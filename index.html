@@ -51,7 +51,7 @@
   --color-blue: #1c35bc;
   --color-green: #008260;
   --color-purple: #6e1d7a;
-  --color-container0bg: #f2f2fa;
+  --color-container-bg: #f4f4fb;
   --color-border: #bbbbcc;
   --color-beige: #fff6ee;
   --font-family-sans: 'PP Radio Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
@@ -106,6 +106,10 @@ p {
     margin-block-end: 0;
   }
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 .smcp {
   font-variant-caps: small-caps;
   font-feature-settings: "smcp";
@@ -130,6 +134,25 @@ header + section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.logowall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.0rem 1.0rem;
+    background: var(--color-container-bg);
+    img {
+      flex: 1;
+      width: 5rem;
+      max-height: 2rem;
+      opacity: 0.9;
+    }
+  }
 }
 .member {
   display: flex;
@@ -185,7 +208,7 @@ header + section {
 .value {
   margin: 1rem 0;
   padding: 0.8rem;
-  border: 1px solid #bbbbcc;
+  background: var(--color-container-bg);
   p {
     font-size: 0.9rem;
   }
@@ -234,31 +257,39 @@ header + section {
           <h2 class="smcp">Experience</h2>
           <p>
             Our staff of industry specialists and doctoral researchers have held senior or founding roles at internationally
-            impactful Open Source initiatives like
-            the <a href="https://opensourcepledge.com">Open Source Pledge</a>,
-            the <a href="https://endowment.dev">Open Source Endowment</a>,
-            <a href="https://thanks.dev">thanks.dev</a>,
-            <a href="https://ecosyste.ms">ecosyste.ms</a>,
-            <a href="https://libraries.io">libraries.io</a>,
-            <a href="https://chaoss.community/">CHAOSS</a>,
-            <a href="https://nuxt.com/">Nuxt</a>,
-            <a href="https://vite.dev/">Vite</a>,
-            <a href="https://npmx.dev/">npmx</a>
-            and others;
-            have contributed to organisations such as
-            the <a href="https://gatesfoundation.org">Gates Foundation</a>,
-            the <a href="https://ox.ac.uk">University of Oxford</a>,
-            <a href="https://www.intel.com/">Intel</a>,
-            <a href="https://www.vmware.com/">VMware</a>,
-            <a href="https://github.com">GitHub</a>,
-            <a href="https://tidelift.com">Tidelift</a>;
-            and have been part of working groups at
-            <a href="https://alpha-omega.dev/">Alpha-Omega</a>,
-            <a href="https://openssf.org/">OpenSSF</a>,
-            <a href="https://www.cncf.io/">CNCF</a>,
-            the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>,
-            and <a href="https://cyclonedx.org/">CycloneDX</a>.
+            impactful Open Source initiatives like:
           </p>
+          <div class="logowall">
+            <div class="logo"><img src="/images/logos/osp.svg" style="padding: 0.1rem 0;"></div>
+            <div class="logo"><img src="/images/logos/ose.svg"></div>
+            <div class="logo"><img src="/images/logos/thanksdev.svg"></div>
+            <div class="logo"><img src="/images/logos/ecosystems.svg"></div>
+            <div class="logo"><img src="/images/logos/librariesio.svg"></div>
+            <div class="logo"><img src="/images/logos/chaoss.svg" style="padding: 0.4rem 0;"></div>
+            <div class="logo"><img src="/images/logos/nuxt.svg" style="padding: 0.4rem 0;"></div>
+            <div class="logo"><img src="/images/logos/vite.svg" style="padding: 0.5rem 0;"></div>
+            <div class="logo"><img src="/images/logos/npmx.svg" style="padding: 0.3rem 0;"></div>
+          </div>
+          <p>
+            Our members have contributed to organisations such as:
+          </p>
+          <div class="logowall">
+            <div class="logo"><img src="/images/logos/gatesfoundation.svg"></div>
+            <div class="logo"><img src="/images/logos/intel.svg" style="padding: 0.3rem 0;"></div>
+            <div class="logo"><img src="/images/logos/vmware.svg"></div>
+            <div class="logo"><img src="/images/logos/github.svg" style="padding: 0.45rem 0;"></div>
+            <div class="logo"><img src="/images/logos/tidelift.svg"></div>
+          </div>
+          <p>
+            Our members have been part of working groups at:
+          </p>
+          <div class="logowall">
+            <div class="logo"><img src="/images/logos/alphaomega.svg"></div>
+            <div class="logo"><img src="/images/logos/openssf.svg" style="padding: 0.1rem 0;"></div>
+            <div class="logo"><img src="/images/logos/cncf.svg"></div>
+            <div class="logo"><img src="/images/logos/linuxfoundation.svg" style="padding: 0.3rem 0;"></div>
+            <div class="logo"><img src="/images/logos/cyclonedx.svg"></div>
+          </div>
         </section>
         <section>
           <h2>Team</h2>
