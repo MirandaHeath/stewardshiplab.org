@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Software Stewardship Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+@font-face {
+  font-family: 'PP Radio Grotesk';
+  font-weight: 400;
+  src: url(/fonts/pp-radio-grotesk/PPRadioGrotesk-Regular.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Radio Grotesk';
+  font-weight: 400;
+  src: url(/fonts/pp-radio-grotesk/PPRadioGrotesk-RegularItalic.woff2) format('woff2');
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon LT Pro';
+  font-weight: 400;
+  src: url(/fonts/sabon-lt-pro/SabonLTPro-Roman.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon LT Pro';
+  font-weight: 400;
+  font-style: italic;
+  src: url(/fonts/sabon-lt-pro/SabonLTPro-Italic.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon LT Pro';
+  font-weight: bold;
+  src: url(/fonts/sabon-lt-pro/SabonLTPro-Bold.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon LT Pro';
+  font-weight: bold;
+  font-style: italic;
+  src: url(/fonts/sabon-lt-pro/SabonLTPro-BoldItalic.woff2) format('woff2');
+  font-display: swap;
+}
+:root {
+  --color-bg: #fdfcff;
+  --color-text: #110033;
+  --color-blue: #1c35bc;
+  --color-green: #008260;
+  --color-purple: #6e1d7a;
+  --color-container0bg: #f2f2fa;
+  --color-border: #bbbbcc;
+  --color-beige: #fff6ee;
+  --font-family-sans: 'PP Radio Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family-serif: 'Sabon LT Pro', 'Georgia Pro', Georgia, serif;
+  --border-radius: 0.5rem;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--font-family-sans);
+}
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+section {
+  margin: 3rem 0;
+}
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+a {
+  color: inherit;
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-family-serif);
+}
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+  margin-block: 0.5em;
+  &:first-child {
+    margin-block-start: 0;
+  }
+  &:last-child {
+    margin-block-end: 0;
+  }
+}
+.smcp {
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+  text-transform: lowercase;
+}
+main {
+  padding: 2rem 0;
+}
+header {
+  img {
+    width: 17rem;
+  }
+}
+header + section {
+  margin-top: 1.5rem;
+}
+.intro {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  .member__photo {
+    img {
+      width: 3rem;
+      border-radius: 100%;
+    }
+  }
+  .member__meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .member__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    span {
+      font-size: 0.9rem;
+    }
+    .member__name {
+      display: flex;
+      gap: 0.5rem;
+      font-family: var(--font-family-serif);
+      strong {
+        line-height: 1.1;
+        font-size: 1.1rem;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: #778;
+        &:hover {
+          color: var(--color-text);
+        }
+        img {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+.value {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #bbbbcc;
+}
+.starset {
+  margin: 2rem 0;
+  text-align: right;
+  img {
+    width: 8rem;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <img src="/images/logo.svg" alt="The Software Stewardship Lab logo">
+        </header>
+        <section>
+          <div class="intro">
+            <p>
+              A new non-profit research lab dedicated to ensuring the stability of the global Open Source ecosystem we all
+              rely on.
+            </p>
+          </div>
+          <h2 class="smcp">Mission</h2>
+          <p>
+            We are a non-profit research lab that safeguards global tech infrastructure by caring for the Open Source
+            technology it relies upon. We develop ways to make the Open Source ecosystem more secure, sustainably
+            funded, and responsibly governed. We do this to benefit the public and protect critical services that depend
+            on Open Source, like transportation, healthcare and the internet.
+          </p>
+          <h2 class="smcp">Strategy</h2>
+          <p>
+            Our team identifies threats to the global Open Source ecosystem and mitigates them by producing software,
+            APIs, informal research reports, and peer-reviewed research papers. We work directly with maintainers to
+            help them implement our solutions.
+          </p>
+          <p>
+            Our work in increasing software supply chain transparency has enabled developers to understand the
+            propagation of vulnerabilities, and to identify critical maintainers that need support. And our work on
+            sustainable funding and governance systems has helped widely-deployed projects avoid maintainer burnout so
+            that they can continue their critical work.
+          </p>
+          <h2 class="smcp">Experience</h2>
+          <p>
+            Our staff of industry specialists and doctoral researchers have held senior or founding roles at internationally
+            impactful Open Source initiatives like
+            the <a href="https://opensourcepledge.com">Open Source Pledge</a>,
+            the <a href="https://endowment.dev">Open Source Endowment</a>,
+            <a href="https://thanks.dev">thanks.dev</a>,
+            <a href="https://ecosyste.ms">ecosyste.ms</a>,
+            <a href="https://libraries.io">libraries.io</a>,
+            <a href="https://chaoss.community/">CHAOSS</a>,
+            <a href="https://nuxt.com/">Nuxt</a>,
+            <a href="https://vite.dev/">Vite</a>,
+            <a href="https://npmx.dev/">npmx</a>
+            and others;
+            have contributed to organisations such as
+            the <a href="https://gatesfoundation.org">Gates Foundation</a>,
+            the <a href="https://ox.ac.uk">University of Oxford</a>,
+            <a href="https://www.intel.com/">Intel</a>,
+            <a href="https://www.vmware.com/">VMware</a>,
+            <a href="https://github.com">GitHub</a>,
+            <a href="https://tidelift.com">Tidelift</a>;
+            and have been part of working groups at
+            <a href="https://alpha-omega.dev/">Alpha-Omega</a>,
+            <a href="https://openssf.org/">OpenSSF</a>,
+            <a href="https://www.cncf.io/">CNCF</a>,
+            the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>,
+            and <a href="https://cyclonedx.org/">CycloneDX</a>.
+          </p>
+        </section>
+        <section>
+          <h2>Team</h2>
+          <div class="members">
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/vlad.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Vlad-Stefan Harbuz</strong>
+                    <a href="https://vlad.website"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Executive Director, Researcher</span>
+                </div>
+              </div>
+              <p>
+                Maintainer of the
+                <a href="https://opensourcepledge.com">Open Source Pledge</a>,
+                which has raised $7,156,281 for maintainers.
+                <a href="https://endowment.dev">Open Source Endowment</a> board adviser.
+                Helped build software used by the
+                <a href="https://gatesfoundation.org">Gates Foundation</a>
+                to allocate $1B in healthcare funding.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/miranda.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Miranda Heath</strong>
+                    <a href="https://mirandaheath.website"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Non-Executive Director, Researcher</span>
+                </div>
+              </div>
+              <p>
+                BPS award-winning psychologist and author of the to-date most comprehensive
+                <a
+                  href="https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/"
+                >report on burnout in Open Source</a>.
+                PhD researcher in moral psychology and philosophy at the University of Edinburgh.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/andrew.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Andrew Nesbitt</strong>
+                    <a href="https://nesbitt.io"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Non-Executive Director, Researcher</span>
+                </div>
+              </div>
+              <p>
+                Creator of leading Open Source intelligence providers
+                <a href="https://ecosyste.ms">ecosyste.ms</a>
+                and
+                <a href="https://libraries.io">libraries.io</a>.
+                Organiser of the FOSDEM
+                <a href="https://fosdem.org/2026/schedule/track/package-management/">
+                  Package Management devroom
+                </a>.
+                Previously an engineer at
+                <a href="https://github.com">GitHub</a>
+                and
+                <a href="https://tidelift.com">Tidelift</a>.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/daniel.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Daniel Roe</strong>
+                    <a href="https://roe.dev"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Non-Executive Director</span>
+                </div>
+              </div>
+              <p>
+                Leader of globally-used web framework <a href="https://nuxt.com/">Nuxt</a>.
+                Steward of package manager frontend <a href="https://npmx.dev">npmx</a>.
+                Regular keynote speaker, Microsoft MVP, Google GDE, and GitHub Star.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/dawn.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Dawn Foster</strong>
+                    <a href="https://fastwonder.com/"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Non-Executive Director</span>
+                </div>
+              </div>
+              <p>
+                Former Director of Data Science at <a href="https://chaoss.community/">CHAOSS</a>.
+                Helped develop <a href="https://www.intel.com/">Intel</a>'s global Open Source engagement strategy.
+                PhD in software metrics.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/patak.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Matias Capeletto</strong>
+                    <a href="https://patak.cat"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Non-Executive Director</span>
+                </div>
+              </div>
+              <p>
+                Steward of <a href="https://npmx.dev">npmx</a>.
+                Core developer of foundational web development tools used by millions, such as
+                <a href="https://vite.dev/">Vite</a>,
+                <a href="https://vitest.dev/">Vitest</a>
+                and
+                <a href="https://e18e.dev/">e18e</a>.
+                Previously at <a href="https://stackblitz.com/">StackBlitz</a>.
+              </p>
+            </div>
+            <div class="member">
+              <div class="member__meta">
+                <div class="member__photo">
+                  <img src="/images/team/mike.webp">
+                </div>
+                <div class="member__info">
+                  <div class="member__name">
+                    <strong>Mike McQuaid</strong>
+                    <a href="https://mikemcquaid.com"><img src="/images/icons/globe.svg"></a>
+                  </div>
+                  <span>Adviser</span>
+                </div>
+              </div>
+              <p>
+                CTPO at <a href="https://www.getadministrate.com/">Administrate</a>.
+                Project Leader of <a href="https://brew.sh/">Homebrew</a>.
+                Former <a href="https://github.com">GitHub</a> Principal Engineer (#232).
+                Author of <a href="https://www.manning.com/books/git-in-practice">Git in Practice</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Values</h2>
+          <div class="value">
+            <h3 class="smcp">Public good</h3>
+            <p>
+              Our projects must provide a clear benefit to the public; and not put the public at disproportionate risk of
+              harm, eg through drastic environmental consequences or the creation of monopolies.
+            </p>
+          </div>
+          <div class="value">
+            <h3 class="smcp">Public access</h3>
+            <p>
+              All our research outputs are accessible and usable by all. Across our different outputs, this means Open
+              Source code, open data, and open access research papers.
+            </p>
+          </div>
+          <div class="value">
+            <h3 class="smcp">Systemic improvements</h3>
+            <p>
+              We aim for widely-applicable systemic solutions, instead of fixes for particular technologies. Our goal is
+              to improve the software ecosystem for current and future developers, not to help current developers shape
+              themselves to fit a bad system.
+            </p>
+          </div>
+          <div class="value">
+            <h3 class="smcp">Interdisciplinarity</h3>
+            <p>
+              Safeguarding tech infrastructure also requires non-technical goals, such as responsible governance, healthy
+              communities, good working conditions and respect. Our work is rooted in software, but we strive for solutions
+              that encompass the social, ethical and policy dimensions of Open Source.
+            </p>
+          </div>
+          <div class="value">
+            <h3 class="smcp">Decentralisation</h3>
+            <p>
+              We promote sharing and distributing power over technology. We want users to be able to shape the tech they
+              use so that it meets their needs and works in their best interests.
+            </p>
+          </div>
+          <div class="value">
+            <h3 class="smcp">Interdependence</h3>
+            <p>
+              We aim to advance public knowledge about the webs of interdependence that constitute our global tech infrastructure.
+              We want more people to be aware that the tech we have today is made possible by thousands of developers
+              collaborating openly, building on and trusting in each others' work.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Interested?<br>Have questions?</h2>
+
+          <p>
+            Reach out to Vlad at
+            <a href="mailto:vlad@vlad.website">vlad@vlad.website</a>.
+          </p>
+
+          <div class="starset">
+            <img src="/images/starset.svg" alt="A set of star illustrations">
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
