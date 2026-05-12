@@ -623,40 +623,6 @@
 </template>
 
 <style scoped>
-section {
-  margin: 3rem 0;
-}
-.container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-p :deep(a) {
-  &:after {
-    content: "°";
-    padding-left: 1px;
-    color: var(--color-main);
-  }
-  &:hover, &:active {
-    background-color: var(--color-blue);
-    color: white;
-  }
-}
-.big-heading {
-  margin-bottom: 0.6lh;
-  font-size: 2rem;
-  text-align: center;
-}
-header {
-  padding-top: 2rem;
-  img {
-    width: 17rem;
-  }
-}
-header + section {
-  margin-top: 1.5rem;
-}
 .intro {
   font-size: 1.4rem;
   line-height: 1.2;
@@ -771,72 +737,4 @@ header + section {
     font-size: 0.9rem;
   }
 }
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 6rem;
-  padding: 2rem 0;
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
-  .footer-socials {
-    display: flex;
-    gap: 1rem;
-  }
-  .footer-starset {
-    img {
-      width: 8rem;
-    }
-  }
-}
-
-/*
-Bluesky flutter — https://flutterby.philhawksworth.dev/
-SPDX-SnippetBegin
-SPDX-License-Identifier: MIT
-SPDX-SnippetCopyrightText: 2024 Phil Hawksworth
-*/
-.bluesky-flutter :deep(svg) {
-  transition: 200ms;
-}
-.bluesky-flutter :deep(.left) {
-  transform-origin: center;
-}
-.bluesky-flutter :deep(.right) {
-  transform-origin: center;
-  transform: scale(-1, 1);
-}
-.bluesky-flutter:hover :deep(.left), .bluesky-flutter:focus :deep(.left) {
-  animation: flutter 430ms ease-in-out;
-  --flip: 1;
-}
-.bluesky-flutter:hover :deep(.right), .bluesky-flutter:focus :deep(.right) {
-  animation: flutter 500ms ease-in-out;
-  --flip: -1;
-}
-.bluesky-flutter:hover :deep(svg), .bluesky-flutter:focus :deep(svg) {
-  transform: rotate(-5deg);
-  transition: 500ms;
-}
-
-@media (prefers-reduced-motion) {
-  .bluesky-flutter:hover :deep(.left),
-  .bluesky-flutter:focus :deep(.left),
-  .bluesky-flutter:hover :deep(.right),
-  .bluesky-flutter:focus :deep(.right) {
-    animation: none;
-  }
-}
-
-@keyframes flutter {
-  10% { transform: scale(calc(var(--flip)*1), 0.9); }
-  20% { transform: scale(calc(var(--flip)*0.5), 1); }
-  40% { transform: scale(calc(var(--flip)*0.9), 0.95); }
-  60% { transform: scale(calc(var(--flip)*0.3), 1); }
-  80% { transform: scale(calc(var(--flip)*0.9), 0.95); }
-  100% { transform: scale(calc(var(--flip)*1), 1); }
-}
-/* SPDX-SnippetEnd */
 </style>
