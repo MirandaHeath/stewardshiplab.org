@@ -1,0 +1,89 @@
+:root {
+  --color-bg: #fdf1f0;
+  --color-text: #202643;
+  --color-blue: #1c35bc;
+  --color-green: #008260;
+  --color-purple: #6e1d7a;
+  --color-container-bg: #f0e7ec;
+  --color-container-bg-dark: #e2d9df;
+  --color-border: #bbbbcc;
+  --color-beige: #fff6ee;
+  --font-family-sans: 'Montreuil', 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family-serif: 'Valkyrie', 'Georgia Pro', Georgia, serif;
+  --border-radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  line-height: 1.35;
+  font-family: var(--font-family-sans);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-top: 1.5em;
+  margin-bottom: 0.5lh;
+  font-family: var(--font-family-serif);
+  line-height: 1.2;
+  font-weight: normal;
+  color: var(--color-blue);
+}
+
+h3 {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+p {
+  margin: 0;
+  margin-block: 0.5em;
+}
+
+p:first-child {
+  margin-block-start: 0;
+}
+
+p:last-child {
+  margin-block-end: 0;
+}
+
+.smcp {
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+  text-transform: lowercase;
+}
+
+.text-justify {
+  text-align: justify;
+}
