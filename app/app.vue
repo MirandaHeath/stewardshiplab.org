@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const description = 'A non-profit research lab dedicated to ensuring the stability of the Open Source ecosystem we all rely on.'
+const description = 'A non-profit applied research lab dedicated to ensuring the stability of the Open Source ecosystem we all rely on.'
 
 useHead({
   link: [
