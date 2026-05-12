@@ -1,6 +1,5 @@
 {
   "name": "stewardshiplab.org",
-  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
