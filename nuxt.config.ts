@@ -7,7 +7,10 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   app: {
-    head: { htmlAttrs: { lang: 'en' } },
+    head: {
+      title: 'Software Stewardship Lab',
+      htmlAttrs: { lang: 'en' }
+    },
   },
   css: ['~/assets/css/main.css'],
   future: { compatibilityVersion: 4 },
