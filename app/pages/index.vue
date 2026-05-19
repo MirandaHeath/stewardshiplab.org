@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <section>
-      <h1 class="visually-hidden">Software Stewardship Lab</h1>
-      <p class="page-intro">
+      <div class="page-intro">
         A new non-profit applied research lab dedicated to ensuring the stability of the Open Source
         ecosystem we all rely on.
-      </p>
+      </div>
+      <h1 class="visually-hidden">Software Stewardship Lab</h1>
       <h2>
         Mission
       </h2>
@@ -543,7 +543,7 @@
   .postcard__main {
     width: auto;
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-l);
   }
   .postcard__starset {
     width: 100px;
@@ -576,7 +576,7 @@
 .members {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .member {
   --photo-size: 60px;
