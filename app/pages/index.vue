@@ -2,10 +2,10 @@
   <div class="container">
     <section>
       <p class="page-intro">
-        A new non-profit applied research lab dedicated to ensuring the stability of the global Open Source
+        A new non-profit applied research lab dedicated to ensuring the stability of the Open Source
         ecosystem we all rely on.
       </p>
-      <h2 class="smcp">
+      <h2>
         Mission
       </h2>
       <p>
@@ -14,7 +14,7 @@
         funded, and responsibly governed. We do this to benefit the public and protect critical services that depend
         on Open Source, like transportation, healthcare and the internet.
       </p>
-      <h2 class="smcp">
+      <h2>
         Strategy
       </h2>
       <p>
@@ -627,8 +627,8 @@
       display: flex;
       gap: 10px;
       strong {
-        font-size: var(--font-size-l);
-        line-height: var(--line-height-l);
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-m);
         /* Montreuil-Medium.woff2 is weight 500, not 700. */
         font-weight: 500;
       }
@@ -659,8 +659,8 @@
   background: var(--color-container-bg);
   h3 {
     font-family: var(--font-family-sans);
-    font-size: var(--font-size-l);
-    line-height: var(--line-height-l);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
   }
   p {
     font-size: var(--font-size-s);

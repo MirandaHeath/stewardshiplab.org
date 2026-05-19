@@ -12,15 +12,15 @@
   --font-size-xs: 16px;
   --font-size-s: 18px;
   --font-size-m: 20px;
-  --font-size-l: 21px;
-  --font-size-xl: 30px;
-  --font-size-xxl: 46px;
+  --font-size-l: 28px;
+  --font-size-xl: 40px;
+  --font-size-xxl: 50px;
 
   --line-height-xs: 20px;
   --line-height-s: 25px;
   --line-height-m: 25px;
   --line-height-l: 25px;
-  --line-height-xl: 35px;
+  --line-height-xl: 40px;
   --line-height-xxl: 55px;
 
   --font-family-sans: 'Montreuil', 'Helvetica Neue', Helvetica, sans-serif;
@@ -61,14 +61,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 45px;
   margin-bottom: 15px;
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-xl);
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
   font-weight: normal;
   color: var(--color-blue);
 }
 
 h3 {
   margin: 0;
+}
+
+.page-intro, .page-title {
+  color: var(--color-blue);
+  font-family: var(--font-family-serif);
 }
 
 .page-intro {
@@ -145,8 +150,8 @@ p a {
 
 .big-heading {
   margin-bottom: 0.6lh;
-  font-size: var(--font-size-xxl);
-  line-height: var(--line-height-xxl);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
   text-align: center;
 }
 
