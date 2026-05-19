@@ -647,8 +647,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
-  padding: 0 1rem;
+  gap: 15px;
+  padding: 0 15px;
   transform: rotate(2deg);
   .postcard__main {
     width: auto;
@@ -656,28 +656,29 @@
     border-radius: var(--border-radius);
   }
   .postcard__starset {
-    width: 4rem;
-    margin-right: 0.5rem;
+    width: 100px;
+    height: auto;
+    margin-right: 0;
   }
 }
 .logowall {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 0.5rem;
+  gap: 10px;
   margin: 1rem 0;
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.0rem 1.0rem;
+    padding: 20px;
     background: var(--color-container-bg);
     &:hover {
       background: var(--color-container-bg-dark);
     }
     img {
       flex: 1;
-      width: 5rem;
-      max-height: 2rem;
+      width: 100px;
+      max-height: 40px;
       opacity: 0.9;
     }
   }
@@ -685,72 +686,79 @@
 .members {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
 }
 .member {
+  --photo-size: 60px;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  padding: 1rem;
+  gap: 10px;
+  padding: 20px;
   background: var(--color-container-bg);
   .member__photo {
-    flex: 0 0 3rem;
+    flex: 0 0 var(--photo-size);
     img {
-      width: 3rem;
-      height: 3rem;
+      width: var(--photo-size);
+      height: var(--photo-size);
       border-radius: 100%;
     }
   }
   .member__meta {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 15px;
   }
   .member__info {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 2px;
     line-height: 1.1;
     span {
-      font-size: 0.8rem;
+      font-size: var(--font-size-xs);
+      line-height: var(--line-height-xs);
     }
     .member__name {
       display: flex;
-      gap: 0.5rem;
+      gap: 10px;
       strong {
-        line-height: 1.1;
-        font-size: 1.1rem;
+        font-size: var(--font-size-l);
+        line-height: var(--line-height-l);
         /* Montreuil-Medium.woff2 is weight 500, not 700. */
         font-weight: 500;
       }
       a {
-        flex: 0 0 0.8rem;
+        --icon-size: 16px;
+        flex: 0 0 var(--icon-size);
         display: flex;
         align-items: center;
         &:hover {
           background-color: unset;
         }
         img {
-          width: 0.8rem;
-          height: 0.8rem;
+          width: var(--icon-size);
+          height: var(--icon-size);
         }
       }
     }
   }
   p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
     margin: 0;
   }
 }
 .value {
   margin: 1rem 0;
-  padding: 0.8rem;
+  padding: 15px;
   background: var(--color-container-bg);
   h3 {
     font-family: var(--font-family-sans);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
   }
   p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
   }
 }
 </style>
