@@ -56,6 +56,7 @@
         <a
           class="logo"
           href="https://opensourcepledge.com"
+          aria-label="Go to the Open Source Pledge website"
         ><LogoOsp
           style="padding: 0.1rem 0;"
           alt="The Open Source Pledge logo"
@@ -65,6 +66,7 @@
         <a
           class="logo"
           href="https://endowment.dev"
+          aria-label="Go to the Open Source Endowment website"
         ><LogoOse
           alt="The Open Source Endowment logo"
           width="104"
@@ -73,6 +75,7 @@
         <a
           class="logo"
           href="https://thanks.dev"
+          aria-label="Go to the thanks.dev website"
         ><LogoThanksDev
           alt="The thanks.dev logo"
           width="104"
@@ -81,6 +84,7 @@
         <a
           class="logo"
           href="https://ecosyste.ms"
+          aria-label="Go to the ecosyste.ms website"
         ><LogoEcosystems
           alt="The ecosyste.ms logo"
           width="104"
@@ -89,6 +93,7 @@
         <a
           class="logo"
           href="https://libraries.io"
+          aria-label="Go to the libraries.io website"
         ><LogoLibrariesIo
           alt="The libraries.io logo"
           width="104"
@@ -97,6 +102,7 @@
         <a
           class="logo"
           href="https://chaoss.community/"
+          aria-label="Go to the CHAOSS website"
         ><LogoChaoss
           alt="The CHAOSS logo"
           style="padding: 0.4rem 0;"
@@ -106,6 +112,7 @@
         <a
           class="logo"
           href="https://nuxt.com/"
+          aria-label="Go to the Nuxt website"
         ><LogoNuxt
           alt="The Nuxt logo"
           style="padding: 0.4rem 0;"
@@ -115,6 +122,7 @@
         <a
           class="logo"
           href="https://vite.dev/"
+          aria-label="Go to the Vite website"
         ><LogoVite
           alt="The Vite logo"
           style="padding: 0.5rem 0;"
@@ -124,6 +132,7 @@
         <a
           class="logo"
           href="https://npmx.dev/"
+          aria-label="Go to the npmx website"
         ><LogoNpmx
           src="/images/logos/npmx.svg"
           alt="The npmx logo"
@@ -139,6 +148,7 @@
         <a
           class="logo"
           href="https://www.gatesfoundation.org/"
+          aria-label="Go to the Gates Foundation website"
         ><LogoGatesFoundation
           alt="The Gates Foundation logo"
           width="104"
@@ -147,6 +157,7 @@
         <a
           class="logo"
           href="https://intel.com"
+          aria-label="Go to the Intel website"
         ><LogoIntel
           alt="The Intel logo"
           style="padding: 0.3rem 0;"
@@ -156,6 +167,7 @@
         <a
           class="logo"
           href="https://www.vmware.com/"
+          aria-label="Go to the VMware website"
         ><LogoVmware
           alt="The VMware logo"
           width="104"
@@ -164,6 +176,7 @@
         <a
           class="logo"
           href="https://github.com"
+          aria-label="Go to the GitHub website"
         ><LogoGitHub
           alt="The GitHub logo"
           style="padding: 0.45rem 0;"
@@ -173,6 +186,7 @@
         <a
           class="logo"
           href="https://tidelift.com"
+          aria-label="Go to the Tidelift website"
         ><LogoTidelift
           alt="The Tidelift logo"
           width="104"
@@ -186,6 +200,7 @@
         <a
           class="logo"
           href="https://alpha-omega.dev/"
+          aria-label="Go to the Alpha Omega website"
         ><LogoAlphaOmega
           alt="The Alpha Omega logo"
           width="104"
@@ -194,6 +209,7 @@
         <a
           class="logo"
           href="https://openssf.org/"
+          aria-label="Go to the OpenSSF website"
         ><LogoOpenSsf
           alt="The OpenSSF logo"
           style="padding: 0.1rem 0;"
@@ -203,6 +219,7 @@
         <a
           class="logo"
           href="https://www.cncf.io/"
+          aria-label="Go to the CNCF website"
         ><LogoCncf
           alt="The CNCF logo"
           width="104"
@@ -211,6 +228,7 @@
         <a
           class="logo"
           href="https://www.linuxfoundation.org/"
+          aria-label="Go to the Linux Foundation website"
         ><LogoLinuxFoundation
           alt="The Linux Foundation logo"
           style="padding: 0.3rem 0;"
@@ -220,6 +238,7 @@
         <a
           class="logo"
           href="https://cyclonedx.org/"
+          aria-label="Go to the CycloneDX website"
         ><LogoCycloneDx
           alt="The CycloneDX logo"
           width="104"
