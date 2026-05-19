@@ -4,12 +4,9 @@
       <div class="visually-hidden">
         Software Stewardship Lab
       </div>
-      <img
-        src="/images/logo.svg"
-        alt=""
-        width="340"
-        height="72"
-      >
+      <a href="/">
+        <Logo width="240" height="51" />
+      </a>
     </div>
   </header>
   <main>
@@ -83,13 +80,13 @@
         </a>
       </div>
       <div class="footer-starset">
-        <img
-          src="/images/starset.svg"
-          alt="A set of star illustrations"
-          width="160"
-          height="42"
-        >
+        <Starset width="160" height="42" />
       </div>
     </footer>
   </div>
 </template>
+
+<script setup lang="ts">
+  import Logo from '~/assets/images/logo.svg'
+  import Starset from '~/assets/images/starset.svg'
+</script>

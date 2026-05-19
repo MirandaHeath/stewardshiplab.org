@@ -27,6 +27,9 @@ importers:
       eslint:
         specifier: 10.3.0
         version: 10.3.0(jiti@2.7.0)
+      nuxt-svgo:
+        specifier: ^5.3.0
+        version: 5.3.0(magicast@0.5.2)(vue@3.5.34(typescript@6.0.3))
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -3152,6 +3155,10 @@ packages:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
 
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+
   minimatch@10.2.5:
     resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
     engines: {node: 18 || 20 || >=22}
@@ -3265,6 +3272,21 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  nuxt-svgo@5.3.0:
+    resolution: {integrity: sha512-tZXAEwwYIy315K/9lxQfEXIQIWJO3hCiK5xBAKUDAmgss90Gr1RvCOZ4vGt/nmaiHSu2GhcAZ0gu9MxnUrmm6g==}
+    peerDependencies:
+      svgo-loader: ^4.0.0
+      vue: '>=3.2.13'
+      vue-loader: ^17.0.0
+      vue-svg-loader: 0.17.0-beta.2
+    peerDependenciesMeta:
+      svgo-loader:
+        optional: true
+      vue-loader:
+        optional: true
+      vue-svg-loader:
+        optional: true
 
   nuxt@4.4.5:
     resolution: {integrity: sha512-MwTf3wyaEIm1U9/T1VKpqg7rGhhrn5Cx2ZS40lwo8GxsiY9xE7UOj5Cg0eAI0fSbJzyXlzdxspytgqWsgL+nIA==}
@@ -7539,6 +7561,8 @@ snapshots:
 
   mimic-fn@4.0.0: {}
 
+  mini-svg-data-uri@1.4.4: {}
+
   minimatch@10.2.5:
     dependencies:
       brace-expansion: 5.0.6
@@ -7721,6 +7745,15 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  nuxt-svgo@5.3.0(magicast@0.5.2)(vue@3.5.34(typescript@6.0.3)):
+    dependencies:
+      '@nuxt/kit': 4.4.5(magicast@0.5.2)
+      mini-svg-data-uri: 1.4.4
+      svgo: 4.0.1
+      vue: 3.5.34(typescript@6.0.3)
+    transitivePeerDependencies:
+      - magicast
 
   nuxt@4.4.5(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.34)(cac@6.7.14)(db0@0.3.4)(eslint@10.3.0(jiti@2.7.0))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(srvx@0.11.15)(terser@5.47.1)(typescript@6.0.3)(vite@7.3.3(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.47.1)(yaml@2.9.0))(vue-tsc@3.2.8(typescript@6.0.3))(yaml@2.9.0):
     dependencies:

@@ -4,7 +4,11 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/html-validator',
     '@nuxt/fonts',
+    'nuxt-svgo',
   ],
+  svgo: {
+    defaultImport: 'component',
+  },
   devtools: { enabled: true },
   app: {
     head: {

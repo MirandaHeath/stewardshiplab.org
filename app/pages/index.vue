@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <section>
+      <h1 class="visually-hidden">Software Stewardship Lab</h1>
       <p class="page-intro">
         A new non-profit applied research lab dedicated to ensuring the stability of the Open Source
         ecosystem we all rely on.
@@ -40,13 +41,7 @@
           width="736"
           height="505"
         >
-        <img
-          class="postcard__starset"
-          src="/images/starset.svg"
-          alt="A set of star illustrations"
-          width="81"
-          height="24"
-        >
+        <Starset width="81" height="24" />
       </div>
     </section>
     <section>
@@ -668,3 +663,7 @@
   }
 }
 </style>
+
+<script setup lang="ts">
+  import Starset from '~/assets/images/starset.svg'
+</script>
