@@ -30,6 +30,24 @@
   --border-radius-l: 10px;
 }
 
+@media (max-width: 800px) {
+  :root {
+      --font-size-xs: 15px;
+      --font-size-s: 17px;
+      --font-size-m: 18px;
+      --font-size-l: 24px;
+      --font-size-xl: 30px;
+      --font-size-xxl: 50px;
+
+      --line-height-xs: 20px;
+      --line-height-s: 25px;
+      --line-height-m: 25px;
+      --line-height-l: 30px;
+      --line-height-xl: 35px;
+      --line-height-xxl: 55px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
