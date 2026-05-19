@@ -56,89 +56,81 @@
         <a
           class="logo"
           href="https://opensourcepledge.com"
-        ><img
-          src="/images/logos/osp.svg"
+        ><LogoOsp
           style="padding: 0.1rem 0;"
           alt="The Open Source Pledge logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://endowment.dev"
-        ><img
-          src="/images/logos/ose.svg"
+        ><LogoOse
           alt="The Open Source Endowment logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://thanks.dev"
-        ><img
-          src="/images/logos/thanksdev.svg"
+        ><LogoThanksDev
           alt="The thanks.dev logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://ecosyste.ms"
-        ><img
-          src="/images/logos/ecosystems.svg"
+        ><LogoEcosystems
           alt="The ecosyste.ms logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://libraries.io"
-        ><img
-          src="/images/logos/librariesio.svg"
+        ><LogoLibrariesIo
           alt="The libraries.io logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://chaoss.community/"
-        ><img
-          src="/images/logos/chaoss.svg"
+        ><LogoChaoss
           alt="The CHAOSS logo"
           style="padding: 0.4rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://nuxt.com/"
-        ><img
-          src="/images/logos/nuxt.svg"
+        ><LogoNuxt
           alt="The Nuxt logo"
           style="padding: 0.4rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://vite.dev/"
-        ><img
-          src="/images/logos/vite.svg"
+        ><LogoVite
           alt="The Vite logo"
           style="padding: 0.5rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://npmx.dev/"
-        ><img
+        ><LogoNpmx
           src="/images/logos/npmx.svg"
           alt="The npmx logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
       </div>
       <p>
         Our members have contributed to organisations such as:
@@ -147,50 +139,45 @@
         <a
           class="logo"
           href="https://www.gatesfoundation.org/"
-        ><img
-          src="/images/logos/gatesfoundation.svg"
+        ><LogoGatesFoundation
           alt="The Gates Foundation logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://intel.com"
-        ><img
-          src="/images/logos/intel.svg"
+        ><LogoIntel
           alt="The Intel logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://www.vmware.com/"
-        ><img
-          src="/images/logos/vmware.svg"
+        ><LogoVmware
           alt="The VMware logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://github.com"
-        ><img
-          src="/images/logos/github.svg"
+        ><LogoGitHub
           alt="The GitHub logo"
           style="padding: 0.45rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://tidelift.com"
-        ><img
-          src="/images/logos/tidelift.svg"
+        ><LogoTidelift
           alt="The Tidelift logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
       </div>
       <p>
         Our members have been part of working groups at:
@@ -199,50 +186,45 @@
         <a
           class="logo"
           href="https://alpha-omega.dev/"
-        ><img
-          src="/images/logos/alphaomega.svg"
+        ><LogoAlphaOmega
           alt="The Alpha Omega logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://openssf.org/"
-        ><img
-          src="/images/logos/openssf.svg"
+        ><LogoOpenSsf
           alt="The OpenSSF logo"
           style="padding: 0.1rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://www.cncf.io/"
-        ><img
-          src="/images/logos/cncf.svg"
+        ><LogoCncf
           alt="The CNCF logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://www.linuxfoundation.org/"
-        ><img
-          src="/images/logos/linuxfoundation.svg"
+        ><LogoLinuxFoundation
           alt="The Linux Foundation logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
-        ></a>
+        /></a>
         <a
           class="logo"
           href="https://cyclonedx.org/"
-        ><img
-          src="/images/logos/cyclonedx.svg"
+        ><LogoCycloneDx
           alt="The CycloneDX logo"
           width="104"
           height="40"
-        ></a>
+        /></a>
       </div>
     </section>
     <section>
@@ -263,12 +245,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Vlad-Stefan Harbuz</strong>
-                <a href="https://vlad.website"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Vlad's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://vlad.website">
+                  <IconGlobe
+                    alt="Go to Vlad's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Executive Director, Researcher</span>
             </div>
@@ -297,12 +280,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Miranda Heath</strong>
-                <a href="https://mirandaheath.website"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Miranda's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://mirandaheath.website">
+                  <IconGlobe
+                    alt="Go to Miranda's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Non-Executive Director, Researcher</span>
             </div>
@@ -326,12 +310,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Andrew Nesbitt</strong>
-                <a href="https://nesbitt.io"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Andrew's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://nesbitt.io">
+                  <IconGlobe
+                    alt="Go to Andrew's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Non-Executive Director, Researcher</span>
             </div>
@@ -362,12 +347,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Daniel Roe</strong>
-                <a href="https://roe.dev"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Daniel's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://roe.dev">
+                  <IconGlobe
+                    alt="Go to Daniel's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Non-Executive Director</span>
             </div>
@@ -391,12 +377,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Dawn Foster</strong>
-                <a href="https://fastwonder.com/"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Dawn's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://fastwonder.com/">
+                  <IconGlobe
+                    alt="Go to Dawn's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Non-Executive Director</span>
             </div>
@@ -420,12 +407,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Matias Capeletto</strong>
-                <a href="https://patak.cat"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Matias's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://patak.cat">
+                  <IconGlobe
+                    alt="Go to Matias's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Non-Executive Director</span>
             </div>
@@ -453,12 +441,13 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Mike McQuaid</strong>
-                <a href="https://mikemcquaid.com"><img
-                  src="/images/icons/globe.svg"
-                  alt="Go to Mike's website"
-                  width="16"
-                  height="16"
-                ></a>
+                <a href="https://mikemcquaid.com">
+                  <IconGlobe
+                    alt="Go to Mike's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
               </div>
               <span>Adviser</span>
             </div>
@@ -666,4 +655,24 @@
 
 <script setup lang="ts">
   import Starset from '~/assets/images/starset.svg'
+  import IconGlobe from '~/assets/images/icons/globe.svg'
+  import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
+  import LogoChaoss from '~/assets/images/logos/chaoss.svg'
+  import LogoCncf from '~/assets/images/logos/cncf.svg'
+  import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
+  import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
+  import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
+  import LogoGitHub from '~/assets/images/logos/github.svg'
+  import LogoIntel from '~/assets/images/logos/intel.svg'
+  import LogoLibrariesIo from '~/assets/images/logos/librariesio.svg'
+  import LogoLinuxFoundation from '~/assets/images/logos/linuxfoundation.svg'
+  import LogoNpmx from '~/assets/images/logos/npmx.svg'
+  import LogoNuxt from '~/assets/images/logos/nuxt.svg'
+  import LogoOpenSsf from '~/assets/images/logos/openssf.svg'
+  import LogoOse from '~/assets/images/logos/ose.svg'
+  import LogoOsp from '~/assets/images/logos/osp.svg'
+  import LogoThanksDev from '~/assets/images/logos/thanksdev.svg'
+  import LogoTidelift from '~/assets/images/logos/tidelift.svg'
+  import LogoVite from '~/assets/images/logos/vite.svg'
+  import LogoVmware from '~/assets/images/logos/vmware.svg'
 </script>
