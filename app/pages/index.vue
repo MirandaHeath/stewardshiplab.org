@@ -58,7 +58,7 @@
           href="https://opensourcepledge.com"
         ><LogoOsp
           style="padding: 0.1rem 0;"
-          alt="The Open Source Pledge logo"
+          aria-label="The Open Source Pledge logo"
           width="104"
           height="40"
         /></a>
@@ -66,7 +66,7 @@
           class="logo"
           href="https://endowment.dev"
         ><LogoOse
-          alt="The Open Source Endowment logo"
+          aria-label="The Open Source Endowment logo"
           width="104"
           height="40"
         /></a>
@@ -74,7 +74,7 @@
           class="logo"
           href="https://thanks.dev"
         ><LogoThanksDev
-          alt="The thanks.dev logo"
+          aria-label="The thanks.dev logo"
           width="104"
           height="40"
         /></a>
@@ -82,7 +82,7 @@
           class="logo"
           href="https://ecosyste.ms"
         ><LogoEcosystems
-          alt="The ecosyste.ms logo"
+          aria-label="The ecosyste.ms logo"
           width="104"
           height="40"
         /></a>
@@ -90,7 +90,7 @@
           class="logo"
           href="https://libraries.io"
         ><LogoLibrariesIo
-          alt="The libraries.io logo"
+          aria-label="The libraries.io logo"
           width="104"
           height="40"
         /></a>
@@ -98,7 +98,7 @@
           class="logo"
           href="https://chaoss.community/"
         ><LogoChaoss
-          alt="The CHAOSS logo"
+          aria-label="The CHAOSS logo"
           style="padding: 0.4rem 0;"
           width="104"
           height="40"
@@ -107,7 +107,7 @@
           class="logo"
           href="https://nuxt.com/"
         ><LogoNuxt
-          alt="The Nuxt logo"
+          aria-label="The Nuxt logo"
           style="padding: 0.4rem 0;"
           width="104"
           height="40"
@@ -116,7 +116,7 @@
           class="logo"
           href="https://vite.dev/"
         ><LogoVite
-          alt="The Vite logo"
+          aria-label="The Vite logo"
           style="padding: 0.5rem 0;"
           width="104"
           height="40"
@@ -126,7 +126,7 @@
           href="https://npmx.dev/"
         ><LogoNpmx
           src="/images/logos/npmx.svg"
-          alt="The npmx logo"
+          aria-label="The npmx logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
@@ -140,7 +140,7 @@
           class="logo"
           href="https://www.gatesfoundation.org/"
         ><LogoGatesFoundation
-          alt="The Gates Foundation logo"
+          aria-label="The Gates Foundation logo"
           width="104"
           height="40"
         /></a>
@@ -148,7 +148,7 @@
           class="logo"
           href="https://intel.com"
         ><LogoIntel
-          alt="The Intel logo"
+          aria-label="The Intel logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
@@ -157,7 +157,7 @@
           class="logo"
           href="https://www.vmware.com/"
         ><LogoVmware
-          alt="The VMware logo"
+          aria-label="The VMware logo"
           width="104"
           height="40"
         /></a>
@@ -165,7 +165,7 @@
           class="logo"
           href="https://github.com"
         ><LogoGitHub
-          alt="The GitHub logo"
+          aria-label="The GitHub logo"
           style="padding: 0.45rem 0;"
           width="104"
           height="40"
@@ -174,7 +174,7 @@
           class="logo"
           href="https://tidelift.com"
         ><LogoTidelift
-          alt="The Tidelift logo"
+          aria-label="The Tidelift logo"
           width="104"
           height="40"
         /></a>
@@ -187,7 +187,7 @@
           class="logo"
           href="https://alpha-omega.dev/"
         ><LogoAlphaOmega
-          alt="The Alpha Omega logo"
+          aria-label="The Alpha Omega logo"
           width="104"
           height="40"
         /></a>
@@ -195,7 +195,7 @@
           class="logo"
           href="https://openssf.org/"
         ><LogoOpenSsf
-          alt="The OpenSSF logo"
+          aria-label="The OpenSSF logo"
           style="padding: 0.1rem 0;"
           width="104"
           height="40"
@@ -204,7 +204,7 @@
           class="logo"
           href="https://www.cncf.io/"
         ><LogoCncf
-          alt="The CNCF logo"
+          aria-label="The CNCF logo"
           width="104"
           height="40"
         /></a>
@@ -212,7 +212,7 @@
           class="logo"
           href="https://www.linuxfoundation.org/"
         ><LogoLinuxFoundation
-          alt="The Linux Foundation logo"
+          aria-label="The Linux Foundation logo"
           style="padding: 0.3rem 0;"
           width="104"
           height="40"
@@ -221,7 +221,7 @@
           class="logo"
           href="https://cyclonedx.org/"
         ><LogoCycloneDx
-          alt="The CycloneDX logo"
+          aria-label="The CycloneDX logo"
           width="104"
           height="40"
         /></a>
@@ -247,7 +247,7 @@
                 <strong>Vlad-Stefan Harbuz</strong>
                 <a href="https://vlad.website">
                   <IconGlobe
-                    alt="Go to Vlad's website"
+                    aria-label="Go to Vlad's website"
                     width="16"
                     height="16"
                   />
@@ -282,7 +282,7 @@
                 <strong>Miranda Heath</strong>
                 <a href="https://mirandaheath.website">
                   <IconGlobe
-                    alt="Go to Miranda's website"
+                    aria-label="Go to Miranda's website"
                     width="16"
                     height="16"
                   />
@@ -312,7 +312,7 @@
                 <strong>Andrew Nesbitt</strong>
                 <a href="https://nesbitt.io">
                   <IconGlobe
-                    alt="Go to Andrew's website"
+                    aria-label="Go to Andrew's website"
                     width="16"
                     height="16"
                   />
@@ -349,7 +349,7 @@
                 <strong>Daniel Roe</strong>
                 <a href="https://roe.dev">
                   <IconGlobe
-                    alt="Go to Daniel's website"
+                    aria-label="Go to Daniel's website"
                     width="16"
                     height="16"
                   />
@@ -379,7 +379,7 @@
                 <strong>Dawn Foster</strong>
                 <a href="https://fastwonder.com/">
                   <IconGlobe
-                    alt="Go to Dawn's website"
+                    aria-label="Go to Dawn's website"
                     width="16"
                     height="16"
                   />
@@ -409,7 +409,7 @@
                 <strong>Matias Capeletto</strong>
                 <a href="https://patak.cat">
                   <IconGlobe
-                    alt="Go to Matias's website"
+                    aria-label="Go to Matias's website"
                     width="16"
                     height="16"
                   />
@@ -443,7 +443,7 @@
                 <strong>Mike McQuaid</strong>
                 <a href="https://mikemcquaid.com">
                   <IconGlobe
-                    alt="Go to Mike's website"
+                    aria-label="Go to Mike's website"
                     width="16"
                     height="16"
                   />
