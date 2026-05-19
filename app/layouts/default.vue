@@ -4,7 +4,7 @@
       <div class="visually-hidden">
         Software Stewardship Lab
       </div>
-      <a href="/">
+      <a href="/" class="site-title">
         <Logo width="240" height="51" />
       </a>
     </div>

@@ -643,8 +643,8 @@
   background: var(--color-container-bg);
   h3 {
     font-family: var(--font-family-sans);
-    font-size: var(--font-size-m);
-    line-height: var(--line-height-m);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
   }
   p {
     font-size: var(--font-size-s);

@@ -12,7 +12,7 @@
   --font-size-xs: 16px;
   --font-size-s: 18px;
   --font-size-m: 20px;
-  --font-size-l: 28px;
+  --font-size-l: 25px;
   --font-size-xl: 40px;
   --font-size-xxl: 50px;
 
@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-img {
+img, svg {
   display: block;
   max-width: 100%;
 }
@@ -195,7 +195,7 @@ header {
     display: block;
     img, svg {
       width: 240px;
-      height: auto;
+      height: 51px;
     }
   }
 }
