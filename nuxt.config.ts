@@ -18,9 +18,6 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   future: { compatibilityVersion: 4 },
-  features: {
-    noScripts: 'all',
-  },
   experimental: { typedPages: true },
   compatibilityDate: 'latest',
   nitro: {

@@ -24,6 +24,7 @@ type Org = {
 };
 
 export async function getPropublicaInfo(id, pageBody) {
+  console.log('parsing', id);
   const $ = await cheerio.load(pageBody);
 
   const name = $('h1.text-hed-900').text();

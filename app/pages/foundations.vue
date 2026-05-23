@@ -16,12 +16,26 @@
   </div>
   <section>
     <div class="container">
-      <h2>2024</h2>
       <div class="control-bar">
         <div class="control-set">
-          <button @click="test()" class="btn btn--active" type="button">2024</button>
-          <button @click="test()" class="btn" type="button">2023</button>
-          <button @click="test()" class="btn" type="button">2022</button>
+          <button
+            @click="displayYear = 2024"
+            class="btn"
+            :class="{ 'btn--active': displayYear == 2024 }"
+            type="button"
+          >2024</button>
+          <button
+            @click="displayYear = 2023"
+            class="btn"
+            :class="{ 'btn--active': displayYear == 2023 }"
+            type="button"
+          >2023</button>
+          <button
+            @click="displayYear = 2022"
+            class="btn"
+            :class="{ 'btn--active': displayYear == 2022 }"
+            type="button"
+          >2022</button>
         </div>
       </div>
     </div>
@@ -68,17 +82,14 @@ import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
 
-function test() {
-  console.log('lol');
-}
-
 const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
   return await Promise.all(
     ORG_IDS.map((orgId) =>
-      $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId)
+      $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
         .then((pageBody) => getPropublicaInfo(orgId, pageBody))
     )
   );
 });
-let displayYear = 2024;
+
+let displayYear = ref(2024);
 </script>
