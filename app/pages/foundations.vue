@@ -40,18 +40,18 @@
       </div>
     </div>
     <div class="container container--wide table-container">
-      <table class="data-table">
+      <table>
         <thead>
           <tr>
-            <th scope="col">Name</th>
-            <th scope="col" class="cell--desktop-only">Country</th>
-            <th scope="col" class="cell--desktop-only">Legal form</th>
-            <th scope="col">Revenue</th>
-            <th scope="col">Net assets</th>
-            <th scope="col">Highest paid person</th>
-            <th scope="col">Highest paid title</th>
-            <th scope="col">Salary</th>
-            <th scope="col">Other pay</th>
+            <th width="28%" scope="col">Name</th>
+            <th width="5%" scope="col" class="cell--desktop-only">Country</th>
+            <th width="6%" scope="col" class="cell--desktop-only">Legal form</th>
+            <th width="9%" scope="col" class="cell--right-align">Revenue</th>
+            <th width="9%" scope="col" class="cell--right-align">Net assets</th>
+            <th width="15%" scope="col">Highest paid person</th>
+            <th width="10%" scope="col">Highest paid title</th>
+            <th width="9%" scope="col" class="cell--right-align">Salary</th>
+            <th width="9%" scope="col" class="cell--right-align">Other pay</th>
           </tr>
         </thead>
         <tbody>
@@ -75,6 +75,9 @@
 </template>
 
 <style scoped>
+  table {
+    table-layout: fixed;
+  }
 </style>
 
 <script setup lang="ts">

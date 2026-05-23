@@ -152,9 +152,11 @@ p:last-child {
   overflow-x: scroll;
 }
 table {
+  width: 100%;
   margin: 30px auto;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
+  border-collapse: collapse;
   td, th {
     text-align: left;
     padding: 5px 10px;
@@ -184,6 +186,11 @@ table {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-variant-numeric: lining-nums;
+  }
+  tr:hover {
+    td, th {
+      background: white;
+    }
   }
 }
 
