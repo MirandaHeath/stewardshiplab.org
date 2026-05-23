@@ -19,19 +19,19 @@
       <div class="control-bar">
         <div class="control-set">
           <button
-            @click="displayYear = 2024"
+            @click="setDisplayYear(2024)"
             class="btn"
             :class="{ 'btn--active': displayYear == 2024 }"
             type="button"
           >2024</button>
           <button
-            @click="displayYear = 2023"
+            @click="setDisplayYear(2023)"
             class="btn"
             :class="{ 'btn--active': displayYear == 2023 }"
             type="button"
           >2023</button>
           <button
-            @click="displayYear = 2022"
+            @click="setDisplayYear(2022)"
             class="btn"
             :class="{ 'btn--active': displayYear == 2022 }"
             type="button"
@@ -43,19 +43,70 @@
       <table>
         <thead>
           <tr>
-            <th width="25%" scope="col">Name</th>
-            <th width="6%" scope="col" class="cell--desktop-only">Country</th>
-            <th width="8%" scope="col" class="cell--desktop-only">Legal form</th>
-            <th width="9%" scope="col" class="cell--right-align">Revenue</th>
-            <th width="9%" scope="col" class="cell--right-align">Net assets</th>
-            <th width="12%" scope="col">Highest paid person</th>
-            <th width="13%" scope="col">Highest paid title</th>
-            <th width="9%" scope="col" class="cell--right-align">Salary</th>
-            <th width="9%" scope="col" class="cell--right-align">Other pay</th>
+            <th
+              style="width: 25%"
+              scope="col"
+              @click="setSortGetter(SG_NAME)"
+              :data-sorting="getSortingDataAttr(SG_NAME)"
+            >Name</th>
+            <th
+              style="width: 6%"
+              scope="col"
+              @click="setSortGetter(SG_COUNTRY)"
+              :data-sorting="getSortingDataAttr(SG_COUNTRY)"
+              class="cell--desktop-only"
+            >Country</th>
+            <th
+              style="width: 8%"
+              scope="col"
+              @click="setSortGetter(SG_LEGALFORM)"
+              :data-sorting="getSortingDataAttr(SG_LEGALFORM)"
+              class="cell--desktop-only"
+            >Legal form</th>
+            <th
+              style="width: 9%"
+              scope="col"
+              @click="setSortGetter(SG_REVENUE)"
+              :data-sorting="getSortingDataAttr(SG_REVENUE)"
+              class="cell--right-align"
+            >Revenue</th>
+            <th
+              style="width: 9%"
+              scope="col"
+              @click="setSortGetter(SG_NETASSETS)"
+              :data-sorting="getSortingDataAttr(SG_NETASSETS)"
+              class="cell--right-align"
+            >Net assets</th>
+            <th
+              style="width: 12%"
+              scope="col"
+              @click="setSortGetter(SG_HPE_NAME)"
+              :data-sorting="getSortingDataAttr(SG_HPE_NAME)"
+            >Highest paid person</th>
+            <th
+              style="width: 13%"
+              scope="col"
+              @click="setSortGetter(SG_HPE_TITLE)"
+              :data-sorting="getSortingDataAttr(SG_HPE_TITLE)"
+            >Highest paid title</th>
+            <th
+              style="width: 9%"
+              scope="col"
+              @click="setSortGetter(SG_HPE_SALARYPAY)"
+              :data-sorting="getSortingDataAttr(SG_HPE_SALARYPAY)"
+              class="cell--right-align"
+            >Salary</th>
+            <th
+              style="width: 9%"
+              scope="col"
+              @click="setSortGetter(SG_HPE_OTHERPAY)"
+              :data-sorting="getSortingDataAttr(SG_HPE_OTHERPAY)"
+              class="cell--right-align"
+            >Other pay</th>
           </tr>
         </thead>
         <tbody>
-          <template v-for="org in allOrgs" :key="org.name">
+          <template v-for="org in sortedOrgs" :key="org.name">
             <tr v-if="displayYear in org.filings">
               <td><a :href="'https://projects.propublica.org/nonprofits/organizations/' + org.id">{{ org.name }}</a></td>
               <td class="cell--desktop-only">US</td>
@@ -78,6 +129,25 @@
   table {
     min-width: 1000px;
     table-layout: fixed;
+    th {
+      cursor: pointer;
+      user-select: none;
+      &[data-sorting] {
+        &:after {
+          padding-left: 3px;
+        }
+        &[data-sorting="asc"] {
+          &:after {
+            content: '▲';
+          }
+        }
+        &[data-sorting="desc"] {
+          &:after {
+            content: '▼';
+          }
+        }
+      }
+    }
   }
 </style>
 
@@ -85,6 +155,16 @@
 import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
+
+const SG_NAME          = (d) => d.name;
+const SG_COUNTRY       = (d) => d.country;
+const SG_LEGALFORM     = (d) => d.legalForm;
+const SG_REVENUE       = (d) => d.filings[displayYear.value].revenue;
+const SG_NETASSETS     = (d) => d.filings[displayYear.value].netAssets;
+const SG_HPE_NAME      = (d) => d.filings[displayYear.value].highestPaidEmployee.name;
+const SG_HPE_TITLE     = (d) => d.filings[displayYear.value].highestPaidEmployee.title;
+const SG_HPE_SALARYPAY = (d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay;
+const SG_HPE_OTHERPAY  = (d) => d.filings[displayYear.value].highestPaidEmployee.otherPay;
 
 const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
   return await Promise.all(
@@ -95,5 +175,56 @@ const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { 
   );
 });
 
-let displayYear = ref(2024);
+const sortedOrgs = computed(() => {
+  return allOrgs.value.toSorted((a, b) => {
+    let va, vb;
+    try {
+      va = sortGetter.value(a);
+      vb = sortGetter.value(b);
+    } catch (e) {
+      return 0;
+    }
+    if (typeof va == 'number' && typeof vb == 'number') {
+      if (sortAsc.value) {
+        return va - vb;
+      } else {
+        return vb - va;
+      }
+    }
+    if (typeof va == 'string' && typeof vb == 'string') {
+      if (sortAsc.value) {
+        return va.localeCompare(vb);
+      } else {
+        return vb.localeCompare(va);
+      }
+    }
+  });
+});
+
+function setDisplayYear(year) {
+  displayYear.value = year;
+}
+
+function setSortGetter(newGetter) {
+  if (sortGetter.value.name == newGetter.name) {
+    sortAsc.value = !sortAsc.value;
+  } else {
+    sortGetter.value = newGetter;
+    sortAsc.value = true;
+  }
+}
+
+function getSortingDataAttr(candidateSortGetter) {
+  if (candidateSortGetter == sortGetter.value) {
+    if (sortAsc.value) {
+      return 'asc';
+    } else {
+      return 'desc';
+    }
+  }
+}
+
+let sortGetter = ref(SG_REVENUE);
+let sortAsc = ref(false);
+let displayYear = ref('2024');
 </script>

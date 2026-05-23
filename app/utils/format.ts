@@ -3,7 +3,7 @@ export function parseUsdAmount(str) {
 }
 
 export function formatUsdAmount(value) {
-  if (typeof value != "number") {
+  if (typeof value != 'number') {
     return value;
   }
   const formatter = new Intl.NumberFormat('en-US', {
