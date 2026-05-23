@@ -1,0 +1,88 @@
+import * as cheerio from 'cheerio';
+import { parseUsdAmount } from './format.ts';
+
+type Employee = {
+  name: string;
+  title: string;
+  salaryPay: number;
+  otherPay: number;
+  totalPay: number;
+};
+
+type Filing = {
+  year: number;
+  revenue: number;
+  netAssets: number;
+  highestPaidEmployee: Employee;
+  employees: Employee[];
+};
+
+type Org = {
+  id: string;
+  name: string;
+  filings: Filing[];
+};
+
+export async function getPropublicaInfo(id, pageBody) {
+  const $ = await cheerio.load(pageBody);
+
+  const name = $('h1.text-hed-900').text();
+  const legalForm = $('.nonprofit-type label').text();
+
+  const $filings = $('[id^=filing]');
+  const filings = {};
+  $filings.map(function() {
+    let highestPaidEmployee: Employee;
+    const year = +$(this).attr('id').replace('filing', '');
+    const revenue = parseUsdAmount($(this)
+      .find('.extract-summary .row-revenue__number')
+      .text());
+    if (!revenue) {
+      return;
+    }
+    const netAssets = parseUsdAmount($(this)
+      .find('.row-summary .row-summary__item:last-child .row-summary__number')
+      .text());
+    const $employeeRows = $(this).find('.employee-row:not(.more-employees-link)');
+    const employees = $employeeRows.map(function(idx) {
+      const nameAndTitle = $(this).find('td:first-child').text().trim();
+      const name = nameAndTitle.replace(/ \n.*/, '');
+      let title = '';
+      const titleMatches = nameAndTitle.match(/\((.*)\)/)
+      if (titleMatches && titleMatches.length >= 2) {
+        title = titleMatches[1];
+      }
+      const salaryPay = parseUsdAmount($(this).find('td:nth-child(2)').text());
+      const otherPay = parseUsdAmount($(this).find('td:last-child').text());
+      const employee = {
+        name: name,
+        title: title,
+        salaryPay: salaryPay,
+        otherPay: otherPay,
+        totalPay: salaryPay + otherPay,
+      };
+      if (
+        idx == 0 ||
+        !highestPaidEmployee.salaryPay ||
+        (employee.salaryPay && employee.salaryPay > highestPaidEmployee.salaryPay)
+      ) {
+        highestPaidEmployee = employee;
+      }
+      return employee;
+    }).get();
+    filings[year] = {
+      year: year,
+      revenue: revenue,
+      netAssets: netAssets,
+      highestPaidEmployee: highestPaidEmployee,
+      employees: employees,
+    };
+  });
+
+  return {
+    name: name,
+    id: id,
+    legalForm: legalForm,
+    filings: filings,
+  };
+}
