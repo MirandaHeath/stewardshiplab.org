@@ -43,13 +43,13 @@
       <table>
         <thead>
           <tr>
-            <th width="28%" scope="col">Name</th>
-            <th width="5%" scope="col" class="cell--desktop-only">Country</th>
-            <th width="6%" scope="col" class="cell--desktop-only">Legal form</th>
+            <th width="25%" scope="col">Name</th>
+            <th width="6%" scope="col" class="cell--desktop-only">Country</th>
+            <th width="8%" scope="col" class="cell--desktop-only">Legal form</th>
             <th width="9%" scope="col" class="cell--right-align">Revenue</th>
             <th width="9%" scope="col" class="cell--right-align">Net assets</th>
-            <th width="15%" scope="col">Highest paid person</th>
-            <th width="10%" scope="col">Highest paid title</th>
+            <th width="12%" scope="col">Highest paid person</th>
+            <th width="13%" scope="col">Highest paid title</th>
             <th width="9%" scope="col" class="cell--right-align">Salary</th>
             <th width="9%" scope="col" class="cell--right-align">Other pay</th>
           </tr>
@@ -62,8 +62,8 @@
               <td class="cell--desktop-only">{{ org.legalForm }}</td>
               <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].revenue) }}</td>
               <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].netAssets) }}</td>
-              <td class="cell--cropped">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.name) }}</td>
-              <td class="cell--cropped">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.title) }}</td>
+              <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.name) }}</td>
+              <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.title) }}</td>
               <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.salaryPay) }}</td>
               <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.otherPay) }}</td>
             </tr>
@@ -76,6 +76,7 @@
 
 <style scoped>
   table {
+    min-width: 1000px;
     table-layout: fixed;
   }
 </style>

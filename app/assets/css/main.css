@@ -160,14 +160,12 @@ table {
   td, th {
     text-align: left;
     padding: 5px 10px;
+    font-variant-numeric: lining-nums;
     &:first-child {
       padding-left: 0;
     }
     &:last-child {
       padding-right: 0;
-    }
-    &.cell--cropped {
-      max-width: 250px;
     }
     &.cell--right-align {
       text-align: right;
@@ -180,12 +178,12 @@ table {
         display: none;
       }
     }
-  }
-  td {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-variant-numeric: lining-nums;
+    &.cell--ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 200px;
+    }
   }
   tr:hover {
     td, th {
