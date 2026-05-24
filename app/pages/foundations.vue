@@ -48,61 +48,61 @@
               scope="col"
               @click="setSortGetter(SG_NAME)"
               :data-sorting="getSortingDataAttr(SG_NAME)"
-            >Name</th>
+            ><span>Name</span></th>
             <th
               style="width: 6%"
               scope="col"
               @click="setSortGetter(SG_COUNTRY)"
               :data-sorting="getSortingDataAttr(SG_COUNTRY)"
               class="cell--desktop-only"
-            >Country</th>
+            ><span>Country</span></th>
             <th
               style="width: 8%"
               scope="col"
               @click="setSortGetter(SG_LEGALFORM)"
               :data-sorting="getSortingDataAttr(SG_LEGALFORM)"
               class="cell--desktop-only"
-            >Legal form</th>
+            ><span>Legal form</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_REVENUE)"
               :data-sorting="getSortingDataAttr(SG_REVENUE)"
               class="cell--right-align"
-            >Revenue</th>
+            ><span>Revenue</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_NETASSETS)"
               :data-sorting="getSortingDataAttr(SG_NETASSETS)"
               class="cell--right-align"
-            >Net assets</th>
+            ><span>Net assets</span></th>
             <th
               style="width: 12%"
               scope="col"
               @click="setSortGetter(SG_HPE_NAME)"
               :data-sorting="getSortingDataAttr(SG_HPE_NAME)"
-            >Highest paid person</th>
+            ><span>Highest paid person</span></th>
             <th
               style="width: 13%"
               scope="col"
               @click="setSortGetter(SG_HPE_TITLE)"
               :data-sorting="getSortingDataAttr(SG_HPE_TITLE)"
-            >Highest paid title</th>
+            ><span>Highest paid title</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_HPE_SALARYPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_SALARYPAY)"
               class="cell--right-align"
-            >Salary</th>
+            ><span>Salary</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_HPE_OTHERPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_OTHERPAY)"
               class="cell--right-align"
-            >Other pay</th>
+            ><span>Other pay</span></th>
           </tr>
         </thead>
         <tbody>
@@ -132,6 +132,10 @@
     th {
       cursor: pointer;
       user-select: none;
+      span {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+      }
       &[data-sorting] {
         &:after {
           padding-left: 3px;
