@@ -123,58 +123,58 @@
         <tfoot>
           <tr>
             <th scope="col">Mean</th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_REVENUE)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_NETASSETS)) }}</th>
-            <th></th>
-            <th></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_SALARYPAY)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_REVENUE)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_NETASSETS)) }}</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_SALARYPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
             <th scope="col">Median</th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_REVENUE)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_NETASSETS)) }}</th>
-            <th></th>
-            <th></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_SALARYPAY)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_REVENUE)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_NETASSETS)) }}</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_SALARYPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
             <th scope="col">Mean of non-zero</th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--right-align"></th>
-            <th class="cell--right-align"></th>
-            <th></th>
-            <th></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_SALARYPAY)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--right-align"></th>
+            <th scope="col" class="cell--right-align"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_SALARYPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
             <th scope="col">Median of non-zero</th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--right-align"></th>
-            <th class="cell--right-align"></th>
-            <th></th>
-            <th></th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_SALARYPAY)) }}</th>
-            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--right-align"></th>
+            <th scope="col" class="cell--right-align"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_SALARYPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
             <th scope="col"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--desktop-only"></th>
-            <th class="cell--right-align">Revenue</th>
-            <th class="cell--right-align">Net assets</th>
-            <th></th>
-            <th></th>
-            <th class="cell--right-align">Salary</th>
-            <th class="cell--right-align">Other pay</th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--desktop-only"></th>
+            <th scope="col" class="cell--right-align">Revenue</th>
+            <th scope="col" class="cell--right-align">Net assets</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="cell--right-align">Salary</th>
+            <th scope="col" class="cell--right-align">Other pay</th>
           </tr>
         </tfoot>
       </table>
