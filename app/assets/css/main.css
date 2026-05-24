@@ -6,7 +6,7 @@
   --color-purple: #6e1d7a;
   --color-container-bg: #f0e7ec;
   --color-container-bg-dark: #e2d9df;
-  --color-border: #bbbbcc;
+  --color-border: #e3d8df;
   --color-beige: #fff6ee;
 
   --font-size-xs: 16px;
@@ -252,7 +252,7 @@ section {
   }
 }
 
-p a, table a {
+p a, table a, .footer-links a {
   &:after {
     content: "°";
     padding-left: 1px;
@@ -273,7 +273,7 @@ p a, table a {
 
 header {
   padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 80, 0.1);
+  border-bottom: 1px solid var(--color-border);
   a.site-title {
     display: block;
     img, svg {
@@ -288,22 +288,39 @@ main {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
   margin-top: 60px;
-  padding: 40px 0;
-  @media (max-width: 800px) {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--color-border);
+  .footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      .footer-links {
+        text-align: center;
+      }
+    }
+  }
+  .footer-links {
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: var(--font-size-xs);
+    line-height: var(--font-size-xs);
   }
   .footer-socials {
     display: flex;
     gap: 20px;
   }
   .footer-starset {
-    img {
-      width: 140px;
+    svg {
+      width: 90px;
+      height: auto;
     }
   }
 }
