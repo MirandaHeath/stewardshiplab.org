@@ -111,15 +111,72 @@
               <td><a :href="'https://projects.propublica.org/nonprofits/organizations/' + org.id">{{ org.name }}</a></td>
               <td class="cell--desktop-only">US</td>
               <td class="cell--desktop-only">{{ org.legalForm }}</td>
-              <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].revenue) }}</td>
-              <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].netAssets) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].revenue) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].netAssets) }}</td>
               <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.name) }}</td>
               <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.title) }}</td>
-              <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.salaryPay) }}</td>
-              <td class="cell--right-align">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.otherPay) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.salaryPay) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.otherPay) }}</td>
             </tr>
           </template>
         </tbody>
+        <tfoot>
+          <tr>
+            <th scope="col">Mean</th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_REVENUE)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_NETASSETS)) }}</th>
+            <th></th>
+            <th></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_SALARYPAY)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_OTHERPAY)) }}</th>
+          </tr>
+          <tr>
+            <th scope="col">Median</th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_REVENUE)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_NETASSETS)) }}</th>
+            <th></th>
+            <th></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_SALARYPAY)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_OTHERPAY)) }}</th>
+          </tr>
+          <tr>
+            <th scope="col">Mean of non-zero</th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--right-align"></th>
+            <th class="cell--right-align"></th>
+            <th></th>
+            <th></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_SALARYPAY)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_OTHERPAY)) }}</th>
+          </tr>
+          <tr>
+            <th scope="col">Median of non-zero</th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--right-align"></th>
+            <th class="cell--right-align"></th>
+            <th></th>
+            <th></th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_SALARYPAY)) }}</th>
+            <th class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_OTHERPAY)) }}</th>
+          </tr>
+          <tr>
+            <th scope="col"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--desktop-only"></th>
+            <th class="cell--right-align">Revenue</th>
+            <th class="cell--right-align">Net assets</th>
+            <th></th>
+            <th></th>
+            <th class="cell--right-align">Salary</th>
+            <th class="cell--right-align">Other pay</th>
+          </tr>
+        </tfoot>
       </table>
     </div>
   </section>
@@ -181,6 +238,59 @@ const SG_HPE_TITLE     = (d) => d.filings[displayYear.value].highestPaidEmployee
 const SG_HPE_SALARYPAY = (d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay;
 const SG_HPE_OTHERPAY  = (d) => d.filings[displayYear.value].highestPaidEmployee.otherPay;
 
+function setDisplayYear(year) {
+  displayYear.value = year;
+}
+
+function setSortGetter(newGetter) {
+  if (sortGetter.value.name == newGetter.name) {
+    sortAsc.value = !sortAsc.value;
+  } else {
+    sortGetter.value = newGetter;
+    sortAsc.value = true;
+  }
+}
+
+function getSortingDataAttr(candidateSortGetter) {
+  if (candidateSortGetter == sortGetter.value) {
+    if (sortAsc.value) {
+      return 'asc';
+    } else {
+      return 'desc';
+    }
+  }
+}
+
+function mean(getter) {
+  const vals = sortedOrgs.value.map(getter);
+  const sum = vals.reduce((acc, item) => acc + item, 0);
+  return sum / vals.length;
+}
+
+function median(getter) {
+  const vals = sortedOrgs.value.map(getter);
+  return vals[Math.round(vals.length / 2)];
+}
+
+function nonzeroMean(getter) {
+  const vals = sortedOrgs.value
+    .map(getter)
+    .filter((item) => item != 0);
+  const sum = vals.reduce((acc, item) => acc + item, 0);
+  return sum / vals.length;
+}
+
+function nonzeroMedian(getter) {
+  const vals = sortedOrgs.value
+    .map(getter)
+    .filter((item) => item != 0);
+  return vals[Math.round(vals.length / 2)];
+}
+
+let sortGetter = ref(SG_REVENUE);
+let sortAsc = ref(false);
+let displayYear = ref('2024');
+
 const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
   return await Promise.all(
     ORG_IDS.map((orgId) =>
@@ -215,31 +325,4 @@ const sortedOrgs = computed(() => {
     }
   });
 });
-
-function setDisplayYear(year) {
-  displayYear.value = year;
-}
-
-function setSortGetter(newGetter) {
-  if (sortGetter.value.name == newGetter.name) {
-    sortAsc.value = !sortAsc.value;
-  } else {
-    sortGetter.value = newGetter;
-    sortAsc.value = true;
-  }
-}
-
-function getSortingDataAttr(candidateSortGetter) {
-  if (candidateSortGetter == sortGetter.value) {
-    if (sortAsc.value) {
-      return 'asc';
-    } else {
-      return 'desc';
-    }
-  }
-}
-
-let sortGetter = ref(SG_REVENUE);
-let sortAsc = ref(false);
-let displayYear = ref('2024');
 </script>

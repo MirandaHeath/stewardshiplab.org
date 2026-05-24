@@ -25,6 +25,7 @@
 
   --font-family-sans: 'Montreuil', 'Helvetica Neue', Helvetica, sans-serif;
   --font-family-serif: 'Valkyrie', 'Georgia Pro', Georgia, serif;
+  --font-family-mono: 'Iosevka Fixed SS08', 'SF Mono', 'Roboto Mono', Courier, monospace;
 
   --border-radius-s: 5px;
   --border-radius-l: 10px;
@@ -169,6 +170,9 @@ table {
     }
     &.cell--right-align {
       text-align: right;
+    }
+    &.cell--mono {
+      font-family: var(--font-family-mono);
     }
     &.cell--bold {
       font-weight: bold;
