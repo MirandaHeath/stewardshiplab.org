@@ -1,0 +1,62 @@
+version = 1
+
+[[annotations]]
+path = [
+    ".gitignore",
+    "REUSE.toml",
+    "app/data/**",
+    "eslint.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "statichost.yml",
+    "tsconfig.json",
+]
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = [
+    "app/*.vue",
+    "app/assets/css/**",
+    "app/layouts/**",
+    "app/pages/**",
+    "app/utils/**",
+    "nuxt.config.ts",
+]
+SPDX-FileCopyrightText = "© Software Stewardship Lab"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+    "CONTRIBUTING.md",
+    "README.md",
+    "public/pitch.pdf",
+]
+SPDX-FileCopyrightText = "© Software Stewardship Lab"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+[[annotations]]
+path = [
+    "app/assets/images/logo.svg",
+    "app/assets/images/starset.svg",
+    "public/images/favicon.png",
+    "public/images/og.png",
+    "public/images/og.svg",
+]
+SPDX-FileCopyrightText = "© Software Stewardship Lab"
+SPDX-License-Identifier = "LicenseRef-Restricted"
+
+[[annotations]]
+path = [
+    "public/fonts/montreuil/**",
+]
+SPDX-FileCopyrightText = "© OH no Type Co"
+SPDX-License-Identifier = "LicenseRef-Restricted"
+
+[[annotations]]
+path = [
+    "public/fonts/valkyrie/**",
+]
+SPDX-FileCopyrightText = "© Matthew Butterick"
+SPDX-License-Identifier = "LicenseRef-Restricted"
