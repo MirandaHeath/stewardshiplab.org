@@ -16,7 +16,7 @@
     <div class="container">
       <div class="footer-items">
         <div class="footer-links">
-          <strong>Resources</strong>
+          <strong class="smcp">Resources</strong>
           <NuxtLink to="/foundations">Open Source Foundation Financials</NuxtLink>
           <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
         </div>
