@@ -19,9 +19,31 @@ export const ORG_IDS = [
   '842364885', // Interledger Foundation
   '200141248', // Internet Systems Consortium
   '541650477', // ISOC
-  // '825375649', // Kotlin Foundation (reports missing)
   '460503801', // Linux Foundation
+  '882382127', // Rails Foundation
+  '815480308', // Raspberry Pi Foundation North America Inc
   '471136085', // LLVM Foundation
+  '843279550', // Commonhaus Foundation
+  '473151229', // Django Events Foundation North America
+  '271138640', // Drupal Association
+  '833185247', // Erlang Ecosystem Foundation Inc
+  '841730246', // LF Charities
+  '743183459', // Linux Kernel Organization
+  '862536664', // Open Molecular Software Foundation
+  '453630872', // Open Compute Project Foundation
+  '471709705', // Open Connectivity Foundation Inc
+  '260447503', // OpenID Foundation
+  '471491876', // OpenJS Foundation
+  '455230545', // Open Source Robotics Foundation
+  '460618689', // Openstack Foundation
+  '843126447', // Open Technology Fund
+  '200963503', // OWASP Foundation
+  '383536536', // Yet Another Society (Perl)
+  '300040446', // Ruby Central
+  '854376974', // Rust Foundation
+  '882116913', // Tech Matters
+  '262194507', // United States PostgreSQL Association
+  '460830259', // Processing Foundation
   '200097189', // Mozilla Foundation
   '134134071', // NetBSD Foundation
   '454547709', // NumFocus
@@ -34,7 +56,6 @@ export const ORG_IDS = [
   '721613215', // Open Source Geospacial Foundation
   '455524560', // Open Source Hardware Foundation
   '912037395', // Open Source Initiative
-  '262194507', // Postgres US
   '43594598',  // Python Software Foundation
   '824506840', // Signal Foundation
   '412203632', // Software Freedom Conservancy
