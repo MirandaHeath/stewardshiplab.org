@@ -26,6 +26,11 @@ export default defineNuxtConfig({
       routes: ['/'],
     },
   },
+  routeRules: {
+    '/foundations': {
+      prerender: true,
+    },
+  },
   eslint: {
     config: {
       stylistic: true,
