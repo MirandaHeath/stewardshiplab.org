@@ -2,7 +2,7 @@
   <div class="container">
     <section>
       <h1 class="page-title">
-        Open Source Foundation Observatory
+        Open Source Foundation Financials
       </h1>
       <p>
         A summary of the financials of Open Source software foundations.
