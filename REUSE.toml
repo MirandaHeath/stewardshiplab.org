@@ -41,8 +41,7 @@ path = [
     "app/assets/images/logo.svg",
     "app/assets/images/starset.svg",
     "public/images/favicon.png",
-    "public/images/og.png",
-    "public/images/og.svg",
+    "public/images/og/**",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "LicenseRef-Restricted"

@@ -156,6 +156,17 @@
 </style>
 
 <script setup lang="ts">
+const title = 'Open Source Foundation Financials ✸ Software Stewardship Lab';
+const description = 'A summary of the financials of Open Source foundations.';
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: 'https://stewardshiplab.org/images/og/foundations.png',
+})
+
 import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
