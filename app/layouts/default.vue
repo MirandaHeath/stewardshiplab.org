@@ -1,12 +1,21 @@
 <template>
   <header>
     <div class="container container--narrow">
-      <div class="visually-hidden">
-        Software Stewardship Lab
+      <div class="header-container">
+        <div class="header-logo">
+          <div class="visually-hidden">
+            Software Stewardship Lab
+          </div>
+          <a href="/" class="plain-link">
+            <Logo width="240" height="51" />
+          </a>
+        </div>
+        <nav>
+          <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
+          <NuxtLink class="plain-link" to="/reports">Reports</NuxtLink>
+          <NuxtLink class="plain-link" to="/ideas">Ideas</NuxtLink>
+        </nav>
       </div>
-      <a href="/" class="site-title plain-link">
-        <Logo width="240" height="51" />
-      </a>
     </div>
   </header>
   <main>
@@ -17,7 +26,6 @@
       <div class="footer-items">
         <div class="footer-links">
           <strong class="smcp">Resources</strong>
-          <NuxtLink to="/foundations">Open Source Foundation Financials</NuxtLink>
           <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
         </div>
         <div class="footer-socials">
@@ -55,6 +63,124 @@
     </div>
   </footer>
 </template>
+
+<style>
+header {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-beige-pale);
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .header-logo {
+    a {
+      display: block;
+      img, svg {
+        width: 240px;
+        height: 51px;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
+}
+
+main {
+  margin: 40px 0;
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--color-beige-pale);
+  .footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      .footer-links {
+        text-align: center;
+      }
+    }
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: var(--font-size-xs);
+    line-height: var(--font-size-xs);
+  }
+  .footer-socials {
+    display: flex;
+    gap: 20px;
+  }
+  .footer-starset {
+    svg {
+      width: 90px;
+      height: auto;
+    }
+  }
+}
+
+/*
+Bluesky flutter — https://flutterby.philhawksworth.dev/
+SPDX-SnippetBegin
+SPDX-License-Identifier: MIT
+SPDX-SnippetCopyrightText: 2024 Phil Hawksworth
+*/
+.bluesky-flutter svg {
+  transition: 200ms;
+}
+.bluesky-flutter .left {
+  transform-origin: center;
+}
+.bluesky-flutter .right {
+  transform-origin: center;
+  transform: scale(-1, 1);
+}
+.bluesky-flutter:hover .left, .bluesky-flutter:focus .left {
+  animation: flutter 430ms ease-in-out;
+  --flip: 1;
+}
+.bluesky-flutter:hover .right, .bluesky-flutter:focus .right {
+  animation: flutter 500ms ease-in-out;
+  --flip: -1;
+}
+.bluesky-flutter:hover svg, .bluesky-flutter:focus svg {
+  transform: rotate(-5deg);
+  transition: 500ms;
+}
+
+@media (prefers-reduced-motion) {
+  .bluesky-flutter:hover .left,
+  .bluesky-flutter:focus .left,
+  .bluesky-flutter:hover .right,
+  .bluesky-flutter:focus .right {
+    animation: none;
+  }
+}
+
+@keyframes flutter {
+  10% { transform: scale(calc(var(--flip)*1), 0.9); }
+  20% { transform: scale(calc(var(--flip)*0.5), 1); }
+  40% { transform: scale(calc(var(--flip)*0.9), 0.95); }
+  60% { transform: scale(calc(var(--flip)*0.3), 1); }
+  80% { transform: scale(calc(var(--flip)*0.9), 0.95); }
+  100% { transform: scale(calc(var(--flip)*1), 1); }
+}
+/* SPDX-SnippetEnd */
+</style>
 
 <script setup lang="ts">
   import Logo from '~/assets/images/logo.svg'

@@ -1,0 +1,155 @@
+<script setup lang="ts">
+import { formatDate } from '../utils/format.ts';
+
+const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
+
+useSeoMeta({
+  title: props.post.title,
+  description: props.post.description,
+  ogTitle: props.post.title,
+  ogDescription: props.post.description,
+  ogImage: props.post.metaImage,
+});
+
+console.log(props.post);
+</script>
+
+<template>
+  <div class="container post__before">
+    <div>
+      <NuxtLink
+       v-if="breadcrumbUrl && breadcrumbText"
+        class="plain-link"
+        :to="breadcrumbUrl"
+      >{{ breadcrumbText }}</NuxtLink>
+    </div>
+    <div class="post__type">{{ type }}</div>
+  </div>
+  <div class="container">
+    <h1 class="page-title">{{ post.title }}</h1>
+    <div
+      class="post__meta"
+      v-if="post.author || post.editor || post.date || post.location || (post.canonicalWebsiteName && post.canonicalUrl) || post.venue"
+    >
+      <div class="post__meta-item" v-if="post.author">
+        <b>Author</b>
+        <div class="post__person">
+          <img v-if="post.authorImage" :src="post.authorImage" :alt="'A portrait of ' + post.author">
+          <span>{{ post.author }}</span>
+        </div>
+      </div>
+      <div class="post__meta-item" v-if="post.editor">
+        <b>Editor</b>
+        <div class="post__person">
+          <img v-if="post.editorImage" :src="post.editorImage" :alt="'A portrait of ' + post.editor">
+          <span>{{ post.editor }}</span>
+        </div>
+      </div>
+      <div class="post__meta-item" v-if="post.date">
+        <b>Date</b>
+        <span>{{ formatDate(post.date) }}</span>
+      </div>
+      <div class="post__meta-item" v-if="post.location">
+        <b>Location</b>
+        <span>{{ post.location }}</span>
+      </div>
+      <div class="post__meta-item" v-if="post.venue">
+        <b>Talk given at</b>
+        <a target="_blank" :href="post.venueUrl" v-if="post.venueUrl">{{ post.venue }}</a>
+        <span v-if="!post.venueUrl">{{ post.venue }}</span>
+      </div>
+      <div class="post__meta-item" v-if="post.canonicalWebsiteName && post.canonicalUrl">
+        <b>Original post</b>
+        <a target="_blank" :href="post.canonicalUrl">on {{ post.canonicalWebsiteName }}</a>
+      </div>
+    </div>
+    <figure class="post__image" v-if="post.image">
+      <img :src="post.image" :alt="post.imageAlt">
+    </figure>
+  </div>
+  <div :class="{ 'container': !post.fullWidth }">
+    <ContentRenderer :value="post" class="prose" />
+  </div>
+  <div class="container post__after">
+    <div v-if="breadcrumbUrl && breadcrumbText">
+      <NuxtLink class="plain-link" :to="breadcrumbUrl">{{ breadcrumbText }}</NuxtLink>
+    </div>
+  </div>
+</template>
+
+<style>
+.post__before, .post__after {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.post__before {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.post__after {
+  margin-top: 80px;
+}
+.post__type {
+  display: inline-block;
+  padding: 0 8px;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  border-radius: var(--border-radius-s);
+  background: var(--color-blue);
+  color: white;
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+  text-transform: lowercase;
+}
+.post__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 45px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-beige-pale);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  --person-image-size: 20px;
+  .post__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    b {
+      min-width: 120px;
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+      font-weight: normal;
+    }
+  }
+  .post__person {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    img {
+      width: var(--person-image-size);
+      height: var(--person-image-size);
+      border-radius: 100%;
+    }
+  }
+}
+.post__image {
+  img {
+    max-height: 300px;
+  }
+}
+.credit {
+  display: block;
+  margin-top: 45px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.ender {
+  display: none;
+}
+</style>

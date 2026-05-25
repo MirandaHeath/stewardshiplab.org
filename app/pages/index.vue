@@ -543,7 +543,7 @@
   .postcard__main {
     width: auto;
     height: auto;
-    border-radius: var(--border-radius-l);
+    border-radius: var(--border-radius-s);
   }
   .postcard__starset {
     width: 100px;
@@ -654,25 +654,29 @@
 </style>
 
 <script setup lang="ts">
-  import Starset from '~/assets/images/starset.svg'
-  import IconGlobe from '~/assets/images/icons/globe.svg'
-  import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
-  import LogoChaoss from '~/assets/images/logos/chaoss.svg'
-  import LogoCncf from '~/assets/images/logos/cncf.svg'
-  import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
-  import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
-  import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
-  import LogoGitHub from '~/assets/images/logos/github.svg'
-  import LogoIntel from '~/assets/images/logos/intel.svg'
-  import LogoLibrariesIo from '~/assets/images/logos/librariesio.svg'
-  import LogoLinuxFoundation from '~/assets/images/logos/linuxfoundation.svg'
-  import LogoNpmx from '~/assets/images/logos/npmx.svg'
-  import LogoNuxt from '~/assets/images/logos/nuxt.svg'
-  import LogoOpenSsf from '~/assets/images/logos/openssf.svg'
-  import LogoOse from '~/assets/images/logos/ose.svg'
-  import LogoOsp from '~/assets/images/logos/osp.svg'
-  import LogoThanksDev from '~/assets/images/logos/thanksdev.svg'
-  import LogoTidelift from '~/assets/images/logos/tidelift.svg'
-  import LogoVite from '~/assets/images/logos/vite.svg'
-  import LogoVmware from '~/assets/images/logos/vmware.svg'
+import Starset from '~/assets/images/starset.svg'
+import IconGlobe from '~/assets/images/icons/globe.svg'
+import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
+import LogoChaoss from '~/assets/images/logos/chaoss.svg'
+import LogoCncf from '~/assets/images/logos/cncf.svg'
+import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
+import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
+import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
+import LogoGitHub from '~/assets/images/logos/github.svg'
+import LogoIntel from '~/assets/images/logos/intel.svg'
+import LogoLibrariesIo from '~/assets/images/logos/librariesio.svg'
+import LogoLinuxFoundation from '~/assets/images/logos/linuxfoundation.svg'
+import LogoNpmx from '~/assets/images/logos/npmx.svg'
+import LogoNuxt from '~/assets/images/logos/nuxt.svg'
+import LogoOpenSsf from '~/assets/images/logos/openssf.svg'
+import LogoOse from '~/assets/images/logos/ose.svg'
+import LogoOsp from '~/assets/images/logos/osp.svg'
+import LogoThanksDev from '~/assets/images/logos/thanksdev.svg'
+import LogoTidelift from '~/assets/images/logos/tidelift.svg'
+import LogoVite from '~/assets/images/logos/vite.svg'
+import LogoVmware from '~/assets/images/logos/vmware.svg'
+
+useSeoMeta({
+  ogDeterminer: 'the',
+});
 </script>

@@ -1,3 +1,5 @@
+import { Temporal } from 'temporal-polyfill';
+
 export function parseUsdAmount(str) {
   return parseFloat(str.replace(/[$,]/g, ''));
 }
@@ -13,4 +15,13 @@ export function formatUsdAmount(value) {
     maximumFractionDigits: 0,
   });
   return formatter.format(value);
+}
+
+export function formatDate(date) {
+  return Temporal.PlainDate.from(date)
+    .toLocaleString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
 }

@@ -1,39 +1,24 @@
 <template>
-  <div class="container">
-    <section>
-      <h1 class="page-title">
-        Open Source Foundation Financials
-      </h1>
-      <p>
-        A summary of the financials of Open Source software foundations.
-      </p>
-      <p class="text-xs">
-        US data is up-to-date from IRS.
-        Non-US data pending.
-        Contributions <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">welcome.</a>
-      </p>
-    </section>
-  </div>
-  <section>
+  <div class="foundations-table">
     <div class="container">
       <div class="control-bar">
         <div class="control-set">
           <button
             @click="setDisplayYear(2024)"
-            class="btn"
-            :class="{ 'btn--active': displayYear == 2024 }"
+            class="button button--s"
+            :class="{ 'button--active': displayYear == 2024 }"
             type="button"
           >2024</button>
           <button
             @click="setDisplayYear(2023)"
-            class="btn"
-            :class="{ 'btn--active': displayYear == 2023 }"
+            class="button button--s"
+            :class="{ 'button--active': displayYear == 2023 }"
             type="button"
           >2023</button>
           <button
             @click="setDisplayYear(2022)"
-            class="btn"
-            :class="{ 'btn--active': displayYear == 2022 }"
+            class="button button--s"
+            :class="{ 'button--active': displayYear == 2022 }"
             type="button"
           >2022</button>
         </div>
@@ -179,51 +164,43 @@
         </tfoot>
       </table>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-  table {
-    min-width: 1000px;
-    table-layout: fixed;
-    th {
-      cursor: pointer;
-      user-select: none;
-      span {
-        text-decoration: underline;
-        text-decoration-style: dotted;
+.foundations-table {
+  margin-block: 30px;
+}
+table {
+  min-width: 1000px;
+  table-layout: fixed;
+  th {
+    cursor: pointer;
+    user-select: none;
+    span {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+    &[data-sorting] {
+      &:after {
+        padding-left: 3px;
       }
-      &[data-sorting] {
+      &[data-sorting="asc"] {
         &:after {
-          padding-left: 3px;
+          content: '▲';
         }
-        &[data-sorting="asc"] {
-          &:after {
-            content: '▲';
-          }
-        }
-        &[data-sorting="desc"] {
-          &:after {
-            content: '▼';
-          }
+      }
+      &[data-sorting="desc"] {
+        &:after {
+          content: '▼';
         }
       }
     }
   }
+}
 </style>
 
 <script setup lang="ts">
-const title = 'Open Source Foundation Financials ✸ Software Stewardship Lab';
-const description = 'A summary of the financials of Open Source foundations.';
-
-useSeoMeta({
-  title: title,
-  description: description,
-  ogTitle: title,
-  ogDescription: description,
-  ogImage: 'https://stewardshiplab.org/images/og/foundations.png',
-})
-
 import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';

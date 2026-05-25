@@ -47,8 +47,14 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/foundations': {
+    '/reports/foundations': {
       prerender: true,
+    },
+    '/foundations': {
+      redirect: {
+        to: '/reports/foundations',
+        statusCode: 308,
+      },
     },
   },
   eslint: {

@@ -13,7 +13,6 @@ useSeoMeta({
   description: description,
   ogTitle: title,
   ogDescription: description,
-  ogDeterminer: 'the',
   ogType: 'website',
   ogSiteName: 'Software Stewardship Lab',
   ogImage: 'https://stewardshiplab.org/images/og/index.png',
