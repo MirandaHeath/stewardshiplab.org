@@ -69,6 +69,17 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  &:not(.plain-link) {
+    &:after {
+      content: "°";
+      padding-left: 1px;
+      color: var(--color-main);
+    }
+    &:hover, &:active {
+      background-color: var(--color-blue);
+      color: white;
+    }
+  }
 }
 
 img, svg {
@@ -253,18 +264,6 @@ section {
   padding: 0 15px;
   &.container--wide {
     max-width: 100%;
-  }
-}
-
-p a, table a, .footer-links a {
-  &:after {
-    content: "°";
-    padding-left: 1px;
-    color: var(--color-main);
-  }
-  &:hover, &:active {
-    background-color: var(--color-blue);
-    color: white;
   }
 }
 

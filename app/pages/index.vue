@@ -54,7 +54,7 @@
       </p>
       <div class="logowall">
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://opensourcepledge.com"
         ><LogoOsp
           style="padding: 0.1rem 0;"
@@ -63,7 +63,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://endowment.dev"
         ><LogoOse
           aria-label="The Open Source Endowment logo"
@@ -71,7 +71,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://thanks.dev"
         ><LogoThanksDev
           aria-label="The thanks.dev logo"
@@ -79,7 +79,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://ecosyste.ms"
         ><LogoEcosystems
           aria-label="The ecosyste.ms logo"
@@ -87,7 +87,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://libraries.io"
         ><LogoLibrariesIo
           aria-label="The libraries.io logo"
@@ -95,7 +95,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://chaoss.community/"
         ><LogoChaoss
           aria-label="The CHAOSS logo"
@@ -104,7 +104,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://nuxt.com/"
         ><LogoNuxt
           aria-label="The Nuxt logo"
@@ -113,7 +113,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://vite.dev/"
         ><LogoVite
           aria-label="The Vite logo"
@@ -122,7 +122,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://npmx.dev/"
         ><LogoNpmx
           src="/images/logos/npmx.svg"
@@ -137,7 +137,7 @@
       </p>
       <div class="logowall">
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://www.gatesfoundation.org/"
         ><LogoGatesFoundation
           aria-label="The Gates Foundation logo"
@@ -145,7 +145,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://intel.com"
         ><LogoIntel
           aria-label="The Intel logo"
@@ -154,7 +154,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://www.vmware.com/"
         ><LogoVmware
           aria-label="The VMware logo"
@@ -162,7 +162,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://github.com"
         ><LogoGitHub
           aria-label="The GitHub logo"
@@ -171,7 +171,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://tidelift.com"
         ><LogoTidelift
           aria-label="The Tidelift logo"
@@ -184,7 +184,7 @@
       </p>
       <div class="logowall">
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://alpha-omega.dev/"
         ><LogoAlphaOmega
           aria-label="The Alpha Omega logo"
@@ -192,7 +192,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://openssf.org/"
         ><LogoOpenSsf
           aria-label="The OpenSSF logo"
@@ -201,7 +201,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://www.cncf.io/"
         ><LogoCncf
           aria-label="The CNCF logo"
@@ -209,7 +209,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://www.linuxfoundation.org/"
         ><LogoLinuxFoundation
           aria-label="The Linux Foundation logo"
@@ -218,7 +218,7 @@
           height="40"
         /></a>
         <a
-          class="logo"
+          class="logo plain-link"
           href="https://cyclonedx.org/"
         ><LogoCycloneDx
           aria-label="The CycloneDX logo"
@@ -245,7 +245,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Vlad-Stefan Harbuz</strong>
-                <a href="https://vlad.website">
+                <a class="plain-link" href="https://vlad.website">
                   <IconGlobe
                     aria-label="Go to Vlad's website"
                     width="16"
@@ -280,7 +280,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Miranda Heath</strong>
-                <a href="https://mirandaheath.website">
+                <a class="plain-link" href="https://mirandaheath.website">
                   <IconGlobe
                     aria-label="Go to Miranda's website"
                     width="16"
@@ -310,7 +310,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Andrew Nesbitt</strong>
-                <a href="https://nesbitt.io">
+                <a class="plain-link" href="https://nesbitt.io">
                   <IconGlobe
                     aria-label="Go to Andrew's website"
                     width="16"
@@ -347,7 +347,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Daniel Roe</strong>
-                <a href="https://roe.dev">
+                <a class="plain-link" href="https://roe.dev">
                   <IconGlobe
                     aria-label="Go to Daniel's website"
                     width="16"
@@ -377,7 +377,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Dawn Foster</strong>
-                <a href="https://fastwonder.com/">
+                <a class="plain-link" href="https://fastwonder.com/">
                   <IconGlobe
                     aria-label="Go to Dawn's website"
                     width="16"
@@ -407,7 +407,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Matias Capeletto</strong>
-                <a href="https://patak.cat">
+                <a class="plain-link" href="https://patak.cat">
                   <IconGlobe
                     aria-label="Go to Matias's website"
                     width="16"
@@ -441,7 +441,7 @@
             <div class="member__info">
               <div class="member__name">
                 <strong>Mike McQuaid</strong>
-                <a href="https://mikemcquaid.com">
+                <a class="plain-link" href="https://mikemcquaid.com">
                   <IconGlobe
                     aria-label="Go to Mike's website"
                     width="16"

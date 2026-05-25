@@ -7,9 +7,10 @@ const { data: articles } = await useAsyncData(route.path, () =>
 
 <template>
   <div class="container">
-    <NuxtLink v-for="article in articles" :key="article.path" :to="article.path">
-      <h2>{{ article.title }}</h2>
-      <p>{{ article.description }}</p>
-    </NuxtLink>
+    <ul>
+      <li v-for="article in articles" :key="article.path">
+        <NuxtLink :to="article.path">{{ article.title }}</NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>

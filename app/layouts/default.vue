@@ -4,7 +4,7 @@
       <div class="visually-hidden">
         Software Stewardship Lab
       </div>
-      <a href="/" class="site-title">
+      <a href="/" class="site-title plain-link">
         <Logo width="240" height="51" />
       </a>
     </div>
@@ -23,7 +23,7 @@
         <div class="footer-socials">
           <a
             href="https://bsky.app/profile/stewardshiplab.org"
-            class="bluesky-flutter"
+            class="bluesky-flutter plain-link"
             target="_blank"
           >
             <svg
@@ -39,12 +39,14 @@
           <a
             href="https://fosstodon.org/@stewardshiplab"
             target="_blank"
+            class="plain-link"
           >
             <IconMastodon width="28" height="28" />
           </a>
           <a
             href="https://discord.gg/2GNQHcKmcH"
             target="_blank"
+            class="plain-link"
           >
             <IconDiscord width="28" height="28" />
           </a>
