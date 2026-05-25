@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxt/fonts',
     'nuxt-svgo',
+    '@nuxt/content',
   ],
   svgo: {
     defaultImport: 'component',
@@ -24,6 +25,18 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  content: {
+    database: {
+      type: 'sqlite',
+      filename: ':memory:',
+    },
+    experimental: { sqliteConnector: 'native' },
+  },
+  vite: {
+    optimizeDeps: {
+      include: [],
+    },
+  },
   future: { compatibilityVersion: 4 },
   experimental: { typedPages: true },
   compatibilityDate: 'latest',
