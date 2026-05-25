@@ -13,7 +13,14 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Software Stewardship Lab',
-      htmlAttrs: { lang: 'en' }
+      htmlAttrs: { lang: 'en' },
+      script: [
+        {
+          'data-goatcounter': 'https://stewardshiplab.goatcounter.com/count',
+          src: '//gc.zgo.at/count.js',
+          async: '',
+        },
+      ],
     },
   },
   css: ['~/assets/css/main.css'],
