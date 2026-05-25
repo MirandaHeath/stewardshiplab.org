@@ -82,7 +82,7 @@ a {
   }
 }
 
-img, svg {
+img, svg, figure, iframe, video {
   display: block;
   max-width: 100%;
 }
@@ -258,7 +258,7 @@ section {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
