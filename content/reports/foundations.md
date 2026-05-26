@@ -1,14 +1,17 @@
 ---
 title: "Open Source Foundation Financials"
+author: "Vlad-Stefan Harbuz"
+authorImage: "/images/team/vlad.webp"
 description: "A summary of the financials of Open Source foundations."
 metaImage: "https://stewardshiplab.org/images/og/foundations.png"
 fullWidth: true
+date: 2026-05-24
 ---
 
 <div class="container">
   <section>
     <p>
-      A summary of the financials of Open Source software foundations.
+      An automated summary of the financials of Open Source software foundations.
     </p>
     <p class="text-xs">
       US data is up-to-date from IRS.
