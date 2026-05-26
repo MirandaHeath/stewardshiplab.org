@@ -1,0 +1,192 @@
+---
+layout: post
+title: "Supply Chain Security Tools for Ruby"
+date: 2025-12-14
+description: "Ruby implementations of PURL, VERS, SBOM, SWHID, and SARIF specs."
+tags:
+  - ruby
+  - sbom
+  - package-managers
+  - tools
+---
+
+I've published several Ruby gems that work together to help people build supply chain security tools: [purl](https://github.com/andrew/purl), [vers](https://github.com/andrew/vers), [sbom](https://github.com/andrew/sbom), [swhid](https://github.com/andrew/swhid), and [sarif](https://github.com/andrew/sarif). They handle the specs that security tooling depends on.
+
+I built these for [Ecosyste.ms](https://ecosyste.ms), which tracks dependencies across package registries. We deal with a lot of cross-ecosystem data: vulnerability reports that reference packages by PURL, version ranges from security advisories, SBOMs from various sources. If you're building security scanners, registry tooling, or compliance pipelines in Ruby, these might be useful.
+
+### [purl](https://github.com/andrew/purl)
+
+Package URL is a standardized format for identifying software packages across ecosystems. Instead of saying "the requests package version 2.28.0 from PyPI," you write `pkg:pypi/requests@2.28.0`. The format handles the variations between registries:
+
+- `pkg:npm/%40babel/core@7.24.0` (npm scoped package)
+- `pkg:maven/org.apache.logging.log4j/log4j-core@2.17.1` (Maven with group ID)
+- `pkg:docker/library/nginx@1.25.0` (Docker image)
+- `pkg:gem/rails@7.1.0` (RubyGems)
+- `pkg:github/rails/rails@v7.1.0` (GitHub repo at a tag)
+
+It's used in SPDX, CycloneDX, and most security tooling. PURL recently became [ECMA-427](https://ecma-international.org/publications-and-standards/standards/ecma-427/).
+
+The gem parses and generates these identifiers, with type-specific validation for ecosystems like conan, cran, and swift. Use it as a library:
+
+```ruby
+purl = Purl.parse("pkg:gem/rails@7.0.0")
+purl.type    # => "gem"
+purl.name    # => "rails"
+purl.version # => "7.0.0"
+```
+
+Or from the command line. The CLI integrates with Ecosyste.ms for looking up package metadata and security advisories:
+
+```
+$ purl advisories pkg:npm/lodash@4.17.19
+```
+
+It also generates registry URLs for most package ecosystems.
+
+### [vers](https://github.com/andrew/vers)
+
+[VERS](https://github.com/package-url/vers-spec) is the version range specification that accompanies PURL. Vulnerability databases need to express "this CVE affects versions 1.0 through 1.4.2, and also 2.0.0-beta." Different ecosystems have incompatible range syntaxes: npm uses `>=1.0.0 <1.4.3`, Ruby uses `>= 1.0, < 1.4.3`, Python uses `>=1.0,<1.4.3`. If you're building cross-ecosystem tooling, you need one syntax to normalize everything to. VERS provides that:
+
+- `vers:gem/>=2.0.0|<2.7.2` (Ruby versions 2.0.0 up to but not including 2.7.2)
+- `vers:npm/>=1.0.0|<1.4.3|>=2.0.0|<2.1.0` (two separate ranges)
+- `vers:pypi/>=0|<1.2.3` (all versions before 1.2.3)
+- `vers:maven/>=1.0|<=1.5|!=1.3` (1.0 through 1.5, excluding 1.3)
+
+```ruby
+range = Vers.parse("vers:npm/>=1.2.3|<2.0.0")
+range.contains?("1.5.0") # => true
+range.contains?("2.1.0") # => false
+```
+
+The gem parses these ranges and checks whether a given version falls within them. Internally it uses a mathematical interval model inspired by a [presentation from Open Source Summit NA 2025](https://www.youtube.com/watch?v=EU-TodN27rM) ([slides](https://static.sched.com/hosted_files/ossna2025/74/We%20need%20a%20standard%20for%20open%20source%20package%20requirements.pdf)) by Eve Martin-Jones and Elitsa Bankova. It's also a redo of [semantic_range](https://github.com/librariesio/semantic_range), a library I wrote 10 years ago for Libraries.io that handled version ranges across multiple ecosystems.
+
+### [sbom](https://github.com/andrew/sbom)
+
+There are two main Software Bill of Materials formats: SPDX and CycloneDX. [Of course there are two](https://xkcd.com/927/). SPDX comes from the Linux Foundation and started as a license compliance format. CycloneDX comes from OWASP and started as a security format. Both now try to do everything.
+
+The gem parses, generates, and validates both. SPDX 2.2 and 2.3 in JSON, YAML, XML, RDF, and tag-value. CycloneDX 1.4 through 1.7 in JSON and XML. It auto-detects formats when parsing and validates against the official schemas.
+
+```ruby
+sbom = Sbom.parse_file("example.spdx.json")
+sbom.packages.each do |pkg|
+  puts "#{pkg.name} @ #{pkg.version}"
+end
+```
+
+The CLI handles parsing, validation, format conversion, and enrichment:
+
+```
+$ sbom validate example.cdx.json
+$ sbom convert example.cdx.json --type spdx --output example.spdx.json
+$ sbom enrich example.cdx.json
+```
+
+The enrich command pulls metadata from Ecosyste.ms: descriptions, homepages, licenses, repository URLs, and security advisories.
+
+### [swhid](https://github.com/andrew/swhid)
+
+SoftWare Hash IDentifiers are content-based hashes for software artifacts: files, directories, commits, releases, and snapshots. They originated from [Software Heritage](https://www.softwareheritage.org/), the archive that's preserving all publicly available source code. They're intrinsic identifiers, meaning the same content always produces the same SWHID regardless of where it lives. The spec is now ISO/IEC 18670:2025.
+
+```ruby
+swhid = Swhid.parse("swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2")
+swhid.object_type # => "cnt"
+
+Swhid.from_content(File.read("file.txt"))
+```
+
+The CLI generates SWHIDs from files, directories, or git objects:
+
+```
+$ swhid content < file.txt
+$ swhid directory /path/to/project
+$ swhid revision /path/to/repo HEAD
+```
+
+### [changelog-parser](https://github.com/andrew/changelog-parser)
+
+Changelogs are one of the most useful pieces of metadata a package can have, but they come in dozens of formats. Some projects use CHANGELOG.md, others use HISTORY.txt or NEWS. Some follow Keep a Changelog, others use their own conventions.
+
+This gem parses changelogs and extracts structured release notes:
+
+```ruby
+result = Changelog::Parser.parse_file("CHANGELOG.md")
+# => { "1.0.0" => { date: #<Date: 2024-01-15>, content: "### Added\n- Initial release" } }
+
+parser = Changelog::Parser.new(changelog)
+parser.versions        # => ["Unreleased", "1.0.0"]
+parser["1.0.0"]        # => { date: #<Date>, content: "..." }
+parser.between("1.0.0", "2.0.0")  # content between versions, like Dependabot uses
+```
+
+The CLI handles parsing, listing versions, and extracting content between versions:
+
+```
+$ changelog-parser parse CHANGELOG.md
+$ changelog-parser list CHANGELOG.md
+$ changelog-parser between 1.0.0 2.0.0 CHANGELOG.md
+```
+
+### [diffoscope](https://github.com/andrew/diffoscope)
+
+When a new version of a package is released, what actually changed? The version number and changelog tell you what the maintainer thinks changed, but sometimes you want to verify. This is particularly useful when investigating supply chain attacks or checking for unexpected modifications.
+
+This gem provides Ruby bindings for [diffoscope](https://diffoscope.org/), a tool for in-depth comparison of files, archives, and directories:
+
+```ruby
+result = Diffoscope.compare("old.tar.gz", "new.tar.gz")
+result.identical?        # => true/false
+result.to_unified_diff   # => git-style diff string
+result.sha256_1          # => SHA256 of first file
+
+# Compare package URLs directly
+result = Diffoscope.compare("pkg:gem/rails@7.0.0", "pkg:gem/rails@7.1.0")
+```
+
+The CLI wraps diffoscope with PURL support:
+
+```
+$ diffoscope old.tar.gz new.tar.gz
+$ diffoscope pkg:gem/rails@7.0.0 pkg:gem/rails@7.1.0
+```
+
+### [sarif](https://github.com/andrew/sarif)
+
+Static analysis tools produce findings: "line 42 has a SQL injection vulnerability." SARIF (Static Analysis Results Interchange Format) is the OASIS standard for representing these results. GitHub code scanning uses it. Most security scanners can output it.
+
+The gem provides Ruby classes for the complete SARIF 2.1.0 specification:
+
+```ruby
+log = Sarif::Log.new(
+  runs: [
+    Sarif::Run.new(
+      tool: Sarif::Tool.new(driver: Sarif::ToolComponent.new(name: "my-scanner")),
+      results: [
+        Sarif::Result.new(
+          rule_id: "SQL001",
+          level: "error",
+          message: Sarif::Message.new(text: "SQL injection vulnerability")
+        )
+      ]
+    )
+  ]
+)
+
+Sarif.dump("output.sarif", log)
+```
+
+Reading existing SARIF files:
+
+```ruby
+log = Sarif.load("scanner-output.sarif")
+log.runs.each do |run|
+  run.results.each do |result|
+    puts "#{result.rule_id}: #{result.message.text}"
+  end
+end
+```
+
+---
+
+These gems provide Ruby implementations of specs that show up repeatedly in supply chain security work: package identifiers, version ranges, SBOM formats, content hashes, changelogs, package diffs, and static analysis results. They're designed to be used as libraries or CLI tools, and to behave predictably across ecosystems.
+
+They were built to support Ecosyste.ms and are used there in production. If you're working with dependency metadata in Ruby, they handle the spec compliance so you don't have to. With the CRA coming into full effect in 2027, you'll probably hear more about SBOMs and supply chain security in the coming years.
