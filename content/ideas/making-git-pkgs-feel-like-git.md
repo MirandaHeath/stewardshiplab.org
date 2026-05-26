@@ -8,7 +8,13 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/01/04/making-git-pkgs-feel-like-git"
 ---
 
-**Update:** git-pkgs has been [rewritten in Go](/2026/01/24/rewriting-git-pkgs-in-go) and now lives at [github.com/git-pkgs/git-pkgs](https://github.com/git-pkgs/git-pkgs).
+<div class="alert">
+  <strong>Update:</strong>
+  git-pkgs has been
+  <a href="/2026/01/24/rewriting-git-pkgs-in-go" target="_blank">rewritten in Go</a>
+  and now lives at
+  <a href="https://github.com/git-pkgs/git-pkgs" target="_blank">github.com/git-pkgs/git-pkgs</a>.
+</div>
 
 Since releasing [git-pkgs](/2026/01/01/git-pkgs-explore-your-dependency-history) I've been focused on one thing: making it feel like you're using git, not some tool that happens to work with git.
 

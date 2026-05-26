@@ -1,13 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "brief"
 date: 2026-04-21 10:00 +0000
 description: "A knowledge base of project conventions, exposed as a CLI."
-tags:
-  - tools
-  - git-pkgs
-  - ai
-  - security
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/04/21/brief.md"
 ---
 
 Anyone landing in an unfamiliar repo, whether that's a new contributor, a security scanner, or an AI coding agent, has to answer the same handful of questions before doing anything useful: what language is this, how do I install dependencies, what's the test command, which linter do I run before committing, and for a security review, which functions in this stack are the dangerous ones.
@@ -70,4 +68,10 @@ Ruby:
 
 Tool definitions live in [the `knowledge/` directory](https://github.com/git-pkgs/brief/tree/main/knowledge) and PRs adding new ones are the contributions I'm most interested in, particularly for ecosystems I don't write every day. If you point it at a project and it gets something wrong, [open an issue](https://github.com/git-pkgs/brief/issues) or find me on [Mastodon](https://mastodon.social/@andrewnez).
 
-`brew install git-pkgs/git-pkgs/brief` / [github.com/git-pkgs/brief](https://github.com/git-pkgs/brief)
+You can `brew install git-pkgs/git-pkgs/brief`, or see more instructions in the repository:
+
+<div class="page-items">
+    <a class="button button--arrow" href="https://github.com/git-pkgs/brief" target="_blank">
+        Go to repository
+    </a>
+</div>

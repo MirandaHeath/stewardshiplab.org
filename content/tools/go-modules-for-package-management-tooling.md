@@ -1,13 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Go Modules for Package Management Tooling"
 date: 2026-02-19
 description: "The Go modules behind git-pkgs, rebuilt from my Ruby supply chain libraries."
-tags:
-  - go
-  - sbom
-  - package-managers
-  - tools
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/02/19/go-modules-for-package-management-tooling"
 ---
 
 I've been working on a reusable layer for building ecosystem-agnostic package and supply chain tools in Go: fourteen modules under [git-pkgs](https://github.com/git-pkgs) covering manifest parsing, registry clients, license normalization, platform translation, vulnerability feeds, and more.

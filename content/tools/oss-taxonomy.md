@@ -1,18 +1,22 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "A Taxonomy for Open Source Software"
 date: 2025-11-29 08:00 +0000
 description: "I'm working on a structured taxonomy for classifying open source projects across multiple dimensions: domain, role, technology, audience, layer, and function."
-tags:
-  - open-source
-  - metadata
-  - taxonomy
-  - ecosyste.ms
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/11/29/oss-taxonomy.html"
 ---
 
 There are millions of open source projects across dozens of package registries, but no standard way to classify them. Existing metadata doesn't help: topic and keyword data is inconsistent, unstructured, or missing entirely, even from popular projects. I found some taxonomies for research software ([FAIRsoft](https://academic.oup.com/bioinformatics/article/40/8/btae464/7717992), the [RSE taxonomy](https://github.com/rseng/rseng)), but nothing for open source software more broadly.
 
 I've been interested in improving discovery in open source for a long time, ever since I first launched [24 Pull Requests](https://24pullrequests.com) and saw how hard it was for people to find projects to contribute to. So I've been working on [OSS Taxonomy](https://github.com/ecosyste-ms/oss-taxonomy), a structured classification system. Instead of forcing projects into a single category, it uses multiple facets to describe different dimensions.
+
+<div class="page-items">
+    <a class="button button--arrow" href="https://github.com/ecosyste-ms/oss-taxonomy" target="_blank">
+        Go to repository
+    </a>
+</div>
 
 A web framework like Django might be classified as:
 

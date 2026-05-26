@@ -1,13 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "proxy"
 date: 2026-05-11 10:00 +0000
 description: "A lightweight multi-ecosystem caching package proxy"
-tags:
-  - package-managers
-  - tools
-  - git-pkgs
-  - security
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/05/11/proxy"
 ---
 
 Building tools that talk to package registries means making thousands of requests to npm, RubyGems, PyPI, and crates.io while you iterate, and at some point you start to feel bad about it. Recorded HTTP fixtures go stale, mocking sixteen different registry protocols by hand is its own project, and pointing the test suite at the real thing means every red-green cycle is a few hundred more requests to infrastructure other people are paying for. I wanted something I could point [git-pkgs](https://github.com/git-pkgs/git-pkgs) and [brief](https://github.com/git-pkgs/brief) at locally that would answer like the real registries do but only fetch from upstream once.
@@ -75,4 +73,10 @@ Most of the heavy lifting is in modules shared with the rest of the [git-pkgs](h
 
 Contributions are very welcome on this one, particularly protocol handlers for the registries still unticked in the README (Helm, Swift, Alpine, Arch) and anything that makes the browse UI more useful. Tell me what you'd want it to do on [Mastodon](https://mastodon.social/@andrewnez) or [the issue tracker](https://github.com/git-pkgs/proxy/issues).
 
-`brew install git-pkgs/git-pkgs/proxy` / [github.com/git-pkgs/proxy](https://github.com/git-pkgs/proxy)
+You can `brew install git-pkgs/git-pkgs/proxy`, or see more instructions in the repository:
+
+<div class="page-items">
+    <a class="button button--arrow" href="https://github.com/git-pkgs/proxy" target="_blank">
+        Go to repository
+    </a>
+</div>
