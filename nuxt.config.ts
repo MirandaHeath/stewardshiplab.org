@@ -34,7 +34,9 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: [],
+      include: [
+        'temporal-polyfill',
+      ]
     },
   },
   future: { compatibilityVersion: 4 },
