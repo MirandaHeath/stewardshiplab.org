@@ -74,7 +74,7 @@ The [rfcdeps](https://github.com/raybellis/rfcdeps) tool graphs these relationsh
 
 ### Naming
 
-[Package management is naming](/2026/02/14/package-management-namespaces.html), and the naming problem for specifications is worse than for packages.
+[Package management is naming](/reports/package-management-namespaces), and the naming problem for specifications is worse than for packages.
 
 The IETF uses sequential numbers where a new version of a spec gets a new number entirely. RFC 9110 obsoletes RFC 7231, which obsoleted RFC 2616. If you want to reference "HTTP semantics," you need to pick which RFC number, and that choice encodes a point in time rather than a version range. W3C uses levels for CSS (CSS Grid Level 1, Level 2), numbered versions for older specs (HTML 4.01), and maturity stages (Working Draft, Candidate Recommendation, Recommendation). WHATWG abandoned versioning entirely; HTML is a "Living Standard" with no version number and no snapshots. ECMA uses both edition numbers and year names (ECMA-262 6th Edition is also ES2015). ISO uses structured identifiers with amendment and corrigenda layers (`ISO/IEC 5962:2021`). IEEE uses base number plus year (IEEE 754-2019).
 

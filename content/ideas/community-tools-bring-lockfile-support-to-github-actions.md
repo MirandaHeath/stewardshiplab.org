@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2025/12/30/community-tools-bring-lockfile-support-to-github-actions"
 ---
 
-Earlier this month I wrote about [GitHub Actions' missing lockfile](/2025/12/06/github-actions-package-manager.html). After the post was featured on [Hacker News](https://news.ycombinator.com/item?id=46189692) and [Lobste.rs](https://lobste.rs/s/zbqvyu/github_actions_has_package_manager_it), the authors of two projects reached out to share their work solving the problem from different angles.
+Earlier this month I wrote about [GitHub Actions' missing lockfile](/ideas/github-actions-package-manager). After the post was featured on [Hacker News](https://news.ycombinator.com/item?id=46189692) and [Lobste.rs](https://lobste.rs/s/zbqvyu/github_actions_has_package_manager_it), the authors of two projects reached out to share their work solving the problem from different angles.
 
 [gh-actions-lockfile](https://github.com/gjtorikian/gh-actions-lockfile) by Garen Torikian is a TypeScript tool that generates a lockfile recording 40-character commit SHAs and SHA-256 integrity hashes for every action in your workflows. It resolves transitive dependencies from composite actions too, so you can see and pin the full tree. It also checks for known CVEs against the discovered actions. Run the CLI locally to generate the lockfile, then add the action to your workflow to verify against it. If an action's content changes, the hash mismatch fails your build.
 

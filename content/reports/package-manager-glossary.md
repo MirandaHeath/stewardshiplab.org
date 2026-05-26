@@ -28,7 +28,7 @@ An identifier for a specific release of a package. Usually follows some versioni
 
 Versions are strings, not numbers. "1.10.0" is greater than "1.9.0" even though 1.10 < 1.9 numerically. This trips up more tooling than you'd expect.
 
-**Ecosystem variations:** Most ecosystems encourage or require [semantic versioning](https://semver.org/) (major.minor.patch), but enforcement varies widely. Elm actually enforces semver by diffing APIs and rejecting publishes that break compatibility without a major bump. Go modules encode the major version in the import path, so v2 of a module is effectively a different package. [CalVer](https://calver.org/) (like Ubuntu's 24.04) and [various other schemes](/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html) exist too. Pre-release version handling (1.0.0-alpha, 1.0.0-rc.1) is inconsistent across ecosystems.
+**Ecosystem variations:** Most ecosystems encourage or require [semantic versioning](https://semver.org/) (major.minor.patch), but enforcement varies widely. Elm actually enforces semver by diffing APIs and rejecting publishes that break compatibility without a major bump. Go modules encode the major version in the import path, so v2 of a module is effectively a different package. [CalVer](https://calver.org/) (like Ubuntu's 24.04) and [various other schemes](/reports/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source) exist too. Pre-release version handling (1.0.0-alpha, 1.0.0-rc.1) is inconsistent across ecosystems.
 
 ## Module
 
@@ -68,9 +68,9 @@ A package your code needs to function. Dependencies form [directed graphs](https
 
 ## Registry
 
-Also called a package index. A server that hosts packages and provides an API for publishing and downloading them. The canonical source for a package ecosystem, and often a [governance chokepoint](/2025/12/22/package-registries-are-governance-as-a-service.html) for who can publish what.
+Also called a package index. A server that hosts packages and provides an API for publishing and downloading them. The canonical source for a package ecosystem, and often a [governance chokepoint](/ideas/package-registries-are-governance-as-a-service) for who can publish what.
 
-Some ecosystems call these "repositories" (apt, Maven), but I use "registry" for package hosting and "repository" for git repos to avoid confusion. Forges like GitHub and GitLab host source repositories, and [some registries use git repositories as their index](/2025/12/24/package-managers-keep-using-git-as-a-database.html).
+Some ecosystems call these "repositories" (apt, Maven), but I use "registry" for package hosting and "repository" for git repos to avoid confusion. Forges like GitHub and GitLab host source repositories, and [some registries use git repositories as their index](/ideas/package-managers-keep-using-git-as-a-database).
 
 Most ecosystems have a single canonical public registry, but many also support private or alternative registries. Artifactory and Nexus can proxy multiple upstream registries. [Verdaccio](https://www.verdaccio.org/) gives you a private npm registry. Organizations run internal PyPI mirrors.
 
@@ -197,7 +197,7 @@ Also called scope in npm. A way of partitioning package names to avoid collision
 
 Namespaces can be organizational (`@babel/core`), hierarchical (`org.apache.commons:commons-lang3`), or URL-based (`github.com/user/repo`). Flat namespaces (RubyGems, PyPI, crates.io) have no built-in ownership signal beyond who registered the name first.
 
-**Ecosystem variations:** npm uses scopes (`@org/package`), Maven uses groupId with reverse domain notation, and Go uses the source URL as the identifier. Python and Ruby have flat namespaces with no ownership partitioning, which is why name squatting and [typosquatting](/2025/12/17/typosquatting-in-package-managers.html) are bigger concerns there. Some registries retroactively added optional namespacing after launching with flat names. Confusingly, Maven uses "scope" for something unrelated: when a dependency is needed (compile, test, runtime, or provided).
+**Ecosystem variations:** npm uses scopes (`@org/package`), Maven uses groupId with reverse domain notation, and Go uses the source URL as the identifier. Python and Ruby have flat namespaces with no ownership partitioning, which is why name squatting and [typosquatting](/reports/typosquatting-in-package-managers) are bigger concerns there. Some registries retroactively added optional namespacing after launching with flat names. Confusingly, Maven uses "scope" for something unrelated: when a dependency is needed (compile, test, runtime, or provided).
 
 ## Version constraint
 
@@ -215,7 +215,7 @@ Also called dependency resolution or version resolution. The process of turning 
 
 Resolution is [NP-complete](https://en.wikipedia.org/wiki/NP-completeness) in the general case, meaning the resolver may need to explore an exponential number of version combinations before finding a solution or proving none exists. Different resolvers make different tradeoffs: [SAT solvers](https://en.wikipedia.org/wiki/SAT_solver) can prove unsatisfiability, backtracking is simpler but can be slow, [minimal version selection](https://research.swtch.com/vgo-mvs) is fast but picks old versions.
 
-**Ecosystem variations:** See [Categorizing Package Manager Clients](/2025/12/29/categorizing-package-manager-clients.html) for a breakdown of resolution algorithms. [PubGrub](https://nex3.medium.com/pubgrub-2fb6470504f) (used by pub, Poetry, uv, Bundler) gives better error messages by tracking why versions were excluded. Go's MVS avoids the complexity entirely by always picking the minimum version that satisfies constraints.
+**Ecosystem variations:** See [Categorizing Package Manager Clients](/reports/categorizing-package-manager-clients) for a breakdown of resolution algorithms. [PubGrub](https://nex3.medium.com/pubgrub-2fb6470504f) (used by pub, Poetry, uv, Bundler) gives better error messages by tracking why versions were excluded. Go's MVS avoids the complexity entirely by always picking the minimum version that satisfies constraints.
 
 ## Pinning
 
@@ -245,14 +245,14 @@ Workspaces are commonly used in **monorepos** (also spelled mono-repo): reposito
 
 These companion posts cover specific aspects of package management in more detail:
 
-- [What is a Package Manager?](/2025/12/02/what-is-a-package-manager.html) breaks down the many responsibilities modern package managers have accumulated
-- [The Package Management Landscape](/2026/01/03/the-package-management-landscape.html) surveys the full ecosystem of package managers and registries
-- [Package Manager Tradeoffs](/2025/12/05/package-manager-tradeoffs.html) explores the design decisions that shape each ecosystem
-- [Documenting Package Manager Data](/2025/11/30/documenting-package-manager-data.html) covers what metadata registries expose and how to access it
-- [Package Manager Timeline](/2025/11/15/package-manager-timeline.html) traces the history of package management
-- [Package Management Papers](/2025/11/13/package-management-papers.html) collects academic research on dependency management
-- [Categorizing Package Manager Clients](/2025/12/29/categorizing-package-manager-clients.html) covers resolution algorithms, lockfile strategies, build hooks, and manifest formats across ecosystems
-- [Categorizing Package Registries](/2025/12/29/categorizing-package-registries.html) covers architecture, review models, namespacing, and governance
+- [What is a Package Manager?](/reports/what-is-a-package-manager) breaks down the many responsibilities modern package managers have accumulated
+- [The Package Management Landscape](/reports/the-package-management-landscape) surveys the full ecosystem of package managers and registries
+- [Package Manager Tradeoffs](/reports/package-manager-tradeoffs) explores the design decisions that shape each ecosystem
+- [Documenting Package Manager Data](https://nesbitt.io/2025/11/30/documenting-package-manager-data) covers what metadata registries expose and how to access it
+- [Package Manager Timeline](/reports/package-manager-timeline) traces the history of package management
+- [Package Management Papers](/reports/package-management-papers) collects academic research on dependency management
+- [Categorizing Package Manager Clients](/reports/categorizing-package-manager-clients) covers resolution algorithms, lockfile strategies, build hooks, and manifest formats across ecosystems
+- [Categorizing Package Registries](/reports/categorizing-package-registries) covers architecture, review models, namespacing, and governance
 
 Other glossaries worth reading:
 

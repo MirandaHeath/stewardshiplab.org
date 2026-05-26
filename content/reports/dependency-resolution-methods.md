@@ -12,7 +12,7 @@ Every package manager faces the same core problem: given a set of packages with 
 
 These approaches fall roughly into complete solvers (SAT, PubGrub, ASP), heuristic solvers (backtracking, Molinillo, system resolvers), constraint relaxation strategies (deduplication with nesting, version mediation), and approaches that avoid the problem entirely (minimal version selection, content-addressed stores).
 
-The [categorizing package manager clients](/2025/12/29/categorizing-package-manager-clients.html) post lists which package managers use which approach. The [package management papers](/2025/11/13/package-management-papers.html) post has the full bibliography. The [package-manager-resolvers](https://github.com/ecosyste-ms/package-manager-resolvers) repo has per-ecosystem detail and comparison tables.
+The [categorizing package manager clients](/reports/categorizing-package-manager-clients) post lists which package managers use which approach. The [package management papers](/reports/package-management-papers) post has the full bibliography. The [package-manager-resolvers](/reports/package-manager-resolvers) repo has per-ecosystem detail and comparison tables.
 
 ### SAT solving
 
@@ -80,7 +80,7 @@ RubyGems and CocoaPods use Molinillo. Bundler used it for years before switching
 
 ### System package resolution
 
-System package managers have a structural advantage that simplifies resolution: within a given repository or suite, there's typically only one version of each package available. Debian stable doesn't offer you a choice between openssl 1.1 and openssl 3.0; the suite maintainers already made that decision. As I wrote about in the [Crates.io's Freaky Friday](/2026/02/06/cratesio-freaky-friday.html) post, this collapses what would be a version selection problem into something closer to a compatibility check. The resolver still has real work to do, but the search space is radically smaller than what language-level resolvers face with thousands of candidate versions per package.
+System package managers have a structural advantage that simplifies resolution: within a given repository or suite, there's typically only one version of each package available. Debian stable doesn't offer you a choice between openssl 1.1 and openssl 3.0; the suite maintainers already made that decision. As I wrote about in the [Crates.io's Freaky Friday](/ideas/cratesio-freaky-friday) post, this collapses what would be a version selection problem into something closer to a compatibility check. The resolver still has real work to do, but the search space is radically smaller than what language-level resolvers face with thousands of candidate versions per package.
 
 What system resolvers handle instead are constraints that language-level tools don't encounter: file conflicts between packages, virtual packages, architecture-specific dependencies, and triggers that run during installation. The virtual packages concept has no real equivalent in language package managers. When a Debian package declares `Provides: mail-transport-agent`, any of postfix, exim4, or sendmail can satisfy that dependency. The resolver has to pick one, and the choice interacts with the rest of the installed system in ways that a language-level resolver never faces, since removing one mail transport agent to install another can break unrelated packages that assumed it was there.
 
@@ -113,7 +113,7 @@ Reusable libraries that package managers can embed rather than writing their own
 
 ### Key papers
 
-The most relevant research, pulled from the [full bibliography](/2025/11/13/package-management-papers.html):
+The most relevant research, pulled from the [full bibliography](/reports/package-management-papers):
 
 - [Di Cosmo et al. (2005)](https://www.researchgate.net/publication/278629134_EDOS_deliverable_WP2-D21_Report_on_Formal_Management_of_Software_Dependencies) - First proof that package installation is NP-complete, with 3SAT encoding for Debian and RPM.
 - [Tucker et al. (2007) "OPIUM"](https://cseweb.ucsd.edu/~lerner/papers/opium.pdf) - Complete solver using SAT, pseudo-boolean optimization, and ILP. Showed apt-get's incompleteness affects a quarter of Debian users.

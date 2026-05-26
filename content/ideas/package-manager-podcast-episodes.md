@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/02/09/package-manager-podcast-episodes"
 ---
 
-Like the [blog posts](/2026/01/09/package-management-blog-posts.html) and [papers](/2025/11/13/package-management-papers.html) collections, this is a running list of podcast episodes where people who build and maintain package managers talk about their work. Grouped by ecosystem, with a few cross-cutting episodes at the end.
+Like the [blog posts](/reports/package-management-blog-posts) and [papers](/reports/package-management-papers) collections, this is a running list of podcast episodes where people who build and maintain package managers talk about their work. Grouped by ecosystem, with a few cross-cutting episodes at the end.
 
 The Manifest ([manifest.fm](https://manifest.fm)) is a podcast dedicated entirely to package management, hosted by Alex Pounds and me. I've listed its episodes under the relevant ecosystems below rather than in a separate section.
 

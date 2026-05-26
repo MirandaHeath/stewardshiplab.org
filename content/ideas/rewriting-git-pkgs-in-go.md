@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/01/24/rewriting-git-pkgs-in-go"
 ---
 
-This past week I've rewritten [git-pkgs](/2026/01/01/git-pkgs-explore-your-dependency-history) in Go. git-pkgs is a git subcommand that indexes your dependency history into a SQLite database. It parses manifests and lockfiles across 35+ package managers, tracks every add, update, and remove through your git history, and gives you commands like `git pkgs blame` to see who added each dependency, `git pkgs history <package>` to trace a package's version changes over time, and `git pkgs diff` to compare dependencies between branches or commits.
+This past week I've rewritten [git-pkgs](/tools/git-pkgs-explore-your-dependency-history) in Go. git-pkgs is a git subcommand that indexes your dependency history into a SQLite database. It parses manifests and lockfiles across 35+ package managers, tracks every add, update, and remove through your git history, and gives you commands like `git pkgs blame` to see who added each dependency, `git pkgs history <package>` to trace a package's version changes over time, and `git pkgs diff` to compare dependencies between branches or commits.
 
 The Ruby version worked fine, but installing a Ruby gem as a git subcommand has friction: you need Ruby installed, the right version, maybe a version manager, and `gem install` puts binaries somewhere that might not be in your PATH.
 

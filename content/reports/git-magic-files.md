@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/02/05/git-magic-files"
 ---
 
-A follow-up to my post on [extending git functionality](/2025/11/26/extending-git-functionality.html). Git looks for several special files in your repository that control its behavior. These aren't configuration files in `.git/`, they're committed files that travel with your code and affect how git treats your files.
+A follow-up to my post on [extending git functionality](/reports/extending-git-functionality). Git looks for several special files in your repository that control its behavior. These aren't configuration files in `.git/`, they're committed files that travel with your code and affect how git treats your files.
 
 If you're building a tool that works with git repositories, like [git-pkgs](https://github.com/git-pkgs/git-pkgs), you'll want to ensure you respect these configs.
 

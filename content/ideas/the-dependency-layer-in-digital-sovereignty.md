@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2026/01/28/the-dependency-layer-in-digital-sov
 
 David Eaves recently argued that [the path to tech sovereignty runs through commodification](https://www.techpolicy.press/the-path-to-a-sovereign-tech-stack-is-via-a-commodified-tech-stack/), not duplication. Europe shouldn't try to build its own AWS. Instead, governments should use procurement power to enforce interoperability standards. The S3 API became a de facto standard that lets you move between providers, reducing switching costs. If governments required that kind of compatibility as a condition for contracts, smaller providers could compete. Sovereignty through standards rather than state-owned infrastructure.
 
-The same logic applies to [the software supply chain](/2026/01/03/the-package-management-landscape.html), though that layer gets less attention in sovereignty discussions than cloud and storage.
+The same logic applies to [the software supply chain](/reports/the-package-management-landscape), though that layer gets less attention in sovereignty discussions than cloud and storage.
 
 Most git forges are US-based:
 
@@ -48,7 +48,7 @@ The dependency intelligence layer built on top of these forges is almost entirel
 | Amazon ECR | Amazon | US |
 | Quay | Red Hat/IBM | US |
 
-The [package registries](/2025/12/29/categorizing-package-registries.html) follow a similar pattern, with a few European exceptions:
+The [package registries](/reports/categorizing-package-registries) follow a similar pattern, with a few European exceptions:
 
 | Registry | Owner | Country |
 |----------|-------|---------|
@@ -80,7 +80,7 @@ Dries Buytaert [extended this to procurement](https://dri.es/funding-open-source
 
 ### Where standards exist and where they don't
 
-Eaves's commodification argument depends on standards to reduce switching costs. In [the package management landscape](/2026/01/03/the-package-management-landscape.html), some de facto standards have emerged. Git is nearly universal for source hosting. Semver is the dominant versioning scheme, even if ecosystems interpret it differently. [Lockfile formats](/2026/01/17/lockfile-format-design-and-tradeoffs.html) vary by ecosystem, but they've become standards in practice: every dependency scanning company builds the same set of parsers to extract dependency information from all of them. Syft, bibliothecary, gemnasium, osv-scalibr, and others all parse the same formats. I made a [dataset covering manifest and lockfile examples](https://github.com/ecosyste-ms/package-manager-manifest-examples) across ecosystems, and a similar [collection of OpenAPI schemas](https://github.com/ecosyste-ms/package-manager-openapi-schemas) for registry APIs. These are what made git-pkgs come together quickly.
+Eaves's commodification argument depends on standards to reduce switching costs. In [the package management landscape](/reports/the-package-management-landscape), some de facto standards have emerged. Git is nearly universal for source hosting. Semver is the dominant versioning scheme, even if ecosystems interpret it differently. [Lockfile formats](/reports/lockfile-format-design-and-tradeoffs) vary by ecosystem, but they've become standards in practice: every dependency scanning company builds the same set of parsers to extract dependency information from all of them. Syft, bibliothecary, gemnasium, osv-scalibr, and others all parse the same formats. I made a [dataset covering manifest and lockfile examples](https://github.com/ecosyste-ms/package-manager-manifest-examples) across ecosystems, and a similar [collection of OpenAPI schemas](https://github.com/ecosyste-ms/package-manager-openapi-schemas) for registry APIs. These are what made git-pkgs come together quickly.
 
 Beyond those de facto standards, some areas have formal specifications. PURL provides a standardized way to reference packages across ecosystems. OSV and OpenVEX let advisory data flow between systems. CycloneDX and SPDX handle SBOMs. SLSA, in-toto, and TUF cover provenance. OCI standardizes container images.
 
@@ -88,15 +88,15 @@ Other areas don't, which keeps switching costs high. Dependency graph APIs vary 
 
 Most standards work in this space focuses on compliance artifacts: SBOMs for the Cyber Resilience Act, attestations for procurement requirements. Less attention goes to the underlying tools developers actually use. The dependency graph that feeds the SBOM generator, the metadata lookup that powers vulnerability scanning, the notification when a new version ships.
 
-The gap between these columns is where standardization would reduce switching costs. A common dependency graph API would matter more than a European deps.dev. Standardizing how dependency updates get proposed would matter more than a European Dependabot. [A protocol for package management](/2026/01/22/a-protocol-for-package-management.html) could let different implementations compete on the same interfaces.
+The gap between these columns is where standardization would reduce switching costs. A common dependency graph API would matter more than a European deps.dev. Standardizing how dependency updates get proposed would matter more than a European Dependabot. [A protocol for package management](/ideas/a-protocol-for-package-management) could let different implementations compete on the same interfaces.
 
 GitHub and GitLab bundle dependency features into their platforms: dependency graphs, vulnerability alerts, automated updates. A self-hosted Forgejo or Gitea instance doesn't have equivalent tooling. But if those features were built on open standards and open data sources, switching forges wouldn't mean losing supply chain visibility. The dependency intelligence could come from any provider that implements the same interfaces, rather than being locked to the forge vendor.
 
-Some gaps need new standards rather than adoption of existing ones. There's no good specification for package version history across registries. Codemeta describes a package at a point in time, not its release history. [PkgFed](/2026/01/25/pkgfed-activitypub-for-package-releases.html) proposes using ActivityPub to federate release announcements, similar to how ForgeFed handles forge events.
+Some gaps need new standards rather than adoption of existing ones. There's no good specification for package version history across registries. Codemeta describes a package at a point in time, not its release history. [PkgFed](/ideas/pkgfed-activitypub-for-package-releases) proposes using ActivityPub to federate release announcements, similar to how ForgeFed handles forge events.
 
 ### What governments and funders could do
 
-The strategy is to [unbundle the parts of a package manager](/2025/12/02/what-is-a-package-manager.html) and standardize them individually. Registry APIs, dependency graphs, vulnerability feeds, update notifications. Each piece can be commodified without replacing entire systems.
+The strategy is to [unbundle the parts of a package manager](/reports/what-is-a-package-manager) and standardize them individually. Registry APIs, dependency graphs, vulnerability feeds, update notifications. Each piece can be commodified without replacing entire systems.
 
 Treat dependency intelligence as infrastructure worth funding directly. The Sovereign Tech Fund model applies: direct funding to open source projects that serve as foundations. Ecosyste.ms, VulnerableCode, OSV, PURL implementations, CycloneDX/SPDX tooling, Forgejo's dependency features all fit this category.
 
@@ -104,4 +104,4 @@ Procurement requirements could include open supply chain tooling. If an agency r
 
 Supporting Forgejo with work on dependency features would help too. The goal would be feature parity with GitHub and GitLab so self-hosted forges work with the same security tooling.
 
-[Package management is a wicked problem](/2026/01/23/package-management-is-a-wicked-problem.html), but the dependency intelligence layer is more tractable. Standards exist (PURL, OSV, CycloneDX) and open implementations exist (ecosyste.ms, VulnerableCode), so the gap is investment rather than invention.
+[Package management is a wicked problem](/ideas/package-management-is-a-wicked-problem), but the dependency intelligence layer is more tractable. Standards exist (PURL, OSV, CycloneDX) and open implementations exist (ecosyste.ms, VulnerableCode), so the gap is investment rather than invention.

@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2026/02/19/go-modules-for-package-management-t
 
 I've been working on a reusable layer for building ecosystem-agnostic package and supply chain tools in Go: fourteen modules under [git-pkgs](https://github.com/git-pkgs) covering manifest parsing, registry clients, license normalization, platform translation, vulnerability feeds, and more.
 
-These are rebuilds of libraries I've written and used in Ruby for years, some going back to [Libraries.io](https://libraries.io) and more recently for [Ecosyste.ms](https://ecosyste.ms), which I wrote about [previously](/2025/12/14/supply-chain-security-tools-for-ruby). I built the Go versions for [git-pkgs](/2026/01/24/rewriting-git-pkgs-in-go), a tool for exploring the dependency history of your repositories that [compiles to a single binary](/2026/01/24/rewriting-git-pkgs-in-go) with no runtime dependencies, which matters for a git subcommand that needs to just work on any machine. When I went looking for Go equivalents of my Ruby libraries, most were either abandoned, incomplete, or only covered a single ecosystem, so I rebuilt them.
+These are rebuilds of libraries I've written and used in Ruby for years, some going back to [Libraries.io](https://libraries.io) and more recently for [Ecosyste.ms](https://ecosyste.ms), which I wrote about [previously](/reports/supply-chain-security-tools-for-ruby). I built the Go versions for [git-pkgs](/ideas/rewriting-git-pkgs-in-go), a tool for exploring the dependency history of your repositories that [compiles to a single binary](/ideas/rewriting-git-pkgs-in-go) with no runtime dependencies, which matters for a git subcommand that needs to just work on any machine. When I went looking for Go equivalents of my Ruby libraries, most were either abandoned, incomplete, or only covered a single ecosystem, so I rebuilt them.
 
 ## Identification
 
@@ -62,7 +62,7 @@ spdx.HasCopyleft("MIT OR GPL-3.0-only")                // true
 
 ### [platforms](https://github.com/git-pkgs/platforms)
 
-I wrote about [platform string fragmentation](/2026/02/17/platform-strings) recently: Go uses `darwin/arm64`, Node uses `darwin-arm64`, Rust uses `aarch64-apple-darwin`, RubyGems uses `arm64-darwin`, all for the same chip on the same OS. This translates between 14 ecosystems through a canonical intermediate representation:
+I wrote about [platform string fragmentation](/reports/platform-strings) recently: Go uses `darwin/arm64`, Node uses `darwin-arm64`, Rust uses `aarch64-apple-darwin`, RubyGems uses `arm64-darwin`, all for the same chip on the same OS. This translates between 14 ecosystems through a canonical intermediate representation:
 
 ```go
 p, _ := platforms.Parse(platforms.Go, "darwin/arm64")
@@ -202,7 +202,7 @@ for _, dep := range result.Direct {
 
 ### [archives](https://github.com/git-pkgs/archives)
 
-Reads and browses archive files entirely in memory, with a unified Reader interface across ZIP, tar (with gzip, bzip2, xz compression), jar, wheel, nupkg, egg, and Ruby gems. Includes prefix stripping for packages that wrap content in a directory (like npm's `package/` wrapper). No [OCI support](/2026/02/18/what-package-registries-could-borrow-from-oci) yet, but pulling and browsing image layers through the same Reader interface is on the list.
+Reads and browses archive files entirely in memory, with a unified Reader interface across ZIP, tar (with gzip, bzip2, xz compression), jar, wheel, nupkg, egg, and Ruby gems. Includes prefix stripping for packages that wrap content in a directory (like npm's `package/` wrapper). No [OCI support](/ideas/what-package-registries-could-borrow-from-oci) yet, but pulling and browsing image layers through the same Reader interface is on the list.
 
 ```go
 reader, _ := archives.Open("package.tar.gz", f)
@@ -235,7 +235,7 @@ content, _ := p.Between("1.0.0", "2.0.0")
 
 ### [gitignore](https://github.com/git-pkgs/gitignore)
 
-Matches paths against [gitignore rules](/2026/02/12/the-many-flavors-of-ignore-files) using a direct implementation of git's wildmatch algorithm rather than converting patterns to regexes, tested against git's own wildmatch test suite. Handles nested `.gitignore` files scoped to their directories, global excludes, negation patterns, and all 12 POSIX character classes:
+Matches paths against [gitignore rules](/reports/the-many-flavors-of-ignore-files) using a direct implementation of git's wildmatch algorithm rather than converting patterns to regexes, tested against git's own wildmatch test suite. Handles nested `.gitignore` files scoped to their directories, global excludes, negation patterns, and all 12 POSIX character classes:
 
 ```go
 m := gitignore.NewFromDirectory("/path/to/repo")

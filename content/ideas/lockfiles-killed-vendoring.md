@@ -20,7 +20,7 @@ Rails formalized the convention with `vendor/` for third-party code and `lib/` f
 
 ### git clone
 
-Git clones the entire repository history by default. Every developer, every CI run, gets everything. A vendored dependency updated twenty times means twenty snapshots of its source tree in your .git directory, forever. Shallow clones and partial clones help, but as I wrote in [package managers keep using git as a database](/2025/12/24/package-managers-keep-using-git-as-a-database.html), they're workarounds for a problem SVN never had.
+Git clones the entire repository history by default. Every developer, every CI run, gets everything. A vendored dependency updated twenty times means twenty snapshots of its source tree in your .git directory, forever. Shallow clones and partial clones help, but as I wrote in [package managers keep using git as a database](/ideas/package-managers-keep-using-git-as-a-database), they're workarounds for a problem SVN never had.
 
 The weight became visible in ways it hadn't been before: code search indexed everything in `vendor/`. GitHub's language statistics counted vendored code unless you added `linguist-vendored` to .gitattributes. Pull requests touching `vendor/` generated walls of diff noise. The developer experience of working with a vendored codebase went from tolerable to actively painful.
 
@@ -30,9 +30,9 @@ Security tooling piled on: GitHub's dependency graph, Dependabot, and similar to
 
 Bundler shipped Gemfile.lock in 2010, one of the first lockfiles to pin exact dependency versions with enough information to reproduce an install. But the ecosystem where vendoring arguments ran hottest didn't have one for years. npm launched in 2010 too, and you'd specify `^1.2.0` in package.json and get whatever the registry served that day.
 
-[Yarn launched](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) in October 2016 with yarn.lock and content hashes from day one. npm followed with [package-lock.json in npm 5.0](https://blog.npmjs.org/post/161081169345/v500) in May 2017. Once lockfiles recorded exact versions and integrity hashes (I covered the design choices in [lockfile format design and tradeoffs](/2026/01/17/lockfile-format-design-and-tradeoffs/)), you got reproducible builds without storing the code. The lockfile records what to fetch, the registry serves it, and the hash proves nothing changed in transit.
+[Yarn launched](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/) in October 2016 with yarn.lock and content hashes from day one. npm followed with [package-lock.json in npm 5.0](https://blog.npmjs.org/post/161081169345/v500) in May 2017. Once lockfiles recorded exact versions and integrity hashes (I covered the design choices in [lockfile format design and tradeoffs](/reports/lockfile-format-design-and-tradeoffs/)), you got reproducible builds without storing the code. The lockfile records what to fetch, the registry serves it, and the hash proves nothing changed in transit.
 
-Lockfiles spread to every major ecosystem. The [package manager timeline](/2025/11/15/package-manager-timeline) shows them arriving in waves: Bundler in 2010, Cargo.lock with Rust in 2015, Yarn and npm in 2016-2017, pipenv and Poetry bringing lockfiles to Python.
+Lockfiles spread to every major ecosystem. The [package manager timeline](/reports/package-manager-timeline) shows them arriving in waves: Bundler in 2010, Cargo.lock with Rust in 2015, Yarn and npm in 2016-2017, pipenv and Poetry bringing lockfiles to Python.
 
 ### left-pad
 
@@ -40,13 +40,13 @@ In March 2016, a developer [unpublished the 11-line left-pad package](https://bl
 
 The long-term response went the other way: npm [tightened its unpublish policy](https://docs.npmjs.com/policies/unpublish). Lockfiles with content hashes meant even a re-uploaded package with different code would be caught. And enterprise proxy caches like [Artifactory](https://jfrog.com/artifactory/) filled the remaining availability gap: a local mirror that your builds pull from, still serving packages even when the upstream registry goes down or a maintainer rage-quits. The availability guarantee of vendoring, without anything in your git history.
 
-left-pad is sometimes framed as vindication for vendoring. I think it was the moment the industry decided to [fix registry governance](/2025/12/22/package-registries-are-governance-as-a-service.html) rather than abandon registries altogether.
+left-pad is sometimes framed as vindication for vendoring. I think it was the moment the industry decided to [fix registry governance](/ideas/package-registries-are-governance-as-a-service) rather than abandon registries altogether.
 
 ### The C-shaped hole
 
 C never went through this transition because it never had the prerequisites: no dominant language package manager, no central registry that everyone publishes to, and no lockfile format. A lockfile is just a pointer to something in a registry, and if there's no reliable registry to point to, you have to bring the code with you.
 
-As I wrote in [The C-Shaped Hole in Package Management](/2026/01/27/the-c-shaped-hole-in-package-management.html), developers are still dropping .c and .h files into source trees the way they have since the 1970s. Libraries like SQLite and stb are distributed as single files specifically to make this easy. Conan and vcpkg exist now, but neither has the cultural ubiquity that would make vendoring unnecessary. Without a registry everyone agrees on, vendoring in C remains the path of least resistance.
+As I wrote in [The C-Shaped Hole in Package Management](/ideas/the-c-shaped-hole-in-package-management), developers are still dropping .c and .h files into source trees the way they have since the 1970s. Libraries like SQLite and stb are distributed as single files specifically to make this easy. Conan and vcpkg exist now, but neither has the cultural ubiquity that would make vendoring unnecessary. Without a registry everyone agrees on, vendoring in C remains the path of least resistance.
 
 ### Go and the Google problem
 

@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/02/22/forge-specific-repository-folders"
 ---
 
-Git doesn't know about CI, code review, or issue templates, but every forge that hosts git repositories has added these features through the same trick: a dot-folder in your repo root that the forge reads on push. The folder names differ, the contents overlap in some places and diverge in others, and the portability story between them is worse than you'd expect. A companion to my earlier post on [git's magic files](/2026/02/05/git-magic-files.html).
+Git doesn't know about CI, code review, or issue templates, but every forge that hosts git repositories has added these features through the same trick: a dot-folder in your repo root that the forge reads on push. The folder names differ, the contents overlap in some places and diverge in others, and the portability story between them is worse than you'd expect. A companion to my earlier post on [git's magic files](/reports/git-magic-files).
 
 ### .github/
 
@@ -24,7 +24,7 @@ GitHub also reads some files from the repo root or from `.github/`: **SECURITY.m
 
 The `.github/workflows/` directory contains YAML files defining Actions workflows. Each file is a separate workflow that runs on events like push, pull request, or schedule.
 
-CODEOWNERS uses [gitignore-style](/2026/02/12/the-many-flavors-of-ignore-files.html) glob patterns to map paths to GitHub users or teams who must review changes:
+CODEOWNERS uses [gitignore-style](/reports/the-many-flavors-of-ignore-files) glob patterns to map paths to GitHub users or teams who must review changes:
 
 ```
 # .github/CODEOWNERS

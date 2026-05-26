@@ -14,7 +14,7 @@ Zig shipped a built-in package manager in version 0.11 in August 2023. It uses `
 
 The package manager works well enough for declaring dependencies, fetching them, and building against them. The hard part is everything else: the ecosystem of tools, services, and infrastructure that makes a package manager usable in production.
 
-[The package management landscape](/2026/01/03/the-package-management-landscape.html) spans dozens of categories and hundreds of tools. For Zig to have the same tooling support as npm or Cargo, each of those tools either needs to add Zig support, or the Zig community needs to build alternatives.
+[The package management landscape](/reports/the-package-management-landscape) spans dozens of categories and hundreds of tools. For Zig to have the same tooling support as npm or Cargo, each of those tools either needs to add Zig support, or the Zig community needs to build alternatives.
 
 ### What the community has to build
 
@@ -71,7 +71,7 @@ Somewhere along the way, package manager designers realize that some of their ea
 
 Each new package manager goes through the same loop. Each tool vendor reimplements the same patterns: parse a manifest, extract dependencies, check against advisories. The work is duplicated dozens of times across the ecosystem, with each implementation making slightly different decisions about edge cases.
 
-Beyond the engineering, there's human coordination. Shepherding PRs through repos maintained by volunteers with different priorities. Getting PURL proposals reviewed by a committee that meets sporadically. Convincing SCA vendors to prioritize your ecosystem over the next one in line. It's part of why [package management is a wicked problem](/2026/01/23/package-management-is-a-wicked-problem.html): too many stakeholders, no single authority, solutions that create new problems.
+Beyond the engineering, there's human coordination. Shepherding PRs through repos maintained by volunteers with different priorities. Getting PURL proposals reviewed by a committee that meets sporadically. Convincing SCA vendors to prioritize your ecosystem over the next one in line. It's part of why [package management is a wicked problem](/ideas/package-management-is-a-wicked-problem): too many stakeholders, no single authority, solutions that create new problems.
 
 ### What would make this easier
 
@@ -81,11 +81,11 @@ Package management has the same M×N problem. Every tool (Dependabot, Snyk, Syft
 
 Every codebase is a dependency graph. The syntax varies, the resolution algorithms differ, the registries have different APIs, but the structure is the same: nodes are packages, edges are version constraints, and the goal is a consistent set of concrete versions. Zig's graph looks like Cargo's graph looks like npm's graph, once you strip away the surface differences.
 
-We need a Dependency Lifecycle Protocol (DLP), an LSP for the package management world. In [A Protocol for Package Management](/2026/01/22/a-protocol-for-package-management.html), I sketched what this might look like: common definitions for manifest structure, resolution behavior, registry APIs. If it existed, a new package manager could implement against it. Tools that speak the protocol would get Zig support without each SCA vendor adding it separately.
+We need a Dependency Lifecycle Protocol (DLP), an LSP for the package management world. In [A Protocol for Package Management](/ideas/a-protocol-for-package-management), I sketched what this might look like: common definitions for manifest structure, resolution behavior, registry APIs. If it existed, a new package manager could implement against it. Tools that speak the protocol would get Zig support without each SCA vendor adding it separately.
 
 ### The same problem twice
 
-[The dependency layer in digital sovereignty](/2026/01/28/the-dependency-layer-in-digital-sovereignty.html) makes a similar point from a different angle: dependencies are a chokepoint that nation-states and institutions don't control. The Zig problem and the sovereignty problem are the same problem. One is "why can't a new language ecosystem bootstrap quickly" and the other is "why can't institutions control their own dependency infrastructure." Both point to missing abstraction layers that would allow substitution.
+[The dependency layer in digital sovereignty](/ideas/the-dependency-layer-in-digital-sovereignty) makes a similar point from a different angle: dependencies are a chokepoint that nation-states and institutions don't control. The Zig problem and the sovereignty problem are the same problem. One is "why can't a new language ecosystem bootstrap quickly" and the other is "why can't institutions control their own dependency infrastructure." Both point to missing abstraction layers that would allow substitution.
 
 The lack of a protocol creates lock-in by default, through gravity more than malice. If you're Zig, you need Dependabot and Snyk and GitHub's dependency graph. If you're a European institution, you need those same tools because that's where the vulnerability data lives. A protocol would make the dependency layer contestable: run your own registry that federates with others, stand up a regional vulnerability database that speaks the same language, use tooling that isn't controlled by three American companies.
 

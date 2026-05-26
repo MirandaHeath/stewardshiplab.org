@@ -14,7 +14,7 @@ A directory of tools, libraries, registries, and standards across package manage
 
 ## Language package managers
 
-Each programming language ecosystem has at least one package manager, often several. The [categorizing clients](/2025/12/29/categorizing-package-manager-clients.html) post covers their resolution algorithms, lockfile strategies, and manifest formats in detail.
+Each programming language ecosystem has at least one package manager, often several. The [categorizing clients](/reports/categorizing-package-manager-clients) post covers their resolution algorithms, lockfile strategies, and manifest formats in detail.
 
 **JavaScript/TypeScript:** [npm](https://www.npmjs.com), [Yarn](https://yarnpkg.com), [pnpm](https://pnpm.io), [Bun](https://bun.sh), [Deno](https://deno.land), [jsr.io](https://jsr.io), [Corepack](https://github.com/nodejs/corepack), [jspm](https://github.com/jspm/jspm)
 
@@ -90,7 +90,7 @@ Each programming language ecosystem has at least one package manager, often seve
 
 ## System package managers
 
-Operating system package managers handle system-level software: libraries, applications, kernel modules. The [categorizing registries](/2025/12/29/categorizing-package-registries.html) post covers their architectures and governance.
+Operating system package managers handle system-level software: libraries, applications, kernel modules. The [categorizing registries](/reports/categorizing-package-registries) post covers their architectures and governance.
 
 **Debian/Ubuntu:** [apt](https://wiki.debian.org/Apt), [dpkg](https://wiki.debian.org/dpkg)
 
@@ -354,7 +354,7 @@ Build systems that include package management features.
 
 ## Research
 
-A longer list of academic work is in [Package Management Papers](/2025/11/13/package-management-papers.html).
+A longer list of academic work is in [Package Management Papers](/reports/package-management-papers).
 
 **Dependency analysis:** [FASTEN](https://github.com/fasten-project), [Software Heritage](https://www.softwareheritage.org), [Mancoosi](https://www.mancoosi.org)
 
@@ -364,7 +364,7 @@ A longer list of academic work is in [Package Management Papers](/2025/11/13/pac
 
 ## Governance and best practices
 
-Registries don't just host files, they [make political choices](/2025/12/22/package-registries-are-governance-as-a-service.html) about naming, ownership, and removal. These resources cover how ecosystems govern themselves.
+Registries don't just host files, they [make political choices](/ideas/package-registries-are-governance-as-a-service) about naming, ownership, and removal. These resources cover how ecosystems govern themselves.
 
 **Working groups:** [OpenSSF Securing Software Repos WG](https://repos.openssf.org/), [Python Packaging Authority](https://www.pypa.io/), [Node.js Package Maintenance WG](https://github.com/nodejs/package-maintenance), [CPAN Security Group](https://security.metacpan.org/)
 

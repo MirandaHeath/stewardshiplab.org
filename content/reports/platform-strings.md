@@ -5,7 +5,7 @@ title: "Platform Strings"
 date: 2026-02-17 10:00 +0000
 description: "An M1 Mac is aarch64-apple-darwin, arm64-darwin, darwin/arm64, or macosx_11_0_arm64 depending on which tool you ask."
 canonicalWebsiteName: "nesbitt.io"
-canonicalUrl: "https://nesbitt.io/2026/02/17/platform-strings.html"
+canonicalUrl: "https://nesbitt.io/2026/02/17/platform-strings"
 ---
 
 Ask a dozen ecosystems what platform you're running on and you'll get a dozen different answers. An M1 Mac compiling a library is `aarch64-apple-darwin` to LLVM, `arm64-darwin` to RubyGems, `darwin/arm64` to Go, `macosx_11_0_arm64` to Python wheels, and `darwin-arm64` to npm, all describing the same chip on the same OS. Each naming scheme was designed for its own context with its own constraints, and every tool that needs to work across ecosystems ends up maintaining a translation table between them.
@@ -88,7 +88,7 @@ Under the proposed scheme, `aarch64-linux-gnu` becomes `aarch64-linux-gnu-lp64` 
 
 ### Conan and vcpkg
 
-C and C++ have [no canonical package registry](/2026/01/27/the-c-shaped-hole-in-package-management.html), so the two main C/C++ package managers each invented their own platform identification from scratch.
+C and C++ have [no canonical package registry](/ideas/the-c-shaped-hole-in-package-management), so the two main C/C++ package managers each invented their own platform identification from scratch.
 
 [Conan](https://conan.io/) doesn't use platform strings at all. It uses [hierarchical settings](https://docs.conan.io/2/reference/config_files/settings.html): `os=Macos`, `arch=armv8`, `compiler=apple-clang`, `compiler.version=15`. The settings are separate key-value pairs rather than a combined string, which means Conan never had to decide on a separator or field order. It also means Conan calls ARM64 `armv8`, adding a third name for the architecture alongside `aarch64` and `arm64`. For cross-compilation, Conan 2 uses [dual profiles](https://docs.conan.io/2/tutorial/consuming_packages/cross_building_with_conan.html) (`--profile:build` and `--profile:host`) rather than encoding build and target in a single string.
 

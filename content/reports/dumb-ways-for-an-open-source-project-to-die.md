@@ -5,14 +5,14 @@ title: "Dumb Ways for an Open Source Project to Die"
 date: 2026-05-19 10:00 +0000
 description: "How your dependencies became Bernies"
 canonicalWebsiteName: "nesbitt.io"
-canonicalUrl: "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html"
+canonicalUrl: "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die"
 ---
 
-[Weekend at Bernie's](/2026/05/08/weekend-at-bernies.html) showed that a good chunk of the most-depended-on open source packages are dead, and there are a lot of different ways for a project to end up that way.
+[Weekend at Bernie's](/ideas/weekend-at-bernies) showed that a good chunk of the most-depended-on open source packages are dead, and there are a lot of different ways for a project to end up that way.
 
 ## The maintainer left
 
-**Ghost maintainer.** The simplest and most common case: last human commit some years back, issues accumulating unanswered, the repo not archived so it doesn't show up in any filter that would flag it. Usually the maintainer just moved on to other things and the project wasn't important enough to them to formally hand over or shut down, though the same silence covers everything up to and including the maintainer having died, which neither the registry nor the repo has any way to represent. From outside it's indistinguishable from a long holiday until enough unanswered issues have piled up to make the silence unambiguous, and the npm utilities at the top of the [Bernie's dead list](/2026/05/08/weekend-at-bernies.html) are mostly this.
+**Ghost maintainer.** The simplest and most common case: last human commit some years back, issues accumulating unanswered, the repo not archived so it doesn't show up in any filter that would flag it. Usually the maintainer just moved on to other things and the project wasn't important enough to them to formally hand over or shut down, though the same silence covers everything up to and including the maintainer having died, which neither the registry nor the repo has any way to represent. From outside it's indistinguishable from a long holiday until enough unanswered issues have piled up to make the silence unambiguous, and the npm utilities at the top of the [Bernie's dead list](/ideas/weekend-at-bernies) are mostly this.
 
 **Corporate orphan.** A company built and open-sourced it with a team to run it, then a pivot or a layoff round took the team out and nobody updated the README. The GitHub org persists with the company logo and the last people who had admin rights have left, so often nobody still at the company knows the project is theirs. Google's various graveyards are the famous case but every company past a certain size has a few of these, and the ones that were infrastructure rather than products tend not to even get a deprecation notice.
 
@@ -28,7 +28,7 @@ canonicalUrl: "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-projec
 
 **Burnout plateau.** Still active by any metric you'd run. Typo fixes and dependency bumps get merged with the occasional "thanks, will look at this" on an issue, but anything that needs an actual design decision or a debugging session sits open indefinitely because those take energy the maintainer hasn't had for the project in a long time. There's often just enough response that anyone who suggests forking gets pointed at the recent activity but never enough to actually ship, and it can hold that shape for years without being quite dead enough for anyone to feel justified taking over.
 
-**Benevolent zombie.** The contribution graph is solid green and every commit is a bot. Dependabot bumps, an auto-merge rule, possibly automated releases triggered by the bumps, and now scheduled coding agents that can keep the lights on indefinitely without a human reading anything. Every recency-based health score rates this as fine, which is more or less the [whole problem](/2026/05/09/the-mismeasure-of-open-source.html) with recency-based health scores.
+**Benevolent zombie.** The contribution graph is solid green and every commit is a bot. Dependabot bumps, an auto-merge rule, possibly automated releases triggered by the bumps, and now scheduled coding agents that can keep the lights on indefinitely without a human reading anything. Every recency-based health score rates this as fine, which is more or less the [whole problem](/ideas/the-mismeasure-of-open-source) with recency-based health scores.
 
 **Custody battle.** Two or more co-maintainers have fallen out, each with enough access to block the other and not enough to proceed alone, and the project is frozen between them. It might resolve into a fork or end with one party walking away, but plenty just sit there with the issue tracker filling up with users asking what's going on and getting two contradictory answers.
 
@@ -54,7 +54,7 @@ canonicalUrl: "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-projec
 
 **Stranded major.** The project is on v4 and actively maintained, but most of the ecosystem is still on v1 because v2 was a rewrite they never migrated past and v1 hasn't had maintainer attention in years. Whether "the project" is dead depends entirely on which major version you're asking about, and the versions with the most installs are usually not the ones getting the attention.
 
-**Registry orphan.** The package resolves from the registry and the source repo URL in its metadata 404s: deleted, made private, moved without updating the registry, or the hosting service it was on shut down. There's nowhere to file an issue or fork from, and no way to verify the tarball matches anything that was ever in source control. About 1.7% of npm and 4% of Packagist [point at a repo that isn't there](/2026/05/11/proxy.html), and a fair number of those are still being installed.
+**Registry orphan.** The package resolves from the registry and the source repo URL in its metadata 404s: deleted, made private, moved without updating the registry, or the hosting service it was on shut down. There's nowhere to file an issue or fork from, and no way to verify the tarball matches anything that was ever in source control. About 1.7% of npm and 4% of Packagist [point at a repo that isn't there](/tools/proxy), and a fair number of those are still being installed.
 
 ## Force majeure
 

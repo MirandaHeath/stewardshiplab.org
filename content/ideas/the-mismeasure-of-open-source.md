@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/05/09/the-mismeasure-of-open-source"
 ---
 
-Every attempt to score open source projects for criticality, risk, or funding need ends up built on roughly the same dozen signals, because those are the dozen signals you can get from a registry API and the GitHub REST endpoints in an afternoon. I [wrote earlier this week](/2026/05/06/revisiting-the-2015-open-source-census.html) about the 2015 CII census, whose formula scored xz-utils a 6 out of 13 and let it sink to row 254, and which nonetheless got more right than it's usually given credit for.
+Every attempt to score open source projects for criticality, risk, or funding need ends up built on roughly the same dozen signals, because those are the dozen signals you can get from a registry API and the GitHub REST endpoints in an afternoon. I [wrote earlier this week](/ideas/revisiting-the-2015-open-source-census) about the 2015 CII census, whose formula scored xz-utils a 6 out of 13 and let it sink to row 254, and which nonetheless got more right than it's usually given credit for.
 
 Ten years on there are several successor efforts running, from foundations, academics, and funders, and I've contributed data to most of them. With far more data and far more people working on the problem they are still largely built on the same inputs, so they inherit most of the same blind spots plus a few new ones, and I wanted to write those down in one place without picking on any single model.
 
@@ -16,7 +16,7 @@ Ten years on there are several successor efforts running, from foundations, acad
 
 The most consequential mistake is treating the absence of a signal as a low value of that signal. Go modules are fetched from version control via a proxy that publishes no per-module download counts. C libraries reach machines through apt, dnf, apk, vendoring, and static linking, none of which report to anyone. If a model's entry filter is "top N by downloads", or its importance weight is download-derived, both of these ecosystems are largely excluded before any risk scoring runs, and the output contains no indication that they were ever candidates.
 
-I [mentioned](/2026/05/06/revisiting-the-2015-open-source-census.html) Daniel Stenberg finding curl listed at ten thousand downloads a year, which is an accurate count of the channels that happen to be instrumented and bears no relation to the twenty billion or so installations curl actually has.
+I [mentioned](/ideas/revisiting-the-2015-open-source-census) Daniel Stenberg finding curl listed at ten thousand downloads a year, which is an accurate count of the channels that happen to be instrumented and bears no relation to the twenty billion or so installations curl actually has.
 
 Zero GitHub issues might mean zero users, or it might mean bugs are tracked in Bugzilla, a mailing list, Launchpad, or the Debian BTS. The absence of a `FUNDING.yml` could equally mean nobody is paying or that three full-time maintainers are on Red Hat's payroll, and a missing OpenSSF Scorecard result tells you nothing about security if the project is hosted on cgit where Scorecard can't run.
 
@@ -40,7 +40,7 @@ Code complexity metrics get used as a proxy for how hard a project would be to r
 
 Commit cadence and "last activity" penalise software that is finished. TeX is the canonical case, and bzip2, libogg, and a lot of format-parsing and crypto code that implements a frozen specification are deliberately low-churn because the format is stable and churn is itself a risk. The same metric is trivially gamed in the other direction by Dependabot and Renovate, which will happily keep a repository's activity graph green for years after the last human stopped reading the notifications. That at least leaves a recognisable bot author in the log.
 
-Claude Code and similar coding agents now support scheduled and repeating tasks, so a repository can accumulate a steady stream of plausible-looking maintenance commits authored under a human's name with no human in the loop, and commit frequency stops distinguishing maintained from automated entirely. I've been trying to count how often that [Weekend at Bernie's](/2026/05/08/weekend-at-bernies.html) condition actually holds across the most-depended-on packages, and the bot-only category is large enough that any activity metric ignoring authorship is measuring the bots.
+Claude Code and similar coding agents now support scheduled and repeating tasks, so a repository can accumulate a steady stream of plausible-looking maintenance commits authored under a human's name with no human in the loop, and commit frequency stops distinguishing maintained from automated entirely. I've been trying to count how often that [Weekend at Bernie's](/ideas/weekend-at-bernies) condition actually holds across the most-depended-on packages, and the bot-only category is large enough that any activity metric ignoring authorship is measuring the bots.
 
 ## One number, many units
 

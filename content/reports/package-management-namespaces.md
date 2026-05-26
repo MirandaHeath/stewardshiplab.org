@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/02/14/package-management-namespaces"
 ---
 
-Every package needs a name. The rules for how those names work is one of the most consequential decisions a package manager makes, and one of the hardest to change later. I [categorized the approaches](/2025/12/29/categorizing-package-registries.html) previously and touched on the [tradeoffs](/2025/12/05/package-manager-tradeoffs.html) briefly.
+Every package needs a name. The rules for how those names work is one of the most consequential decisions a package manager makes, and one of the hardest to change later. I [categorized the approaches](/reports/categorizing-package-registries) previously and touched on the [tradeoffs](/reports/package-manager-tradeoffs) briefly.
 
 ### Flat namespaces
 
@@ -20,7 +20,7 @@ At scale, though, good names run out. Someone registers `database` on day one an
 
 Name scarcity creates pressure, and you end up with `python-dateutil` because `dateutil` was taken, `beautifulsoup4` because `beautifulsoup` was the old version, or `pillow` because the original `PIL` package was abandoned and PyPI doesn't recycle names. New developers have to learn not just what to install but which of several similar-sounding packages is the right one.
 
-Flat namespaces also make [typosquatting](/2025/12/17/typosquatting-in-package-managers.html) straightforward. Someone registers `reqeusts` next to `requests` and waits. The attack works because there's nothing between the user's keystrokes and the registry lookup, no organization to verify and no hierarchy to navigate, just a string match against a flat list.
+Flat namespaces also make [typosquatting](/reports/typosquatting-in-package-managers) straightforward. Someone registers `reqeusts` next to `requests` and waits. The attack works because there's nothing between the user's keystrokes and the registry lookup, no organization to verify and no hierarchy to navigate, just a string match against a flat list.
 
 Some registries add normalization rules to limit this. PyPI treats hyphens, underscores, and dots as equivalent, so `my-package` and `my_package` resolve to the same thing. crates.io does similar normalization. RubyGems doesn't, which is why both `stripe` and `stripe-ruby` can coexist as unrelated packages.
 
@@ -88,7 +88,7 @@ The pieces to fix this are partly in place. Apple defined a [registry protocol](
 
 ### The migration problem
 
-As I wrote about in [Package Management is a Wicked Problem](/2026/01/23/package-management-is-a-wicked-problem.html), once PyPI accepted namespace-less package names, that was permanent. If PyPI added mandatory namespaces tomorrow, every existing `requirements.txt`, every tutorial, every CI script would need updating. The new system would have to support both namespaced and un-namespaced packages indefinitely. You haven't replaced the flat namespace, you've just added a layer on top of it.
+As I wrote about in [Package Management is a Wicked Problem](/ideas/package-management-is-a-wicked-problem), once PyPI accepted namespace-less package names, that was permanent. If PyPI added mandatory namespaces tomorrow, every existing `requirements.txt`, every tutorial, every CI script would need updating. The new system would have to support both namespaced and un-namespaced packages indefinitely. You haven't replaced the flat namespace, you've just added a layer on top of it.
 
 npm's experience shows what this looks like in practice. Scoped packages have been available since 2014, but most of the ecosystem still uses flat names. The existence of scopes didn't make `express` become `@expressjs/express` because too much already depends on the existing name. Scopes ended up being used primarily for new packages and organizational groups rather than as a migration path for the existing namespace.
 

@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/04/15/the-tuesday-test"
 ---
 
-[Yesterday](/2026/04/14/standing-on-the-shoulders-of-homebrew.html) I wrote about the fast Homebrew rewrites and ended on the line that the bottleneck for that whole class of project is not Rust or Ruby, it is the absence of a stable declarative package schema. Someone on Mastodon picked up that thread and asked the obvious follow-on: which package managers actually have one? Going through the list, the honest answer is hardly any of them, and there is a quick test that makes the answer easy to check.
+[Yesterday](/ideas/standing-on-the-shoulders-of-homebrew) I wrote about the fast Homebrew rewrites and ended on the line that the bottleneck for that whole class of project is not Rust or Ruby, it is the absence of a stable declarative package schema. Someone on Mastodon picked up that thread and asked the obvious follow-on: which package managers actually have one? Going through the list, the honest answer is hardly any of them, and there is a quick test that makes the answer easy to check.
 
 Ask this of any package manager: if I install this package on a Tuesday, could it do something different than if I install it on a Wednesday? If the answer is yes, the package manager is not really declarative, no matter what the manifest file looks like on the surface.
 
@@ -18,7 +18,7 @@ The test is not about whether the code is malicious, or whether it is a supply c
 
 It is also not about the registry changing under you between the two days: new versions, yanks and the like are all real concerns, but they are concerns about the data the package manager is fetching rather than about the package manager itself. Pretend the registry is frozen and the lockfile is pinned.
 
-The question here is narrower. Given the same manifest, the same lockfile and the same registry contents, is the install allowed to read anything the manifest does not declare as an input? The day of the week is the simplest example of such a hidden input, but the real point is that a package that passes the Tuesday test has no way to reach outside its declared inputs at all. A package that fails it can, and once it can, the manifest is no longer the whole story. Going through the list of well known package managers from [the landscape post](/2026/01/03/the-package-management-landscape.html), it turns out that almost none of them pass.
+The question here is narrower. Given the same manifest, the same lockfile and the same registry contents, is the install allowed to read anything the manifest does not declare as an input? The day of the week is the simplest example of such a hidden input, but the real point is that a package that passes the Tuesday test has no way to reach outside its declared inputs at all. A package that fails it can, and once it can, the manifest is no longer the whole story. Going through the list of well known package managers from [the landscape post](/reports/the-package-management-landscape), it turns out that almost none of them pass.
 
 ### Homebrew
 

@@ -53,7 +53,7 @@ cooldown:
     "pkg:npm/lodash": "0"
 ```
 
-With that config, a version published to npm an hour ago doesn't exist as far as anything behind the proxy is concerned, and won't for a week. I [wrote about why I think cooldowns are the single most effective supply-chain control most projects aren't using](/2026/03/04/package-managers-need-to-cool-down.html); the short version is that almost every malicious-package incident is caught within a day or two of publish, so a build that can't see anything younger than three days was never exposed in the first place.
+With that config, a version published to npm an hour ago doesn't exist as far as anything behind the proxy is concerned, and won't for a week. I [wrote about why I think cooldowns are the single most effective supply-chain control most projects aren't using](/ideas/package-managers-need-to-cool-down); the short version is that almost every malicious-package incident is caught within a day or two of publish, so a build that can't see anything younger than three days was never exposed in the first place.
 
 A few package managers have grown a native setting for this since I wrote that post, but doing it at the proxy means one config covers every ecosystem at once, including the ones that haven't.
 
@@ -61,11 +61,11 @@ A few package managers have grown a native setting for this since I wrote that p
 
 There's a web UI on `/` for browsing what's in the cache: packages by ecosystem, hit counts, size, a source browser for reading files inside cached tarballs without extracting them, and a diff view for comparing two cached versions of the same package file by file. The enrichment API behind it (`/api/package/{ecosystem}/{name}/{version}`) returns licence, publish date, latest version, and any OSV advisories for a given coordinate, which is the same lookup git-pkgs needs, so the two share that code.
 
-There's a lot more I want the UI to do, most of it on the list of [things worth stealing from npmx](/2026/04/16/features-everyone-should-steal-from-npmx.html): bundle composition, install-size sunbursts, typosquat warnings. A registry frontend that only shows you packages you've actually installed is a slightly different design problem from one that fronts all four million packages on npm, and I haven't fully worked out what that should look like yet.
+There's a lot more I want the UI to do, most of it on the list of [things worth stealing from npmx](/ideas/features-everyone-should-steal-from-npmx): bundle composition, install-size sunbursts, typosquat warnings. A registry frontend that only shows you packages you've actually installed is a slightly different design problem from one that fronts all four million packages on npm, and I haven't fully worked out what that should look like yet.
 
 ### Next
 
-[Upstream merging](https://github.com/git-pkgs/proxy/issues/55) would put an internal index and the public registry behind one URL, with the internal names shadowing the public ones, which is the dependency-confusion defence that pip in particular has no native answer for. I'd also like the proxy to enforce dependency policy more broadly than just cooldowns (licence allowlists, blocked package names, version floors), though [there's no shared format for writing those policies down](/2026/03/19/the-fragmented-world-of-dependency-policy.html), so whatever config the proxy grows will be yet another one, and I'd rather that problem got solved upstream of any individual tool.
+[Upstream merging](https://github.com/git-pkgs/proxy/issues/55) would put an internal index and the public registry behind one URL, with the internal names shadowing the public ones, which is the dependency-confusion defence that pip in particular has no native answer for. I'd also like the proxy to enforce dependency policy more broadly than just cooldowns (licence allowlists, blocked package names, version floors), though [there's no shared format for writing those policies down](/ideas/the-fragmented-world-of-dependency-policy), so whatever config the proxy grows will be yet another one, and I'd rather that problem got solved upstream of any individual tool.
 
 The experiment I'm most looking forward to is a [wrapper mode](https://github.com/git-pkgs/proxy/issues/52), `proxy npm install express`, where the binary finds or starts a server, sets `NPM_CONFIG_REGISTRY` or `GOPROXY` or `PIP_INDEX_URL` as appropriate, and execs the underlying command. Add `alias npm="proxy npm"` to your shell and every install on your machine is cached and cooled down without ever touching an `.npmrc`.
 

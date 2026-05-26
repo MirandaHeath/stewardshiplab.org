@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/04/09/package-security-defenses-for-ai-agents"
 ---
 
-Yesterday I wrote about [the package security problems AI agents face](/2026/04/08/package-security-problems-for-ai-agents): typosquatting, registry poisoning, lockfile manipulation, install-time code execution, credential theft, and cascading failures through the dependency graph. Agents inherit all the old package security problems but resolve, install, and propagate faster than any human can review.
+Yesterday I wrote about [the package security problems AI agents face](/reports/package-security-problems-for-ai-agents): typosquatting, registry poisoning, lockfile manipulation, install-time code execution, credential theft, and cascading failures through the dependency graph. Agents inherit all the old package security problems but resolve, install, and propagate faster than any human can review.
 
 There's no silver bullet for securing agent coding workflows because LLMs can't reliably distinguish safe packages and metadata from malicious ones, but these defenses can reduce the blast radius when something gets through. Some of them introduce friction, but agents can absorb that friction better than humans.
 
@@ -20,7 +20,7 @@ npm has `--ignore-scripts`, pip has `--only-binary :all:` to refuse sdists and f
 
 ### Dependency cooldown periods
 
-New package versions shouldn't be installable by agents for some window after publication, maybe 24-72 hours. I wrote about [cooldown support across package managers](/2026/03/04/package-managers-need-to-cool-down) in more detail last month. Most malicious packages are detected and removed within days of upload. A cooldown means agents only resolve versions that have survived initial community and automated review. npm's provenance attestations help here but aren't sufficient alone. This could be enforced at the registry level, the resolver level, or the AI coding platform level.
+New package versions shouldn't be installable by agents for some window after publication, maybe 24-72 hours. I wrote about [cooldown support across package managers](/ideas/package-managers-need-to-cool-down) in more detail last month. Most malicious packages are detected and removed within days of upload. A cooldown means agents only resolve versions that have survived initial community and automated review. npm's provenance attestations help here but aren't sufficient alone. This could be enforced at the registry level, the resolver level, or the AI coding platform level.
 
 ### Sandbox package installation
 
@@ -50,7 +50,7 @@ MCP server descriptions, agent cards, skill descriptors, and plugin manifests sh
 
 Log every package install, version resolution, and registry query an agent makes, and diff these against expected behavior for the task. If an agent asked to fix a CSS bug runs `npm install crypto-utils`, that should page someone the same way an unexpected outbound network connection would in production. If an agent resolves a package version different from what's in the lockfile, the task should halt and wait for human approval. Traditional package security tooling already surfaces these signals but most AI coding platforms don't wire them into their agent workflows.
 
-Failed installs matter too. When an agent tries to install a package that doesn't exist, that's likely a hallucinated name, and those names are [slopsquatting](/2025/12/10/slopsquatting-meets-dependency-confusion) targets. Registries and AI coding platforms that log failed resolution attempts have an early warning system for which package names attackers should be racing to register.
+Failed installs matter too. When an agent tries to install a package that doesn't exist, that's likely a hallucinated name, and those names are [slopsquatting](/ideas/slopsquatting-meets-dependency-confusion) targets. Registries and AI coding platforms that log failed resolution attempts have an early warning system for which package names attackers should be racing to register.
 
 ### Namespace reservation for agent ecosystems
 

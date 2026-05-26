@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2026/01/17/lockfile-format-design-and-tradeoff
 
 Lockfiles record which packages were installed, at what versions, from where, with what checksums. Most package managers have one: Gemfile.lock, package-lock.json, Cargo.lock, poetry.lock, pnpm-lock.yaml. (Go splits this across go.mod and go.sum.) They solve the same problem but make different decisions about format, structure, and what to include.[^tradeoffs]
 
-[^tradeoffs]: For broader package manager design decisions beyond lockfiles, see [Package Manager Design Tradeoffs](/2025/12/05/package-manager-tradeoffs).
+[^tradeoffs]: For broader package manager design decisions beyond lockfiles, see [Package Manager Design Tradeoffs](/reports/package-manager-tradeoffs).
 
 A good lockfile format optimizes for mergeability, determinism, and external tooling compatibility, even when that means sacrificing compactness or human readability.
 
@@ -38,7 +38,7 @@ Early lockfile formats prioritized getting resolution right over optimizing for 
 
 **What to include.** There's a distinction between intrinsic data (what you need to fetch and verify: name, version, source, checksum, dependencies) and extrinsic data (metadata about the package: descriptions, licenses, authors). Lockfiles need the intrinsic data. Beyond that, opinions diverge. Poetry includes descriptions and Python version constraints for every package. uv strips that metadata and stores only what's needed for installation. The more extrinsic metadata you include, the more the lockfile drifts toward being a quasi-SBOM, and the more every change ripples through diffs.[^sbom]
 
-[^sbom]: The line between lockfiles and SBOMs is blurry. See [Could lockfiles just be SBOMs?](/2025/12/23/could-lockfiles-just-be-sboms) for more on this tension.
+[^sbom]: The line between lockfiles and SBOMs is blurry. See [Could lockfiles just be SBOMs?](/ideas/could-lockfiles-just-be-sboms) for more on this tension.
 
 **Schema versioning.** Bundler records which Bundler version created the file (`BUNDLED WITH`), which causes friction when developers use different versions. npm's `lockfileVersion` tracks format compatibility rather than tool version. Cargo's approach (a version field for schema changes only) causes the least friction.
 
@@ -229,7 +229,7 @@ wheels = [
 ]
 ```
 
-Leaner TOML than Poetry. Skips descriptions and optional flags. Stores URLs, hashes, and file sizes for both sdists and wheels. uv prioritizes [speed throughout its design](/2025/12/26/how-uv-got-so-fast), and the lockfile reflects that. Python has multiple competing lockfile formats (Poetry, PDM, pip-tools, uv); [PEP 751](https://peps.python.org/pep-0751/) proposes a standard but adoption is uncertain.
+Leaner TOML than Poetry. Skips descriptions and optional flags. Stores URLs, hashes, and file sizes for both sdists and wheels. uv prioritizes [speed throughout its design](/ideas/how-uv-got-so-fast), and the lockfile reflects that. Python has multiple competing lockfile formats (Poetry, PDM, pip-tools, uv); [PEP 751](https://peps.python.org/pep-0751/) proposes a standard but adoption is uncertain.
 
 ### conda-lock.yml ([example](https://github.com/01-ai/Yi/blob/main/conda-lock.yml))
 

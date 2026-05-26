@@ -35,7 +35,7 @@ Matthew Suozzo gave [Trust Nothing, Trace Everything: Auditing Package Builds at
 
 Philippe Ombredanne returned with [PURL: From FOSDEM 2018 to international standard](https://fosdem.org/2026/schedule/event/P8AAT3-purl/). Package-URL was [first presented at FOSDEM](https://archive.fosdem.org/2018/schedule/event/purl/) eight years ago and has now become an international standard for referencing packages across ecosystems. Ombredanne highlighted PURL's adoption in CVE format, security tools, and SCA platforms, and its journey from community project to Ecma standard with plans for ISO standardization.
 
-Vlad-Stefan Harbuz spoke about [Binary Dependencies: Identifying the Hidden Packages We All Depend On](https://fosdem.org/2026/schedule/event/7NQJNU-binary_dependencies_identifying_the_hidden_packages_we_all_depend_on/), examining dependencies that don't appear in standard package manager manifests. Related: [the C-shaped hole in package management](/2026/01/27/the-c-shaped-hole-in-package-management.html).
+Vlad-Stefan Harbuz spoke about [Binary Dependencies: Identifying the Hidden Packages We All Depend On](/reports/binary-dependencies-identifying-the-hidden-packages-we-all-depend-on), examining dependencies that don't appear in standard package manager manifests. Related: [the C-shaped hole in package management](/ideas/the-c-shaped-hole-in-package-management).
 
 Michael Winser discussed [The terrible economics of package registries and how to fix them](https://fosdem.org/2026/schedule/event/8WJKEH-package-registry-economics/), looking at the sustainability challenges facing package registry infrastructure.
 
@@ -95,5 +95,5 @@ The Security track included [Using Capslock analysis to develop seccomp filters 
 
 The Design track featured [Designing attestations UI: The Security and Safety of OSS package supply chain](https://fosdem.org/2026/schedule/event/HCQRVT-designing_attestations_ui_the_security_and_safety_of_oss_package_supply_chain/), examining user interface design for package attestation systems.
 
-I also presented [git blame for your dependencies](https://fosdem.org/2026/schedule/event/E7BQKK-git_blame_for_your_dependencies/) in the /dev/random track about [git-pkgs](/2026/01/01/git-pkgs-explore-your-dependency-history).
+I also presented [git blame for your dependencies](https://fosdem.org/2026/schedule/event/E7BQKK-git_blame_for_your_dependencies/) in the /dev/random track about [git-pkgs](/tools/git-pkgs-explore-your-dependency-history).
 

@@ -12,7 +12,7 @@ At a Node.js conference years ago, I heard a speaker claim that npm had finally 
 
 Docker's adoption in Node.js was partly a response to this. When local builds aren't deterministic, containers become the only way to ensure what you test is what you deploy. The Dockerfile compensated for reliability the package manager didn't provide.
 
-Many developers have moved to pnpm or Yarn. But to understand why npm struggled with correctness for so long, look at the incentives. Every [package manager tradeoff](/2025/12/05/package-manager-tradeoffs.html) has a growth-friendly side and a correctness-friendly side. npm consistently chose growth.
+Many developers have moved to pnpm or Yarn. But to understand why npm struggled with correctness for so long, look at the incentives. Every [package manager tradeoff](/reports/package-manager-tradeoffs) has a growth-friendly side and a correctness-friendly side. npm consistently chose growth.
 
 ### Dependency resolution
 

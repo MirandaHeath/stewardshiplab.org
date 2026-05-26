@@ -16,7 +16,7 @@ Typosquatting and namespace confusion are some of the oldest problems in package
 
 - An attacker registers an MCP server package on npm or PyPI with a name one character off from a popular one, and when an agent dynamically discovers and installs tools, it resolves the typosquatted package instead, treating it as legitimate.
 - A malicious tool package named `report` gets resolved before the legitimate `report_finance` because of how the agent's tool registry handles namespace collisions, causing misrouted queries and unintended data disclosure.
-- LLMs hallucinating package names during code generation create install targets that don't exist yet, and attackers can register those names on PyPI or npm with malicious payloads. I wrote about [slopsquatting](/2025/12/10/slopsquatting-meets-dependency-confusion) in more detail last year.
+- LLMs hallucinating package names during code generation create install targets that don't exist yet, and attackers can register those names on PyPI or npm with malicious payloads. I wrote about [slopsquatting](/ideas/slopsquatting-meets-dependency-confusion) in more detail last year.
 
 ### Registry and repository attacks
 

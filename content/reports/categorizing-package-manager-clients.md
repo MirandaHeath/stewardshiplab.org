@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2025/12/29/categorizing-package-manager-clients"
 ---
 
-This is the companion to [Categorizing Package Registries](/2025/12/29/categorizing-package-registries.html), focusing on the client side: how package managers resolve dependencies, track versions, run build code, and declare dependencies. The data is also available as [CSV](https://github.com/andrew/nesbitt.io/blob/master/data/package-manager-clients.csv). There are gaps; contributions welcome.
+This is the companion to [Categorizing Package Registries](/reports/categorizing-package-registries), focusing on the client side: how package managers resolve dependencies, track versions, run build code, and declare dependencies. The data is also available as [CSV](https://github.com/andrew/nesbitt.io/blob/master/data/package-manager-clients.csv). There are gaps; contributions welcome.
 
 Each package manager combines these choices differently. Cargo uses backtracking resolution, generates lockfiles, allows build hooks via build.rs, and uses TOML manifests. Go uses minimal version selection, achieves reproducibility without lockfiles, forbids hooks entirely, and embeds dependencies in go.mod. npm uses deduplication with nesting, generates lockfiles, allows postinstall hooks, and uses JSON. The particular combination shapes the developer experience more than any single choice.
 

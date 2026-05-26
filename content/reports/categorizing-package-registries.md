@@ -8,11 +8,11 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2025/12/29/categorizing-package-registries"
 ---
 
-Package registries differ in dozens of ways, but most of those differences cluster into a few structural categories. Looking at them through the lens of [design tradeoffs](/2025/12/05/package-manager-tradeoffs.html) helps explain why they ended up where they did. The [ecosyste.ms documentation repositories](/2025/11/30/documenting-package-manager-data.html) contain detailed data on over 70 registries; here I'm trying to draw out the shapes.
+Package registries differ in dozens of ways, but most of those differences cluster into a few structural categories. Looking at them through the lens of [design tradeoffs](/reports/package-manager-tradeoffs) helps explain why they ended up where they did. The [ecosyste.ms documentation repositories](https://nesbitt.io/2025/11/30/documenting-package-manager-data.html) contain detailed data on over 70 registries; here I'm trying to draw out the shapes.
 
 The categories below are roughly orthogonal dimensions. No registry is "just" one thing; each is a particular combination of choices. npmjs.com is database-backed, unreviewed, has flat-plus-scoped names, ships mostly source, and is run by a for-profit company. Debian's repositories are filesystem-based, curated by maintainers, use distro-managed names, ship binaries, and are run by a foundation. Those combinations matter more than any single axis.
 
-A companion post covers [package manager clients](/2025/12/29/categorizing-package-manager-clients.html): resolution algorithms, lockfiles, build hooks, and manifest formats. The data is also available as [CSV](https://github.com/andrew/nesbitt.io/blob/master/data/package-registries.csv). There are gaps; contributions welcome.
+A companion post covers [package manager clients](/reports/29/categorizing-package-manager-clients.html): resolution algorithms, lockfiles, build hooks, and manifest formats. The data is also available as [CSV](https://github.com/andrew/nesbitt.io/blob/master/data/package-registries.csv). There are gaps; contributions welcome.
 
 **Contents:** [Architecture](#registry-architecture) · [Review model](#reviewed--unreviewed) · [Namespacing](#namespacing) · [Distribution model](#distribution-model) · [Governance](#registry-governance) · [Ecosystem scope](#ecosystem-scope) · [Version retention](#version-retention) · [Size](#registry-size) · [Mirroring](#mirroring--proxying)
 
@@ -39,7 +39,7 @@ How does the registry store and serve package metadata?
 - galaxy.ansible.com
 - jsr.io
 
-**Git repositories as indexes** use version control as the storage layer on the critical path. If you removed git, you'd need to replace it with a database. The git model provides history, is trivially mirrorable, and works offline once cloned. But it doesn't scale indefinitely; Cargo had to add a [sparse index](/2025/12/28/the-compact-index.html) to avoid downloading the entire registry on first use.
+**Git repositories as indexes** use version control as the storage layer on the critical path. If you removed git, you'd need to replace it with a database. The git model provides history, is trivially mirrorable, and works offline once cloned. But it doesn't scale indefinitely; Cargo had to add a [sparse index](/ideas/the-compact-index) to avoid downloading the entire registry on first use.
 
 - homebrew-core
 - cocoapods.org
@@ -53,7 +53,7 @@ How does the registry store and serve package metadata?
 - nix[^nix-guix-spack-hashing]
 - guix[^nix-guix-spack-hashing]
 
-**Filesystem-based repositories** serve generated index files statically from HTTP mirrors. The server does work only when the repository is updated, not when clients fetch. This is the pattern that [the compact index](/2025/12/28/the-compact-index.html) brought to RubyGems.
+**Filesystem-based repositories** serve generated index files statically from HTTP mirrors. The server does work only when the repository is updated, not when clients fetch. This is the pattern that [the compact index](/ideas/the-compact-index) brought to RubyGems.
 
 - apt/dpkg
 - yum/dnf

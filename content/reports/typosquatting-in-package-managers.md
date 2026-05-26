@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2025/12/17/typosquatting-in-package-managers"
 
 Typosquatting is registering a package name that looks like a popular one, hoping developers mistype or copy-paste the wrong thing. It's been a supply chain attack vector since at least 2016, when Nikolai Tschacher [demonstrated](https://incolumitas.com/2016/06/08/typosquatting-package-managers/) that uploading malicious packages with slightly misspelled names could infect thousands of hosts within days. His bachelor thesis experiment infected over 17,000 machines across PyPI, npm, and RubyGems, with half running his code as administrator.
 
-The attack surface is straightforward: package managers accept whatever name you type. If you run `pip install reqeusts` instead of `pip install requests`, and someone has registered `reqeusts`, you get their code. The typo can come from your fingers, from a tutorial you copied, or from an LLM hallucination ([slopsquatting](/2025/12/10/slopsquatting-meets-dependency-confusion.html)).
+The attack surface is straightforward: package managers accept whatever name you type. If you run `pip install reqeusts` instead of `pip install requests`, and someone has registered `reqeusts`, you get their code. The typo can come from your fingers, from a tutorial you copied, or from an LLM hallucination ([slopsquatting](/ideas/slopsquatting-meets-dependency-confusion)).
 
 ### Generation techniques
 

@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/01/09/package-management-blog-posts"
 ---
 
-I've been collecting posts about package management for a while. Not academic papers (those are in a [separate list](/2025/11/13/package-management-papers.html)) and not the historical events themselves (that's the [timeline](/2025/11/15/package-manager-timeline.html)), but the blog posts, talks, and essays where practitioners worked through ideas, explained incidents, or just vented.
+I've been collecting posts about package management for a while. Not academic papers (those are in a [separate list](/reports/package-management-papers)) and not the historical events themselves (that's the [timeline](/reports/package-manager-timeline)), but the blog posts, talks, and essays where practitioners worked through ideas, explained incidents, or just vented.
 
 ## Foundational explanations
 
@@ -30,9 +30,9 @@ I've been collecting posts about package management for a while. Not academic pa
 
 **[Semantic Versioning is a terrible mistake](https://reprog.wordpress.com/2023/12/27/semantic-versioning-is-a-terrible-mistake/)** (The Reinvigorated Programmer, 2023). Argues semver gives developers permission to make breaking changes. Unix libraries didn't need version numbers because they never broke compatibility. Documents version inflation: React at 18 major versions, react-router with 6 major versions in 8 years.
 
-**[Semantic versioning and its contradictions](https://frank.sauerburger.io/2024/05/22/semantic-versioning.html)** (Frank Sauerburger, 2024). Two internal contradictions: patches must change behavior to fix bugs, so they're technically breaking. And in dynamically-typed languages, adding a method can break duck-typing code. Still concludes semver is the best we have.
+**[Semantic versioning and its contradictions](https://frank.sauerburger.io/2024/05/22/semantic-versioning)** (Frank Sauerburger, 2024). Two internal contradictions: patches must change behavior to fix bugs, so they're technically breaking. And in dynamically-typed languages, adding a method can break duck-typing code. Still concludes semver is the best we have.
 
-**[The Cutting Edge of Versioning](https://v5.chriskrycho.com/elsewhere/cutting-edge-of-versioning/)** (Chris Krycho, LambdaConf 2024). Versioning as a socio-technical contract. Covers "SemVer lawyering," Hyrum's Law, and why the TypeScript team argues semver doesn't make sense for compilers. Also examines tooling solutions: Elm's automatic type-based breaking change detection, Rust's cargo-semver-checks. See also [From ZeroVer to SemVer](/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html) for alternative versioning schemes people have proposed.
+**[The Cutting Edge of Versioning](https://v5.chriskrycho.com/elsewhere/cutting-edge-of-versioning/)** (Chris Krycho, LambdaConf 2024). Versioning as a socio-technical contract. Covers "SemVer lawyering," Hyrum's Law, and why the TypeScript team argues semver doesn't make sense for compilers. Also examines tooling solutions: Elm's automatic type-based breaking change detection, Rust's cargo-semver-checks. See also [From ZeroVer to SemVer](/reports/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source) for alternative versioning schemes people have proposed.
 
 **[The golden rule of software distributions](https://www.haskellforall.com/2022/05/the-golden-rule-of-software.html)** (Gabriella Gonzalez, 2022). Locally coherent package managers require globally coherent distributions. If your system only allows one version of each package, someone has to curate a set of versions that all work together. Explains why "Cabal hell" happened and how Stackage fixed it.
 

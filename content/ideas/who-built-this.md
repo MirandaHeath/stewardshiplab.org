@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/04/07/who-built-this"
 ---
 
-Michael Stapelberg [wrote last week](https://michael.stapelberg.ch/posts/2026-04-05-stamp-it-all-programs-must-report-their-version/) about Go's automatic VCS stamping: since Go 1.18, every binary built from a git checkout embeds the commit hash, timestamp, and dirty flag, queryable with `go version -m` or `runtime/debug.ReadBuildInfo()` at runtime. His argument is that every program should do this, so you can always answer "what version is running in production?" without guessing. Go is unusual in doing this by default, and the rest of the [package management landscape](/2026/01/03/the-package-management-landscape.html) varies wildly in how it handles this, if it handles it at all.
+Michael Stapelberg [wrote last week](https://michael.stapelberg.ch/posts/2026-04-05-stamp-it-all-programs-must-report-their-version/) about Go's automatic VCS stamping: since Go 1.18, every binary built from a git checkout embeds the commit hash, timestamp, and dirty flag, queryable with `go version -m` or `runtime/debug.ReadBuildInfo()` at runtime. His argument is that every program should do this, so you can always answer "what version is running in production?" without guessing. Go is unusual in doing this by default, and the rest of the [package management landscape](/reports/the-package-management-landscape) varies wildly in how it handles this, if it handles it at all.
 
 ## Compiled languages
 

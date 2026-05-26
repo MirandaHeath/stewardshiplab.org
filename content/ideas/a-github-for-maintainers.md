@@ -24,11 +24,11 @@ If I'm planning to remove a deprecated function in the next major version, today
 
 ### Fork networks
 
-When a project goes quiet the community response is usually that everyone [patches or forks it independently](/2026/05/01/patching-and-forking-in-package-managers.html), one of those forks eventually picks up steam, and a long tail of users slowly discover it through word of mouth and a pinned issue. The forge can see all of this. It knows the upstream hasn't merged in eighteen months and that three forks have active release tags and incoming stars. Put that on the original repo's page instead of leaving every user to do the archaeology themselves, and let the fork's maintainers signal that they consider themselves a continuation. The GitHub network graph has shown the same unreadable spaghetti since 2010 and there's an obvious better version waiting to be built.
+When a project goes quiet the community response is usually that everyone [patches or forks it independently](/ideas/patching-and-forking-in-package-managers), one of those forks eventually picks up steam, and a long tail of users slowly discover it through word of mouth and a pinned issue. The forge can see all of this. It knows the upstream hasn't merged in eighteen months and that three forks have active release tags and incoming stars. Put that on the original repo's page instead of leaving every user to do the archaeology themselves, and let the fork's maintainers signal that they consider themselves a continuation. The GitHub network graph has shown the same unreadable spaghetti since 2010 and there's an obvious better version waiting to be built.
 
 ### Borrowed from the npmx list
 
-Once a forge takes dependencies seriously it starts to overlap with what a package registry frontend does, and [I wrote up the npmx feature list](/2026/04/16/features-everyone-should-steal-from-npmx.html) a couple of weeks ago as a catalogue of what users build when they get to design that themselves. Several of those belong on a repo page as much as a package page:
+Once a forge takes dependencies seriously it starts to overlap with what a package registry frontend does, and [I wrote up the npmx feature list](/ideas/features-everyone-should-steal-from-npmx) a couple of weeks ago as a catalogue of what users build when they get to design that themselves. Several of those belong on a repo page as much as a package page:
 
 - A breakdown of which versions of this project downstream users are actually running, so a maintainer can see how many are stuck three majors behind
 - A diff view between any two tagged releases, in the browser
@@ -37,7 +37,7 @@ Once a forge takes dependencies seriously it starts to overlap with what a packa
 
 ### Safer CI defaults
 
-I've written about this twice already, once on [Actions being a package manager with no lockfile](/2025/12/06/github-actions-package-manager.html) and once on [the run of supply-chain incidents that all trace back to a workflow file](/2026/04/28/github-actions-is-the-weakest-link.html), so I won't repeat it here. The short version is that forge-hosted CI is where most open source artifacts now get built and published, and the defaults were designed for private enterprise repos. Anyone building a new forge gets to pick new defaults: pinned actions, isolated caches, no workflows triggered by strangers at all.
+I've written about this twice already, once on [Actions being a package manager with no lockfile](/ideas/github-actions-package-manager) and once on [the run of supply-chain incidents that all trace back to a workflow file](/ideas/github-actions-is-the-weakest-link), so I won't repeat it here. The short version is that forge-hosted CI is where most open source artifacts now get built and published, and the defaults were designed for private enterprise repos. Anyone building a new forge gets to pick new defaults: pinned actions, isolated caches, no workflows triggered by strangers at all.
 
 ### A package cache in CI
 
@@ -49,7 +49,7 @@ Nothing to do with the dependency graph, but while I'm making a list: a feature 
 
 ### Out of scope
 
-I haven't mentioned AI, federation, or enterprise permissions. I'm not getting into AI right now. I've [written about federation before](/2025/12/21/federated-package-management.html) and the hard part is naming, which I'm not going to pretend to solve here. And I just don't care about enterprise features. If your favourite topic isn't here it's probably one of those.
+I haven't mentioned AI, federation, or enterprise permissions. I'm not getting into AI right now. I've [written about federation before](/ideas/federated-package-management) and the hard part is naming, which I'm not going to pretend to solve here. And I just don't care about enterprise features. If your favourite topic isn't here it's probably one of those.
 
 ---
 

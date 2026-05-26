@@ -31,7 +31,7 @@ RubyGems started with Marshal.4.8.gz (the "4.8" refers to the Marshal format ver
 
 Download it, deserialize it, and you have everything. This worked when the registry was small. By 2014, there were nearly 100,000 gems. The file was massive, and you had to download all of it even if you only needed one dependency.
 
-The Marshal format had other problems. Ruby's serialization format has had [security vulnerabilities](https://blog.rubygems.org/2017/10/09/unsafe-object-deserialization-vulnerability.html), including a 2017 RCE on RubyGems.org itself. Deserializing untrusted data is risky.
+The Marshal format had other problems. Ruby's serialization format has had [security vulnerabilities](https://blog.rubygems.org/2017/10/09/unsafe-object-deserialization-vulnerability), including a 2017 RCE on RubyGems.org itself. Deserializing untrusted data is risky.
 
 specs.4.8.gz was lighter. Instead of full specifications, it contained just name, version, and platform tuples:
 
@@ -75,7 +75,7 @@ The separate API helped, but the fundamental problem remained: serving dependenc
 
 ## The compact index design
 
-[André Arko](https://andre.arko.net/2014/03/28/the-new-rubygems-index-format/), Samuel Giddins, and the rest of the Bundler team spent 2014-2015 designing something new, shipping it in [Bundler 1.12](https://andre.arko.net/2014/03/28/the-new-rubygems-index-format/) in April 2016. The requirements were clear: no server-side computation, cacheable on a CDN, and efficient for clients that already have most of the data. Every [package manager design involves trade-offs](/2025/12/05/package-manager-tradeoffs.html), and this one optimised for scale.
+[André Arko](https://andre.arko.net/2014/03/28/the-new-rubygems-index-format/), Samuel Giddins, and the rest of the Bundler team spent 2014-2015 designing something new, shipping it in [Bundler 1.12](https://andre.arko.net/2014/03/28/the-new-rubygems-index-format/) in April 2016. The requirements were clear: no server-side computation, cacheable on a CDN, and efficient for clients that already have most of the data. Every [package manager design involves trade-offs](/reports/package-manager-tradeoffs), and this one optimised for scale.
 
 The [compact index](https://guides.rubygems.org/rubygems-org-compact-index-api/) has three endpoints.
 
@@ -137,9 +137,9 @@ All of these are acceptable because failure modes degrade to a full download, no
 
 ## Cargo's sparse index
 
-Cargo faced the same problem Bundler did, just later. The crates.io index is [a git repository](/2025/12/24/package-managers-keep-using-git-as-a-database.html) with one JSON file per crate. Clone it and you have everything offline. But by 2019, that clone was 215MB. The actual content compresses to about 10MB with xz. Twenty times the necessary bandwidth, every time.
+Cargo faced the same problem Bundler did, just later. The crates.io index is [a git repository](/ideas/package-managers-keep-using-git-as-a-database) with one JSON file per crate. Clone it and you have everything offline. But by 2019, that clone was 215MB. The actual content compresses to about 10MB with xz. Twenty times the necessary bandwidth, every time.
 
-[RFC 2789](https://rust-lang.github.io/rfcs/2789-sparse-index.html) proposed a sparse index, and it explicitly credits Bundler: "Bundler used to have a full index fetched ahead of time, similar to Cargo's, until it grew too large."
+[RFC 2789](https://rust-lang.github.io/rfcs/2789-sparse-index) proposed a sparse index, and it explicitly credits Bundler: "Bundler used to have a full index fetched ahead of time, similar to Cargo's, until it grew too large."
 
 The sparse index fetches individual crate files over HTTP. The URL structure mirrors the git layout: `https://index.crates.io/se/rd/serde` for serde. No new server infrastructure, just static files on a CDN.
 

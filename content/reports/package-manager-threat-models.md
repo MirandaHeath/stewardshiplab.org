@@ -8,7 +8,7 @@ canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/05/05/package-manager-threat-models"
 ---
 
-The [previous post](/2026/05/04/package-manager-cwes.html) catalogued the bugs that get filed against package managers: path traversal in the extractor, argument injection in the git driver, XSS in the registry's README renderer. Things you can find by reading code, point at a line number, and patch.
+The [previous post](/reports/package-manager-cwes) catalogued the bugs that get filed against package managers: path traversal in the extractor, argument injection in the git driver, XSS in the registry's README renderer. Things you can find by reading code, point at a line number, and patch.
 
 This post is the other half. The properties below are working as designed, so nobody files a CVE for them. They're also where almost every supply-chain incident with a name actually came from. In [event-stream](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident), [ua-parser-js](https://github.com/advisories/GHSA-pjwm-rvh2-c87w), [left-pad](https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm), and [xz](https://www.openwall.com/lists/oss-security/2024/03/29/4), the package manager did exactly what it was built to do.
 

@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2026/01/23/package-management-is-a-wicked-prob
 
 In 1973, Horst Rittel and Melvin Webber published ["Dilemmas in a General Theory of Planning"](https://urbanpolicy.net/wp-content/uploads/2015/06/Rittel-Webber_1973_DilemmasInAGeneralTheoryOfPlanning.pdf), introducing the concept of "wicked problems" in urban planning. Wicked problems are problems where the act of trying to solve them changes what the problem is. Problems where you can't test solutions in advance. Problems where every stakeholder has a different definition of success.
 
-Package management fits the definition. I've spent years working on [package manager data and tooling](/2025/12/09/why-im-fascinated-by-package-management.html), and the more I learn, the more the wicked problem framework explains why progress feels so difficult. Tens of millions of packages, hundreds of millions of versions, trillions of downloads. Small improvements at this layer affect every project built on top.
+Package management fits the definition. I've spent years working on [package manager data and tooling](/ideas/why-im-fascinated-by-package-management), and the more I learn, the more the wicked problem framework explains why progress feels so difficult. Tens of millions of packages, hundreds of millions of versions, trillions of downloads. Small improvements at this layer affect every project built on top.
 
 Rittel and Webber [identified ten characteristics](https://www.leanessays.com/2002/01/wicked-problems.html) that distinguish wicked problems from tame ones.
 
@@ -22,7 +22,7 @@ The term itself is ambiguous. Say "package management" and some people think npm
 
 Ask ten people what package management should accomplish and you'll get ten different answers. Should it prioritize reproducibility or freshness? Security or convenience? Should it be centralized for coordination or federated for resilience? The answers shape the problem definition.
 
-When npm added lockfiles, it wasn't solving a pre-existing problem everyone agreed on. It was redefining what "installing dependencies" meant. Same with Cargo adding a central registry when Go was experimenting with URL-based imports. Each design decision [changes what problem you're trying to solve](/2025/12/05/package-manager-tradeoffs.html).
+When npm added lockfiles, it wasn't solving a pre-existing problem everyone agreed on. It was redefining what "installing dependencies" meant. Same with Cargo adding a central registry when Go was experimenting with URL-based imports. Each design decision [changes what problem you're trying to solve](/reports/package-manager-tradeoffs).
 
 ### 2. No stopping rule
 
@@ -38,15 +38,15 @@ Work stops when you run out of time or money, when maintainers burn out, or when
 
 Solutions can't be objectively correct, only better or worse from someone's perspective.
 
-Homebrew's choice to use git as a database was neither right nor wrong. It worked brilliantly for years, then [became a bottleneck](/2025/12/24/package-managers-keep-using-git-as-a-database.html). Whether that was a good decision depends on whether you weight early simplicity or long-term scaling. Different stakeholders will evaluate it differently.
+Homebrew's choice to use git as a database was neither right nor wrong. It worked brilliantly for years, then [became a bottleneck](/ideas/package-managers-keep-using-git-as-a-database). Whether that was a good decision depends on whether you weight early simplicity or long-term scaling. Different stakeholders will evaluate it differently.
 
-Semver was an attempt to make versioning true-or-false: either a release breaks compatibility or it doesn't. In practice it became good-or-bad anyway. [Different ecosystems interpret it differently](/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html). Some communities treat it as sacred law, others as rough guidance. The spec's existence didn't settle the question. Hyrum's Law makes it worse: a bug fix for one user is a breaking change for someone who depended on that bug. There's no objectively correct version bump, only outcomes that help or hurt specific people.
+Semver was an attempt to make versioning true-or-false: either a release breaks compatibility or it doesn't. In practice it became good-or-bad anyway. [Different ecosystems interpret it differently](/reports/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source). Some communities treat it as sacred law, others as rough guidance. The spec's existence didn't settle the question. Hyrum's Law makes it worse: a bug fix for one user is a breaking change for someone who depended on that bug. There's no objectively correct version bump, only outcomes that help or hurt specific people.
 
 ### 4. No immediate or ultimate test
 
 > "Solutions to wicked problems generate waves of consequences."
 
-When Go chose URL-based imports, the immediate effect seemed elegant: no central registry, no naming conflicts. Years later, [the consequences emerged](/2025/12/21/federated-package-management.html): leftpad-style breakages when repos disappeared, security implications from trusting random hostnames, and the eventual need for a central proxy anyway.
+When Go chose URL-based imports, the immediate effect seemed elegant: no central registry, no naming conflicts. Years later, [the consequences emerged](/ideas/federated-package-management): leftpad-style breakages when repos disappeared, security implications from trusting random hostnames, and the eventual need for a central proxy anyway.
 
 You can't A/B test a package manager design. By the time you know whether a decision worked, you've built an ecosystem on top of it. Even in retrospect, we can't know if the alternative would have been better. Maybe a central Go registry from day one would have created different, worse problems.
 
@@ -54,7 +54,7 @@ You can't A/B test a package manager design. By the time you know whether a deci
 
 > "Every implemented solution leaves traces that cannot be undone."
 
-Once PyPI accepted namespace-less package names, [typosquatting](/2025/12/17/typosquatting-in-package-managers.html) became inevitable. You can't fix it without breaking every existing requirements.txt file. Once npm let packages depend on version ranges, you couldn't switch to pinned-only without breaking the ecosystem's culture.
+Once PyPI accepted namespace-less package names, [typosquatting](/reports/typosquatting-in-package-managers) became inevitable. You can't fix it without breaking every existing requirements.txt file. Once npm let packages depend on version ranges, you couldn't switch to pinned-only without breaking the ecosystem's culture.
 
 Every registry accumulates cruft that can never be removed. RubyGems still hosts gems that haven't been updated since 2007. Yanking packages breaks dependent builds. The only direction is forward, with all the baggage included. Even attempts to fix cruft create new cruft: if PyPI added namespaces tomorrow, it would just be another layer on top of the existing flat namespace.
 
@@ -64,7 +64,7 @@ Every registry accumulates cruft that can never be removed. RubyGems still hosts
 
 Different stakeholders envision different acceptable outcomes.
 
-Registry operators want stability. Security researchers want auditability. Library authors want flexibility. Maintainers want sustainability. Application developers want reproducibility. Corporate users want compliance. [These goals actively conflict](/2025/12/22/package-registries-are-governance-as-a-service.html). A registry that allows easy package updates is also one that's easier to attack. A lockfile that captures every transitive dependency is also one that's harder to update.
+Registry operators want stability. Security researchers want auditability. Library authors want flexibility. Maintainers want sustainability. Application developers want reproducibility. Corporate users want compliance. [These goals actively conflict](/ideas/package-registries-are-governance-as-a-service). A registry that allows easy package updates is also one that's easier to attack. A lockfile that captures every transitive dependency is also one that's harder to update.
 
 The npm/Yarn/pnpm competition is partly a story of different stakeholder priorities winning out. Yarn emerged because Facebook needed reproducibility npm didn't provide. pnpm emerged because disk space and install speed mattered more to some users than compatibility. Each tool embodies a different answer to "what should a package manager optimize for?" and all three coexist because there's no consensus.
 
@@ -82,9 +82,9 @@ When Python tried to adopt npm-style lockfiles, it didn't quite work. The Python
 
 Problems are embedded in other problems.
 
-Supply chain security isn't just a package management problem. It's entangled with [how open source gets funded](/2017/11/10/what-does-a-sustainable-open-source-project-look-like.html), how maintainers get support, how companies evaluate risk, how developers learn security practices. You can't fix typosquatting without addressing why [attackers have economic incentives to do it](/2025/12/27/how-to-ruin-all-of-package-management.html).
+Supply chain security isn't just a package management problem. It's entangled with [how open source gets funded](https://nesbitt.io/2017/11/10/what-does-a-sustainable-open-source-project-look-like), how maintainers get support, how companies evaluate risk, how developers learn security practices. You can't fix typosquatting without addressing why [attackers have economic incentives to do it](/ideas/how-to-ruin-all-of-package-management).
 
-[The dependency explosion](/2026/01/05/the-nine-levels-of-javascript-dependency-hell.html) in modern software is a symptom of developer productivity pressure, which is a symptom of market competition, which is a symptom of capitalism's relationship with software. Package managers just happen to be the layer where the symptom manifests. Ecosystems evolve toward what they reward, not what they intend.
+[The dependency explosion](https://nesbitt.io/2026/01/05/the-nine-levels-of-javascript-dependency-hell) in modern software is a symptom of developer productivity pressure, which is a symptom of market competition, which is a symptom of capitalism's relationship with software. Package managers just happen to be the layer where the symptom manifests. Ecosystems evolve toward what they reward, not what they intend.
 
 ### 9. Multiple causal explanations
 
@@ -110,7 +110,7 @@ Package managers operate production infrastructure. You don't get do-overs. The 
 
 None of this means we shouldn't try to improve package management. The leverage is enormous: better security defaults would protect millions of projects, better funding mechanisms could support the maintainers everything depends on, better coordination could prevent the next left-pad. But the wicked problem framework explains why progress is slow, why solutions create new problems, and why experts disagree about basics. Package managers will never be "solved."
 
-Rittel and Webber's answer to wicked problems was participatory planning: bring stakeholders together early, iterate continuously, accept that you're managing tradeoffs rather than finding solutions. If we accept that these problems are wicked, we stop looking for a perfect tool and start looking for better ways to communicate across tools. That shift from tools to interfaces is what led me to think about [what a shared protocol for package management](/2026/01/22/a-protocol-for-package-management.html) might look like.
+Rittel and Webber's answer to wicked problems was participatory planning: bring stakeholders together early, iterate continuously, accept that you're managing tradeoffs rather than finding solutions. If we accept that these problems are wicked, we stop looking for a perfect tool and start looking for better ways to communicate across tools. That shift from tools to interfaces is what led me to think about [what a shared protocol for package management](/ideas/a-protocol-for-package-management) might look like.
 
 ### Related reading
 
