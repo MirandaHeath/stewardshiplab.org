@@ -522,7 +522,7 @@
         </p>
       </div>
     </section>
-    <section>
+    <section class="section--ender">
       <h2>Interested?<br>Have questions?</h2>
       <p>
         Reach out to Vlad at
