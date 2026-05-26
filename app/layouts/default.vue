@@ -11,8 +11,8 @@
           </a>
         </div>
         <nav>
-          <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
           <NuxtLink class="plain-link" to="/reports">Reports</NuxtLink>
+          <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
           <NuxtLink class="plain-link" to="/ideas">Ideas</NuxtLink>
         </nav>
       </div>
