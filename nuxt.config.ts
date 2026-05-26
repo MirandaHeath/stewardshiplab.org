@@ -68,6 +68,6 @@ export default defineNuxtConfig({
     },
   },
   htmlValidator: {
-    failOnError: false,
+    failOnError: true,
   },
 })
