@@ -107,16 +107,16 @@
         </thead>
         <tbody>
           <template v-for="org in sortedOrgs" :key="org.name">
-            <tr v-if="displayYear in org.filings">
+            <tr>
               <td><a :href="'https://projects.propublica.org/nonprofits/organizations/' + org.id">{{ org.name }}</a></td>
               <td class="cell--desktop-only">US</td>
               <td class="cell--desktop-only">{{ org.legalForm }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].revenue) }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].netAssets) }}</td>
-              <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.name) }}</td>
-              <td class="cell--ellipsis">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.title) }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.salaryPay) }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(org.filings[displayYear].highestPaidEmployee.otherPay) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_REVENUE(org)) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_NETASSETS(org)) }}</td>
+              <td class="cell--ellipsis">{{ formatUsdAmount(SG_HPE_NAME(org)) }}</td>
+              <td class="cell--ellipsis">{{ formatUsdAmount(SG_HPE_TITLE(org)) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_HPE_SALARYPAY(org)) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_HPE_OTHERPAY(org)) }}</td>
             </tr>
           </template>
         </tbody>
@@ -228,15 +228,24 @@ import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
 
-const SG_NAME          = (d) => d.name;
-const SG_COUNTRY       = (d) => d.country;
-const SG_LEGALFORM     = (d) => d.legalForm;
-const SG_REVENUE       = (d) => d.filings[displayYear.value].revenue;
-const SG_NETASSETS     = (d) => d.filings[displayYear.value].netAssets;
-const SG_HPE_NAME      = (d) => d.filings[displayYear.value].highestPaidEmployee.name;
-const SG_HPE_TITLE     = (d) => d.filings[displayYear.value].highestPaidEmployee.title;
-const SG_HPE_SALARYPAY = (d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay;
-const SG_HPE_OTHERPAY  = (d) => d.filings[displayYear.value].highestPaidEmployee.otherPay;
+function guard(getter) {
+  return (org) => {
+    try {
+      return getter(org);
+    } catch (e) {
+      return undefined;
+    }
+  };
+}
+const SG_NAME          = guard((d) => d.name);
+const SG_COUNTRY       = guard((d) => d.country);
+const SG_LEGALFORM     = guard((d) => d.legalForm);
+const SG_REVENUE       = guard((d) => d.filings[displayYear.value].revenue);
+const SG_NETASSETS     = guard((d) => d.filings[displayYear.value].netAssets);
+const SG_HPE_NAME      = guard((d) => d.filings[displayYear.value].highestPaidEmployee.name);
+const SG_HPE_TITLE     = guard((d) => d.filings[displayYear.value].highestPaidEmployee.title);
+const SG_HPE_SALARYPAY = guard((d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
+const SG_HPE_OTHERPAY  = guard((d) => d.filings[displayYear.value].highestPaidEmployee.otherPay);
 
 function setDisplayYear(year) {
   displayYear.value = year;
@@ -262,19 +271,20 @@ function getSortingDataAttr(candidateSortGetter) {
 }
 
 function mean(getter) {
-  const vals = sortedOrgs.value.map(getter);
+  const vals = sortedOrgs.value.map(getter).filter((item) => item);
   const sum = vals.reduce((acc, item) => acc + item, 0);
   return sum / vals.length;
 }
 
 function median(getter) {
-  const vals = sortedOrgs.value.map(getter);
+  const vals = sortedOrgs.value.map(getter).filter((item) => item);
   return vals[Math.round(vals.length / 2)];
 }
 
 function nonzeroMean(getter) {
   const vals = sortedOrgs.value
     .map(getter)
+    .filter((item) => item)
     .filter((item) => item != 0);
   const sum = vals.reduce((acc, item) => acc + item, 0);
   return sum / vals.length;
@@ -283,6 +293,7 @@ function nonzeroMean(getter) {
 function nonzeroMedian(getter) {
   const vals = sortedOrgs.value
     .map(getter)
+    .filter((item) => item)
     .filter((item) => item != 0);
   return vals[Math.round(vals.length / 2)];
 }
