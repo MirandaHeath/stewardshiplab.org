@@ -561,9 +561,10 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: var(--color-container-bg);
+    background: var(--color-beige-xpale);
+    border: 1px solid var(--color-beige-pale);
     &:hover {
-      background: var(--color-container-bg-dark);
+      background: var(--color-beige-pale);
     }
     img {
       flex: 1;
@@ -584,7 +585,8 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background: var(--color-container-bg);
+  background: var(--color-beige-xpale);
+  border: 1px solid var(--color-beige-pale);
   .member__photo {
     flex: 0 0 var(--photo-size);
     img {
@@ -640,7 +642,8 @@
 .value {
   margin: 1rem 0;
   padding: 15px;
-  background: var(--color-container-bg);
+  background: var(--color-beige-xpale);
+  border: 1px solid var(--color-beige-pale);
   h3 {
     font-family: var(--font-family-sans);
     font-size: var(--font-size-l);
