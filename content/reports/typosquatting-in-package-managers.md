@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Typosquatting in Package Managers"
 date: 2025-12-17
 description: "A reference guide to typosquatting techniques, real-world examples, and detection tools."
-tags:
-  - security
-  - package-managers
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/12/17/typosquatting-in-package-managers"
 ---
 
 Typosquatting is registering a package name that looks like a popular one, hoping developers mistype or copy-paste the wrong thing. It's been a supply chain attack vector since at least 2016, when Nikolai Tschacher [demonstrated](https://incolumitas.com/2016/06/08/typosquatting-package-managers/) that uploading malicious packages with slightly misspelled names could infect thousands of hosts within days. His bachelor thesis experiment infected over 17,000 machines across PyPI, npm, and RubyGems, with half running his code as administrator.

@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Manager People"
 date: 2026-01-14 12:00 +0000
 description: "People who built, maintain, or research package managers."
-tags:
-  - package-managers
-  - research
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/01/14/package-manager-people"
 ---
 
 People who built, maintain, or research package managers. Tool creators, registry operators, resolver authors, and the academics studying how it all works.

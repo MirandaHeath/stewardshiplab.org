@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Categorizing Package Manager Clients"
 date: 2025-12-29 10:00 +0000
 description: "Sorting package manager clients by resolution algorithms, lockfile strategies, build hooks, and manifest formats."
-tags:
-  - package-managers
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/12/29/categorizing-package-manager-clients"
 ---
 
 This is the companion to [Categorizing Package Registries](/2025/12/29/categorizing-package-registries.html), focusing on the client side: how package managers resolve dependencies, track versions, run build code, and declare dependencies. The data is also available as [CSV](https://github.com/andrew/nesbitt.io/blob/master/data/package-manager-clients.csv). There are gaps; contributions welcome.

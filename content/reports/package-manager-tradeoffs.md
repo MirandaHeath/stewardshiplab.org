@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Manager Design Tradeoffs"
 date: 2025-12-05 10:00 +0000
 description: "Design tradeoffs in package managers"
-tags:
-  - package-managers
-  - rust
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/12/05/package-manager-tradeoffs"
 ---
 
 Package managers make dozens of design decisions with no right answer. Each choice has real costs and benefits, and choosing one side often forecloses other options. This is a survey of those tradeoffs.

@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Management Blog Posts"
 date: 2026-01-09 10:00 +0000
 description: "Blog posts, talks, and essays that changed how people think about dependency management."
-tags:
-  - package-managers
-  - history
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/01/09/package-management-blog-posts"
 ---
 
 I've been collecting posts about package management for a while. Not academic papers (those are in a [separate list](/2025/11/13/package-management-papers.html)) and not the historical events themselves (that's the [timeline](/2025/11/15/package-manager-timeline.html)), but the blog posts, talks, and essays where practitioners worked through ideas, explained incidents, or just vented.

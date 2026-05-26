@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Forge-Specific Repository Folders"
 date: 2026-02-22 10:00 +0000
 description: "Magic folders in git forges: what .github/, .gitlab/, .gitea/, .forgejo/ and .bitbucket/ do."
-tags:
-  - git
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/02/22/forge-specific-repository-folders"
 ---
 
 Git doesn't know about CI, code review, or issue templates, but every forge that hosts git repositories has added these features through the same trick: a dot-folder in your repo root that the forge reads on push. The folder names differ, the contents overlap in some places and diverge in others, and the portability story between them is worse than you'd expect. A companion to my earlier post on [git's magic files](/2026/02/05/git-magic-files.html).

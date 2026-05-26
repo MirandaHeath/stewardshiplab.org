@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Dependency Resolution Methods"
 date: 2026-02-06 12:00 +0000
 description: "A reference on how package managers solve the version constraint satisfaction problem, from SAT solvers to content-addressed stores."
-tags:
-  - package-managers
-  - reference
-  - dependencies
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/02/06/dependency-resolution-methods"
 ---
 
 Every package manager faces the same core problem: given a set of packages with version constraints, find a compatible set of versions to install. The classic example is the diamond dependency: A depends on B and C, both of which depend on D but at incompatible versions. The resolver has to find a version of D that satisfies both, prove that none exists, or find some other way out. Di Cosmo et al. [proved in 2005](https://www.researchgate.net/publication/278629134_EDOS_deliverable_WP2-D21_Report_on_Formal_Management_of_Software_Dependencies) that this problem is NP-complete, encoding it as 3SAT for Debian and RPM constraint languages. In practice, real-world dependency graphs are far more tractable than the worst case, and different ecosystems have landed on different resolution strategies that make different tradeoffs between completeness, speed, error quality, and simplicity.

@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Manager Mirroring"
 description: "Every mirroring tool I could find, and the protocols underneath them."
 date: 2026-03-20 10:00:00 +0000
-tags:
-  - package-managers
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/03/20/package-manager-mirroring"
 ---
 
 [Mike Fiedler](https://www.linkedin.com/in/mikefiedler/) from PyPI asked me recently: which package ecosystems have mirroring tools and what protocols do they use? Here's what I found.

@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Lockfile Format Design and Tradeoffs"
 date: 2026-01-17 10:00 +0000
 description: "Lockfile format tradeoffs, best practices, and a survey of existing formats across package managers."
-tags:
-  - package-managers
-  - deep-dive
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/01/17/lockfile-format-design-and-tradeoffs"
 ---
 
 Lockfiles record which packages were installed, at what versions, from where, with what checksums. Most package managers have one: Gemfile.lock, package-lock.json, Cargo.lock, poetry.lock, pnpm-lock.yaml. (Go splits this across go.mod and go.sum.) They solve the same problem but make different decisions about format, structure, and what to include.[^tradeoffs]

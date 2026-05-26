@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Git's Magic Files"
 date: 2026-02-05 10:00 +0000
 description: "Magic files and where to find them: .gitignore, .gitattributes, .mailmap, .git-blame-ignore-revs, .lfsconfig, and more."
-tags:
-  - git
-  - tools
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/02/05/git-magic-files"
 ---
 
 A follow-up to my post on [extending git functionality](/2025/11/26/extending-git-functionality.html). Git looks for several special files in your repository that control its behavior. These aren't configuration files in `.git/`, they're committed files that travel with your code and affect how git treats your files.

@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Manager Threat Models"
 date: 2026-05-05 10:00 +0000
 description: "The non-CVE half of package manager security"
-tags:
-  - package-managers
-  - security
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/05/05/package-manager-threat-models"
 ---
 
 The [previous post](/2026/05/04/package-manager-cwes.html) catalogued the bugs that get filed against package managers: path traversal in the extractor, argument injection in the git driver, XSS in the registry's README renderer. Things you can find by reading code, point at a line number, and patch.

@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Extending Git Functionality"
 date: 2025-11-26 12:00 +0000
 description: "A practical guide to the different ways you can extend git: subcommands, filters, hooks, remote helpers, and more."
-tags:
-  - git
-  - tools
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/11/26/extending-git-functionality"
 ---
 
 I've been researching how to extend git for a project I'm working on. There are seven distinct patterns that I've seen people use to add functionality to git without modifying git itself:

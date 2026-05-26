@@ -1,8 +1,6 @@
 ---
 author: "Andrew Nesbitt"
 authorImage: "/images/team/andrew.webp"
-editor: "Vlad-Stefan Harbuz"
-editorImage: "/images/team/vlad.webp"
 title: "Dumb Ways for an Open Source Project to Die"
 date: 2026-05-19 10:00 +0000
 description: "How your dependencies became Bernies"

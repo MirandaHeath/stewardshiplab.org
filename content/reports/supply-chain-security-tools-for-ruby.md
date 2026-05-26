@@ -1,13 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Supply Chain Security Tools for Ruby"
 date: 2025-12-14
 description: "Ruby implementations of PURL, VERS, SBOM, SWHID, and SARIF specs."
-tags:
-  - ruby
-  - sbom
-  - package-managers
-  - tools
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/12/14/supply-chain-security-tools-for-ruby"
 ---
 
 I've published several Ruby gems that work together to help people build supply chain security tools: [purl](https://github.com/andrew/purl), [vers](https://github.com/andrew/vers), [sbom](https://github.com/andrew/sbom), [swhid](https://github.com/andrew/swhid), and [sarif](https://github.com/andrew/sarif). They handle the specs that security tooling depends on.

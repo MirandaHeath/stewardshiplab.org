@@ -1,14 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Management Papers"
 date: 2025-11-13 12:00 +0000
 description: "A collection of academic research papers on package management systems, dependency resolution, supply chain security, and software ecosystems."
-tags:
-  - package-managers
-  - research
-  - dependencies
-  - history
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2025/11/13/package-management-papers"
 ---
 
 There's been all kinds of interesting academic research on package management systems, dependency resolution algorithms, software supply chain security, and package ecosystem analysis over the years. Below is a curated list of papers I've found interesting, it's not exhaustive but covers a good chunk of the literature.

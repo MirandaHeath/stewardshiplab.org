@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "The Package Management Landscape"
 date: 2026-01-03 10:00 +0000
 description: "A directory of tools, systems, and services that relate to package management."
-tags:
-  - package-managers
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/01/03/the-package-management-landscape"
 ---
 
 A directory of tools, libraries, registries, and standards across package management. I put this together partly as a reference, partly to track which areas I've covered in other posts.

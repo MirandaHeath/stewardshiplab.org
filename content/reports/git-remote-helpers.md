@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Git Remote Helpers"
 description: "Git can talk to anything if you write the right helper."
 date: 2026-03-18 10:00:00 +0000
-tags:
-  - git
-  - reference
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/03/18/git-remote-helpers"
 ---
 
 [Bastien Guerry](https://bzg.fr/) from [Software Heritage](https://www.softwareheritage.org/) recently nerd-sniped me with [an idea](https://nanodash.knowledgepixels.com/explore?id=https://w3id.org/np/RAJIQOw50gSAqzKUJoFSbNQghA_b72Y3-ImjTRN4YOF9s&label=Idea:+git+clone+from+SoftWare+Hash+IDentifiers&forward-to-part=true) for a `git-remote-swh` that would let you `git clone` from a [SWHID](https://www.swhid.org/), pulling source code directly from Software Heritage's archive by content hash rather than by URL. Building that means writing a git remote helper, which sent me back to the [gitremote-helpers docs](https://git-scm.com/docs/gitremote-helpers) and down the rabbit hole of how many of these things already exist. I covered remote helpers briefly in my earlier post on [extending git functionality](/2025/11/26/extending-git-functionality.html), but the protocol deserves a closer look.

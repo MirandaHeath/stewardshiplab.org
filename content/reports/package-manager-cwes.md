@@ -1,11 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Manager CWEs"
 date: 2026-05-04 10:00 +0000
 description: "Recurring weakness classes in package managers"
-tags:
-  - package-managers
-  - security
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/05/04/package-manager-cwes"
 ---
 
 I went through every public CVE and security advisory I could find that was filed against a package manager itself. Clients and registries both: language package managers, system package managers, self-hosted registry servers, the lot.

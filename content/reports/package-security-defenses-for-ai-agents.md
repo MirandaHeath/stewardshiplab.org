@@ -1,12 +1,11 @@
 ---
-layout: post
+author: "Andrew Nesbitt"
+authorImage: "/images/team/andrew.webp"
 title: "Package Security Defenses for AI Agents"
 description: "Lockfiles, sandboxes, and cooldown timers."
 date: 2026-04-09 10:00 +0000
-tags:
-  - security
-  - package-managers
-  - ai
+canonicalWebsiteName: "nesbitt.io"
+canonicalUrl: "https://nesbitt.io/2026/04/09/package-security-defenses-for-ai-agents"
 ---
 
 Yesterday I wrote about [the package security problems AI agents face](/2026/04/08/package-security-problems-for-ai-agents): typosquatting, registry poisoning, lockfile manipulation, install-time code execution, credential theft, and cascading failures through the dependency graph. Agents inherit all the old package security problems but resolve, install, and propagate faster than any human can review.
