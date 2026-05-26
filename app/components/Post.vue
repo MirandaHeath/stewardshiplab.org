@@ -10,8 +10,6 @@ useSeoMeta({
   ogDescription: props.post.description,
   ogImage: props.post.metaImage,
 });
-
-console.log(props.post);
 </script>
 
 <template>
