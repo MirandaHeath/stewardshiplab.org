@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
-  queryCollection('ideas').all()
+  queryCollection('ideas').order('date', 'DESC').all()
 );
 </script>
 
