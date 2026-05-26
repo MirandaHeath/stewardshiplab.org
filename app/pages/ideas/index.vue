@@ -6,5 +6,13 @@ const { data: posts } = await useAsyncData(route.path, () =>
 </script>
 
 <template>
+  <div class="container">
+    <h1 class="page-title">Ideas</h1>
+    <p>
+      We regularly write about Open Source governance and burnout, software supply chains, package management, funding
+      and metrics, and other topics in Open Source sustainability.
+    </p>
+    <hr>
+  </div>
   <PostList :posts="posts" />
 </template>
