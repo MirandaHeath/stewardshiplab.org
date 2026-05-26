@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxtjs/html-validator',
     '@nuxt/fonts',
     'nuxt-svgo',
     '@nuxt/content',
