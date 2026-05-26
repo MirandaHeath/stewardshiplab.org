@@ -228,24 +228,22 @@ import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
 import { getPropublicaInfo } from '../utils/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
 
-function guard(getter) {
-  return (org) => {
-    try {
-      return getter(org);
-    } catch (e) {
-      return undefined;
-    }
-  };
+function guard(org, getter) {
+  try {
+    return getter(org);
+  } catch (e) {
+    return undefined;
+  }
 }
-const SG_NAME          = guard((d) => d.name);
-const SG_COUNTRY       = guard((d) => d.country);
-const SG_LEGALFORM     = guard((d) => d.legalForm);
-const SG_REVENUE       = guard((d) => d.filings[displayYear.value].revenue);
-const SG_NETASSETS     = guard((d) => d.filings[displayYear.value].netAssets);
-const SG_HPE_NAME      = guard((d) => d.filings[displayYear.value].highestPaidEmployee.name);
-const SG_HPE_TITLE     = guard((d) => d.filings[displayYear.value].highestPaidEmployee.title);
-const SG_HPE_SALARYPAY = guard((d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
-const SG_HPE_OTHERPAY  = guard((d) => d.filings[displayYear.value].highestPaidEmployee.otherPay);
+const SG_NAME          = (d) => guard(d, (d) => d.name);
+const SG_COUNTRY       = (d) => guard(d, (d) => d.country);
+const SG_LEGALFORM     = (d) => guard(d, (d) => d.legalForm);
+const SG_REVENUE       = (d) => guard(d, (d) => d.filings[displayYear.value].revenue);
+const SG_NETASSETS     = (d) => guard(d, (d) => d.filings[displayYear.value].netAssets);
+const SG_HPE_NAME      = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.name);
+const SG_HPE_TITLE     = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.title);
+const SG_HPE_SALARYPAY = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
+const SG_HPE_OTHERPAY  = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.otherPay);
 
 function setDisplayYear(year) {
   displayYear.value = year;
