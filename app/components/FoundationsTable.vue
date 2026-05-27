@@ -107,7 +107,7 @@
         </tbody>
         <tfoot>
           <tr>
-            <th scope="col">Mean</th>
+            <th scope="row">Mean</th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_REVENUE)) }}</th>
@@ -118,7 +118,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
-            <th scope="col">Median</th>
+            <th scope="row">Median</th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_REVENUE)) }}</th>
@@ -129,7 +129,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
-            <th scope="col">Mean of non-zero</th>
+            <th scope="row">Mean of non-zero</th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--right-align"></th>
@@ -140,7 +140,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
-            <th scope="col">Median of non-zero</th>
+            <th scope="row">Median of non-zero</th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--right-align"></th>
@@ -151,7 +151,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_OTHERPAY)) }}</th>
           </tr>
           <tr>
-            <th scope="col"></th>
+            <th scope="row"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--desktop-only"></th>
             <th scope="col" class="cell--right-align">Revenue</th>
