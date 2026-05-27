@@ -78,7 +78,6 @@ export async function getPropublicaInfo(id, pageBody, targetYears) {
       revenue: revenue,
       netAssets: netAssets,
       highestPaidEmployee: highestPaidEmployee,
-      employees: employees,
     };
   });
 
