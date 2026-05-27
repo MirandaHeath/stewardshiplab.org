@@ -41,16 +41,7 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   experimental: { typedPages: true },
   compatibilityDate: 'latest',
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/'],
-    },
-  },
   routeRules: {
-    '/reports/foundations': {
-      prerender: true,
-    },
     '/foundations': {
       redirect: {
         to: '/reports/foundations',
