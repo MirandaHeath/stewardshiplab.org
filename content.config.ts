@@ -2,6 +2,7 @@ import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
 
 const commonSchema = z.object({
+  type: z.enum(['tool', 'report', 'idea']),
   authors: z.array(z.string()).optional(),
   author: z.string().optional(),
   authorImage: z.string().optional(),
@@ -14,6 +15,7 @@ const commonSchema = z.object({
   image: z.string().optional(),
   imageAlt: z.string().optional(),
   fullWidth: z.boolean().optional(),
+  featured: z.boolean().optional(),
   canonicalWebsiteName: z.string().optional(),
   canonicalUrl: z.string().optional(),
   venue: z.string().optional(),

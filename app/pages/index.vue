@@ -1,3 +1,42 @@
+<script setup lang="ts">
+import Starset from '~/assets/images/starset.svg'
+import IconGlobe from '~/assets/images/icons/globe.svg'
+import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
+import LogoChaoss from '~/assets/images/logos/chaoss.svg'
+import LogoCncf from '~/assets/images/logos/cncf.svg'
+import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
+import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
+import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
+import LogoGitHub from '~/assets/images/logos/github.svg'
+import LogoIntel from '~/assets/images/logos/intel.svg'
+import LogoLibrariesIo from '~/assets/images/logos/librariesio.svg'
+import LogoLinuxFoundation from '~/assets/images/logos/linuxfoundation.svg'
+import LogoNpmx from '~/assets/images/logos/npmx.svg'
+import LogoNuxt from '~/assets/images/logos/nuxt.svg'
+import LogoOpenSsf from '~/assets/images/logos/openssf.svg'
+import LogoOse from '~/assets/images/logos/ose.svg'
+import LogoOsp from '~/assets/images/logos/osp.svg'
+import LogoThanksDev from '~/assets/images/logos/thanksdev.svg'
+import LogoTidelift from '~/assets/images/logos/tidelift.svg'
+import LogoVite from '~/assets/images/logos/vite.svg'
+import LogoVmware from '~/assets/images/logos/vmware.svg'
+
+useSeoMeta({
+  ogDeterminer: 'the',
+});
+
+const route = useRoute();
+const { data: posts } = await useAsyncData(route.path, () =>
+  Promise.all([
+    queryCollection('tools').order('date', 'DESC').where('featured', '=', true).all(),
+    queryCollection('reports').order('date', 'DESC').where('featured', '=', true).all(),
+    queryCollection('ideas').order('date', 'DESC').where('featured', '=', true).all(),
+  ]).then((results) =>
+    results.flat()
+  )
+);
+</script>
+
 <template>
   <div class="container">
     <section>
@@ -42,189 +81,6 @@
           height="505"
         >
         <Starset width="81" height="24" />
-      </div>
-    </section>
-    <section>
-      <h2 class="big-heading">
-        Experience
-      </h2>
-      <p>
-        Our staff of industry specialists and doctoral researchers have held senior or founding roles at internationally
-        impactful Open Source initiatives like:
-      </p>
-      <div class="logowall">
-        <a
-          class="logo plain-link"
-          href="https://opensourcepledge.com"
-        ><LogoOsp
-          style="padding: 0.1rem 0;"
-          aria-label="The Open Source Pledge logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://endowment.dev"
-        ><LogoOse
-          aria-label="The Open Source Endowment logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://thanks.dev"
-        ><LogoThanksDev
-          aria-label="The thanks.dev logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://ecosyste.ms"
-        ><LogoEcosystems
-          aria-label="The ecosyste.ms logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://libraries.io"
-        ><LogoLibrariesIo
-          aria-label="The libraries.io logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://chaoss.community/"
-        ><LogoChaoss
-          aria-label="The CHAOSS logo"
-          style="padding: 0.4rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://nuxt.com/"
-        ><LogoNuxt
-          aria-label="The Nuxt logo"
-          style="padding: 0.4rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://vite.dev/"
-        ><LogoVite
-          aria-label="The Vite logo"
-          style="padding: 0.5rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://npmx.dev/"
-        ><LogoNpmx
-          src="/images/logos/npmx.svg"
-          aria-label="The npmx logo"
-          style="padding: 0.3rem 0;"
-          width="104"
-          height="40"
-        /></a>
-      </div>
-      <p>
-        Our members have contributed to organisations such as:
-      </p>
-      <div class="logowall">
-        <a
-          class="logo plain-link"
-          href="https://www.gatesfoundation.org/"
-        ><LogoGatesFoundation
-          aria-label="The Gates Foundation logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://intel.com"
-        ><LogoIntel
-          aria-label="The Intel logo"
-          style="padding: 0.3rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://www.vmware.com/"
-        ><LogoVmware
-          aria-label="The VMware logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://github.com"
-        ><LogoGitHub
-          aria-label="The GitHub logo"
-          style="padding: 0.45rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://tidelift.com"
-        ><LogoTidelift
-          aria-label="The Tidelift logo"
-          width="104"
-          height="40"
-        /></a>
-      </div>
-      <p>
-        Our members have been part of working groups at:
-      </p>
-      <div class="logowall">
-        <a
-          class="logo plain-link"
-          href="https://alpha-omega.dev/"
-        ><LogoAlphaOmega
-          aria-label="The Alpha Omega logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://openssf.org/"
-        ><LogoOpenSsf
-          aria-label="The OpenSSF logo"
-          style="padding: 0.1rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://www.cncf.io/"
-        ><LogoCncf
-          aria-label="The CNCF logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://www.linuxfoundation.org/"
-        ><LogoLinuxFoundation
-          aria-label="The Linux Foundation logo"
-          style="padding: 0.3rem 0;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          href="https://cyclonedx.org/"
-        ><LogoCycloneDx
-          aria-label="The CycloneDX logo"
-          width="104"
-          height="40"
-        /></a>
       </div>
     </section>
     <section>
@@ -462,6 +318,191 @@
     </section>
     <section>
       <h2 class="big-heading">
+        Experience
+      </h2>
+      <p>
+        Our staff of industry specialists and doctoral researchers have held leadership roles at:
+      </p>
+      <div class="logowall">
+        <a
+          class="logo plain-link"
+          href="https://opensourcepledge.com"
+        ><LogoOsp
+          style="padding: 0.1rem 0;"
+          aria-label="The Open Source Pledge logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://endowment.dev"
+        ><LogoOse
+          aria-label="The Open Source Endowment logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://thanks.dev"
+        ><LogoThanksDev
+          aria-label="The thanks.dev logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://ecosyste.ms"
+        ><LogoEcosystems
+          aria-label="The ecosyste.ms logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://libraries.io"
+        ><LogoLibrariesIo
+          aria-label="The libraries.io logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://chaoss.community/"
+        ><LogoChaoss
+          aria-label="The CHAOSS logo"
+          style="padding: 0.4rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://nuxt.com/"
+        ><LogoNuxt
+          aria-label="The Nuxt logo"
+          style="padding: 0.4rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://vite.dev/"
+        ><LogoVite
+          aria-label="The Vite logo"
+          style="padding: 0.5rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://npmx.dev/"
+        ><LogoNpmx
+          src="/images/logos/npmx.svg"
+          aria-label="The npmx logo"
+          style="padding: 0.3rem 0;"
+          width="104"
+          height="40"
+        /></a>
+      </div>
+      <p>
+        Our members have contributed to:
+      </p>
+      <div class="logowall">
+        <a
+          class="logo plain-link"
+          href="https://www.gatesfoundation.org/"
+        ><LogoGatesFoundation
+          aria-label="The Gates Foundation logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://intel.com"
+        ><LogoIntel
+          aria-label="The Intel logo"
+          style="padding: 0.3rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://www.vmware.com/"
+        ><LogoVmware
+          aria-label="The VMware logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://github.com"
+        ><LogoGitHub
+          aria-label="The GitHub logo"
+          style="padding: 0.45rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://tidelift.com"
+        ><LogoTidelift
+          aria-label="The Tidelift logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://alpha-omega.dev/"
+        ><LogoAlphaOmega
+          aria-label="The Alpha Omega logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://openssf.org/"
+        ><LogoOpenSsf
+          aria-label="The OpenSSF logo"
+          style="padding: 0.1rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://www.cncf.io/"
+        ><LogoCncf
+          aria-label="The CNCF logo"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://www.linuxfoundation.org/"
+        ><LogoLinuxFoundation
+          aria-label="The Linux Foundation logo"
+          style="padding: 0.3rem 0;"
+          width="104"
+          height="40"
+        /></a>
+        <a
+          class="logo plain-link"
+          href="https://cyclonedx.org/"
+        ><LogoCycloneDx
+          aria-label="The CycloneDX logo"
+          width="104"
+          height="40"
+        /></a>
+      </div>
+    </section>
+  </div>
+  <section>
+    <h2 class="big-heading">
+      Featured Posts
+    </h2>
+    <PostList :posts="posts" />
+  </section>
+  <div class="container">
+    <section>
+      <h2 class="big-heading">
         Values
       </h2>
       <div class="value">
@@ -657,31 +698,3 @@
   }
 }
 </style>
-
-<script setup lang="ts">
-import Starset from '~/assets/images/starset.svg'
-import IconGlobe from '~/assets/images/icons/globe.svg'
-import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
-import LogoChaoss from '~/assets/images/logos/chaoss.svg'
-import LogoCncf from '~/assets/images/logos/cncf.svg'
-import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
-import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
-import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
-import LogoGitHub from '~/assets/images/logos/github.svg'
-import LogoIntel from '~/assets/images/logos/intel.svg'
-import LogoLibrariesIo from '~/assets/images/logos/librariesio.svg'
-import LogoLinuxFoundation from '~/assets/images/logos/linuxfoundation.svg'
-import LogoNpmx from '~/assets/images/logos/npmx.svg'
-import LogoNuxt from '~/assets/images/logos/nuxt.svg'
-import LogoOpenSsf from '~/assets/images/logos/openssf.svg'
-import LogoOse from '~/assets/images/logos/ose.svg'
-import LogoOsp from '~/assets/images/logos/osp.svg'
-import LogoThanksDev from '~/assets/images/logos/thanksdev.svg'
-import LogoTidelift from '~/assets/images/logos/tidelift.svg'
-import LogoVite from '~/assets/images/logos/vite.svg'
-import LogoVmware from '~/assets/images/logos/vmware.svg'
-
-useSeoMeta({
-  ogDeterminer: 'the',
-});
-</script>
