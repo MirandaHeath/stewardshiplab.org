@@ -65,7 +65,7 @@ defineProps(['posts']);
         .post-list-item__authors {
           display: flex;
           gap: 15px;
-          @media (max-width: 800px) {
+          @media (max-width: 900px) {
             flex-direction: column;
             gap: 3px;
           }

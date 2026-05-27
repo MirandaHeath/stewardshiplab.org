@@ -105,7 +105,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       flex-direction: column;
       align-items: center;
       .footer-links {

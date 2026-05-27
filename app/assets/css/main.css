@@ -31,7 +31,7 @@
   --border-radius-l: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   :root {
       --font-size-xs: 15px;
       --font-size-s: 17px;

@@ -257,11 +257,10 @@
             </div>
           </div>
           <p>
-            Maintainer of the
+            Director of the
             <a href="https://opensourcepledge.com">Open Source Pledge</a>,
             which has raised $7,156,281 for maintainers.
-            <a href="https://thanks.dev">thanks.dev</a> core developer,
-            <a href="https://endowment.dev">Open Source Endowment</a> board adviser.
+            <a href="https://thanks.dev">thanks.dev</a> core developer.
             Helped build software used by the
             <a href="https://gatesfoundation.org">Gates Foundation</a>
             to allocate $1B in healthcare funding.
@@ -361,7 +360,7 @@
           <p>
             Leader of globally-used web framework <a href="https://nuxt.com/">Nuxt</a>.
             Steward of package manager frontend <a href="https://npmx.dev">npmx</a>.
-            Regular keynote speaker, Microsoft MVP, Google GDE, and GitHub Star.
+            Regular keynote speaker. Microsoft MVP, Google GDE, and GitHub Star.
           </p>
         </div>
         <div class="member">
@@ -575,9 +574,12 @@
   }
 }
 .members {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 15px;
+  @media (min-width: 901px) {
+    grid-auto-rows: 1fr;
+  }
 }
 .member {
   --photo-size: 60px;
@@ -634,8 +636,8 @@
     }
   }
   p {
-    font-size: var(--font-size-s);
-    line-height: var(--line-height-s);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
     margin: 0;
   }
 }
