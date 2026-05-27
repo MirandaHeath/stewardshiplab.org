@@ -42,6 +42,9 @@ export default defineNuxtConfig({
   experimental: { typedPages: true },
   compatibilityDate: 'latest',
   routeRules: {
+    '/reports/foundations': {
+      prerender: true,
+    },
     '/foundations': {
       redirect: {
         to: '/reports/foundations',
