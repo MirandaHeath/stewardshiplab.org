@@ -4,23 +4,12 @@
       <div class="control-bar">
         <div class="control-set">
           <button
-            @click="setDisplayYear(2024)"
+            v-for='year in displayYearOptions'
+            @click="setDisplayYear(year)"
             class="button button--s"
-            :class="{ 'button--active': displayYear == 2024 }"
+            :class="{ 'button--active': displayYear == year }"
             type="button"
-          >2024</button>
-          <button
-            @click="setDisplayYear(2023)"
-            class="button button--s"
-            :class="{ 'button--active': displayYear == 2023 }"
-            type="button"
-          >2023</button>
-          <button
-            @click="setDisplayYear(2022)"
-            class="button button--s"
-            :class="{ 'button--active': displayYear == 2022 }"
-            type="button"
-          >2022</button>
+          >{{ year }}</button>
         </div>
       </div>
     </div>
@@ -276,12 +265,13 @@ function nonzeroMedian(getter) {
 let sortGetter = ref(SG_REVENUE);
 let sortAsc = ref(false);
 let displayYear = ref('2024');
+const displayYearOptions = ['2024', '2023', '2022'];
 
 const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
   return await Promise.all(
     ORG_IDS.map((orgId) =>
       $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
-        .then((pageBody) => getPropublicaInfo(orgId, pageBody))
+        .then((pageBody) => getPropublicaInfo(orgId, pageBody, displayYearOptions))
     )
   );
 });

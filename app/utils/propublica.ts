@@ -23,7 +23,7 @@ type Org = {
   filings: Filing[];
 };
 
-export async function getPropublicaInfo(id, pageBody) {
+export async function getPropublicaInfo(id, pageBody, targetYears) {
   const $ = await cheerio.load(pageBody);
 
   const name = $('h1.text-hed-900').text();
@@ -33,7 +33,10 @@ export async function getPropublicaInfo(id, pageBody) {
   const filings = {};
   $filings.map(function() {
     let highestPaidEmployee: Employee;
-    const year = +$(this).attr('id').replace('filing', '');
+    const year = $(this).attr('id').replace('filing', '');
+    if (!targetYears.includes(year)) {
+      return;
+    }
     const revenue = parseUsdAmount($(this)
       .find('.extract-summary .row-revenue__number')
       .text());
