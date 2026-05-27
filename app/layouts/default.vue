@@ -11,9 +11,9 @@
           </a>
         </div>
         <nav>
-          <a class="plain-link" href="/reports">Reports</a>
-          <a class="plain-link" href="/tools">Tools</a>
-          <a class="plain-link" href="/ideas">Ideas</a>
+          <NuxtLink class="plain-link" to="/reports">Reports</NuxtLink>
+          <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
+          <NuxtLink class="plain-link" to="/ideas">Ideas</NuxtLink>
         </nav>
       </div>
     </div>
