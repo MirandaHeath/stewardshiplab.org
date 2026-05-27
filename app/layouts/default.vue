@@ -86,8 +86,13 @@ header {
   nav {
     display: flex;
     gap: 20px;
-    font-size: var(--font-size-s);
-    line-height: var(--line-height-s);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    a {
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+    }
   }
 }
 
