@@ -28,9 +28,21 @@ useSeoMeta({
 const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   Promise.all([
-    queryCollection('tools').order('date', 'DESC').where('featured', '=', true).all(),
-    queryCollection('reports').order('date', 'DESC').where('featured', '=', true).all(),
-    queryCollection('ideas').order('date', 'DESC').where('featured', '=', true).all(),
+    queryCollection('tools')
+      .select('path', 'title', 'description', 'authors', 'date')
+      .order('date', 'DESC')
+      .where('featured', '=', true)
+      .all(),
+    queryCollection('reports')
+      .select('path', 'title', 'description', 'authors', 'date')
+      .order('date', 'DESC')
+      .where('featured', '=', true)
+      .all(),
+    queryCollection('ideas')
+      .select('path', 'title', 'description', 'authors', 'date')
+      .order('date', 'DESC')
+      .where('featured', '=', true)
+      .all(),
   ]).then((results) =>
     results.flat()
   )
