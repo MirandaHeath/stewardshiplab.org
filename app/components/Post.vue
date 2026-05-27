@@ -16,11 +16,11 @@ useSeoMeta({
 <template>
   <div class="container post__before">
     <div>
-      <NuxtLink
-       v-if="breadcrumbUrl && breadcrumbText"
+      <a
+        v-if="breadcrumbUrl && breadcrumbText"
         class="plain-link"
-        :to="breadcrumbUrl"
-      >{{ breadcrumbText }}</NuxtLink>
+        :href="breadcrumbUrl"
+      >{{ breadcrumbText }}</a>
     </div>
     <div class="post__type">{{ type }}</div>
   </div>
@@ -74,7 +74,7 @@ useSeoMeta({
   </div>
   <div class="container post__after">
     <div v-if="breadcrumbUrl && breadcrumbText">
-      <NuxtLink class="plain-link" :to="breadcrumbUrl">{{ breadcrumbText }}</NuxtLink>
+      <a class="plain-link" :href="breadcrumbUrl">{{ breadcrumbText }}</a>
     </div>
   </div>
 </template>

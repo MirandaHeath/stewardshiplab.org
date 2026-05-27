@@ -9,7 +9,7 @@ defineProps(['posts']);
   <div class="container">
     <div class="post-list">
       <div class="post-list-item" v-for="post in posts" :key="post.path">
-        <NuxtLink class="post-list-item__link" :to="post.path">
+        <a class="post-list-item__link" :href="post.path">
           <h2>{{ post.title }}</h2>
           <div class="post-list-item__meta">
             <div class="post-list-item__authors">
@@ -24,7 +24,7 @@ defineProps(['posts']);
               {{ formatDate(post.date) }}
             </div>
           </div>
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </div>
