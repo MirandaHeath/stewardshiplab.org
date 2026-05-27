@@ -1,6 +1,5 @@
 ---
-author: "Miranda Heath"
-authorImage: "/images/team/miranda.webp"
+authors: ['miranda']
 title: "Burnout in Open Source: A Structural Problem We Can Fix Together"
 date: 2025-11-18
 description: "Burnout is affecting the entire Open Source ecosystem. Here's what we could do to make things better."

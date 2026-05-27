@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Community Tools Bring Lockfile Support to GitHub Actions"
 date: 2025-12-30 10:00 +0000
 description: "Community projects gh-actions-lockfile and ghasum address GitHub's missing lockfile support with SHA pinning and integrity verification"

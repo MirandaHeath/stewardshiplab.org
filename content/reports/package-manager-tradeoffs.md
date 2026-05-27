@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Design Tradeoffs"
 date: 2025-12-05 10:00 +0000
 description: "Design tradeoffs in package managers"

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Threat Models"
 date: 2026-05-05 10:00 +0000
 description: "The non-CVE half of package manager security"

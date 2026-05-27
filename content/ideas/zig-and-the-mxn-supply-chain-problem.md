@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Zig and the M×N Supply Chain Problem"
 date: 2026-01-29 10:00 +0000
 description: "Zig's long road to supply chain security."

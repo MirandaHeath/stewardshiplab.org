@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Glossary"
 date: 2026-01-13
 description: "A cross-ecosystem glossary of package management terms."

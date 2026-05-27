@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "npm's Defaults Are Bad"
 date: 2026-03-31 10:00 +0000
 description: "The npm client's default settings are a root cause of JavaScript's recurring supply chain security problems."

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Management Commands"
 date: 2025-11-30
 description: "A cross-reference table of commands across 48 package managers."

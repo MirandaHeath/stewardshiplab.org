@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Will AI Make Package Managers Redundant?"
 date: 2026-01-30 10:00 +0000
 description: "Following the prompt registry idea to its logical conclusion."

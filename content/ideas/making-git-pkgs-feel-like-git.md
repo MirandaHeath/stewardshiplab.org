@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Making git-pkgs feel like Git"
 date: 2026-01-04 10:00 +0000
 description: What it takes to make a git subcommand feel native.

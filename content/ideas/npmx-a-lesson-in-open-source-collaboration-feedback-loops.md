@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "npmx: A Lesson in Open Source's Collaboration Feedback Loops"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "npmx's success is reminding us why Open Source is such a special social phenomenon."
 date: 2026-03-03T10:00:00+01:00
 location: Edinburgh, Scotland

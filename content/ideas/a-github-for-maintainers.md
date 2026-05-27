@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "A GitHub for maintainers"
 date: 2026-05-02 10:00 +0000
 description: "Giving dependencies the same treatment the fork got"

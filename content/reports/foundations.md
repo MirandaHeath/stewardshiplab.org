@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "Open Source Foundation Financials"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "A summary of the financials of Open Source foundations."
 metaImage: "https://stewardshiplab.org/images/og/foundations.png"
 fullWidth: true

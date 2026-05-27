@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The Dependency Layer in Digital Sovereignty"
 date: 2026-01-28 10:00 +0000
 description: "Where package management fits in the digital sovereignty discussion."

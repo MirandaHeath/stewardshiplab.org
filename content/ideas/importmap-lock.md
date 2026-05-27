@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "importmap.lock: a lockfile for the web"
 date: 2026-01-19 10:00 +0000
 description: "Extending import maps with package metadata to improve dependency management and security for browser-native JavaScript."

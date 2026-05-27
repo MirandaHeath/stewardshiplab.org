@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "Binary Dependencies: Identifying the Hidden Packages We All Depend On"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "We need better tools for uncovering phantom binary dependencies. Not having these tools makes our global tech infrastructure less secure, and puts a strain on the Open Source maintainers we rely on."
 date: 2026-01-31T00:00:00+00:00
 location: 'Brussels, Belgium'

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Lockfiles Killed Vendoring"
 date: 2026-02-10 10:00 +0000
 description: "Why almost nobody vendors their dependencies anymore."

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Managers Need to Cool Down"
 date: 2026-03-04 10:00 +0000
 description: "A survey of dependency cooldown support across package managers and update tools."

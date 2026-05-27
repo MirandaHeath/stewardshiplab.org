@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Managers OPML"
 date: 2025-11-30
 description: "RSS and Atom feeds for tracking releases from package managers, registries, and related infrastructure projects."

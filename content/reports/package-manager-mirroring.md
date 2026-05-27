@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Mirroring"
 description: "Every mirroring tool I could find, and the protocols underneath them."
 date: 2026-03-20 10:00:00 +0000

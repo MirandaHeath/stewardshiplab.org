@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: ".gitlocal"
 date: 2026-03-06 10:00 +0000
 description: "Git Should Let Files Ignore Themselves"

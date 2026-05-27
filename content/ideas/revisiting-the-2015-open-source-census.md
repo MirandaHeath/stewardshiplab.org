@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Revisiting the 2015 Open Source Census"
 date: 2026-05-06 10:00 +0000
 description: "The riskiest projects in open source, scored a decade early"

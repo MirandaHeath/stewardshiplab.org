@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
+import { AUTHORS } from '../data/content.ts';
 
 const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
 
@@ -27,15 +28,18 @@ useSeoMeta({
     <h1 class="page-title">{{ post.title }}</h1>
     <div
       class="post__meta"
-      v-if="post.author || post.editor || post.date || post.location || (post.canonicalWebsiteName && post.canonicalUrl) || post.venue"
+      v-if="post.authors || post.editor || post.date || post.location || (post.canonicalWebsiteName && post.canonicalUrl) || post.venue"
     >
-      <div class="post__meta-item" v-if="post.author">
-        <b>Author</b>
-        <div class="post__person">
-          <img v-if="post.authorImage" :src="post.authorImage" :alt="'A portrait of ' + post.author">
-          <span>{{ post.author }}</span>
+      <template v-if="post.authors">
+        <div class="post__meta-item" v-for="author in post.authors">
+          <b v-if="post.authors.length == 1">Author</b>
+          <b v-if="post.authors.length > 1">Co-author</b>
+          <div class="post__person">
+            <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
+            <span>{{ AUTHORS[author].name }}</span>
+          </div>
         </div>
-      </div>
+      </template>
       <div class="post__meta-item" v-if="post.editor">
         <b>Editor</b>
         <div class="post__person">

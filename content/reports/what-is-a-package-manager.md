@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "What is a Package Manager?"
 date: 2025-12-02 10:00 +0000
 description: "What is a package manager? Perhaps quite a few more components than you might think"

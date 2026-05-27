@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Management is Naming All the Way Down"
 date: 2026-03-03 10:00 +0000
 description: "There are two hard problems in computer science, and package managers found at least eight of them."

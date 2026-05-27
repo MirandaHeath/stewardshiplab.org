@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Open Source Activity in 2025"
 date: 2025-12-31 10:00 +0000
 description: "A look back at my open source work in 2025: ecosyste.ms, supply chain security tooling, and Ruby gems"

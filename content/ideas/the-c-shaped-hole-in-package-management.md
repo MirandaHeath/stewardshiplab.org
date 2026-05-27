@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The C-Shaped Hole in Package Management"
 date: 2026-01-27 10:00 +0000
 description: "System package managers and language package managers are solving different problems that happen to overlap in the middle."

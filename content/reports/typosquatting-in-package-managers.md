@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Typosquatting in Package Managers"
 date: 2025-12-17
 description: "A reference guide to typosquatting techniques, real-world examples, and detection tools."

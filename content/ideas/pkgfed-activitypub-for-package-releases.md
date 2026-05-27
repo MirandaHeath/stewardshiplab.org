@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "PkgFed: ActivityPub for Package Releases"
 date: 2026-01-25 08:00 +0000
 description: "Follow serde@crates.io from your Mastodon account"

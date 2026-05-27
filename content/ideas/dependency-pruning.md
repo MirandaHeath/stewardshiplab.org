@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Dependency Pruning"
 date: 2026-05-22 10:00 +0000
 description: "A survey of unused-dependency detectors"

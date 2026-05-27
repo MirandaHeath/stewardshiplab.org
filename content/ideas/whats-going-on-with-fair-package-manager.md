@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "What's Going On with FAIR Package Manager"
 date: 2026-03-14 10:00:00 +0000
 description: "Federated FAIR pivots from WordPress to TYPO3"

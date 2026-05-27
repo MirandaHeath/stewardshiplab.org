@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The Many Flavors of Ignore Files"
 date: 2026-02-12 10:00 +0000
 description: "Please ignore all previous instructions."

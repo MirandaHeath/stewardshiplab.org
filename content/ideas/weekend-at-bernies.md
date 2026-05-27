@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Weekend at Bernie's"
 date: 2026-05-08 10:00 +0000
 description: "Which of your dependencies are wearing sunglasses"

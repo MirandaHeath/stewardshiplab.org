@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Features everyone should steal from npmx"
 date: 2026-04-16 10:00 +0000
 description: "What happens when users design their own package registry frontend"

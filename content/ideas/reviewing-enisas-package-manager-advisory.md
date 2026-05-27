@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Reviewing ENISA's Package Manager Advisory"
 date: 2026-03-12 10:00:00
 description: "Notes on ENISA's Technical Advisory for Secure Use of Package Managers."

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Cursed Bundler: Using go get to install Ruby Gems"
 date: 2025-12-25 12:00 +0000
 description: "Go's module system accidentally created a universal, content-addressed, transparency-logged package CDN. You could abuse this for any language."

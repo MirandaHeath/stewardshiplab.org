@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "Open Source Burnout Claims Another Project"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "Yet another OSS maintainer quits because of burnout. To fix this, we need better mental health resources for maintainers."
 date: 2026-05-20T10:00:00+01:00
 location: Edinburgh, Scotland

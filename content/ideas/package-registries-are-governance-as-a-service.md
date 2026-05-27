@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Registries Are Governance Providers"
 date: 2025-12-22 10:00 +0000
 description: "Registries host files, but they also decide who owns names, how disputes resolve, and what gets removed. That second job is governance."

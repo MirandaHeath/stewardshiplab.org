@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Categorizing Package Manager Clients"
 date: 2025-12-29 10:00 +0000
 description: "Sorting package manager clients by resolution algorithms, lockfile strategies, build hooks, and manifest formats."

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The Compact Index: How Bundler Scales Dependency Resolution"
 date: 2025-12-28 10:00 +0000
 description: "The append-only index format that saved RubyGems.org, inspired Cargo's sparse index, and could speed up npm and PyPI too."

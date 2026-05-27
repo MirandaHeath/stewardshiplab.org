@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "If It Quacks Like a Package Manager"
 date: 2026-03-08 10:00 +0000
 description: "Some tools waddle like package managers without learning to swim."

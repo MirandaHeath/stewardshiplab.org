@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Lockfile Format Design and Tradeoffs"
 date: 2026-01-17 10:00 +0000
 description: "Lockfile format tradeoffs, best practices, and a survey of existing formats across package managers."

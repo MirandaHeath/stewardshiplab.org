@@ -2,6 +2,7 @@ import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
 
 const commonSchema = z.object({
+  authors: z.array(z.string()).optional(),
   author: z.string().optional(),
   authorImage: z.string().optional(),
   editor: z.string().optional(),

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "A Jepsen Test for Package Managers"
 date: 2026-01-19 10:00 +0000
 description: "Applying Jepsen-style adversarial testing to package managers."

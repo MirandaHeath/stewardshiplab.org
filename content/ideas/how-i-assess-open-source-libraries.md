@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "How I Assess Open Source Libraries"
 date: 2025-12-15
 description: "What I actually look at when deciding whether to adopt a dependency."

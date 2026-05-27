@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager People"
 date: 2026-01-14 12:00 +0000
 description: "People who built, maintain, or research package managers."

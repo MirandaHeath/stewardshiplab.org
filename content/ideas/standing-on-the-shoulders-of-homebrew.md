@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Standing on the shoulders of Homebrew"
 date: 2026-04-14 10:00 +0000
 description: "Rewriting the easy parts of Homebrew."

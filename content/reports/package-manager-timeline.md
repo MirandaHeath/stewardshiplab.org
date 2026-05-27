@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Timeline"
 date: 2025-11-15 12:00 +0000
 description: "A chronological timeline of package manager releases, major milestones, and significant events in the history of software dependency management."

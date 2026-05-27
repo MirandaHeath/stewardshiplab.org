@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Hooks"
 date: 2025-11-30
 description: "A reference documenting lifecycle hooks across package manager ecosystems, categorizing them into two types: package-defined hooks and system/plugin hooks."

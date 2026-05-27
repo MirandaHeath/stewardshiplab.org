@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "How Binary Dependencies Work Across Different Languages"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "Have you ever wondered how it's possible to call C code from other languages like Python? Here are the technical details — and also why this topic is important for security and sustainability."
 date: 2026-01-16T00:00:00+00:00
 metaImage: 'https://vlad.website/images/opengraph/how-binary-dependencies-work.png'

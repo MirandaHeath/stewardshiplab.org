@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "What Package Registries Could Borrow from OCI"
 date: 2026-02-18
 description: "OCI's storage primitives applied to package management."

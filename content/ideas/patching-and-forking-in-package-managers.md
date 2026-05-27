@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Patching and forking in package managers"
 date: 2026-05-01 10:00 +0000
 description: "What to do when upstream ghosts you"

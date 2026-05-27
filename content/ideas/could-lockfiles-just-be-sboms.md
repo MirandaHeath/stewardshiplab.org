@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Could lockfiles just be SBOMs?"
 date: 2025-12-23 10:00 +0000
 description: "Lockfiles and SBOMs record the same information in different formats. What if package managers used SBOMs directly, instead of converting later?"

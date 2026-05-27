@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "A Taxonomy for Open Source Software"
 date: 2025-11-29 08:00 +0000
 description: "I'm working on a structured taxonomy for classifying open source projects across multiple dimensions: domain, role, technology, audience, layer, and function."

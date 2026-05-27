@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Where Do Specifications Fit in the Dependency Tree?"
 date: 2026-02-23 10:00 +0000
 description: "RFC 9110 is a phantom dependency with thousands of transitive dependents."

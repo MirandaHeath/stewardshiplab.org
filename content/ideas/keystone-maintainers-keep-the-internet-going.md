@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "Keystone Maintainers Keep the Internet Going"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 description: "“Keystone maintainers” is a good name for the most impactful Open Source maintainers."
 date: 2025-11-13T12:00:00+01:00
 location: Edinburgh, Scotland

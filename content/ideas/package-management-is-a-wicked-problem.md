@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Management is a Wicked Problem"
 date: 2026-01-23
 description: "Why fixing package managers is harder than it looks."

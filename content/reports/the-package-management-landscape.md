@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The Package Management Landscape"
 date: 2026-01-03 10:00 +0000
 description: "A directory of tools, systems, and services that relate to package management."

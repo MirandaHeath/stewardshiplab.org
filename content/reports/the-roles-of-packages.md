@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "The Roles of Packages"
 date: 2026-03-29 10:00 +0000
 description: "Applying Sajaniemi's roles of variables to packages across every kind of package manager."

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Forge"
 description: "A unified CLI for GitHub, GitLab, Gitea, Forgejo, and Bitbucket."
 date: 2026-03-13 10:00:00 +0000

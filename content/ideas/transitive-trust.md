@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Transitive Trust"
 date: 2026-03-02 10:00 +0000
 description: "You trust your maintainers, who trust their maintainers, but do they trust their maintainers' maintainers?"

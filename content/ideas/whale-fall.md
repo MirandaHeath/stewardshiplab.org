@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Whale Fall"
 date: 2026-02-21
 description: "What happens when a large open source project dies."

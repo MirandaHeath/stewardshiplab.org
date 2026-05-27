@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Centrality is not vitality"
 date: 2026-05-14 10:00 +0000
 description: "Don't automatically reach for PageRank on dependency graphs"

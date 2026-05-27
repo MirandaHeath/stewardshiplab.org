@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "git-pkgs: explore your dependency history"
 date: 2026-01-01 10:00 +0000
 description: A git subcommand to explore the dependency history of your repositories.

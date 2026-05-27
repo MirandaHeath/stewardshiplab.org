@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Dumb Ways for an Open Source Project to Die"
 date: 2026-05-19 10:00 +0000
 description: "How your dependencies became Bernies"

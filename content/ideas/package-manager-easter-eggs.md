@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Easter Eggs"
 date: 2026-04-03 10:00 +0000
 description: "A tour of the easter eggs hiding inside package managers."

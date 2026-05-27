@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "A Protocol for Package Management"
 date: 2026-01-22 10:00 +0000
 description: "A shared vocabulary for resolution, publishing, and governance across ecosystems."

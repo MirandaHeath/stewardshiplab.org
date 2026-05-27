@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Management Blog Posts"
 date: 2026-01-09 10:00 +0000
 description: "Blog posts, talks, and essays that changed how people think about dependency management."

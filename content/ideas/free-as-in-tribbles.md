@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Free as in Tribbles"
 date: 2026-05-07 10:00 +0000
 description: "The next metaphor after free-as-in-puppy"

@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager Podcast Episodes"
 date: 2026-02-09 10:00 +0000
 description: "A reference list of podcast episodes about package managers, grouped by ecosystem."

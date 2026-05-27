@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Git Diff Drivers"
 date: 2026-03-30 10:00 +0000
 description: "What git's diff drivers can do, from built-in language support to custom textconv filters."

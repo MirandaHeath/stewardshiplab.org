@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Manager CWEs"
 date: 2026-05-04 10:00 +0000
 description: "Recurring weakness classes in package managers"

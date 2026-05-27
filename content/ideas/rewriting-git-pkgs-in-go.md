@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Rewriting git-pkgs in Go"
 date: 2026-01-24 08:00 +0000
 description: The dependency history tool is now a single Go binary.

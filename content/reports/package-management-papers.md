@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "Package Management Papers"
 date: 2025-11-13 12:00 +0000
 description: "A collection of academic research papers on package management systems, dependency resolution, supply chain security, and software ecosystems."

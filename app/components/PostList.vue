@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
+import { AUTHORS } from '../data/content.ts';
 
 defineProps(['posts']);
 </script>
@@ -11,9 +12,13 @@ defineProps(['posts']);
         <NuxtLink class="post-list-item__link" :to="post.path">
           <h2>{{ post.title }}</h2>
           <div class="post-list-item__meta">
-            <div class="post-list-item__person">
-              <img v-if="post.authorImage" :src="post.authorImage" :alt="'A portrait of ' + post.author">
-              <span>{{ post.author }}</span>
+            <div class="post-list-item__authors">
+              <template v-if="post.authors">
+                <div class="post-list-item__person" v-for="author in post.authors">
+                  <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
+                  <span>{{ AUTHORS[author].name }}</span>
+                </div>
+              </template>
             </div>
             <div>
               {{ formatDate(post.date) }}
@@ -54,16 +59,25 @@ defineProps(['posts']);
       .post-list-item__meta {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         font-size: var(--font-size-xs);
         line-height: var(--line-height-xs);
-        .post-list-item__person {
+        .post-list-item__authors {
           display: flex;
-          align-items: center;
-          gap: 7px;
-          img {
-            width: var(--person-image-size);
-            height: var(--person-image-size);
-            border-radius: 100%;
+          gap: 15px;
+          @media (max-width: 800px) {
+            flex-direction: column;
+            gap: 3px;
+          }
+          .post-list-item__person {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            img {
+              width: var(--person-image-size);
+              height: var(--person-image-size);
+              border-radius: 100%;
+            }
           }
         }
       }

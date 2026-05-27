@@ -1,6 +1,5 @@
 ---
-author: "Andrew Nesbitt"
-authorImage: "/images/team/andrew.webp"
+authors: ['andrew']
 title: "How uv got so fast"
 date: 2025-12-26 10:00 +0000
 description: "uv's speed comes from engineering decisions, not just Rust. Static metadata, dropping legacy formats, and standards that didn't exist five years ago."

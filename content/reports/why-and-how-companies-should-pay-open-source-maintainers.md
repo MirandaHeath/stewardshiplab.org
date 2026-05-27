@@ -1,7 +1,6 @@
 ---
+authors: ['vlad']
 title: "Why and How Companies Should Pay Open Source Maintainers"
-author: "Vlad-Stefan Harbuz"
-authorImage: "/images/team/vlad.webp"
 date: 2025-02-02T00:00:00+00:00
 location: 'Brussels, Belgium'
 venue: 'FOSDEM 2025'
