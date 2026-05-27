@@ -270,36 +270,6 @@
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/miranda.webp"
-                alt="A portrait of Miranda"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Miranda Heath</strong>
-                <a class="plain-link" href="https://mirandaheath.website">
-                  <IconGlobe
-                    aria-label="Go to Miranda's website"
-                    width="16"
-                    height="16"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director, Researcher</span>
-            </div>
-          </div>
-          <p>
-            BPS award-winning psychologist and author of the to-date most comprehensive
-            <a href="https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/">report on burnout in Open Source</a>.
-            PhD researcher in moral psychology and philosophy at the University of Edinburgh.
-          </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
                 src="/images/team/andrew.webp"
                 alt="A portrait of Andrew"
                 width="60"
@@ -331,6 +301,36 @@
             <a href="https://github.com">GitHub</a>
             and
             <a href="https://tidelift.com">Tidelift</a>.
+          </p>
+        </div>
+        <div class="member">
+          <div class="member__meta">
+            <div class="member__photo">
+              <img
+                src="/images/team/miranda.webp"
+                alt="A portrait of Miranda"
+                width="60"
+                height="60"
+              >
+            </div>
+            <div class="member__info">
+              <div class="member__name">
+                <strong>Miranda Heath</strong>
+                <a class="plain-link" href="https://mirandaheath.website">
+                  <IconGlobe
+                    aria-label="Go to Miranda's website"
+                    width="16"
+                    height="16"
+                  />
+                </a>
+              </div>
+              <span>Non-Executive Director, Researcher</span>
+            </div>
+          </div>
+          <p>
+            BPS award-winning psychologist and author of the to-date most comprehensive
+            <a href="https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/">report on burnout in Open Source</a>.
+            PhD researcher in moral psychology and philosophy at the University of Edinburgh.
           </p>
         </div>
         <div class="member">
