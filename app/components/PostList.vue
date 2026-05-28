@@ -1,39 +1,102 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { AUTHORS } from '../data/content.ts';
+import { AUTHORS, CATEGORIES } from '../data/content.ts';
 
-defineProps(['posts']);
+const props = defineProps(['posts']);
+
+const postsByCategory = props.posts.reduce((cats, post) => {
+  if (!(post.category in cats)) {
+    cats[post.category] = [];
+  }
+  cats[post.category].push(post);
+  return cats;
+}, {});
 </script>
 
 <template>
   <div class="container">
     <div class="post-list">
-      <div class="post-list-item" v-for="post in posts" :key="post.path">
-        <NuxtLink class="post-list-item__link" :to="post.path">
-          <h2>{{ post.title }}</h2>
-          <div class="post-list-item__meta">
-            <div class="post-list-item__authors">
-              <template v-if="post.authors">
-                <div class="post-list-item__person" v-for="author in post.authors">
-                  <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
-                  <span>{{ AUTHORS[author].name }}</span>
+      <template v-for='category in Object.keys(CATEGORIES)'>
+        <div class="post-list-category" v-if='category in postsByCategory'>
+          <div class="post-list-category__details">
+            <h2>{{ CATEGORIES[category].name }}</h2>
+            <p>{{ CATEGORIES[category].description }}</p>
+          </div>
+          <div class="post-list-item-set">
+            <div class="post-list-item" v-for="post in postsByCategory[category]" :key="post.path">
+              <NuxtLink class="post-list-item__link" :to="post.path">
+                <h3>{{ post.title }}</h3>
+                <div class="post-list-item__meta">
+                  <div class="post-list-item__authors">
+                    <template v-if="post.authors">
+                      <div class="post-list-item__person" v-for="author in post.authors">
+                        <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
+                        <span>{{ AUTHORS[author].name }}</span>
+                      </div>
+                    </template>
+                  </div>
+                  <div>
+                    {{ formatDate(post.date) }}
+                  </div>
                 </div>
-              </template>
-            </div>
-            <div>
-              {{ formatDate(post.date) }}
+              </NuxtLink>
             </div>
           </div>
-        </NuxtLink>
-      </div>
+        </div>
+      </template>
     </div>
   </div>
 </template>
 
 <style>
 .post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  .post-list-category {
+    display: flex;
+    gap: 35px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .post-list-category__details {
+      flex-basis: 200px;
+      @media (max-width: 900px) {
+        flex-basis: unset;
+        max-width: 280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 3px;
+        font-size: var(--font-size-m);
+        line-height: 20px;
+        font-family: var(--font-family-sans);
+        font-variant-caps: small-caps;
+        font-feature-settings: "smcp";
+        text-transform: lowercase;
+      }
+      p {
+        margin-top: 0;
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-xs);
+        color: var(--color-text-pale);
+        text-wrap: balance;
+      }
+    }
+    .post-list-item-set {
+      flex-grow: 1;
+    }
+  }
   .post-list-item {
-    margin: 15px 0;
+    margin: 10px 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
     a.post-list-item__link {
       display: flex;
       flex-direction: column;
@@ -51,10 +114,10 @@ defineProps(['posts']);
         background: var(--color-beige-pale);
         color: var(--color-text);
       }
-      h2 {
+      h3 {
         margin-bottom: 0;
-        font-size: var(--font-size-m);
-        line-height: var(--line-height-m);
+        font-size: var(--font-size-s);
+        line-height: 20px;
       }
       .post-list-item__meta {
         display: flex;

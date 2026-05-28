@@ -16,7 +16,7 @@ export const AUTHORS = {
 export const CATEGORIES = {
   'software-supply-chains': {
     name: 'Software Supply Chains',
-    description: 'How to sustainably and securely manage software dependency graphs.',
+    description: 'How to sustainably and securely manage dependencies.',
   },
   'maintainer-well-being': {
     name: 'Maintainer Well-Being',
@@ -24,7 +24,7 @@ export const CATEGORIES = {
   },
   'funding-tech-infrastructure': {
     name: 'Funding Tech Infrastructure',
-    description: 'How to sustainably finance the ecosystem we rely on.',
+    description: 'How to sustainably finance our ecosystems.',
   },
   'software-metrics': {
     name: 'Software Metrics',
@@ -32,15 +32,15 @@ export const CATEGORIES = {
   },
   'governance': {
     name: 'Project Governance',
-    description: 'How to share control of the tech we all rely on.',
+    description: 'How to share control of our tech.',
   },
   'philosophy': {
     name: 'Philosophy',
-    description: 'How to categorise the practical and moral concepts used in Open Source.',
+    description: 'How to categorise practical and moral Open Source concepts.',
   },
   'package-management': {
     name: 'Package Management',
-    description: 'How package managers and registries are built, and how they should be built.',
+    description: 'How to build package managers and registries.',
   },
   'tooling': {
     name: 'Tooling',

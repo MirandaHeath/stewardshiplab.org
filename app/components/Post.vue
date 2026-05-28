@@ -111,6 +111,7 @@ useSeoMeta({
   border-radius: var(--border-radius-s);
   background: var(--color-blue);
   color: white;
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-xs);
   line-height: 1;
   font-variant-caps: small-caps;
