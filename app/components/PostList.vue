@@ -55,7 +55,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
   gap: 80px;
   .post-list-category {
     display: flex;
-    gap: 35px;
+    gap: 45px;
     @media (max-width: 900px) {
       flex-direction: column;
       gap: 20px;
