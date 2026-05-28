@@ -7,7 +7,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     .all()
 );
 
-const title = `Tools ✸ Software Stewardship Lab`:
+const title = `Tools ✸ Software Stewardship Lab`;
 const description = 'Lab members build tools that help Open Source developers better navigate complex software ecosystems. Find them here.';
 useSeoMeta({
   title: title,

@@ -7,7 +7,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     .all()
 );
 
-const title = `Ideas ✸ Software Stewardship Lab`:
+const title = `Ideas ✸ Software Stewardship Lab`;
 const description = 'We regularly write about Open Source governance and burnout, software supply chains, package management, funding and metrics, and other topics in Open Source sustainability.';
 useSeoMeta({
   title: title,
