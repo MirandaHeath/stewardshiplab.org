@@ -505,14 +505,14 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
       </div>
     </section>
-  </div>
-  <section>
-    <h2 class="big-heading">
-      Featured Posts
-    </h2>
-    <PostList :posts="posts" />
-  </section>
-  <div class="container">
+  <!-- </div> -->
+  <!-- <section> -->
+  <!--   <h2 class="big-heading"> -->
+  <!--     Featured Posts -->
+  <!--   </h2> -->
+  <!--   <PostList :posts="posts" /> -->
+  <!-- </section> -->
+  <!-- <div class="container"> -->
     <section>
       <h2 class="big-heading">
         Values
