@@ -4,10 +4,11 @@ import { AUTHORS, CATEGORIES } from '../data/content.ts';
 
 const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
 
+const title = `${props.post.title} ✸ Software Stewardship Lab`:
 useSeoMeta({
-  title: props.post.title,
+  title: title,
   description: props.post.description,
-  ogTitle: props.post.title,
+  ogTitle: title,
   ogDescription: props.post.description,
   ogImage: props.post.metaImage,
 });
