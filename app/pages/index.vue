@@ -29,17 +29,17 @@ const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   Promise.all([
     queryCollection('tools')
-      .select('path', 'title', 'description', 'authors', 'date')
+      .select('path', 'title', 'description', 'authors', 'date', 'category')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
     queryCollection('reports')
-      .select('path', 'title', 'description', 'authors', 'date')
+      .select('path', 'title', 'description', 'authors', 'date', 'category')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
     queryCollection('ideas')
-      .select('path', 'title', 'description', 'authors', 'date')
+      .select('path', 'title', 'description', 'authors', 'date', 'category')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
