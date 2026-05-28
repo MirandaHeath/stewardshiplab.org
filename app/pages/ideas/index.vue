@@ -17,5 +17,5 @@ const { data: posts } = await useAsyncData(route.path, () =>
     </p>
     <hr>
   </div>
-  <PostList :posts="posts" />
+  <PostBrowser :posts="posts" />
 </template>

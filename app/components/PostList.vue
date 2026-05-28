@@ -2,7 +2,7 @@
 import { formatDate } from '../utils/format.ts';
 import { AUTHORS, CATEGORIES } from '../data/content.ts';
 
-const props = defineProps(['posts']);
+const props = defineProps(['posts', 'categorised']);
 
 const postsByCategory = props.posts.reduce((cats, post) => {
   if (!(post.category in cats)) {
@@ -16,32 +16,52 @@ const postsByCategory = props.posts.reduce((cats, post) => {
 <template>
   <div class="container">
     <div class="post-list">
-      <template v-for='category in Object.keys(CATEGORIES)'>
-        <div class="post-list-category" v-if='category in postsByCategory'>
-          <div class="post-list-category__details">
-            <h2>{{ CATEGORIES[category].name }}</h2>
-            <p>{{ CATEGORIES[category].description }}</p>
-          </div>
-          <div class="post-list-item-set">
-            <div class="post-list-item" v-for="post in postsByCategory[category]" :key="post.path">
-              <NuxtLink class="post-list-item__link" :to="post.path">
-                <h3>{{ post.title }}</h3>
-                <div class="post-list-item__meta">
-                  <div class="post-list-item__authors">
-                    <template v-if="post.authors">
-                      <div class="post-list-item__person" v-for="author in post.authors">
-                        <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
-                        <span>{{ AUTHORS[author].name }}</span>
+      <template v-if="categorised">
+        <div class="post-list-category-set">
+          <template v-for='category in Object.keys(CATEGORIES)'>
+            <div class="post-list-category" v-if='category in postsByCategory'>
+              <div class="post-list-category__details">
+                <h2>{{ CATEGORIES[category].name }}</h2>
+                <p>{{ CATEGORIES[category].description }}</p>
+              </div>
+              <div class="post-list-item-set">
+                <div class="post-list-item" v-for="post in postsByCategory[category]" :key="post.path">
+                  <NuxtLink class="post-list-item__link" :to="post.path">
+                    <h3>{{ post.title }}</h3>
+                    <div class="post-list-item__meta">
+                      <div class="post-list-item__authors">
+                        <template v-if="post.authors">
+                          <div class="post-list-item__person" v-for="author in post.authors">
+                            <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
+                            <span>{{ AUTHORS[author].name }}</span>
+                          </div>
+                        </template>
                       </div>
-                    </template>
-                  </div>
-                  <div>
-                    {{ formatDate(post.date) }}
-                  </div>
+                      <div>{{ formatDate(post.date) }}</div>
+                    </div>
+                  </NuxtLink>
                 </div>
-              </NuxtLink>
+              </div>
             </div>
-          </div>
+          </template>
+        </div>
+      </template>
+      <template v-if="!categorised">
+        <div class="post-list-item" v-for="post in posts" :key="post.path">
+          <NuxtLink class="post-list-item__link" :to="post.path">
+            <h3>{{ post.title }}</h3>
+            <div class="post-list-item__meta">
+              <div class="post-list-item__authors">
+                <template v-if="post.authors">
+                  <div class="post-list-item__person" v-for="author in post.authors">
+                    <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
+                    <span>{{ AUTHORS[author].name }}</span>
+                  </div>
+                </template>
+              </div>
+              <div>{{ formatDate(post.date) }}</div>
+            </div>
+          </NuxtLink>
         </div>
       </template>
     </div>
@@ -50,9 +70,11 @@ const postsByCategory = props.posts.reduce((cats, post) => {
 
 <style>
 .post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  .post-list-category-set {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
   .post-list-category {
     display: flex;
     gap: 45px;
