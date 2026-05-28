@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Management Commands"
 date: 2025-11-30
 description: "A cross-reference table of commands across 48 package managers."

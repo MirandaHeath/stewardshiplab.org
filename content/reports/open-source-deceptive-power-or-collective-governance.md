@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'governance'
 title: "Open Source: Deceptive Power or Collective Governance?"
 date: 2025-06-06T00:00:00+00:00
 metaImage: 'https://vlad.website/static/AltCtrOrg-Event-115@1000px.webp'

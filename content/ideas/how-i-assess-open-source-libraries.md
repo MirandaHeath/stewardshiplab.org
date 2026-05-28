@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "How I Assess Open Source Libraries"
 date: 2025-12-15
 description: "What I actually look at when deciding whether to adopt a dependency."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Security Problems for AI Agents"
 description: "Packages all the way down, agents all the way up."
 date: 2026-04-08 10:00 +0000

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Transitive Trust"
 date: 2026-03-02 10:00 +0000
 description: "You trust your maintainers, who trust their maintainers, but do they trust their maintainers' maintainers?"

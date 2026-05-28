@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Categorizing Package Registries"
 date: 2025-12-29 10:00 +0000
 description: "Sorting package registries by architecture, review model, namespacing, governance, and other structural differences."

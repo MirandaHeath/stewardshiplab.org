@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Common Package Specification"
 date: 2026-04-13 10:00 +0000
 description: "Not the cross-ecosystem format the name suggests."

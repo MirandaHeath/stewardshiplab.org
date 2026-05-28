@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Supply Chain Security Tools for Ruby"
 date: 2025-12-14
 description: "Ruby implementations of PURL, VERS, SBOM, SWHID, and SARIF specs."

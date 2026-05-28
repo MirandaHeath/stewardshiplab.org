@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "GitHub Actions Has a Package Manager, and It Might Be the Worst"
 date: 2025-12-06 10:00 +0000
 description: "GitHub Actions has a package manager that ignores decades of supply chain security best practices: no lockfile, no integrity verification, no transitive pinning"

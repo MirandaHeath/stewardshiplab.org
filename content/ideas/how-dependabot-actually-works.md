@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "How Dependabot Actually Works"
 date: 2026-01-02 10:00 +0000
 description: "Inside dependabot-core's architecture, its reliance on proprietary GitHub infrastructure, and open source alternatives"

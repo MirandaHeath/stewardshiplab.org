@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Platform Strings"
 date: 2026-02-17 10:00 +0000
 description: "An M1 Mac is aarch64-apple-darwin, arm64-darwin, darwin/arm64, or macosx_11_0_arm64 depending on which tool you ask."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Registries and Pagination"
 description: "100MB of metadata for 10,451 versions."
 date: 2026-04-10 10:00 +0000

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Forge-Specific Repository Folders"
 date: 2026-02-22 10:00 +0000
 description: "Magic folders in git forges: what .github/, .gitlab/, .gitea/, .forgejo/ and .bitbucket/ do."

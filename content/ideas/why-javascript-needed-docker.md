@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Why JavaScript Needed Docker"
 date: 2025-12-19 10:00 +0000
 description: "How Docker became JavaScript's real lockfile"

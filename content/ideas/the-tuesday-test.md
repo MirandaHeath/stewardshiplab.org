@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "The Tuesday Test"
 date: 2026-04-15 10:00 +0000
 description: "Like the Turing test but with more tacos."

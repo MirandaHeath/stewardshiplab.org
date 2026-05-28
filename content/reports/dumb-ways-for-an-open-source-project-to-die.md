@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Dumb Ways for an Open Source Project to Die"
 date: 2026-05-19 10:00 +0000
 description: "How your dependencies became Bernies"

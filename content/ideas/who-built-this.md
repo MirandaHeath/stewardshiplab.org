@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Who Built This?"
 date: 2026-04-07 10:00 +0000
 description: "Tracing a dependency back to its source commit."

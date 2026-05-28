@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Git Remote Helpers"
 description: "Git can talk to anything if you write the right helper."
 date: 2026-03-18 10:00:00 +0000

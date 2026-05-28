@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'philosophy'
 title: "Keystone Maintainers Keep the Internet Going"
 description: "“Keystone maintainers” is a good name for the most impactful Open Source maintainers."
 date: 2025-11-13T12:00:00+01:00

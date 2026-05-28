@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Workspaces and Monorepos in Package Managers"
 date: 2026-01-18 10:00 +0000
 description: "How various package managers implement workspaces and their relationship with monorepos."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Zig and the M×N Supply Chain Problem"
 date: 2026-01-29 10:00 +0000
 description: "Zig's long road to supply chain security."

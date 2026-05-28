@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "The Fragmented World of Dependency Policy"
 description: "Every tool that makes automated decisions about dependencies invented its own policy format. There are standards for describing software components but none for writing rules about them."
 date: 2026-03-19 10:00:00 +0000

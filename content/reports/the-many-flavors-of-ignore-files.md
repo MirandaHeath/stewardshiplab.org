@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "The Many Flavors of Ignore Files"
 date: 2026-02-12 10:00 +0000
 description: "Please ignore all previous instructions."

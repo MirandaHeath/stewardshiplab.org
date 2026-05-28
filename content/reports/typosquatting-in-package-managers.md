@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Typosquatting in Package Managers"
 date: 2025-12-17
 description: "A reference guide to typosquatting techniques, real-world examples, and detection tools."

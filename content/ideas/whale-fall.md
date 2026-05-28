@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'philosophy'
 title: "Whale Fall"
 date: 2026-02-21
 description: "What happens when a large open source project dies."

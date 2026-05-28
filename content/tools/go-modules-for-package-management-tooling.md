@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Go Modules for Package Management Tooling"
 date: 2026-02-19
 description: "The Go modules behind git-pkgs, rebuilt from my Ruby supply chain libraries."

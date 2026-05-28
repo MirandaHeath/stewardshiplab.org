@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Federated Package Management and the Zooko Triangle"
 date: 2025-12-21 10:00 +0000
 description: "The trade-offs that make decentralized package management impractical"

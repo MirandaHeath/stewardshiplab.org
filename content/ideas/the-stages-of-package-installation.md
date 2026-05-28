@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "The stages of package installation"
 date: 2026-04-27 10:00 +0000
 description: "Denial, anger, bargaining, depression, acceptance, postinstall."

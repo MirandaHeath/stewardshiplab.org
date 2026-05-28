@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "brief"
 date: 2026-04-21 10:00 +0000
 description: "A knowledge base of project conventions, exposed as a CLI."

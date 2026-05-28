@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'funding-tech-infrastructure'
 title: "Open Source Foundation Financials"
 description: "A summary of the financials of Open Source foundations."
 metaImage: "https://stewardshiplab.org/images/og/foundations.png"

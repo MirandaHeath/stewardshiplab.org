@@ -1,8 +1,9 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
+import { CATEGORIES } from './app/data/content.ts';
 
 const commonSchema = z.object({
-  type: z.enum(['tool', 'report', 'idea']),
+  category: z.enum(Object.keys(CATEGORIES)),
   authors: z.array(z.string()).optional(),
   author: z.string().optional(),
   authorImage: z.string().optional(),

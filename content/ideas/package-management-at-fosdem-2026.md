@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Management at FOSDEM 2026"
 date: 2026-02-04
 description: "Summary of package management talks from FOSDEM 2026, covering supply chain security, attestations, SBOMs, dependency resolution, and distribution packaging across multiple devrooms."

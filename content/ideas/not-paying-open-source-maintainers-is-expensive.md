@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'funding-tech-infrastructure'
 title: "Not Paying Open Source Maintainers Is Expensive"
 description: "Not paying for the Open Source software you use can seem like a great deal — but it can end up costing you money."
 date: 2025-06-18

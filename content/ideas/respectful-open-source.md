@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'maintainer-well-being'
 title: "Respectful Open Source"
 date: 2026-02-13
 description: "Maintainer attention as a finite resource."

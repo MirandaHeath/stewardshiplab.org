@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Downstream Testing"
 date: 2026-03-01
 description: "Most library maintainers have no way to test against their dependents before releasing."

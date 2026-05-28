@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Signing is for the bad days"
 date: 2026-05-24 10:00 +0000
 description: "TUF, in-toto, and Sigstore only look pointless while nothing is on fire"

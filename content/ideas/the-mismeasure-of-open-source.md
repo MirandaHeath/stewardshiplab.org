@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-metrics'
 title: "The Mismeasure of Open Source"
 date: 2026-05-09 10:00 +0000
 description: "The streetlight effect in project-health scoring"

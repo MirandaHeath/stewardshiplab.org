@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Dependency Resolution Methods"
 date: 2026-02-06 12:00 +0000
 description: "A reference on how package managers solve the version constraint satisfaction problem, from SAT solvers to content-addressed stores."

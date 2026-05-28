@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "The Roles of Packages"
 date: 2026-03-29 10:00 +0000
 description: "Applying Sajaniemi's roles of variables to packages across every kind of package manager."

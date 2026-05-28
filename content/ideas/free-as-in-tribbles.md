@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Free as in Tribbles"
 date: 2026-05-07 10:00 +0000
 description: "The next metaphor after free-as-in-puppy"

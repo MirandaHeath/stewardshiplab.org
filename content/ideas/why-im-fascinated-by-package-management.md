@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Why I'm Fascinated by Package Management"
 date: 2025-12-09 10:00 +0000
 description: "From gaming magazine CDs to dependency graphs"

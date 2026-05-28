@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Security Defenses for AI Agents"
 description: "Lockfiles, sandboxes, and cooldown timers."
 date: 2026-04-09 10:00 +0000

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Not a Security Issue"
 date: 2026-05-12 10:00 +0000
 description: "How curl's disclosure policy filtered an AI scanner's findings at source"

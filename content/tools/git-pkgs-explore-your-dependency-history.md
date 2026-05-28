@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "git-pkgs: explore your dependency history"
 date: 2026-01-01 10:00 +0000
 description: A git subcommand to explore the dependency history of your repositories.

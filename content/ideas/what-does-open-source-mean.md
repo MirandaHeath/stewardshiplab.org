@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'philosophy'
 title: "What does Open Source mean?"
 description: "A stack of incompatible expectations."
 date: 2026-04-04 10:00:00 +0000

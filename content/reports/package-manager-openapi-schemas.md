@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Manager OpenAPI Schemas"
 date: 2025-11-30
 description: "OpenAPI 3.0 specifications for 25+ package registry APIs including npm, PyPI, Maven, RubyGems, Cargo, Docker, and Terraform."

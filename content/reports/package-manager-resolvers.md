@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Manager Resolvers"
 date: 2025-11-30
 description: "A reference documenting dependency resolution algorithms across package managers."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "GitHub Actions is the weakest link"
 date: 2026-04-28 10:00 +0000
 description: "Anne Robinson would like a word with .github/workflows"

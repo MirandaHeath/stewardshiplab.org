@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Reproducible Builds in Language Package Managers"
 date: 2026-02-24 10:00 +0000
 description: "Verifying that a published package was actually built from the source it claims."

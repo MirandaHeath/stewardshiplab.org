@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'funding-tech-infrastructure'
 title: "Why and How Companies Should Pay Open Source Maintainers"
 date: 2025-02-02T00:00:00+00:00
 location: 'Brussels, Belgium'

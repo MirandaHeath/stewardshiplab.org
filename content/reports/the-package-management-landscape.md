@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "The Package Management Landscape"
 date: 2026-01-03 10:00 +0000
 description: "A directory of tools, systems, and services that relate to package management."

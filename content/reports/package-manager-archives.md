@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Manager Archives"
 date: 2025-11-30
 description: "Documentation of archive formats used by package managers, covering both language-specific ecosystems (gems, wheels, npm tarballs, crates) and system-level formats (deb, rpm, apk)."

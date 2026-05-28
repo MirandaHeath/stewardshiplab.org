@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Language Registries Are Unstable by Default"
 date: 2026-05-15 10:00 +0000
 description: "apt install -t unstable, but make it your whole personality"

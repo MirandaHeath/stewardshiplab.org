@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "From ZeroVer to SemVer: A List of Versioning Schemes in Open Source"
 date: 2024-06-24 16:52 +0100
 description: "A curated catalogue of versioning schemes used in open source software—from the conventional to the creative."

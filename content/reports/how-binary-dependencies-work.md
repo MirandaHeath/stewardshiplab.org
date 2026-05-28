@@ -1,5 +1,6 @@
 ---
 authors: ['vlad']
+category: 'software-supply-chains'
 title: "How Binary Dependencies Work Across Different Languages"
 description: "Have you ever wondered how it's possible to call C code from other languages like Python? Here are the technical details — and also why this topic is important for security and sustainability."
 date: 2026-01-16T00:00:00+00:00

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Features everyone should steal from npmx"
 date: 2026-04-16 10:00 +0000
 description: "What happens when users design their own package registry frontend"

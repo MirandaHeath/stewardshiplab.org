@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Slopsquatting meets Dependency Confusion"
 date: 2025-12-10
 description: "LLMs can leak internal package names, making dependency confusion attacks easier to scale."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Extending Git Functionality"
 date: 2025-11-26 12:00 +0000
 description: "A practical guide to the different ways you can extend git: subcommands, filters, hooks, remote helpers, and more."

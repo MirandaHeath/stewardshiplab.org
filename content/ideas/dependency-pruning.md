@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Dependency Pruning"
 date: 2026-05-22 10:00 +0000
 description: "A survey of unused-dependency detectors"

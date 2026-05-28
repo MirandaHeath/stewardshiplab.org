@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Manager Magic Files"
 date: 2026-03-05 10:00 +0000
 description: "Package manager magic files and where to find them: .npmrc, MANIFEST.in, Directory.Packages.props, .pnpmfile.cjs, and more."

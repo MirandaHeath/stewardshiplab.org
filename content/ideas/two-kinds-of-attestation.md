@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Two Kinds of Attestation"
 date: 2026-02-25
 description: "The oldest problem in computer science, but with toasters."

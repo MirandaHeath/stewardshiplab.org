@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "proxy"
 date: 2026-05-11 10:00 +0000
 description: "A lightweight multi-ecosystem caching package proxy"

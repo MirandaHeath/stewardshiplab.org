@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Lockfiles Killed Vendoring"
 date: 2026-02-10 10:00 +0000
 description: "Why almost nobody vendors their dependencies anymore."

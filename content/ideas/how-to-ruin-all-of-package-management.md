@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "How to Ruin All of Package Management"
 date: 2025-12-27
 description: "Attach financial incentives to open source metrics and watch the spam flood in."

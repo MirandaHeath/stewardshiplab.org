@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "git-pkgs/actions"
 description: "How to add git-pkgs to your GitHub Actions workflows."
 date: 2026-03-11 10:00:00 +0000

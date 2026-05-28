@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Manager Manifest Examples"
 date: 2025-11-30
 description: "Over 145 manifest and lockfile examples from 34 package ecosystems, organized by PURL type."

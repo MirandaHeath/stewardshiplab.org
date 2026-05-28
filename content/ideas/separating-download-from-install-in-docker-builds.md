@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Separating Download from Install in Docker Builds"
 date: 2026-02-15
 description: "Most package managers could separate download from install for better Docker layer caching."

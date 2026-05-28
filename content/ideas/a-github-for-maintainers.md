@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "A GitHub for maintainers"
 date: 2026-05-02 10:00 +0000
 description: "Giving dependencies the same treatment the fork got"

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: ".gitlocal"
 date: 2026-03-06 10:00 +0000
 description: "Git Should Let Files Ignore Themselves"

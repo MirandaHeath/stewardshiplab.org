@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Docker is the Lockfile for System Packages"
 date: 2025-12-18 10:00 +0000
 description: "Why Docker filled the reproducibility gap that system package managers left open"

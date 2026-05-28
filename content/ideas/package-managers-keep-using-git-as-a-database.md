@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package managers keep using git as a database, it never works out"
 date: 2025-12-24 10:00 +0000
 description: "Git repositories seem like an elegant solution for package registry data. Pull requests for governance, version history for free, distributed by design. But as registries grow, the cracks appear."

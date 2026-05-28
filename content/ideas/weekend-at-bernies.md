@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'software-supply-chains'
 title: "Weekend at Bernie's"
 date: 2026-05-08 10:00 +0000
 description: "Which of your dependencies are wearing sunglasses"

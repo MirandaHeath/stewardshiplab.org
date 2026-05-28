@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Standing on the shoulders of Homebrew"
 date: 2026-04-14 10:00 +0000
 description: "Rewriting the easy parts of Homebrew."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'package-management'
 title: "Package Management Namespaces"
 date: 2026-02-14
 description: "Comparing namespace models across npm, Maven, Go, Swift, and crates.io."

@@ -1,5 +1,6 @@
 ---
 authors: ['andrew']
+category: 'tooling'
 title: "Git Diff Drivers"
 date: 2026-03-30 10:00 +0000
 description: "What git's diff drivers can do, from built-in language support to custom textconv filters."
