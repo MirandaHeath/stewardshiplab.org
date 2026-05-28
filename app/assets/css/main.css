@@ -342,9 +342,12 @@ table {
     &.cell--bold {
       font-weight: bold;
     }
-    &.cell--desktop-only {
-      @media (max-width: 1200px) {
+    @media (max-width: 1200px) {
+      &.cell--desktop-only {
         display: none;
+      }
+      &.cell--mobile-expand {
+        width: 12.5% !important; /* HACK */
       }
     }
     &.cell--ellipsis {

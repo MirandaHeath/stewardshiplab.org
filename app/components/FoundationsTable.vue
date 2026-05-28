@@ -42,14 +42,14 @@
               scope="col"
               @click="setSortGetter(SG_REVENUE)"
               :data-sorting="getSortingDataAttr(SG_REVENUE)"
-              class="cell--right-align"
+              class="cell--right-align cell--mobile-expand"
             ><span>Revenue</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_NETASSETS)"
               :data-sorting="getSortingDataAttr(SG_NETASSETS)"
-              class="cell--right-align"
+              class="cell--right-align cell--mobile-expand"
             ><span>Net assets</span></th>
             <th
               style="width: 12%"
@@ -68,14 +68,14 @@
               scope="col"
               @click="setSortGetter(SG_HPE_SALARYPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_SALARYPAY)"
-              class="cell--right-align"
+              class="cell--right-align cell--mobile-expand"
             ><span>Salary</span></th>
             <th
               style="width: 9%"
               scope="col"
               @click="setSortGetter(SG_HPE_OTHERPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_OTHERPAY)"
-              class="cell--right-align"
+              class="cell--right-align cell--mobile-expand"
             ><span>Other pay</span></th>
           </tr>
         </thead>
