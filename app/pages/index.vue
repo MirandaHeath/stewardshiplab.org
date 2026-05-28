@@ -44,7 +44,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
       .where('featured', '=', true)
       .all(),
   ]).then((results) =>
-    results.flat()
+    results.flat().sort((a, b) => b.date.localeCompare(a.date))
   )
 );
 </script>
