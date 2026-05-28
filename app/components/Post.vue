@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { AUTHORS } from '../data/content.ts';
+import { AUTHORS, CATEGORIES } from '../data/content.ts';
 
 const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
 
@@ -22,7 +22,10 @@ useSeoMeta({
         :to="breadcrumbUrl"
       >{{ breadcrumbText }}</NuxtLink>
     </div>
-    <div class="post__type">{{ type }}</div>
+    <div class="post__labels">
+      <div class="post-label post-label--category">{{ CATEGORIES[post.category].name }}</div>
+      <div class="post-label post-label--type">{{ type }}</div>
+    </div>
   </div>
   <div class="container">
     <h1 class="page-title">{{ post.title }}</h1>
@@ -88,12 +91,19 @@ useSeoMeta({
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-bottom: 20px;
 }
 .post__after {
   margin-top: 80px;
 }
-.post__type {
+.post__labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.post-label {
   display: inline-block;
   padding: 0 8px;
   padding-top: 4px;
@@ -106,6 +116,12 @@ useSeoMeta({
   font-variant-caps: small-caps;
   font-feature-settings: "smcp";
   text-transform: lowercase;
+}
+.post-label--type {
+  background: var(--color-blue);
+}
+.post-label--category {
+  background: var(--color-purple);
 }
 .post__meta {
   display: flex;
