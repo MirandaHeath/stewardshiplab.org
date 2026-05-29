@@ -5,6 +5,7 @@ path = [
     ".gitignore",
     "REUSE.toml",
     "app/data/**",
+    "content.config.ts",
     "eslint.config.mjs",
     "package.json",
     "pnpm-lock.yaml",
@@ -17,7 +18,7 @@ SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
 path = [
-    "app/*.vue",
+    "app/**/*.vue",
     "app/assets/css/**",
     "app/layouts/**",
     "app/pages/**",
@@ -35,6 +36,13 @@ path = [
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+[[annotations]]
+path = [
+    "content/**/*",
+]
+SPDX-FileCopyrightText = "© The post's author"
+SPDX-License-Identifier = "LicenseRef-Restricted"
 
 [[annotations]]
 path = [
