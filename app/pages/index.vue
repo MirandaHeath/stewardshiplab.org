@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Markset from '~/assets/images/markset.svg'
-import IconGlobe from '~/assets/images/icons/globe.svg'
+import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
 import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
 import LogoChaoss from '~/assets/images/logos/chaoss.svg'
 import LogoCncf from '~/assets/images/logos/cncf.svg'
@@ -114,10 +114,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Vlad-Stefan Harbuz</strong>
                 <a class="plain-link" href="https://vlad.website">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Vlad's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -148,10 +147,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Andrew Nesbitt</strong>
                 <a class="plain-link" href="https://nesbitt.io">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Andrew's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -185,10 +183,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Miranda Heath</strong>
                 <a class="plain-link" href="https://mirandaheath.website">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Miranda's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -215,10 +212,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Daniel Roe</strong>
                 <a class="plain-link" href="https://roe.dev">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Daniel's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -245,10 +241,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Dawn Foster</strong>
                 <a class="plain-link" href="https://fastwonder.com/">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Dawn's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -275,10 +270,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Matias Capeletto</strong>
                 <a class="plain-link" href="https://patak.cat">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Matias's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -309,10 +303,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
               <div class="member__name">
                 <strong>Mike McQuaid</strong>
                 <a class="plain-link" href="https://mikemcquaid.com">
-                  <IconGlobe
+                  <IconHandWaving
                     aria-label="Go to Mike's website"
-                    width="16"
-                    height="16"
+                    class="icon icon--s icon--black"
                   />
                 </a>
               </div>
@@ -674,7 +667,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
   .member__info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
     line-height: 1.1;
     span {
       font-size: var(--font-size-xs);
@@ -686,20 +678,12 @@ const { data: posts } = await useAsyncData(route.path, () =>
       strong {
         font-size: var(--font-size-m);
         line-height: var(--line-height-m);
-        /* Montreuil-Medium.woff2 is weight 500, not 700. */
-        font-weight: 500;
       }
       a {
-        --icon-size: 16px;
-        flex: 0 0 var(--icon-size);
         display: flex;
         align-items: center;
         &:hover {
           background-color: unset;
-        }
-        img {
-          width: var(--icon-size);
-          height: var(--icon-size);
         }
       }
     }

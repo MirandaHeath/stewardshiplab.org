@@ -31,6 +31,9 @@
 
   --border-radius-s: 5px;
   --border-radius-l: 10px;
+
+  --icon-size-s: 16px;
+  --icon-size-m: 22px;
 }
 
 @media (max-width: 900px) {
@@ -68,6 +71,10 @@ body, button, input, textarea {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   font-family: var(--font-family-sans);
+}
+
+strong {
+  font-weight: 500;
 }
 
 a {
@@ -417,6 +424,32 @@ button.plain-button {
   padding: 0;
   border: none;
   cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  path {
+    fill: var(--color-blue);
+    stroke: var(--color-blue);
+  }
+  &.icon--white {
+    path {
+      fill: white;
+      stroke: white;
+    }
+  }
+  &.icon--black {
+    path {
+      fill: var(--color-text);
+      stroke: var(--color-text);
+    }
+  }
+  &.icon--s {
+    width: var(--icon-size-s);
+    height: var(--icon-size-s);
+  }
 }
 
 .page-items {

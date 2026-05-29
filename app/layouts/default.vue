@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import Logo from '~/assets/images/logo.svg'
+import IconBluesky from '../components/IconBluesky.vue'
 import IconMastodon from '~/assets/images/icons/mastodon.svg'
 import IconDiscord from '~/assets/images/icons/discord.svg'
-import IconList from '~/assets/images/icons/list.svg'
-import IconCaretRight from '~/assets/images/icons/caret-right.svg'
+import IconList from '~/assets/images/icons/phosphor/list.svg'
+import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
+import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
 
 const isNavOpen = ref(false);
 </script>
@@ -21,9 +23,21 @@ const isNavOpen = ref(false);
           </a>
         </div>
         <nav class="desktop-nav">
-          <NuxtLink class="plain-link" to="/reports">Reports<IconCaretRight /></NuxtLink>
-          <NuxtLink class="plain-link" to="/tools">Tools<IconCaretRight /></NuxtLink>
-          <NuxtLink class="plain-link" to="/ideas">Ideas<IconCaretRight /></NuxtLink>
+          <NuxtLink class="plain-link" to="/reports">
+            Reports<IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <NuxtLink class="plain-link" to="/tools">
+            Tools<IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <NuxtLink class="plain-link" to="/ideas">
+            Ideas<IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <!-- <NuxtLink class="plain-link" to="/stories"> -->
+          <!--   Stories<IconCaretRightBold class="icon icon--s" /> -->
+          <!-- </NuxtLink> -->
+          <NuxtLink class="plain-link" to="/contact">
+            <IconHandWaving class="icon" />
+          </NuxtLink>
         </nav>
         <div class="mobile-nav-trigger">
           <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen">
@@ -31,9 +45,22 @@ const isNavOpen = ref(false);
           </button>
         </div>
         <nav class="mobile-nav" v-show="isNavOpen">
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">Reports<IconCaretRight /></NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">Tools<IconCaretRight /></NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">Ideas<IconCaretRight /></NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">
+            <div class="mobile-nav__name">Reports</div><IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">
+            <div class="mobile-nav__name">Tools</div><IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">
+            <div class="mobile-nav__name">Ideas</div><IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
+          <!-- <NuxtLink @click="isNavOpen = false" class="plain-link" to="/stories"> -->
+          <!--   <div class="mobile-nav__name">Stories</div><IconCaretRightBold class="icon icon--s" /> -->
+          <!-- </NuxtLink> -->
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/contact">
+            <div class="mobile-nav__name">Contact<IconHandWaving class="icon icon--white" /></div>
+            <IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
         </nav>
       </div>
     </div>
@@ -51,18 +78,10 @@ const isNavOpen = ref(false);
         <div class="footer-socials">
           <a
             href="https://bsky.app/profile/stewardshiplab.org"
-            class="bluesky-flutter plain-link"
+            class="plain-link"
             target="_blank"
           >
-            <svg
-              role="img"
-              aria-label="The Bluesky logo"
-              width="28"
-              height="28"
-              viewBox="0 0 566 500"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            ><defs><path id="wing" fill="#1c35bc" d="M 123.244 35.008 C 188.248 83.809 283.836 176.879 283.836 235.857 C 283.836 316.899 283.879 235.845 283.836 376.038 C 283.889 375.995 282.67 376.544 280.212 383.758 C 266.806 423.111 214.487 576.685 94.841 453.913 C 31.843 389.269 61.013 324.625 175.682 305.108 C 110.08 316.274 36.332 297.827 16.093 225.504 C 10.271 204.699 0.343 76.56 0.343 59.246 C 0.343 -27.451 76.342 -0.206 123.244 35.008 Z" /></defs><use xlink:href="#wing" class="left" /><use xlink:href="#wing" class="right" /></svg>
+            <IconBluesky />
           </a>
           <a
             href="https://fosstodon.org/@stewardshiplab"
@@ -108,7 +127,7 @@ header {
   }
   nav.desktop-nav {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     @media (max-width: 800px) {
       display: none;
     }
@@ -125,16 +144,13 @@ header {
       color: var(--color-blue);
       border-radius: var(--border-radius-s);
       transition: background-color 200ms;
-      svg {
+      .icon.icon--s {
         position: relative;
         top: 1px;
         margin-left: 1px;
-        width: 14px;
-        height: 14px;
         path {
           fill: var(--color-blue);
           stroke: var(--color-blue);
-          stroke-width: 13px;
         }
       }
       &:hover {
@@ -167,6 +183,11 @@ header {
     @media (min-width: 801px) {
       display: none;
     }
+    .mobile-nav__name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     a {
       display: flex;
       align-items: center;
@@ -181,16 +202,13 @@ header {
       font-weight: 500;
       line-height: 1;
       color: white;
-      svg {
+      .icon.icon--s {
         position: relative;
         top: 1px;
         margin-left: 1px;
-        width: 14px;
-        height: 14px;
         path {
           fill: white;
           stroke: white;
-          stroke-width: 13px;
         }
       }
     }
@@ -226,54 +244,10 @@ footer {
   .footer-socials {
     display: flex;
     gap: 20px;
+    a svg {
+      width: var(--icon-size-m);
+      height: var(--icon-size-m);
+    }
   }
 }
-
-/*
-Bluesky flutter — https://flutterby.philhawksworth.dev/
-SPDX-SnippetBegin
-SPDX-License-Identifier: MIT
-SPDX-SnippetCopyrightText: 2024 Phil Hawksworth
-*/
-.bluesky-flutter svg {
-  transition: 200ms;
-}
-.bluesky-flutter .left {
-  transform-origin: center;
-}
-.bluesky-flutter .right {
-  transform-origin: center;
-  transform: scale(-1, 1);
-}
-.bluesky-flutter:hover .left, .bluesky-flutter:focus .left {
-  animation: flutter 430ms ease-in-out;
-  --flip: 1;
-}
-.bluesky-flutter:hover .right, .bluesky-flutter:focus .right {
-  animation: flutter 500ms ease-in-out;
-  --flip: -1;
-}
-.bluesky-flutter:hover svg, .bluesky-flutter:focus svg {
-  transform: rotate(-5deg);
-  transition: 500ms;
-}
-
-@media (prefers-reduced-motion) {
-  .bluesky-flutter:hover .left,
-  .bluesky-flutter:focus .left,
-  .bluesky-flutter:hover .right,
-  .bluesky-flutter:focus .right {
-    animation: none;
-  }
-}
-
-@keyframes flutter {
-  10% { transform: scale(calc(var(--flip)*1), 0.9); }
-  20% { transform: scale(calc(var(--flip)*0.5), 1); }
-  40% { transform: scale(calc(var(--flip)*0.9), 0.95); }
-  60% { transform: scale(calc(var(--flip)*0.3), 1); }
-  80% { transform: scale(calc(var(--flip)*0.9), 0.95); }
-  100% { transform: scale(calc(var(--flip)*1), 1); }
-}
-/* SPDX-SnippetEnd */
 </style>

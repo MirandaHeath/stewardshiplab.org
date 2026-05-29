@@ -30,6 +30,13 @@ SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
 path = [
+    "app/assets/images/icons/phosphor/**",
+]
+SPDX-FileCopyrightText = "© Phosphor Icons"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = [
     "CONTRIBUTING.md",
     "README.md",
     "public/pitch.pdf",
