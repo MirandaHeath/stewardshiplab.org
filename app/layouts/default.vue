@@ -86,12 +86,23 @@ header {
   nav {
     display: flex;
     gap: 20px;
-    font-size: var(--font-size-m);
-    line-height: var(--line-height-m);
     a {
+      font-size: var(--font-size-s);
+      line-height: var(--line-height-s);
       font-variant-caps: small-caps;
       font-feature-settings: "smcp";
       text-transform: lowercase;
+      color: var(--color-blue);
+      font-weight: 500;
+      &:after {
+        content: '→';
+        margin-left: 5px;
+        font-size: var(--font-size-xs);
+        line-height: 1;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
