@@ -610,6 +610,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     padding: 20px;
     background: var(--color-beige-xpale);
     border: 1px solid var(--color-beige-pale);
+    border-radius: var(--border-radius-s);
     &:hover {
       background: var(--color-beige-pale);
     }
@@ -637,6 +638,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
   padding: 20px;
   background: var(--color-beige-xpale);
   border: 1px solid var(--color-beige-pale);
+  border-radius: var(--border-radius-s);
   .member__photo {
     flex: 0 0 var(--photo-size);
     img {
@@ -694,6 +696,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
   padding: 15px;
   background: var(--color-beige-xpale);
   border: 1px solid var(--color-beige-pale);
+  border-radius: var(--border-radius-s);
   h3 {
     font-family: var(--font-family-sans);
     font-size: var(--font-size-l);
