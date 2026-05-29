@@ -193,10 +193,6 @@ footer {
     gap: 40px;
     @media (max-width: 900px) {
       flex-direction: column;
-      align-items: center;
-      .footer-links {
-        text-align: center;
-      }
     }
   }
   .footer-links {
