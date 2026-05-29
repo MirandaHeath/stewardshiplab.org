@@ -637,7 +637,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
   gap: 10px;
   padding: 20px;
   background: var(--color-beige-xpale);
-  border: 1px solid var(--color-beige-pale);
   border-radius: var(--border-radius-s);
   .member__photo {
     flex: 0 0 var(--photo-size);
@@ -695,7 +694,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
   margin: 1rem 0;
   padding: 15px;
   background: var(--color-beige-xpale);
-  border: 1px solid var(--color-beige-pale);
   border-radius: var(--border-radius-s);
   h3 {
     font-family: var(--font-family-sans);
