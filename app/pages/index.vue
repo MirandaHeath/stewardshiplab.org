@@ -334,7 +334,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           target="_blank"
           href="https://opensourcepledge.com"
         ><LogoOsp
-          style="padding: 0.1rem 0;"
+          style="padding-block: 2px;"
           aria-label="The Open Source Pledge logo"
           width="104"
           height="40"
@@ -381,7 +381,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://chaoss.community/"
         ><LogoChaoss
           aria-label="The CHAOSS logo"
-          style="padding: 0.4rem 0;"
+          style="padding-block: 8px;"
           width="104"
           height="40"
         /></a>
@@ -391,7 +391,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://nuxt.com/"
         ><LogoNuxt
           aria-label="The Nuxt logo"
-          style="padding: 0.4rem 0;"
+          style="padding-block: 8px;"
           width="104"
           height="40"
         /></a>
@@ -401,7 +401,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://vite.dev/"
         ><LogoVite
           aria-label="The Vite logo"
-          style="padding: 0.5rem 0;"
+          style="padding-block: 10px;"
           width="104"
           height="40"
         /></a>
@@ -412,7 +412,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         ><LogoNpmx
           src="/images/logos/npmx.svg"
           aria-label="The npmx logo"
-          style="padding: 0.3rem 0;"
+          style="padding-block: 5px;"
           width="104"
           height="40"
         /></a>
@@ -436,7 +436,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://intel.com"
         ><LogoIntel
           aria-label="The Intel logo"
-          style="padding: 0.3rem 0;"
+          style="padding-block: 6px;"
           width="104"
           height="40"
         /></a>
@@ -455,7 +455,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://github.com"
         ><LogoGitHub
           aria-label="The GitHub logo"
-          style="padding: 0.45rem 0;"
+          style="padding-block: 8px;"
           width="104"
           height="40"
         /></a>
@@ -483,7 +483,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://openssf.org/"
         ><LogoOpenSsf
           aria-label="The OpenSSF logo"
-          style="padding: 0.1rem 0;"
+          style="padding-block: 3px;"
           width="104"
           height="40"
         /></a>
@@ -502,7 +502,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           href="https://www.linuxfoundation.org/"
         ><LogoLinuxFoundation
           aria-label="The Linux Foundation logo"
-          style="padding: 0.3rem 0;"
+          style="padding-block: 5px;"
           width="104"
           height="40"
         /></a>
@@ -612,14 +612,14 @@ const { data: posts } = await useAsyncData(route.path, () =>
 }
 .logowall {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
   margin: 1rem 0;
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     background: var(--color-beige-xpale);
     border: 1px solid var(--color-beige-pale);
     border-radius: var(--border-radius-s);
@@ -627,10 +627,8 @@ const { data: posts } = await useAsyncData(route.path, () =>
     &:hover {
       background: var(--color-beige-pale);
     }
-    img {
-      flex: 1;
-      width: 100px;
-      max-height: 40px;
+    svg {
+      height: 35px;
       opacity: 0.9;
     }
   }
