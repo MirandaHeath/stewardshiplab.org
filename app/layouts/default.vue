@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Logo from '~/assets/images/logo.svg'
-import Starset from '~/assets/images/starset.svg'
 import IconMastodon from '~/assets/images/icons/mastodon.svg'
 import IconDiscord from '~/assets/images/icons/discord.svg'
 import IconList from '~/assets/images/icons/list.svg'
@@ -206,12 +205,6 @@ footer {
   .footer-socials {
     display: flex;
     gap: 20px;
-  }
-  .footer-starset {
-    svg {
-      width: 90px;
-      height: auto;
-    }
   }
 }
 

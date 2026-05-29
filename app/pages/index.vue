@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Starset from '~/assets/images/starset.svg'
+import Markset from '~/assets/images/markset.svg'
 import IconGlobe from '~/assets/images/icons/globe.svg'
 import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
 import LogoChaoss from '~/assets/images/logos/chaoss.svg'
@@ -92,7 +92,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           width="736"
           height="505"
         >
-        <Starset width="81" height="24" />
+        <Markset width="81" height="24" />
       </div>
     </section>
     <section>
@@ -596,11 +596,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
     width: auto;
     height: auto;
     border-radius: var(--border-radius-s);
-  }
-  .postcard__starset {
-    width: 100px;
-    height: auto;
-    margin-right: 0;
   }
 }
 .logowall {

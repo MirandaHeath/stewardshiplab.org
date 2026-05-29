@@ -39,7 +39,7 @@ SPDX-License-Identifier = "CC-BY-SA-4.0"
 [[annotations]]
 path = [
     "app/assets/images/logo.svg",
-    "app/assets/images/starset.svg",
+    "app/assets/images/markset.svg",
     "public/images/favicon.png",
     "public/images/og/**",
 ]
