@@ -338,6 +338,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
       <div class="logowall">
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://opensourcepledge.com"
         ><LogoOsp
           style="padding: 0.1rem 0;"
@@ -347,6 +348,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://endowment.dev"
         ><LogoOse
           aria-label="The Open Source Endowment logo"
@@ -355,6 +357,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://thanks.dev"
         ><LogoThanksDev
           aria-label="The thanks.dev logo"
@@ -363,6 +366,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://ecosyste.ms"
         ><LogoEcosystems
           aria-label="The ecosyste.ms logo"
@@ -371,6 +375,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://libraries.io"
         ><LogoLibrariesIo
           aria-label="The libraries.io logo"
@@ -379,6 +384,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://chaoss.community/"
         ><LogoChaoss
           aria-label="The CHAOSS logo"
@@ -388,6 +394,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://nuxt.com/"
         ><LogoNuxt
           aria-label="The Nuxt logo"
@@ -397,6 +404,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://vite.dev/"
         ><LogoVite
           aria-label="The Vite logo"
@@ -406,6 +414,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://npmx.dev/"
         ><LogoNpmx
           src="/images/logos/npmx.svg"
@@ -421,6 +430,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
       <div class="logowall">
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://www.gatesfoundation.org/"
         ><LogoGatesFoundation
           aria-label="The Gates Foundation logo"
@@ -429,6 +439,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://intel.com"
         ><LogoIntel
           aria-label="The Intel logo"
@@ -438,6 +449,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://www.vmware.com/"
         ><LogoVmware
           aria-label="The VMware logo"
@@ -446,6 +458,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://github.com"
         ><LogoGitHub
           aria-label="The GitHub logo"
@@ -455,6 +468,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://tidelift.com"
         ><LogoTidelift
           aria-label="The Tidelift logo"
@@ -463,6 +477,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://alpha-omega.dev/"
         ><LogoAlphaOmega
           aria-label="The Alpha Omega logo"
@@ -471,6 +486,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://openssf.org/"
         ><LogoOpenSsf
           aria-label="The OpenSSF logo"
@@ -480,6 +496,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://www.cncf.io/"
         ><LogoCncf
           aria-label="The CNCF logo"
@@ -488,6 +505,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://www.linuxfoundation.org/"
         ><LogoLinuxFoundation
           aria-label="The Linux Foundation logo"
@@ -497,6 +515,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         /></a>
         <a
           class="logo plain-link"
+          target="_blank"
           href="https://cyclonedx.org/"
         ><LogoCycloneDx
           aria-label="The CycloneDX logo"
