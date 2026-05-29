@@ -153,6 +153,9 @@ header {
     flex-direction: column;
     height: calc(100vh - var(--header-height));
     background: var(--color-blue);
+    @media (min-width: 801px) {
+      display: none;
+    }
     a {
       display: flex;
       align-items: center;
