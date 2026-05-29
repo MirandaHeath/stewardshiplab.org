@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import Logo from '~/assets/images/logo.svg'
+import Starset from '~/assets/images/starset.svg'
+import IconMastodon from '~/assets/images/icons/mastodon.svg'
+import IconDiscord from '~/assets/images/icons/discord.svg'
+import IconList from '~/assets/images/icons/list.svg'
+
+const isNavOpen = ref(false);
+</script>
+
 <template>
   <header>
     <div class="container container--narrow">
@@ -10,10 +20,20 @@
             <Logo width="240" height="51" />
           </a>
         </div>
-        <nav>
+        <nav class="desktop-nav">
           <NuxtLink class="plain-link" to="/reports">Reports</NuxtLink>
           <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
           <NuxtLink class="plain-link" to="/ideas">Ideas</NuxtLink>
+        </nav>
+        <div class="mobile-nav-trigger">
+          <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen">
+            <IconList width="28" height="28" />
+          </button>
+        </div>
+        <nav class="mobile-nav" v-show="isNavOpen">
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">Reports</NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">Tools</NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">Ideas</NuxtLink>
         </nav>
       </div>
     </div>
@@ -66,34 +86,40 @@
 
 <style>
 header {
-  padding: 10px 0;
+  --header-height: 72px;
+  position: relative;
   border-bottom: 1px solid var(--color-beige-pale);
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    min-height: var(--header-height);
+    padding: 10px 0;
   }
   .header-logo {
     a {
       display: block;
       img, svg {
         width: 240px;
-        height: 51px;
+        height: auto;
       }
     }
   }
-  nav {
+  nav.desktop-nav {
     display: flex;
     gap: 20px;
+    @media (max-width: 800px) {
+      display: none;
+    }
     a {
       font-size: var(--font-size-s);
       line-height: var(--line-height-s);
       font-variant-caps: small-caps;
       font-feature-settings: "smcp";
       text-transform: lowercase;
-      color: var(--color-blue);
       font-weight: 500;
+      color: var(--color-blue);
       &:after {
         content: '→';
         margin-left: 5px;
@@ -102,6 +128,47 @@ header {
       }
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+  .mobile-nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 801px) {
+      display: none;
+    }
+    button {
+      padding: 10px;
+    }
+  }
+  nav.mobile-nav {
+    position: absolute;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    background: var(--color-blue);
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      min-height: var(--header-height);
+      padding: 15px 15px;
+      border-bottom: 1px solid var(--color-blue-light);
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+      font-weight: 500;
+      line-height: 1;
+      color: white;
+      &:after {
+        content: '→';
       }
     }
   }
@@ -197,10 +264,3 @@ SPDX-SnippetCopyrightText: 2024 Phil Hawksworth
 }
 /* SPDX-SnippetEnd */
 </style>
-
-<script setup lang="ts">
-  import Logo from '~/assets/images/logo.svg'
-  import Starset from '~/assets/images/starset.svg'
-  import IconMastodon from '~/assets/images/icons/mastodon.svg'
-  import IconDiscord from '~/assets/images/icons/discord.svg'
-</script>
