@@ -147,6 +147,10 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
             display: block;
             font-weight: 500;
           }
+          span {
+            font-size: var(--font-size-s);
+            line-height: var(--line-height-s);
+          }
         }
       }
       .contact-method-set {
@@ -162,6 +166,7 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
         padding: 10px;
         border-radius: var(--border-radius-s);
         background: var(--color-beige);
+        border: 1px solid var(--color-beige-pale);
         color: var(--color-blue);
         font-size: var(--font-size-s);
         line-height: 1;
