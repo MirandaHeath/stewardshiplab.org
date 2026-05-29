@@ -120,6 +120,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
       margin-bottom: 0;
     }
     a.post-list-item__link {
+      --person-image-size: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -128,7 +129,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
       border-radius: var(--border-radius-s);
       border: 1px solid var(--color-beige-pale);
       text-decoration: none;
-      --person-image-size: 20px;
+      transition: background-color 200ms, color 200ms;
       &:after {
         display: none;
       }

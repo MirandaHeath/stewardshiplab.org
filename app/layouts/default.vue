@@ -3,6 +3,7 @@ import Logo from '~/assets/images/logo.svg'
 import IconMastodon from '~/assets/images/icons/mastodon.svg'
 import IconDiscord from '~/assets/images/icons/discord.svg'
 import IconList from '~/assets/images/icons/list.svg'
+import IconCaretRight from '~/assets/images/icons/caret-right.svg'
 
 const isNavOpen = ref(false);
 </script>
@@ -20,9 +21,9 @@ const isNavOpen = ref(false);
           </a>
         </div>
         <nav class="desktop-nav">
-          <NuxtLink class="plain-link" to="/reports">Reports</NuxtLink>
-          <NuxtLink class="plain-link" to="/tools">Tools</NuxtLink>
-          <NuxtLink class="plain-link" to="/ideas">Ideas</NuxtLink>
+          <NuxtLink class="plain-link" to="/reports">Reports<IconCaretRight /></NuxtLink>
+          <NuxtLink class="plain-link" to="/tools">Tools<IconCaretRight /></NuxtLink>
+          <NuxtLink class="plain-link" to="/ideas">Ideas<IconCaretRight /></NuxtLink>
         </nav>
         <div class="mobile-nav-trigger">
           <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen">
@@ -30,9 +31,9 @@ const isNavOpen = ref(false);
           </button>
         </div>
         <nav class="mobile-nav" v-show="isNavOpen">
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">Reports</NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">Tools</NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">Ideas</NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">Reports<IconCaretRight /></NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">Tools<IconCaretRight /></NuxtLink>
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">Ideas<IconCaretRight /></NuxtLink>
         </nav>
       </div>
     </div>
@@ -107,11 +108,14 @@ header {
   }
   nav.desktop-nav {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     @media (max-width: 800px) {
       display: none;
     }
     a {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
       font-size: var(--font-size-s);
       line-height: var(--line-height-s);
       font-variant-caps: small-caps;
@@ -119,14 +123,22 @@ header {
       text-transform: lowercase;
       font-weight: 500;
       color: var(--color-blue);
-      &:after {
-        content: '→';
-        margin-left: 5px;
-        font-size: var(--font-size-xs);
-        line-height: 1;
+      border-radius: var(--border-radius-s);
+      transition: background-color 200ms;
+      svg {
+        position: relative;
+        top: 1px;
+        margin-left: 1px;
+        width: 14px;
+        height: 14px;
+        path {
+          fill: var(--color-blue);
+          stroke: var(--color-blue);
+          stroke-width: 13px;
+        }
       }
       &:hover {
-        text-decoration: underline;
+        background: var(--color-beige-pale);
       }
     }
   }
@@ -169,8 +181,17 @@ header {
       font-weight: 500;
       line-height: 1;
       color: white;
-      &:after {
-        content: '→';
+      svg {
+        position: relative;
+        top: 1px;
+        margin-left: 1px;
+        width: 14px;
+        height: 14px;
+        path {
+          fill: white;
+          stroke: white;
+          stroke-width: 13px;
+        }
       }
     }
   }

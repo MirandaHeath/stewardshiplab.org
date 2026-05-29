@@ -630,6 +630,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     background: var(--color-beige-xpale);
     border: 1px solid var(--color-beige-pale);
     border-radius: var(--border-radius-s);
+    transition: background-color 200ms;
     &:hover {
       background: var(--color-beige-pale);
     }

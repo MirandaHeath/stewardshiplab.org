@@ -73,6 +73,7 @@ body, button, input, textarea {
 a {
   color: inherit;
   text-decoration: none;
+  transition: background-color 200ms, color 200ms;
   &:not(.plain-link):not(.button):not(.data-footnote-backref) {
     text-decoration: underline;
     text-decoration-color: var(--color-beige-pale);
@@ -325,6 +326,7 @@ table {
     text-align: left;
     padding: 5px 10px;
     font-variant-numeric: lining-nums;
+    transition: background-color 200ms;
     &:first-child {
       padding-left: 0;
     }
@@ -391,6 +393,7 @@ button.button, a.button {
   font-variant-caps: small-caps;
   font-feature-settings: "smcp";
   text-transform: lowercase;
+  transition: background-color 200ms, color 200ms;
   &:hover, &.button--active {
     background: var(--color-blue);
     color: white;
