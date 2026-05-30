@@ -18,9 +18,9 @@ const isNavOpen = ref(false);
           <div class="visually-hidden">
             Software Stewardship Lab
           </div>
-          <a href="/" class="plain-link">
+          <NuxtLink to="/" class="plain-link">
             <Logo width="240" height="51" />
-          </a>
+          </NuxtLink>
         </div>
         <nav class="desktop-nav">
           <NuxtLink class="plain-link" to="/reports">
