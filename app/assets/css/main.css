@@ -390,6 +390,10 @@ button.button, a.button {
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 8px 15px;
   border: 2px solid var(--color-blue);
   border-radius: var(--border-radius-s);
@@ -404,6 +408,11 @@ button.button, a.button {
   &:hover, &.button--active {
     background: var(--color-blue);
     color: white;
+    .icon {
+      path {
+        fill: white;
+      }
+    }
   }
   &.button--s {
     padding: 5px 8px;
@@ -433,6 +442,7 @@ button.plain-button {
   path {
     fill: var(--color-blue);
     stroke: var(--color-blue);
+    transition: fill 200ms, stroke 200ms;
   }
   &.icon--white {
     path {
@@ -464,6 +474,19 @@ button.plain-button {
   }
 }
 
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  h2 {
+    margin: 0;
+  }
+}
+
 .smcp {
   font-variant-caps: small-caps;
   font-feature-settings: "smcp";
@@ -481,9 +504,6 @@ section {
   }
   &:last-child {
     margin-bottom: 0;
-  }
-  &.section--ender {
-    margin-bottom: 120px;
   }
 }
 

@@ -586,12 +586,11 @@ const { data: posts } = await useAsyncData(route.path, () =>
         </p>
       </div>
     </section>
-    <section class="section--ender">
-      <h2>Interested?<br>Have questions?</h2>
-      <p>
-        Reach out to Vlad at
-        <a href="mailto:vlad@vlad.website">vlad@vlad.website</a>.
-      </p>
+    <section>
+      <div class="cta">
+        <h2>Want to work together?</h2>
+        <NuxtLink to="/contact" class="button">Say hi<IconHandWaving class="icon" /></NuxtLink>
+      </div>
     </section>
   </div>
 </template>
