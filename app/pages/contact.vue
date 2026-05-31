@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Markset from '~/assets/images/markset.svg'
 import IconEnvelopeOpenBold from '~/assets/images/icons/phosphor/envelope-open-bold.svg'
 import IconBluesky from '../components/IconBluesky.vue'
 import IconMastodon from '~/assets/images/icons/mastodon.svg'

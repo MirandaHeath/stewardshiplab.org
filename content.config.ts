@@ -1,21 +1,16 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
-import { CATEGORIES } from './app/data/content.ts';
+import { PEOPLE, POST_CATEGORIES, MEDIA_CATEGORIES } from './app/data/content.ts';
 
-const commonSchema = z.object({
-  category: z.enum(Object.keys(CATEGORIES)),
-  authors: z.array(z.string()).optional(),
-  author: z.string().optional(),
-  authorImage: z.string().optional(),
-  editor: z.string().optional(),
-  editorImage: z.string().optional(),
+const postSchema = z.object({
+  category: z.enum(Object.keys(POST_CATEGORIES)),
+  authors: z.array(z.enum(Object.keys(PEOPLE))).optional(),
   date: z.date().optional(),
   location: z.string().optional(),
-  tags: z.array(z.string()),
   metaImage: z.string().optional(),
   image: z.string().optional(),
   imageAlt: z.string().optional(),
-  fullWidth: z.boolean().optional(),
+  fullWidthLayout: z.boolean().optional(),
   featured: z.boolean().optional(),
   canonicalWebsiteName: z.string().optional(),
   canonicalUrl: z.string().optional(),
@@ -23,22 +18,38 @@ const commonSchema = z.object({
   venueUrl: z.string().optional(),
 });
 
+const mediaSchema = z.object({
+  category: z.enum(Object.keys(MEDIA_CATEGORIES)),
+  guests: z.array(z.enum(Object.keys(PEOPLE))).optional(),
+  hosts: z.array(z.enum(Object.keys(PEOPLE))).optional(),
+  date: z.date().optional(),
+  image: z.string().optional(),
+  featured: z.boolean().optional(),
+  url: z.string().optional(),
+  venue: z.string().optional(),
+});
+
 export default defineContentConfig({
   collections: {
     tools: defineCollection({
       type: 'page',
       source: 'tools/*.md',
-      schema: commonSchema,
+      schema: postSchema,
     }),
     reports: defineCollection({
       type: 'page',
       source: 'reports/*.md',
-      schema: commonSchema,
+      schema: postSchema,
     }),
     ideas: defineCollection({
       type: 'page',
       source: 'ideas/*.md',
-      schema: commonSchema,
+      schema: postSchema,
+    }),
+    media: defineCollection({
+      type: 'page',
+      source: 'media/*.md',
+      schema: mediaSchema,
     }),
   },
 });

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { AUTHORS, CATEGORIES } from '../data/content.ts';
+import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
 
 const props = defineProps(['posts', 'categorised']);
 
@@ -18,22 +18,22 @@ const postsByCategory = props.posts.reduce((cats, post) => {
     <div class="post-list">
       <template v-if="categorised">
         <div class="post-list-category-set">
-          <template v-for='category in Object.keys(CATEGORIES)'>
+          <template v-for='category in Object.keys(POST_CATEGORIES)'>
             <div class="post-list-category" v-if='category in postsByCategory'>
               <div class="post-list-category__details">
-                <h2>{{ CATEGORIES[category].name }}</h2>
-                <p>{{ CATEGORIES[category].description }}</p>
+                <h2>{{ POST_CATEGORIES[category].name }}</h2>
+                <p>{{ POST_CATEGORIES[category].description }}</p>
               </div>
               <div class="post-list-item-set">
                 <div class="post-list-item" v-for="post in postsByCategory[category]" :key="post.path">
-                  <NuxtLink class="post-list-item__link" :to="post.path">
+                  <NuxtLink class="post-list-item__link plain-link" :to="post.path">
                     <h3>{{ post.title }}</h3>
                     <div class="post-list-item__meta">
                       <div class="post-list-item__authors">
                         <template v-if="post.authors">
                           <div class="post-list-item__person" v-for="author in post.authors">
-                            <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
-                            <span>{{ AUTHORS[author].name }}</span>
+                            <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+                            <span>{{ PEOPLE[author].name }}</span>
                           </div>
                         </template>
                       </div>
@@ -48,14 +48,14 @@ const postsByCategory = props.posts.reduce((cats, post) => {
       </template>
       <template v-if="!categorised">
         <div class="post-list-item" v-for="post in posts" :key="post.path">
-          <NuxtLink class="post-list-item__link" :to="post.path">
+          <NuxtLink class="post-list-item__link plain-link" :to="post.path">
             <h3>{{ post.title }}</h3>
             <div class="post-list-item__meta">
               <div class="post-list-item__authors">
                 <template v-if="post.authors">
                   <div class="post-list-item__person" v-for="author in post.authors">
-                    <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
-                    <span>{{ AUTHORS[author].name }}</span>
+                    <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+                    <span>{{ PEOPLE[author].name }}</span>
                   </div>
                 </template>
               </div>

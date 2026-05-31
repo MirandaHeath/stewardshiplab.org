@@ -53,6 +53,13 @@ SPDX-License-Identifier = "LicenseRef-Restricted"
 
 [[annotations]]
 path = [
+    "public/images/people/*",
+]
+SPDX-FileCopyrightText = "© The subject"
+SPDX-License-Identifier = "LicenseRef-Restricted"
+
+[[annotations]]
+path = [
     "app/assets/images/logo.svg",
     "app/assets/images/markset.svg",
     "public/images/favicon.png",

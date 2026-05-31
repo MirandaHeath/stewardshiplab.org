@@ -32,9 +32,9 @@ const isNavOpen = ref(false);
           <NuxtLink class="plain-link" to="/ideas">
             Ideas<IconCaretRightBold class="icon icon--s" />
           </NuxtLink>
-          <!-- <NuxtLink class="plain-link" to="/stories"> -->
-          <!--   Stories<IconCaretRightBold class="icon icon--s" /> -->
-          <!-- </NuxtLink> -->
+          <NuxtLink class="plain-link" to="/media">
+            Media<IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
           <NuxtLink class="plain-link" to="/contact">
             <IconHandWaving class="icon" />
           </NuxtLink>
@@ -54,9 +54,9 @@ const isNavOpen = ref(false);
           <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">
             <div class="mobile-nav__name">Ideas</div><IconCaretRightBold class="icon icon--s" />
           </NuxtLink>
-          <!-- <NuxtLink @click="isNavOpen = false" class="plain-link" to="/stories"> -->
-          <!--   <div class="mobile-nav__name">Stories</div><IconCaretRightBold class="icon icon--s" /> -->
-          <!-- </NuxtLink> -->
+          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/media">
+            <div class="mobile-nav__name">Media</div><IconCaretRightBold class="icon icon--s" />
+          </NuxtLink>
           <NuxtLink @click="isNavOpen = false" class="plain-link" to="/contact">
             <div class="mobile-nav__name">Contact<IconHandWaving class="icon icon--white" /></div>
             <IconCaretRightBold class="icon icon--s" />

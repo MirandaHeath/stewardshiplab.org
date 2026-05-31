@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { AUTHORS, CATEGORIES } from '../data/content.ts';
+import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
 
 const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
 
@@ -24,7 +24,7 @@ useSeoMeta({
       >{{ breadcrumbText }}</NuxtLink>
     </div>
     <div class="post__labels">
-      <div class="post-label post-label--category">{{ CATEGORIES[post.category].name }}</div>
+      <div class="post-label post-label--category">{{ POST_CATEGORIES[post.category].name }}</div>
       <div class="post-label post-label--type">{{ type }}</div>
     </div>
   </div>
@@ -39,8 +39,8 @@ useSeoMeta({
           <b v-if="post.authors.length == 1">Author</b>
           <b v-if="post.authors.length > 1">Co-author</b>
           <div class="post__person">
-            <img :src="AUTHORS[author].image" :alt="'A portrait of ' + AUTHORS[author].name">
-            <span>{{ AUTHORS[author].name }}</span>
+            <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+            <span>{{ PEOPLE[author].name }}</span>
           </div>
         </div>
       </template>
@@ -73,7 +73,7 @@ useSeoMeta({
       <img :src="post.image" :alt="post.imageAlt">
     </figure>
   </div>
-  <div :class="{ 'container': !post.fullWidth }">
+  <div :class="{ 'container': !post.fullWidthLayout }">
     <ContentRenderer :value="post" class="prose" />
   </div>
   <div class="container post__after">
