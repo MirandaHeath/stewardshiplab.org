@@ -51,8 +51,8 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
           <div class="contact-option__copy">
             <h2>Want to chat?</h2>
             <p>
-              Our Discord server brings together Open Source experts and their research ideas, as well as resources and
-              news in Open Source sustainability.
+              Our Discord server brings together Open Source experts, and collects research ideas, resources and news in
+              Open Source sustainability.
             </p>
           </div>
           <div class="contact-method-set">
@@ -66,7 +66,7 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
           <div class="contact-option__copy">
             <h2>Want to follow our work?</h2>
             <p>
-              Follow us on socials to see our latest research, as well as our recommended reading and news.
+              Follow us on socials to see our latest research, as well as our recommended reading.
             </p>
           </div>
           <div class="contact-method-set">

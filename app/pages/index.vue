@@ -543,8 +543,8 @@ const { data: posts } = await useAsyncData(route.path, () =>
           Public access
         </h3>
         <p>
-          All our research outputs are accessible and usable by all. Across our different outputs, this means Open
-          Source code, open data, and open access research papers.
+          All our research outputs are accessible and usable by all. This means Open Source code, open data, and open
+          access research papers.
         </p>
       </div>
       <div class="value">
