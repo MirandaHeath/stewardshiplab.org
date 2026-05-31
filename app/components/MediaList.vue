@@ -42,9 +42,12 @@ function makeBackground(imageUrl) {
 <style>
 .media-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
   margin: 1rem 0;
+  @media (max-width: 900px) {
+    gap: 20px;
+  }
   a.media-list-item {
     --person-image-size: 20px;
     display: flex;
@@ -83,6 +86,10 @@ function makeBackground(imageUrl) {
       font-size: var(--font-size-m);
       line-height: var(--line-height-m);
       text-wrap: balance;
+      @media (max-width: 900px) {
+        font-size: var(--font-size-l);
+        line-height: var(--line-height-l);
+      }
     }
     hr {
       margin: 0;
