@@ -64,6 +64,9 @@ function makeBackground(imageUrl) {
     &:hover {
       background: var(--color-beige-pale);
       color: var(--color-text);
+      hr {
+        border-color: var(--color-text-pale);
+      }
     }
     .media-list-item__image {
       display: flex;
