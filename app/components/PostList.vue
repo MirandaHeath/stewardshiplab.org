@@ -32,7 +32,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
                       <div class="post-list-item__authors">
                         <template v-if="post.authors">
                           <div class="post-list-item__person" v-for="author in post.authors">
-                            <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+                            <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
                             <span>{{ PEOPLE[author].name }}</span>
                           </div>
                         </template>
@@ -54,7 +54,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
               <div class="post-list-item__authors">
                 <template v-if="post.authors">
                   <div class="post-list-item__person" v-for="author in post.authors">
-                    <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+                    <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
                     <span>{{ PEOPLE[author].name }}</span>
                   </div>
                 </template>

@@ -39,7 +39,7 @@ useSeoMeta({
           <b v-if="post.authors.length == 1">Author</b>
           <b v-if="post.authors.length > 1">Co-author</b>
           <div class="post__person">
-            <img :src= PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
+            <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
             <span>{{ PEOPLE[author].name }}</span>
           </div>
         </div>
