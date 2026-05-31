@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Markset from '~/assets/images/markset.svg'
+import Star from '~/assets/images/star.svg'
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
 import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg'
 import LogoChaoss from '~/assets/images/logos/chaoss.svg'
@@ -52,53 +52,58 @@ const { data: posts } = await useAsyncData(route.path, () =>
 <template>
   <div class="container">
     <section>
-      <div class="page-intro">
-        A new non-profit applied research lab dedicated to ensuring the stability of the Open Source
-        ecosystem we all rely on.
-      </div>
       <h1 class="visually-hidden">Software Stewardship Lab</h1>
-      <h2>
-        Mission
-      </h2>
-      <p>
-        We are a non-profit applied research lab that safeguards global tech infrastructure by caring for the Open
-        Source technology it relies upon. We develop ways to make the Open Source ecosystem more secure, sustainably
-        funded, and responsibly governed. We do this to benefit the public and protect critical services that depend
-        on Open Source, like transportation, healthcare and the internet.
-      </p>
-      <h2>
-        Strategy
-      </h2>
-      <p>
-        Our team identifies threats to the global Open Source ecosystem and mitigates them by producing software,
-        APIs, informal research reports, and peer-reviewed research papers. We work directly with maintainers to
-        help them implement our solutions.
-      </p>
-      <p>
-        Our work in increasing software supply chain transparency has enabled developers to understand the
-        propagation of vulnerabilities, and to identify critical maintainers that need support.
-      </p>
-      <p>
-        And our work on sustainable funding and governance systems has helped widely-deployed projects avoid
-        maintainer burnout so that they can continue their critical work.
-      </p>
-    </section>
-    <section>
-      <div class="postcard">
+      <div class="hero">
+        <h2>
+          <small>A new non-profit applied research lab</small>
+          <hr class="hr--short">
+          We ensure the stability of the Open Source ecosystem we all rely on.
+        </h2>
+      </div>
+      <div class="feature-set">
+        <div class="feature">
+          <h2>Mission</h2>
+          <p>
+            We safeguard global tech infrastructure by caring for the Open Source technology it relies upon. We
+            develop ways to make the Open Source ecosystem more secure, sustainably funded, and responsibly governed.
+          </p>
+          <p>
+            We do this to benefit the public and protect critical services that depend on Open Source, like
+            transportation, healthcare and the internet.
+          </p>
+        </div>
+        <div class="feature">
+          <h2>Strategy</h2>
+          <p>
+            We identify threats to the Open Source ecosystem and mitigate them by producing software, APIs, research
+            reports, and peer-reviewed papers.
+          </p>
+          <p>
+            Our work on supply chain transparency enables developers to identify and support vulnerable projects.
+          </p>
+          <p>
+            And our work on sustainable funding and governance has helped maintainers avoid burnout, so they can
+            continue their critical work.
+          </p>
+        </div>
+      </div>
+      <figure class="postcard">
         <img
           class="postcard__main"
-          src="/images/AltCtrOrg-Event-115@1000px.webp"
+          src="/images/AltCtrOrg-Event-115@1400px.webp"
           alt="Vlad presenting in front of an audience"
-          width="736"
-          height="505"
+          width="1400"
+          height="933"
         >
-        <Markset width="81" height="24" />
-      </div>
+        <figcaption>Vlad speaking at AltCtrlOrg in Basel, Switzerland (&copy; Kostas Fryganiotis)</figcaption>
+      </figure>
     </section>
-    <section>
-      <h2 class="big-heading">
-        Team
-      </h2>
+  </div>
+  <section class="section--contrasting">
+    <Star class="squiggle squiggle--c" />
+    <Star class="squiggle squiggle--d" />
+    <div class="container">
+      <h2 class="big-heading">Our Team</h2>
       <div class="members">
         <div class="member">
           <div class="member__meta">
@@ -320,204 +325,200 @@ const { data: posts } = await useAsyncData(route.path, () =>
           </p>
         </div>
       </div>
-    </section>
-    <section>
-      <h2 class="big-heading">
-        Experience
-      </h2>
-      <p>
-        Our staff of industry specialists and doctoral researchers have held leadership roles at:
-      </p>
-      <div class="logowall">
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://opensourcepledge.com"
-        ><LogoOsp
-          style="padding-block: 2px;"
-          aria-label="The Open Source Pledge logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://endowment.dev"
-        ><LogoOse
-          aria-label="The Open Source Endowment logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://thanks.dev"
-        ><LogoThanksDev
-          aria-label="The thanks.dev logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://ecosyste.ms"
-        ><LogoEcosystems
-          aria-label="The ecosyste.ms logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://libraries.io"
-        ><LogoLibrariesIo
-          aria-label="The libraries.io logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://chaoss.community/"
-        ><LogoChaoss
-          aria-label="The CHAOSS logo"
-          style="padding-block: 8px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://nuxt.com/"
-        ><LogoNuxt
-          aria-label="The Nuxt logo"
-          style="padding-block: 8px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://vite.dev/"
-        ><LogoVite
-          aria-label="The Vite logo"
-          style="padding-block: 10px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://npmx.dev/"
-        ><LogoNpmx
-          src="/images/logos/npmx.svg"
-          aria-label="The npmx logo"
-          style="padding-block: 5px;"
-          width="104"
-          height="40"
-        /></a>
+      <h2 class="big-heading">Our Experience</h2>
+      <div class="logowall-group">
+        <span>In leadership roles</span>
+        <div class="logowall">
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://opensourcepledge.com"
+          ><LogoOsp
+            style="padding-block: 2px;"
+            aria-label="The Open Source Pledge logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://endowment.dev"
+          ><LogoOse
+            aria-label="The Open Source Endowment logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://thanks.dev"
+          ><LogoThanksDev
+            aria-label="The thanks.dev logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://ecosyste.ms"
+          ><LogoEcosystems
+            aria-label="The ecosyste.ms logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://libraries.io"
+          ><LogoLibrariesIo
+            aria-label="The libraries.io logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://chaoss.community/"
+          ><LogoChaoss
+            aria-label="The CHAOSS logo"
+            style="padding-block: 8px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://nuxt.com/"
+          ><LogoNuxt
+            aria-label="The Nuxt logo"
+            style="padding-block: 8px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://vite.dev/"
+          ><LogoVite
+            aria-label="The Vite logo"
+            style="padding-block: 10px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://npmx.dev/"
+          ><LogoNpmx
+            src="/images/logos/npmx.svg"
+            aria-label="The npmx logo"
+            style="padding-block: 5px;"
+            width="104"
+            height="40"
+          /></a>
+        </div>
       </div>
-      <p>
-        Our members have contributed to:
-      </p>
-      <div class="logowall">
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://www.gatesfoundation.org/"
-        ><LogoGatesFoundation
-          aria-label="The Gates Foundation logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://intel.com"
-        ><LogoIntel
-          aria-label="The Intel logo"
-          style="padding-block: 6px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://www.vmware.com/"
-        ><LogoVmware
-          aria-label="The VMware logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://github.com"
-        ><LogoGitHub
-          aria-label="The GitHub logo"
-          style="padding-block: 8px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://tidelift.com"
-        ><LogoTidelift
-          aria-label="The Tidelift logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://alpha-omega.dev/"
-        ><LogoAlphaOmega
-          aria-label="The Alpha Omega logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://openssf.org/"
-        ><LogoOpenSsf
-          aria-label="The OpenSSF logo"
-          style="padding-block: 3px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://www.cncf.io/"
-        ><LogoCncf
-          aria-label="The CNCF logo"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://www.linuxfoundation.org/"
-        ><LogoLinuxFoundation
-          aria-label="The Linux Foundation logo"
-          style="padding-block: 5px;"
-          width="104"
-          height="40"
-        /></a>
-        <a
-          class="logo plain-link"
-          target="_blank"
-          href="https://cyclonedx.org/"
-        ><LogoCycloneDx
-          aria-label="The CycloneDX logo"
-          width="104"
-          height="40"
-        /></a>
+      <div class="logowall-group">
+        <span>As contributors</span>
+        <div class="logowall">
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://www.gatesfoundation.org/"
+          ><LogoGatesFoundation
+            aria-label="The Gates Foundation logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://intel.com"
+          ><LogoIntel
+            aria-label="The Intel logo"
+            style="padding-block: 6px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://www.vmware.com/"
+          ><LogoVmware
+            aria-label="The VMware logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://github.com"
+          ><LogoGitHub
+            aria-label="The GitHub logo"
+            style="padding-block: 8px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://tidelift.com"
+          ><LogoTidelift
+            aria-label="The Tidelift logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://alpha-omega.dev/"
+          ><LogoAlphaOmega
+            aria-label="The Alpha Omega logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://openssf.org/"
+          ><LogoOpenSsf
+            aria-label="The OpenSSF logo"
+            style="padding-block: 3px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://www.cncf.io/"
+          ><LogoCncf
+            aria-label="The CNCF logo"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://www.linuxfoundation.org/"
+          ><LogoLinuxFoundation
+            aria-label="The Linux Foundation logo"
+            style="padding-block: 5px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
+            href="https://cyclonedx.org/"
+          ><LogoCycloneDx
+            aria-label="The CycloneDX logo"
+            width="104"
+            height="40"
+          /></a>
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   <section>
     <h2 class="big-heading">
       Featured Posts
@@ -596,12 +597,34 @@ const { data: posts } = await useAsyncData(route.path, () =>
 </template>
 
 <style scoped>
+.hero {
+  margin-block: 50px;
+  h2 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    text-wrap: balance;
+    small {
+      display: block;
+      font-family: var(--font-family-sans);
+      font-size: var(--font-size-m);
+      line-height: var(--line-height-m);
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+    }
+    hr {
+      margin: 10px 0;
+      border-color: var(--color-blue);
+    }
+  }
+}
 .postcard {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 15px;
-  padding: 0 15px;
+  margin-top: 80px;
+  margin-bottom: 30px;
   transform: rotate(2deg);
   .postcard__main {
     width: auto;
@@ -609,11 +632,50 @@ const { data: posts } = await useAsyncData(route.path, () =>
     border-radius: var(--border-radius-s);
   }
 }
+.feature-set {
+  display: flex;
+  gap: 50px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.feature {
+  flex: 1;
+  h2 {
+    font-family: var(--font-family-sans);
+    font-variant-caps: small-caps;
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+  }
+}
+.logowall-group {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  & > span {
+    flex-basis: 200px;
+    font-family: var(--font-family-sans);
+    font-variant-caps: small-caps;
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+    @media (max-width: 900px) {
+      flex-basis: unset;
+    }
+  }
+  & > .logowall {
+    flex: 1;
+  }
+}
 .logowall {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
-  margin: 1rem 0;
   .logo {
     display: flex;
     align-items: center;
@@ -636,6 +698,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 15px;
+  margin-block: 30px;
   @media (min-width: 901px) {
     grid-auto-rows: 1fr;
   }
@@ -648,6 +711,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
   padding: 20px;
   background: var(--color-beige-xpale);
   border-radius: var(--border-radius-s);
+  color: var(--color-text);
   .member__photo {
     flex: 0 0 var(--photo-size);
     img {

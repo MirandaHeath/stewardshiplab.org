@@ -1,15 +1,25 @@
 :root {
+  --color-text: #0a1030;
+  --color-text-pale: #505673;
+
   --color-beige: #fdf1f0;
   --color-beige-pale: #e3d8df;
   --color-beige-xpale: #f7ebeb;
-  --color-text: #202643;
-  --color-text-pale: #505673;
+
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
-  --color-green: #008260;
+
+  --color-burgundy: #97183c;
+  --color-light-burgundy: #efdfe0;
+  /* Stronger variant */
+  /* --color-light-burgundy: #eedcdc; */
+
   --color-purple: #6e1d7a;
+
+  /* Not currently used */
   --color-light-blue: #e2d9df;
   --color-light-blue-pale: #f0e7ec;
+  --color-green: #2b3e37;
 
   --font-size-xs: 14px;
   --font-size-s: 18px;
@@ -66,11 +76,50 @@ body {
   margin: 0;
   background: var(--color-beige);
   color: var(--color-text);
+  overflow-x: hidden;
 }
 body, button, input, textarea {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   font-family: var(--font-family-sans);
+}
+
+.squiggle {
+  position: absolute;
+  z-index: 1;
+  path {
+    fill: var(--color-blue);
+  }
+  @media (max-width: 1150px) {
+    display: none;
+  }
+  &.squiggle--a {
+    width: 12vw;
+    height: 12vw;
+    top: 20vh;
+    right: -3vw;
+  }
+  &.squiggle--b {
+    width: 4vw;
+    height: 4vw;
+    top: 85vh;
+    left: 3vw;
+    transform: rotate(23deg);
+  }
+  &.squiggle--c {
+    width: 130px;
+    height: 130px;
+    top: 80%;
+    left: -40px;
+    transform: rotate(73deg);
+  }
+  &.squiggle--d {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    right: 5%;
+    transform: rotate(143deg);
+  }
 }
 
 strong {
@@ -108,6 +157,11 @@ hr {
   margin-block: 40px;
   border: 0;
   border-bottom: 1px solid var(--color-beige-pale);
+  &.hr--short {
+    max-width: 70px;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 img, svg, figure, iframe, video {
@@ -498,17 +552,31 @@ button.plain-button {
 }
 
 section {
-  margin: 60px 0;
+  position: relative;
+  margin-block: 60px;
   &:first-child {
     margin-top: 0;
   }
   &:last-child {
     margin-bottom: 0;
   }
+  &.section--contrasting {
+    margin-block: 100px;
+    padding: 60px 0;
+    background: var(--color-light-burgundy);
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-burgundy);
+    }
+    .squiggle {
+      path {
+        fill: var(--color-burgundy);
+      }
+    }
+  }
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
@@ -518,7 +586,7 @@ section {
 }
 
 .big-heading {
-  margin-bottom: 0.6lh;
+  margin-bottom: 30px;
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
   text-align: center;

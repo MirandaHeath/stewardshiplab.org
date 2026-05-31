@@ -15,7 +15,7 @@ function makeBackground(imageUrl) {
       <NuxtLink class="media-list-item plain-link" :to="item.url" v-for="item in media" :key="item.path">
         <div class="media-list-item__image" :style="{ backgroundImage: makeBackground(item.image) }"></div>
         <h3>{{ item.title }}</h3>
-        <hr>
+        <hr class="hr--short">
         <p>{{ item.description }}</p>
         <div class="media-list-item__people">
           <template v-if="item.guests">
@@ -94,7 +94,6 @@ function makeBackground(imageUrl) {
     hr {
       margin: 0;
       border-color: var(--color-beige-pale);
-      max-width: 100px;
     }
     p {
       flex: 1;

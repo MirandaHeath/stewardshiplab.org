@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Logo from '~/assets/images/logo.svg'
+import Star from '~/assets/images/star.svg'
 import IconBluesky from '../components/IconBluesky.vue'
 import IconMastodon from '~/assets/images/icons/mastodon.svg'
 import IconDiscord from '~/assets/images/icons/discord.svg'
@@ -11,6 +12,8 @@ const isNavOpen = ref(false);
 </script>
 
 <template>
+  <Star class="squiggle squiggle--a" />
+  <Star class="squiggle squiggle--b" />
   <header>
     <div class="container container--narrow">
       <div class="header-container">
