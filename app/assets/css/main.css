@@ -10,6 +10,7 @@
   --color-blue-light: #3a4db6;
 
   --color-green: #2e453f;
+  --color-green-dark: #192d28;
   --color-purple: #6e1d7a;
 
   /* Not currently used */
@@ -562,7 +563,12 @@ section {
   &.section--contrasting {
     margin-block: 80px;
     padding: 60px 0;
-    background: url(/images/noise-light.svg), var(--color-green);
+    background:
+      linear-gradient(
+        to top right,
+        var(--color-green-dark),
+        var(--color-green)
+      );
     @media (max-width: 900px) {
       margin-block: 50px;
     }
