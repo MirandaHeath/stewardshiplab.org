@@ -40,7 +40,7 @@ const isNavOpen = ref(false);
           </NuxtLink>
         </nav>
         <div class="mobile-nav-trigger">
-          <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen">
+          <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen" aria-label="Open menu">
             <IconList width="28" height="28" />
           </button>
         </div>
