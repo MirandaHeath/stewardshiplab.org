@@ -25,7 +25,7 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
             <div class="contact-person">
               <div class="contact-person__head">
                 <img
-                  src="/images/team/vlad@120px.webp"
+                  src="/images/people/vlad@120px.webp"
                   alt="A portrait of Vlad"
                   width="60"
                   height="60"
