@@ -637,7 +637,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
   gap: 50px;
   @media (max-width: 900px) {
     flex-direction: column;
-    gap: 20px;
   }
 }
 .feature {
