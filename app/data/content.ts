@@ -1,15 +1,15 @@
 export const AUTHORS = {
   vlad: {
     name: 'Vlad-Stefan Harbuz',
-    image: '/images/team/vlad.webp',
+    image: '/images/team/vlad@120px.webp',
   },
   miranda: {
     name: 'Miranda Heath',
-    image: '/images/team/miranda.webp',
+    image: '/images/team/miranda@120px.webp',
   },
   andrew: {
     name: 'Andrew Nesbitt',
-    image: '/images/team/andrew.webp',
+    image: '/images/team/andrew@120px.webp',
   },
 };
 

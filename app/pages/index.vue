@@ -104,7 +104,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/vlad.webp"
+                src="/images/team/vlad@120px.webp"
                 alt="A portrait of Vlad"
                 width="60"
                 height="60"
@@ -137,7 +137,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/andrew.webp"
+                src="/images/team/andrew@120px.webp"
                 alt="A portrait of Andrew"
                 width="60"
                 height="60"
@@ -173,7 +173,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/miranda.webp"
+                src="/images/team/miranda@120px.webp"
                 alt="A portrait of Miranda"
                 width="60"
                 height="60"
@@ -202,7 +202,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/daniel.webp"
+                src="/images/team/daniel@120px.webp"
                 alt="A portrait of Daniel"
                 width="60"
                 height="60"
@@ -231,7 +231,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/dawn.webp"
+                src="/images/team/dawn@120px.webp"
                 alt="A portrait of Dawn"
                 width="60"
                 height="60"
@@ -260,7 +260,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/patak.webp"
+                src="/images/team/patak@120px.webp"
                 alt="A portrait of Matias"
                 width="60"
                 height="60"
@@ -293,7 +293,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <div class="member__meta">
             <div class="member__photo">
               <img
-                src="/images/team/mike.webp"
+                src="/images/team/mike@120px.webp"
                 alt="A portrait of Mike"
                 width="60"
                 height="60"
