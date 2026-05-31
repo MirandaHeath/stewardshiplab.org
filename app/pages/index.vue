@@ -60,43 +60,45 @@ const { data: posts } = await useAsyncData(route.path, () =>
           We ensure the stability of the Open Source ecosystem we all rely on.
         </h2>
       </div>
-      <div class="feature-set">
-        <div class="feature">
-          <h2>Mission</h2>
-          <p>
-            We safeguard global tech infrastructure by caring for the Open Source technology it relies upon. We
-            develop ways to make the Open Source ecosystem more secure, sustainably funded, and responsibly governed.
-          </p>
-          <p>
-            We do this to benefit the public and protect critical services that depend on Open Source, like
-            transportation, healthcare and the internet.
-          </p>
+      <div class="subhero">
+        <div class="feature-set">
+          <div class="feature">
+            <h2>Mission</h2>
+            <p>
+              We safeguard global tech infrastructure by caring for the Open Source technology it relies upon. We
+              develop ways to make the Open Source ecosystem more secure, sustainably funded, and responsibly governed.
+            </p>
+            <p>
+              We do this to benefit the public and protect critical services that depend on Open Source, like
+              transportation, healthcare and the internet.
+            </p>
+          </div>
+          <div class="feature">
+            <h2>Strategy</h2>
+            <p>
+              We identify threats to the Open Source ecosystem and mitigate them by producing software, APIs, research
+              reports, and peer-reviewed papers.
+            </p>
+            <p>
+              Our work on supply chain transparency enables developers to identify and support vulnerable projects.
+            </p>
+            <p>
+              And our work on sustainable funding and governance has helped maintainers avoid burnout, so they can
+              continue their critical work.
+            </p>
+          </div>
         </div>
-        <div class="feature">
-          <h2>Strategy</h2>
-          <p>
-            We identify threats to the Open Source ecosystem and mitigate them by producing software, APIs, research
-            reports, and peer-reviewed papers.
-          </p>
-          <p>
-            Our work on supply chain transparency enables developers to identify and support vulnerable projects.
-          </p>
-          <p>
-            And our work on sustainable funding and governance has helped maintainers avoid burnout, so they can
-            continue their critical work.
-          </p>
-        </div>
+        <figure class="postcard">
+          <img
+            class="postcard__main"
+            src="/images/AltCtrOrg-Event-115@1400px.webp"
+            alt="Vlad presenting in front of an audience"
+            width="1400"
+            height="933"
+          >
+          <figcaption>Vlad speaking at AltCtrlOrg in Basel, Switzerland (&copy;&nbsp;Kostas&nbsp;Fryganiotis)</figcaption>
+        </figure>
       </div>
-      <figure class="postcard">
-        <img
-          class="postcard__main"
-          src="/images/AltCtrOrg-Event-115@1400px.webp"
-          alt="Vlad presenting in front of an audience"
-          width="1400"
-          height="933"
-        >
-        <figcaption>Vlad speaking at AltCtrlOrg in Basel, Switzerland (&copy; Kostas Fryganiotis)</figcaption>
-      </figure>
     </section>
   </div>
   <section class="section--contrasting">
@@ -599,6 +601,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
 <style scoped>
 .hero {
   margin-block: 50px;
+  @media (max-width: 900px) {
+    margin-top: 0;
+  }
   h2 {
     font-size: var(--font-size-xl);
     line-height: var(--line-height-xl);
@@ -615,6 +620,21 @@ const { data: posts } = await useAsyncData(route.path, () =>
     hr {
       margin: 10px 0;
       border-color: var(--color-blue);
+    }
+  }
+}
+.subhero {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    .postcard {
+      margin-top: 0;
+      margin-bottom: 40px;
+      figcaption {
+        display: none;
+      }
     }
   }
 }
@@ -637,10 +657,13 @@ const { data: posts } = await useAsyncData(route.path, () =>
   gap: 50px;
   @media (max-width: 900px) {
     flex-direction: column;
+    gap: 30px;
   }
 }
 .feature {
   flex: 1;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
   h2 {
     font-family: var(--font-family-sans);
     font-variant-caps: small-caps;

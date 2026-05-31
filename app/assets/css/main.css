@@ -561,9 +561,12 @@ section {
     margin-bottom: 0;
   }
   &.section--contrasting {
-    margin-block: 100px;
+    margin-block: 80px;
     padding: 60px 0;
     background: var(--color-light-burgundy);
+    @media (max-width: 900px) {
+      margin-block: 50px;
+    }
     h1, h2, h3, h4, h5, h6 {
       color: var(--color-burgundy);
     }

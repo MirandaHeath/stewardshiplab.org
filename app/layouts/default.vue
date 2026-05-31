@@ -219,7 +219,10 @@ header {
 }
 
 main {
-  margin: 40px 0;
+  margin-block: 40px;
+  @media (max-width: 900px) {
+    margin-block: 30px;
+  }
 }
 
 footer {
