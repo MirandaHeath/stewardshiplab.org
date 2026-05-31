@@ -9,17 +9,12 @@
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
 
-  --color-burgundy: #97183c;
-  --color-light-burgundy: #efdfe0;
-  /* Stronger variant */
-  /* --color-light-burgundy: #eedcdc; */
-
+  --color-green: #2e453f;
   --color-purple: #6e1d7a;
 
   /* Not currently used */
   --color-light-blue: #e2d9df;
   --color-light-blue-pale: #f0e7ec;
-  --color-green: #2b3e37;
 
   --font-size-xs: 14px;
   --font-size-s: 18px;
@@ -74,7 +69,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-beige);
+  background: url(/images/noise-dark.svg), var(--color-beige);
   color: var(--color-text);
   overflow-x: hidden;
 }
@@ -361,6 +356,9 @@ details {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
 }
+.text-pale {
+  color: var(--color-text-pale);
+}
 
 p {
   margin: 0;
@@ -564,16 +562,16 @@ section {
   &.section--contrasting {
     margin-block: 80px;
     padding: 60px 0;
-    background: var(--color-light-burgundy);
+    background: url(/images/noise-light.svg), var(--color-green);
     @media (max-width: 900px) {
       margin-block: 50px;
     }
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--color-burgundy);
+    &, h1, h2, h3, h4, h5, h6 {
+      color: white;
     }
     .squiggle {
       path {
-        fill: var(--color-burgundy);
+        fill: white;
       }
     }
   }

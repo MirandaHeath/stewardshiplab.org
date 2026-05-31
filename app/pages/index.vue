@@ -96,7 +96,11 @@ const { data: posts } = await useAsyncData(route.path, () =>
             width="1400"
             height="933"
           >
-          <figcaption>Vlad speaking at AltCtrlOrg in Basel, Switzerland (&copy;&nbsp;Kostas&nbsp;Fryganiotis)</figcaption>
+          <figcaption>
+            Vlad speaking at AltCtrlOrg in Basel, Switzerland
+            &middot;
+            <span class="text-pale">Photo by Kostas&nbsp;Fryganiotis</span>
+          </figcaption>
         </figure>
       </div>
     </section>
@@ -643,12 +647,18 @@ const { data: posts } = await useAsyncData(route.path, () =>
   flex-direction: column;
   align-items: flex-end;
   gap: 15px;
-  margin-top: 80px;
-  margin-bottom: 30px;
-  transform: rotate(2deg);
+  margin-top: 60px;
+  margin-bottom: 0;
   .postcard__main {
     width: auto;
     height: auto;
+    border-radius: var(--border-radius-s);
+    transform: rotate(2deg);
+  }
+  figcaption {
+    position: relative;
+    z-index: 10;
+    top: -20px;
     border-radius: var(--border-radius-s);
   }
 }
