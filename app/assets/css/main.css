@@ -8,7 +8,6 @@
 
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
-  --color-blue-dark: #28388c;
 
   --color-purple: #6e1d7a;
 
@@ -564,7 +563,7 @@ section {
   &.section--contrasting {
     margin-block: 80px;
     padding: 60px 0;
-    background: var(--color-blue-dark);
+    background: var(--color-blue);
     @media (max-width: 900px) {
       margin-block: 50px;
     }
@@ -575,6 +574,12 @@ section {
       path {
         fill: white;
       }
+    }
+    .member {
+      background: white;
+    }
+    .logowall .logo {
+      background: white;
     }
   }
 }
