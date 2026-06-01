@@ -111,29 +111,12 @@ const { data: posts } = await useAsyncData(route.path, () =>
     <div class="container">
       <h2 class="big-heading">Our Team</h2>
       <div class="members">
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/vlad@120px.webp"
-                alt="A portrait of Vlad"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Vlad-Stefan Harbuz</strong>
-                <a class="plain-link" href="https://vlad.website">
-                  <IconHandWaving
-                    aria-label="Go to Vlad's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Executive Director, Researcher</span>
-            </div>
-          </div>
+        <Member
+          name="Vlad-Stefan Harbuz"
+          title="Executive Director, Researcher"
+          imageUrl="/images/people/vlad@300px.webp"
+          url="https://vlad.website"
+        >
           <p>
             Director of the
             <a href="https://opensourcepledge.com">Open Source Pledge</a>,
@@ -143,30 +126,13 @@ const { data: posts } = await useAsyncData(route.path, () =>
             <a href="https://gatesfoundation.org">Gates Foundation</a>
             to allocate $1B in healthcare funding.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/andrew@120px.webp"
-                alt="A portrait of Andrew"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Andrew Nesbitt</strong>
-                <a class="plain-link" href="https://nesbitt.io">
-                  <IconHandWaving
-                    aria-label="Go to Andrew's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director, Researcher</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Andrew Nesbitt"
+          title="Non-Executive Director, Researcher"
+          imageUrl="/images/people/andrew@300px.webp"
+          url="https://nesbitt.io"
+        >
           <p>
             Creator of leading Open Source intelligence providers
             <a href="https://ecosyste.ms">ecosyste.ms</a>
@@ -179,117 +145,49 @@ const { data: posts } = await useAsyncData(route.path, () =>
             and
             <a href="https://tidelift.com">Tidelift</a>.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/miranda@120px.webp"
-                alt="A portrait of Miranda"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Miranda Heath</strong>
-                <a class="plain-link" href="https://mirandaheath.website">
-                  <IconHandWaving
-                    aria-label="Go to Miranda's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director, Researcher</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Miranda Heath"
+          title="Non-Executive Director, Researcher"
+          imageUrl="/images/people/miranda@300px.webp"
+          url="https://mirandaheath.website"
+        >
           <p>
             BPS award-winning psychologist and author of the to-date most comprehensive
             <a href="https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/">report on burnout in Open Source</a>.
             PhD researcher in moral psychology and philosophy at the University of Edinburgh.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/daniel@120px.webp"
-                alt="A portrait of Daniel"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Daniel Roe</strong>
-                <a class="plain-link" href="https://roe.dev">
-                  <IconHandWaving
-                    aria-label="Go to Daniel's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Daniel Roe"
+          title="Non-Executive Director"
+          imageUrl="/images/people/daniel@300px.webp"
+          url="https://roe.dev"
+        >
           <p>
             Leader of globally-used web framework <a href="https://nuxt.com/">Nuxt</a>.
             Steward of package manager frontend <a href="https://npmx.dev">npmx</a>.
             Regular keynote speaker. Microsoft MVP, Google GDE, and GitHub Star.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/dawn@120px.webp"
-                alt="A portrait of Dawn"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Dawn Foster</strong>
-                <a class="plain-link" href="https://fastwonder.com/">
-                  <IconHandWaving
-                    aria-label="Go to Dawn's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Dawn Foster"
+          title="Non-Executive Director"
+          imageUrl="/images/people/dawn@300px.webp"
+          url="https://fastwonder.com/"
+        >
           <p>
             Former Director of Data Science at <a href="https://chaoss.community/">CHAOSS</a>.
             Helped develop <a href="https://www.intel.com/">Intel's</a> global Open Source engagement strategy.
             PhD in software metrics.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/patak@120px.webp"
-                alt="A portrait of Matias"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Matias Capeletto</strong>
-                <a class="plain-link" href="https://patak.cat">
-                  <IconHandWaving
-                    aria-label="Go to Matias's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Non-Executive Director</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Matias Capeletto"
+          title="Non-Executive Director"
+          imageUrl="/images/people/patak@300px.webp"
+          url="https://patak.cat"
+        >
           <p>
             Steward of <a href="https://npmx.dev">npmx</a>.
             Core developer of foundational web development tools used by millions, such as
@@ -299,37 +197,20 @@ const { data: posts } = await useAsyncData(route.path, () =>
             <a href="https://e18e.dev/">e18e</a>.
             Previously at <a href="https://stackblitz.com/">StackBlitz</a>.
           </p>
-        </div>
-        <div class="member">
-          <div class="member__meta">
-            <div class="member__photo">
-              <img
-                src="/images/people/mike@120px.webp"
-                alt="A portrait of Mike"
-                width="60"
-                height="60"
-              >
-            </div>
-            <div class="member__info">
-              <div class="member__name">
-                <strong>Mike McQuaid</strong>
-                <a class="plain-link" href="https://mikemcquaid.com">
-                  <IconHandWaving
-                    aria-label="Go to Mike's website"
-                    class="icon icon--s icon--black"
-                  />
-                </a>
-              </div>
-              <span>Adviser</span>
-            </div>
-          </div>
+        </Member>
+        <Member
+          name="Mike McQuaid"
+          title="Adviser"
+          imageUrl="/images/people/mike@300px.webp"
+          url="https://mikemcquaid.com"
+        >
           <p>
             CTPO at <a href="https://www.getadministrate.com/">Administrate</a>.
             Project Leader of <a href="https://brew.sh/">Homebrew</a>.
             Former <a href="https://github.com">GitHub</a> Principal Engineer (#232).
             Author of <a href="https://www.manning.com/books/git-in-practice">Git in Practice</a>.
           </p>
-        </div>
+        </Member>
       </div>
       <h2 class="big-heading">Our Experience</h2>
       <div class="logowall-group">
@@ -729,63 +610,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
 .members {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 15px;
+  row-gap: 20px;
+  column-gap: 30px;
   margin-block: 30px;
-  @media (min-width: 901px) {
-    grid-auto-rows: 1fr;
-  }
-}
-.member {
-  --photo-size: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  background: var(--color-beige-xpale);
-  border-radius: var(--border-radius-s);
-  color: var(--color-text);
-  .member__photo {
-    flex: 0 0 var(--photo-size);
-    img {
-      width: var(--photo-size);
-      height: var(--photo-size);
-      border-radius: 100%;
-    }
-  }
-  .member__meta {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .member__info {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    span {
-      font-size: var(--font-size-xs);
-      line-height: var(--line-height-xs);
-    }
-    .member__name {
-      display: flex;
-      gap: 10px;
-      strong {
-        font-size: var(--font-size-m);
-        line-height: var(--line-height-m);
-      }
-      a {
-        display: flex;
-        align-items: center;
-        &:hover {
-          background-color: unset;
-        }
-      }
-    }
-  }
-  p {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-    margin: 0;
-  }
 }
 .value {
   margin: 1rem 0;

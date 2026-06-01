@@ -575,9 +575,6 @@ section {
         fill: var(--color-blue);
       }
     }
-    .member {
-      background: var(--color-beige);
-    }
     .logowall .logo {
       background: var(--color-beige);
     }
