@@ -8,7 +8,6 @@
 
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
-  --color-slate: #0a2f58;
 
   --color-purple: #6e1d7a;
 
@@ -569,11 +568,11 @@ section {
       margin-block: 50px;
     }
     h1, h2, h3, h4, h5, h6 {
-      color: var(--color-slate);
+      color: var(--color-blue);
     }
     .squiggle {
       path {
-        fill: var(--color-slate);
+        fill: var(--color-blue);
       }
     }
     .member {
