@@ -177,9 +177,9 @@ const { data: posts } = await useAsyncData(route.path, () =>
           url="https://fastwonder.com/"
         >
           <p>
-            Former Director of Data Science at <a href="https://chaoss.community/">CHAOSS</a>.
-            Helped develop <a href="https://www.intel.com/">Intel's</a> global Open Source engagement strategy.
-            PhD in software metrics.
+            Board member of <a href="https://chaoss.community/">CHAOSS</a> and <a href="https://openuk.uk/">OpenUK</a>.
+            Previous open source leadership positions at <a href="https://www.intel.com/">Intel</a>, <a href="https://www.vmware.com/">VMware</a>, and <a href="https://www.puppet.com/">Puppet</a>.
+            <a href="https://fastwonderblog.com/academic/">PhD</a> using metrics to study the Linux kernel.
           </p>
         </Member>
         <Member
