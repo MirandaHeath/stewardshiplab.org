@@ -8,12 +8,13 @@
 
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
+  --color-blue-dark: #28388c;
 
-  --color-green: #2e453f;
-  --color-green-dark: #192d28;
   --color-purple: #6e1d7a;
 
   /* Not currently used */
+  --color-green: #2e453f;
+  --color-green-dark: #192d28;
   --color-light-blue: #e2d9df;
   --color-light-blue-pale: #f0e7ec;
 
@@ -563,12 +564,7 @@ section {
   &.section--contrasting {
     margin-block: 80px;
     padding: 60px 0;
-    background:
-      linear-gradient(
-        to top right,
-        var(--color-green-dark),
-        var(--color-green)
-      );
+    background: var(--color-blue-dark);
     @media (max-width: 900px) {
       margin-block: 50px;
     }
