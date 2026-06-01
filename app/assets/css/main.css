@@ -8,6 +8,7 @@
 
   --color-blue: #1c35bc;
   --color-blue-light: #3a4db6;
+  --color-slate: #0a2f58;
 
   --color-purple: #6e1d7a;
 
@@ -563,23 +564,23 @@ section {
   &.section--contrasting {
     margin-block: 80px;
     padding: 60px 0;
-    background: var(--color-blue);
+    background: var(--color-beige-xpale);
     @media (max-width: 900px) {
       margin-block: 50px;
     }
-    &, h1, h2, h3, h4, h5, h6 {
-      color: white;
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-slate);
     }
     .squiggle {
       path {
-        fill: white;
+        fill: var(--color-slate);
       }
     }
     .member {
-      background: white;
+      background: var(--color-beige);
     }
     .logowall .logo {
-      background: white;
+      background: var(--color-beige);
     }
   }
 }
