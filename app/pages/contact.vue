@@ -23,23 +23,23 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
               </p>
             </div>
             <div class="contact-person">
-              <div class="contact-person__head">
-                <img
-                  src="/images/people/vlad@120px.webp"
-                  alt="A portrait of Vlad"
-                  width="60"
-                  height="60"
-                >
-                <div>
+              <img
+                src="/images/people/vlad@300px.webp"
+                alt="A portrait of Vlad"
+                width="130"
+                height="130"
+              >
+              <div class="contact-person__body">
+                <div class="contact-person__head">
                   <strong>Vlad-Stefan Harbuz</strong>
                   <span>Executive Director</span>
                 </div>
-              </div>
-              <div class="contact-method-set">
-                <a href="mailto:vlad@vlad.website" class="contact-method plain-link">
-                  <IconEnvelopeOpenBold class="icon" />
-                  <span>vlad@vlad.website</span>
-                </a>
+                <div class="contact-method-set">
+                  <a href="mailto:vlad@vlad.website" class="contact-method plain-link">
+                    <IconEnvelopeOpenBold class="icon" />
+                    <span>vlad@vlad.website</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -103,52 +103,48 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
       padding: 20px;
       background: var(--color-beige-xpale);
       border-radius: var(--border-radius-s);
-      p {
-        font-size: var(--font-size-s);
-        line-height: var(--line-height-s);
-      }
-      .contact-option__copy {
-        flex: 1;
-      }
+      font-size: var(--font-size-s);
+      line-height: var(--line-height-s);
       .contact-option__parts {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 60px;
         @media (max-width: 800px) {
+          gap: 40px;
           flex-direction: column;
           align-items: unset;
         }
-        .contact-option__copy {
-          flex: 2;
-        }
-        .contact-person {
-          flex: 1;
-        }
+      }
+      .contact-option__copy {
+        align-self: flex-start;
+        flex: 1;
       }
       .contact-person {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 20px;
-        padding: 20px;
-        background: var(--color-beige);
-        border-radius: var(--border-radius-s);
-        .contact-method {
-          background: var(--color-beige-xpale);
+        @media (max-width: 900px) {
+          flex-direction: column;
+          text-align: center;
         }
-        .contact-person__head {
+        img {
+          flex: 1;
+          width: 130px;
+          height: 130px;
+          border-radius: var(--border-radius-s);
+        }
+        .contact-person__body {
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: 20px;
-          img {
-            border-radius: 100%;
-          }
-          strong {
-            display: block;
-            font-weight: 500;
-          }
-          span {
-            font-size: var(--font-size-s);
-            line-height: var(--line-height-s);
+          .contact-person__head {
+            strong {
+              display: block;
+              font-weight: 500;
+            }
+            span {
+              color: var(--color-text-pale);
+            }
           }
         }
       }
