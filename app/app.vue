@@ -5,6 +5,7 @@ const description = 'A non-profit applied research lab dedicated to ensuring the
 useHead({
   link: [
     { rel: 'icon', type: 'image/png', href: '/images/favicon.png' },
+    { rel: 'preload', as: 'font', crossorigin: '', href: '/fonts/montreuil/Montreuil-Medium.woff2' },
   ],
 });
 
