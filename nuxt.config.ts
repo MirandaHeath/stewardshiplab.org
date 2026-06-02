@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     '@nuxt/content',
   ],
+  features: {
+    inlineStyles: false
+  },
   svgo: {
     defaultImport: 'component',
   },
