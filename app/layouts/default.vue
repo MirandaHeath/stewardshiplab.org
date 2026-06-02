@@ -9,101 +9,107 @@ import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
 
 const isNavOpen = ref(false);
+
+const route = useRoute();
 </script>
 
 <template>
-  <Star class="squiggle squiggle--a" />
-  <Star class="squiggle squiggle--b" />
-  <header>
-    <div class="container container--narrow">
-      <div class="header-container">
-        <div class="header-logo">
-          <div class="visually-hidden">
-            Software Stewardship Lab
+  <div class="page-container" :data-path="route.path">
+    <div class="squiggles">
+      <Star class="squiggle squiggle--a" />
+      <Star class="squiggle squiggle--b" />
+    </div>
+    <header>
+      <div class="container container--narrow">
+        <div class="header-container">
+          <div class="header-logo">
+            <div class="visually-hidden">
+              Software Stewardship Lab
+            </div>
+            <NuxtLink to="/" class="plain-link">
+              <Logo width="240" height="51" />
+            </NuxtLink>
           </div>
-          <NuxtLink to="/" class="plain-link">
-            <Logo width="240" height="51" />
-          </NuxtLink>
-        </div>
-        <nav class="desktop-nav">
-          <NuxtLink class="plain-link" to="/reports">
-            Reports<IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink class="plain-link" to="/tools">
-            Tools<IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink class="plain-link" to="/ideas">
-            Ideas<IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink class="plain-link" to="/media">
-            Media<IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink class="plain-link" to="/contact">
-            <IconHandWaving class="icon" />
-          </NuxtLink>
-        </nav>
-        <div class="mobile-nav-trigger">
-          <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen" aria-label="Open menu">
-            <IconList width="28" height="28" />
-          </button>
-        </div>
-        <nav class="mobile-nav" v-show="isNavOpen">
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">
-            <div class="mobile-nav__name">Reports</div><IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">
-            <div class="mobile-nav__name">Tools</div><IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">
-            <div class="mobile-nav__name">Ideas</div><IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/media">
-            <div class="mobile-nav__name">Media</div><IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-          <NuxtLink @click="isNavOpen = false" class="plain-link" to="/contact">
-            <div class="mobile-nav__name">Contact<IconHandWaving class="icon icon--white" /></div>
-            <IconCaretRightBold class="icon icon--s" />
-          </NuxtLink>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <main>
-    <slot />
-  </main>
-  <footer>
-    <div class="container">
-      <div class="footer-items">
-        <div class="footer-links">
-          <strong class="smcp">Resources</strong>
-          <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
-        </div>
-        <div class="footer-socials">
-          <a
-            href="https://bsky.app/profile/stewardshiplab.org"
-            class="plain-link"
-            target="_blank"
-          >
-            <IconBluesky />
-          </a>
-          <a
-            href="https://fosstodon.org/@stewardshiplab"
-            target="_blank"
-            class="plain-link"
-          >
-            <IconMastodon width="28" height="28" />
-          </a>
-          <a
-            href="https://discord.gg/2GNQHcKmcH"
-            target="_blank"
-            class="plain-link"
-          >
-            <IconDiscord width="28" height="28" />
-          </a>
+          <nav class="desktop-nav">
+            <NuxtLink class="plain-link" to="/reports">
+              Reports<IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink class="plain-link" to="/tools">
+              Tools<IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink class="plain-link" to="/ideas">
+              Ideas<IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink class="plain-link" to="/media">
+              Media<IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink class="plain-link" to="/contact">
+              <IconHandWaving class="icon" />
+            </NuxtLink>
+          </nav>
+          <div class="mobile-nav-trigger">
+            <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen" aria-label="Open menu">
+              <IconList width="28" height="28" />
+            </button>
+          </div>
+          <nav class="mobile-nav" v-show="isNavOpen">
+            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">
+              <div class="mobile-nav__name">Reports</div><IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">
+              <div class="mobile-nav__name">Tools</div><IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">
+              <div class="mobile-nav__name">Ideas</div><IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/media">
+              <div class="mobile-nav__name">Media</div><IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/contact">
+              <div class="mobile-nav__name">Contact<IconHandWaving class="icon icon--white" /></div>
+              <IconCaretRightBold class="icon icon--s" />
+            </NuxtLink>
+          </nav>
         </div>
       </div>
-    </div>
-  </footer>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-items">
+          <div class="footer-links">
+            <strong class="smcp">Resources</strong>
+            <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
+          </div>
+          <div class="footer-socials">
+            <a
+              href="https://bsky.app/profile/stewardshiplab.org"
+              class="plain-link"
+              target="_blank"
+            >
+              <IconBluesky />
+            </a>
+            <a
+              href="https://fosstodon.org/@stewardshiplab"
+              target="_blank"
+              class="plain-link"
+            >
+              <IconMastodon width="28" height="28" />
+            </a>
+            <a
+              href="https://discord.gg/2GNQHcKmcH"
+              target="_blank"
+              class="plain-link"
+            >
+              <IconDiscord width="28" height="28" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <style>
