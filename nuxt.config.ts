@@ -38,12 +38,6 @@ export default defineNuxtConfig({
     build: {
       cssCodeSplit: false,
     },
-    optimizeDeps: {
-      include: [
-        'cheerio',
-        'temporal-polyfill',
-      ]
-    },
   },
   future: { compatibilityVersion: 4 },
   experimental: {
