@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: 'latest',
   routeRules: {
-    '/**': {
+    '/reports/foundations': {
       prerender: true,
     },
     '/foundations': {
