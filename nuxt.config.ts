@@ -35,6 +35,9 @@ export default defineNuxtConfig({
     experimental: { sqliteConnector: 'native' },
   },
   vite: {
+    build: {
+      cssCodeSplit: false,
+    },
     optimizeDeps: {
       include: [
         'cheerio',
