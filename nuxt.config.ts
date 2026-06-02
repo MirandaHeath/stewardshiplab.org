@@ -42,7 +42,10 @@ export default defineNuxtConfig({
     },
   },
   future: { compatibilityVersion: 4 },
-  experimental: { typedPages: true },
+  experimental: {
+    typedPages: true,
+    extractAsyncDataHandlers: true,
+  },
   compatibilityDate: 'latest',
   routeRules: {
     '/**': {
