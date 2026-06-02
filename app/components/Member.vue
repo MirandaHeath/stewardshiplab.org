@@ -9,6 +9,7 @@ const props = defineProps(['name', 'title', 'imageUrl', 'url']);
     <div
       class="member__photo"
       :style="{ backgroundImage: `url(${imageUrl})` }"
+      role="img"
       :aria-label="`A portrait of ${name}`"
     ></div>
     <div class="member__info">
