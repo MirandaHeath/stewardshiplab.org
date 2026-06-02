@@ -95,6 +95,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
             alt="Vlad presenting in front of an audience"
             width="1400"
             height="933"
+            fetchpriority="high"
           >
           <figcaption>
             Vlad speaking at AltCtrlOrg in Basel, Switzerland
