@@ -9,12 +9,10 @@ import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
 
 const isNavOpen = ref(false);
-
-const route = useRoute();
 </script>
 
 <template>
-  <div class="page-container" :data-path="route.path">
+  <div class="page-container">
     <div class="squiggles">
       <Star class="squiggle squiggle--a" />
       <Star class="squiggle squiggle--b" />

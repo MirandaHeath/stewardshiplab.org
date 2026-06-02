@@ -80,7 +80,7 @@ body, button, input, textarea {
   font-family: var(--font-family-sans);
 }
 
-.page-container[data-path^="/reports/foundations"] {
+.page-container:has(.foundations-table) {
   .squiggles {
     display: none;
   }
