@@ -43,6 +43,7 @@ export default defineNuxtConfig({
   experimental: {
     typedPages: true,
     extractAsyncDataHandlers: true,
+    componentIslands: true,
   },
   compatibilityDate: 'latest',
   routeRules: {

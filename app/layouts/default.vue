@@ -70,6 +70,7 @@ const isNavOpen = ref(false);
           </nav>
         </div>
       </div>
+      <NoscriptNav />
     </header>
     <main>
       <slot />
@@ -187,6 +188,10 @@ header {
     flex-direction: column;
     height: calc(100vh - var(--header-height));
     background: var(--color-blue);
+    &.mobile-nav--compact {
+      position: static;
+      height: unset;
+    }
     @media (min-width: 801px) {
       display: none;
     }
