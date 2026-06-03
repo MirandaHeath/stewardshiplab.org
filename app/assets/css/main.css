@@ -95,6 +95,12 @@ body, button, input, textarea {
   @media (max-width: 1150px) {
     display: none;
   }
+  &.squiggle--mobile {
+    display: none;
+    @media (max-width: 1150px) {
+      display: block;
+    }
+  }
   &.squiggle--a {
     width: 12vw;
     height: 12vw;
@@ -120,6 +126,13 @@ body, button, input, textarea {
     height: 60px;
     top: 20%;
     right: 5%;
+    transform: rotate(143deg);
+  }
+  &.squiggle--section-a {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: 20px;
     transform: rotate(143deg);
   }
 }

@@ -54,6 +54,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     <section>
       <h1 class="visually-hidden">Software Stewardship Lab</h1>
       <div class="hero">
+        <Star class="squiggle squiggle--mobile squiggle--hero" />
         <h2>
           <small>A new non-profit applied research lab</small>
           <hr class="hr--short">
@@ -109,6 +110,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
   <section class="section--contrasting">
     <Star class="squiggle squiggle--c" />
     <Star class="squiggle squiggle--d" />
+    <Star class="squiggle squiggle--mobile squiggle--section-a" />
     <div class="container">
       <h2 class="big-heading">Our Team</h2>
       <div class="members">
@@ -486,11 +488,19 @@ const { data: posts } = await useAsyncData(route.path, () =>
 
 <style scoped>
 .hero {
+  position: relative;
   margin-block: 50px;
   @media (max-width: 900px) {
     margin-top: 0;
   }
+  .squiggle--hero {
+    bottom: -10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+  }
   h2 {
+    padding-right: 30px;
     font-size: var(--font-size-xl);
     line-height: var(--line-height-xl);
     text-wrap: balance;
