@@ -251,6 +251,7 @@ mark {
   background: var(--color-text-mark);
   border-radius: var(--border-radius-s);
   box-shadow: 0px 0px 5px 5px var(--color-text-mark);
+  box-decoration-break: clone;
 }
 
 figure {
