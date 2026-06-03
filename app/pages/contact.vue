@@ -164,9 +164,13 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
         border: 1px solid var(--color-beige-pale);
         color: var(--color-blue);
         font-size: var(--font-size-s);
-        line-height: 1;
+        line-height: var(--line-height-s);
         &:hover {
           background-color: var(--color-beige-pale);
+        }
+        .icon {
+          position: relative;
+          top: 1px;
         }
       }
     }
