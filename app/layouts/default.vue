@@ -7,8 +7,17 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
 import IconList from '~/assets/images/icons/phosphor/list.svg'
 import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
+import { debounceLeading } from '../utils/misc.ts'
 
-const isNavOpen = ref(false);
+let isNavOpen = ref(false);
+
+const closeNav = debounceLeading(() => {
+  isNavOpen.value = false;
+}, 100);
+
+const toggleNav = debounceLeading(() => {
+  isNavOpen.value = !isNavOpen.value;
+}, 100);
 </script>
 
 <template>
@@ -46,24 +55,24 @@ const isNavOpen = ref(false);
             </NuxtLink>
           </nav>
           <div class="mobile-nav-trigger">
-            <button type="button" class="plain-button" @click="isNavOpen = !isNavOpen" aria-label="Open menu">
+            <button type="button" class="plain-button" @click="toggleNav" aria-label="Open menu">
               <IconList width="28" height="28" />
             </button>
           </div>
           <nav class="mobile-nav" v-show="isNavOpen">
-            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/reports">
+            <NuxtLink @click="closeNav" class="plain-link" to="/reports">
               <div class="mobile-nav__name">Reports</div><IconCaretRightBold class="icon icon--s" />
             </NuxtLink>
-            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/tools">
+            <NuxtLink @click="closeNav" class="plain-link" to="/tools">
               <div class="mobile-nav__name">Tools</div><IconCaretRightBold class="icon icon--s" />
             </NuxtLink>
-            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/ideas">
+            <NuxtLink @click="closeNav" class="plain-link" to="/ideas">
               <div class="mobile-nav__name">Ideas</div><IconCaretRightBold class="icon icon--s" />
             </NuxtLink>
-            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/media">
+            <NuxtLink @click="closeNav" class="plain-link" to="/media">
               <div class="mobile-nav__name">Media</div><IconCaretRightBold class="icon icon--s" />
             </NuxtLink>
-            <NuxtLink @click="isNavOpen = false" class="plain-link" to="/contact">
+            <NuxtLink @click="closeNav" class="plain-link" to="/contact">
               <div class="mobile-nav__name">Contact<IconHandWaving class="icon icon--white" /></div>
               <IconCaretRightBold class="icon icon--s" />
             </NuxtLink>
