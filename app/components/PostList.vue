@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
+import { POST_CATEGORIES } from '../data/content.ts';
 
-const props = defineProps(['posts', 'categorised']);
+const props = defineProps(['posts', 'categorised', 'featuredOnly']);
 
 const postsByCategory = props.posts.reduce((cats, post) => {
   if (!(post.category in cats)) {
@@ -11,11 +11,18 @@ const postsByCategory = props.posts.reduce((cats, post) => {
   cats[post.category].push(post);
   return cats;
 }, {});
+
+const featuredPosts = props.posts.filter((post) => post.featured);
 </script>
 
 <template>
-  <div class="container">
-    <div class="post-list">
+  <div class="post-list">
+    <template v-if="featuredOnly">
+      <div class="post-list-item-container" v-for="post in featuredPosts" :key="post.path">
+        <PostListItem :post="post" />
+      </div>
+    </template>
+    <template v-if="!featuredOnly">
       <template v-if="categorised">
         <div class="post-list-category-set">
           <template v-for='category in Object.keys(POST_CATEGORIES)'>
@@ -25,21 +32,8 @@ const postsByCategory = props.posts.reduce((cats, post) => {
                 <p>{{ POST_CATEGORIES[category].description }}</p>
               </div>
               <div class="post-list-item-set">
-                <div class="post-list-item" v-for="post in postsByCategory[category]" :key="post.path">
-                  <NuxtLink class="post-list-item__link plain-link" :to="post.path">
-                    <h3>{{ post.title }}</h3>
-                    <div class="post-list-item__meta">
-                      <div class="post-list-item__authors">
-                        <template v-if="post.authors">
-                          <div class="post-list-item__person" v-for="author in post.authors">
-                            <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
-                            <span>{{ PEOPLE[author].name }}</span>
-                          </div>
-                        </template>
-                      </div>
-                      <div>{{ formatDate(post.date) }}</div>
-                    </div>
-                  </NuxtLink>
+                <div class="post-list-item-container" v-for="post in postsByCategory[category]" :key="post.path">
+                  <PostListItem :post="post" />
                 </div>
               </div>
             </div>
@@ -47,24 +41,11 @@ const postsByCategory = props.posts.reduce((cats, post) => {
         </div>
       </template>
       <template v-if="!categorised">
-        <div class="post-list-item" v-for="post in posts" :key="post.path">
-          <NuxtLink class="post-list-item__link plain-link" :to="post.path">
-            <h3>{{ post.title }}</h3>
-            <div class="post-list-item__meta">
-              <div class="post-list-item__authors">
-                <template v-if="post.authors">
-                  <div class="post-list-item__person" v-for="author in post.authors">
-                    <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
-                    <span>{{ PEOPLE[author].name }}</span>
-                  </div>
-                </template>
-              </div>
-              <div>{{ formatDate(post.date) }}</div>
-            </div>
-          </NuxtLink>
+        <div class="post-list-item-container" v-for="post in posts" :key="post.path">
+          <PostListItem :post="post" />
         </div>
       </template>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -111,62 +92,13 @@ const postsByCategory = props.posts.reduce((cats, post) => {
       flex-grow: 1;
     }
   }
-  .post-list-item {
+  .post-list-item-container {
     margin: 10px 0;
     &:first-child {
       margin-top: 0;
     }
     &:last-child {
       margin-bottom: 0;
-    }
-    a.post-list-item__link {
-      --person-image-size: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 15px;
-      background: var(--color-beige-xpale);
-      border-radius: var(--border-radius-s);
-      border: 1px solid var(--color-beige-pale);
-      text-decoration: none;
-      transition: background-color 200ms, color 200ms;
-      &:after {
-        display: none;
-      }
-      &:hover {
-        background: var(--color-beige-pale);
-        color: var(--color-text);
-      }
-      h3 {
-        margin-bottom: 0;
-        font-size: var(--font-size-s);
-        line-height: 20px;
-      }
-      .post-list-item__meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        font-size: var(--font-size-xs);
-        line-height: var(--line-height-xs);
-        .post-list-item__authors {
-          display: flex;
-          gap: 15px;
-          @media (max-width: 900px) {
-            flex-direction: column;
-            gap: 3px;
-          }
-          .post-list-item__person {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            img {
-              width: var(--person-image-size);
-              height: var(--person-image-size);
-              border-radius: 100%;
-            }
-          }
-        }
-      }
     }
   }
 }

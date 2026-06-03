@@ -2,7 +2,7 @@
 const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   queryCollection('ideas')
-    .select('path', 'title', 'description', 'authors', 'date', 'category')
+    .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
     .order('date', 'DESC')
     .all()
 );
@@ -22,6 +22,6 @@ useSeoMeta({
     <h1 class="page-title">Ideas</h1>
     <p>{{ description }}</p>
     <hr>
+    <PostBrowser :posts="posts" />
   </div>
-  <PostBrowser :posts="posts" />
 </template>

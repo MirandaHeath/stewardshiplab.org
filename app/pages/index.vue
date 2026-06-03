@@ -29,17 +29,17 @@ const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   Promise.all([
     queryCollection('tools')
-      .select('path', 'title', 'description', 'authors', 'date', 'category')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
     queryCollection('reports')
-      .select('path', 'title', 'description', 'authors', 'date', 'category')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
     queryCollection('ideas')
-      .select('path', 'title', 'description', 'authors', 'date', 'category')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
       .order('date', 'DESC')
       .where('featured', '=', true)
       .all(),
@@ -410,13 +410,13 @@ const { data: posts } = await useAsyncData(route.path, () =>
       </div>
     </div>
   </section>
-  <section>
-    <h2 class="big-heading">
-      Featured Posts
-    </h2>
-    <PostList :posts="posts" />
-  </section>
   <div class="container">
+    <section>
+      <h2 class="big-heading">
+        Featured Posts
+      </h2>
+      <PostList :posts="posts" />
+    </section>
     <section>
       <h2 class="big-heading">
         Values

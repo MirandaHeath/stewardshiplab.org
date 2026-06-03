@@ -11,6 +11,7 @@
   --color-blue-light: #3a4db6;
 
   --color-purple: #6e1d7a;
+  --color-gold: #f2cc00;
 
   /* Not currently used */
   --color-green: #2e453f;
@@ -457,9 +458,12 @@ table {
 .control-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 30px;
   margin-block: 30px;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
   &.control-bar--right {
     justify-content: flex-end;
   }
