@@ -418,61 +418,61 @@ const { data: posts } = await useAsyncData(route.path, () =>
       <h2 class="big-heading">
         Values
       </h2>
-      <div class="value">
-        <h3 class="smcp">
-          Public good
-        </h3>
-        <p>
-          Our projects must provide a clear benefit to the public; and not put the public at disproportionate risk of
-          harm, eg through drastic environmental consequences or the creation of monopolies.
-        </p>
-      </div>
-      <div class="value">
-        <h3 class="smcp">
-          Public access
-        </h3>
-        <p>
-          All our research outputs are accessible and usable by all. This means Open Source code, open data, and open
-          access research papers.
-        </p>
-      </div>
-      <div class="value">
-        <h3 class="smcp">
-          Systemic improvements
-        </h3>
-        <p>
-          We aim for widely-applicable systemic solutions, instead of fixes for particular technologies. Our goal is
-          to improve the software ecosystem for current and future developers, not to help current developers shape
-          themselves to fit a bad system.
-        </p>
-      </div>
-      <div class="value">
-        <h3 class="smcp">
-          Interdisciplinarity
-        </h3>
-        <p>
-          Our work is rooted in software, but we also address the social, ethical and policy dimensions of Open
-          Source. This includes responsible governance, healthy communities, good working conditions and respect.
-        </p>
-      </div>
-      <div class="value">
-        <h3 class="smcp">
-          Decentralisation
-        </h3>
-        <p>
-          We promote sharing and distributing power over technology. We want users to be able to shape the tech they
-          use so that it meets their needs and works in their best interests.
-        </p>
-      </div>
-      <div class="value">
-        <h3 class="smcp">
-          Interdependence
-        </h3>
-        <p>
-          We aim to advance public knowledge about the webs of interdependence that constitute our global tech
-          infrastructure; about how the tech we have today is made possible by thousands of developers collaborating
-          openly.
-        </p>
+      <div class="values">
+        <div class="value">
+          <h3 class="smcp">
+            Public good
+          </h3>
+          <p>
+            Our work must provide a clear benefit to the public; and not put them at disproportionate risk of
+            harm, eg via drastic environmental consequences or monopolies.
+          </p>
+        </div>
+        <div class="value">
+          <h3 class="smcp">
+            Public access
+          </h3>
+          <p>
+            All our research outputs are accessible and usable by all. This means Open Source code, open data, and open
+            access research papers.
+          </p>
+        </div>
+        <div class="value">
+          <h3 class="smcp">
+            Systemic improvements
+          </h3>
+          <p>
+            We aim for widely-applicable systemic solutions, not just fixes for particular technologies, so developers
+            don't have to shape themselves to fit a bad system.
+          </p>
+        </div>
+        <div class="value">
+          <h3 class="smcp">
+            Interdisciplinarity
+          </h3>
+          <p>
+            Our work addresses the social, ethical and policy dimensions of Open Source, like responsible governance,
+            good working conditions and respect.
+          </p>
+        </div>
+        <div class="value">
+          <h3 class="smcp">
+            Decentralisation
+          </h3>
+          <p>
+            We promote sharing and distributing power over technology. We want users to be able to shape the tech they
+            use so that it works in their best interests.
+          </p>
+        </div>
+        <div class="value">
+          <h3 class="smcp">
+            Interdependence
+          </h3>
+          <p>
+            We aim to advance public knowledge about how the tech we have today is made possible by webs of
+            interdependence where developers collaborate openly.
+          </p>
+        </div>
       </div>
     </section>
     <section>
@@ -534,13 +534,14 @@ const { data: posts } = await useAsyncData(route.path, () =>
   .postcard__main {
     width: auto;
     height: auto;
-    border-radius: var(--border-radius-s);
+    border-radius: var(--border-radius-l);
     transform: rotate(2deg);
   }
   figcaption {
     position: relative;
     z-index: 10;
     top: -20px;
+    left: -30px;
     border-radius: var(--border-radius-s);
   }
 }
@@ -595,7 +596,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
     align-items: center;
     justify-content: center;
     padding: 15px;
-    background: var(--color-beige-xpale);
+    background: var(--color-beige-pale);
     border: 1px solid var(--color-beige-pale);
     border-radius: var(--border-radius-s);
     transition: background-color 200ms;
@@ -615,17 +616,33 @@ const { data: posts } = await useAsyncData(route.path, () =>
   column-gap: 30px;
   margin-block: 30px;
 }
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  row-gap: 30px;
+  column-gap: 20px;
+}
 .value {
-  margin: 1rem 0;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--border-radius-l);
   background: var(--color-beige-xpale);
-  border-radius: var(--border-radius-s);
   h3 {
+    margin: 0;
+    padding: 15px;
     font-family: var(--font-family-sans);
-    font-size: var(--font-size-l);
-    line-height: var(--line-height-l);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    font-weight: 500;
+    border-top-left-radius: var(--border-radius-l);
+    border-top-right-radius: var(--border-radius-l);
+    background: var(--color-blue);
+    color: white;
   }
   p {
+    margin: 0;
+    padding: 15px;
     font-size: var(--font-size-s);
     line-height: var(--line-height-s);
   }
