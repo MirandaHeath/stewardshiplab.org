@@ -1,6 +1,7 @@
 :root {
   --color-text: #0a1030;
   --color-text-pale: #505673;
+  --color-text-mark: rgba(255, 255, 255, 0.3);
 
   --color-beige: #fdf1f0;
   --color-beige-pale: #e3d8df;
@@ -242,6 +243,14 @@ code {
   border-radius: var(--border-radius-s);
   font-size: var(--font-size-xs);
   color: black;
+}
+
+mark {
+  padding-inline: 2px;
+  font-style: italic;
+  background: var(--color-text-mark);
+  border-radius: var(--border-radius-s);
+  box-shadow: 0px 0px 5px 5px var(--color-text-mark);
 }
 
 figure {

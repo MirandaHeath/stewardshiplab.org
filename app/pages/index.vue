@@ -81,11 +81,12 @@ const { data: posts } = await useAsyncData(route.path, () =>
               reports, and peer-reviewed papers.
             </p>
             <p>
-              Our work on supply chain transparency enables developers to identify and support vulnerable projects.
+              Our work on <mark>supply chain security</mark> enables developers to identify and support vulnerable
+              projects.
             </p>
             <p>
-              And our work on sustainable funding and governance has helped maintainers avoid burnout, so they can
-              continue their critical work.
+              And our work on <mark>sustainable funding and governance</mark> has helped maintainers avoid burnout, so
+              they can continue their critical work.
             </p>
           </div>
         </div>
