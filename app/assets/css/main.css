@@ -385,6 +385,10 @@ details {
   border: 0;
 }
 
+small, .text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
 .text-s {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
@@ -392,6 +396,10 @@ details {
 .text-xs {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
+}
+.text-l {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
 }
 .text-pale {
   color: var(--color-text-pale);
