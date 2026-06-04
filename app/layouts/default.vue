@@ -297,18 +297,10 @@ footer {
     svg {
       height: 16px;
       path[fill] {
-        fill: var(--color-text-pale);
+        fill: var(--color-text);
       }
       path[stroke] {
-        stroke: var(--color-text-pale);
-      }
-      &:hover {
-        path[fill] {
-          fill: var(--color-text);
-        }
-        path[stroke] {
-          stroke: var(--color-text);
-        }
+        stroke: var(--color-text);
       }
     }
   }
