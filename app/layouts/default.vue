@@ -88,7 +88,9 @@ const toggleNav = debounceLeading(() => {
       <div class="container">
         <div class="footer-items">
           <div class="footer-links">
-            <strong class="smcp">Resources</strong>
+            <h2>Resources</h2>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/cookie-policy">Cookie Policy</a>
             <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
           </div>
           <div class="footer-socials">
@@ -248,6 +250,16 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
   border-top: 1px solid var(--color-beige-pale);
+  h2 {
+    margin: 0;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+    font-family: var(--font-family-sans);
+    font-variant-caps: small-caps;
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+    color: var(--color-text);
+  }
   .footer-items {
     display: flex;
     justify-content: space-between;
@@ -261,9 +273,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: 10px;
     font-size: var(--font-size-xs);
     line-height: var(--font-size-xs);
+    a {
+      &:after {
+        display: none;
+      }
+    }
   }
   .footer-socials {
     display: flex;
