@@ -62,7 +62,9 @@ SPDX-License-Identifier = "LicenseRef-Restricted"
 path = [
     "app/assets/images/logo.svg",
     "app/assets/images/markset.svg",
+    "app/assets/images/star.svg",
     "public/images/favicon.png",
+    "public/images/logo.svg",
     "public/images/og/**",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
