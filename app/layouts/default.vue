@@ -7,6 +7,7 @@ import IconDiscord from '~/assets/images/icons/discord.svg'
 import IconList from '~/assets/images/icons/phosphor/list.svg'
 import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
+import LogoStatichost from '~/assets/images/logos/statichost.svg'
 import { debounceLeading } from '../utils/misc.ts'
 
 let isNavOpen = ref(false);
@@ -92,6 +93,12 @@ const toggleNav = debounceLeading(() => {
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/cookie-policy">Cookie Policy</a>
             <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
+          </div>
+          <div class="footer-sponsors">
+            <h2>Hosting Sponsor</h2>
+            <a class="plain-link" href="https://www.statichost.eu/" target="_blank">
+              <LogoStatichost />
+            </a>
           </div>
           <div class="footer-socials">
             <a
@@ -279,6 +286,29 @@ footer {
     a {
       &:after {
         display: none;
+      }
+    }
+  }
+  .footer-sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    svg {
+      height: 16px;
+      path[fill] {
+        fill: var(--color-text-pale);
+      }
+      path[stroke] {
+        stroke: var(--color-text-pale);
+      }
+      &:hover {
+        path[fill] {
+          fill: var(--color-text);
+        }
+        path[stroke] {
+          stroke: var(--color-text);
+        }
       }
     }
   }
