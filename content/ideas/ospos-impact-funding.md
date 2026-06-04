@@ -24,8 +24,7 @@ I'll conclude with a short quote from the [Funding Impact Measurement Guide](htt
 
 >Funders need to be able to understand the impacts of past funding in order to secure buy-in for future funding as well as to adapting and/or innovating funding approaches whilst mitigating ineffective or even harmful approaches. We all benefit from more public institutions, philanthropic organizations, and companies giving money to open source; when done in a way that positive impact is the ultimate goal and objective. We hope that this guide helps organizations measure the impact of their funding initiatives so that we can increase the funding to open source projects to drive future improvements and allow these projects, and the people working on them, to become healthier and more sustainable over time.
 
-
-Related Resources:
+## Related Resources
 
 * [CHAOSS Practitioner Guide: Funding Impact Measurement](https://chaoss.community/practitioner-guide-funding-impact)
 * Osborne, C., Sharratt, P., Foster, D., Boehm, M., 2024, 'A Toolkit for Measuring the Impacts of Public Funding on Open Source Software Development', paper presented to OpenForum Academy Symposium, Boston,  Massachusetts, 13-14 November, Available at [https://doi.org/10.48550/arXiv.2411.06027](https://doi.org/10.48550/arXiv.2411.06027) 
