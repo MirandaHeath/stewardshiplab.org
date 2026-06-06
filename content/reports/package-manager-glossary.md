@@ -250,7 +250,7 @@ These companion posts cover specific aspects of package management in more detai
 - [Package Manager Tradeoffs](/reports/package-manager-tradeoffs) explores the design decisions that shape each ecosystem
 - [Documenting Package Manager Data](https://nesbitt.io/2025/11/30/documenting-package-manager-data) covers what metadata registries expose and how to access it
 - [Package Manager Timeline](/reports/package-manager-timeline) traces the history of package management
-- [Package Management Papers](/reports/package-management-papers) collects academic research on dependency management
+- [Package Management Papers](https://nesbitt.io/2025/11/13/package-management-papers.html) collects academic research on dependency management
 - [Categorizing Package Manager Clients](/reports/categorizing-package-manager-clients) covers resolution algorithms, lockfile strategies, build hooks, and manifest formats across ecosystems
 - [Categorizing Package Registries](/reports/categorizing-package-registries) covers architecture, review models, namespacing, and governance
 

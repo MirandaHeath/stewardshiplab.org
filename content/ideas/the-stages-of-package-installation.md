@@ -44,7 +44,7 @@ Packages get a last opportunity to run their own hooks for the work that can't b
 
 Laid out this way the privilege boundaries are clean enough to enforce. Stages one and three need the network but never execute anything from a package; stages two and four need neither; only five and six run package-supplied code, and even those shouldn't need to dial out.
 
-You could draw a line after stage four and put everything beyond it in a sandbox, or chop the pipeline at any join to get offline installs, [air-gapped mirrors](/reports/package-manager-mirroring), prefetch-then-build CI caching, and "resolve here, install there" workflows like [separating download from install in Docker builds](/ideas/separating-download-from-install-in-docker-builds) more or less for free.
+You could draw a line after stage four and put everything beyond it in a sandbox, or chop the pipeline at any join to get offline installs, [air-gapped mirrors](https://nesbitt.io/2026/03/20/package-manager-mirroring.html), prefetch-then-build CI caching, and "resolve here, install there" workflows like [separating download from install in Docker builds](https://nesbitt.io/2026/02/15/separating-download-from-install-in-docker-builds.html) more or less for free.
 
 ### The model versus the implementations
 
@@ -54,7 +54,7 @@ Resolution is where it most often falls apart, because the resolver needs accura
 
 Stages one through five collapsed into a single recursive tangle, and the resolver could end up executing dozens of untrusted `setup.py` files from versions it would ultimately reject. Python has spent years digging out of this with static metadata standards and wheels, but the long tail of sdist-only packages means a cold `pip install` can still drop into that path without warning.
 
-Ruby has a milder form of the same thing: a `.gemspec` is Ruby code, and Bundler resolving against a git dependency means cloning the repo and evaluating that file just to learn what it requires, so a manifest that looks declarative is really a small program with the full language available to it. Homebrew formulae and Portage ebuilds never pretended otherwise: the manifest format and the host language were always the same thing and a static representation has been retrofitted later. I've written before about [the Tuesday test](/ideas/the-tuesday-test) for this: if a manifest format is expressive enough that a package can declare different dependencies depending on what day of the week it is, you've lost any hope of resolving it without running it.
+Ruby has a milder form of the same thing: a `.gemspec` is Ruby code, and Bundler resolving against a git dependency means cloning the repo and evaluating that file just to learn what it requires, so a manifest that looks declarative is really a small program with the full language available to it. Homebrew formulae and Portage ebuilds never pretended otherwise: the manifest format and the host language were always the same thing and a static representation has been retrofitted later. I've written before about [the Tuesday test](https://nesbitt.io/2026/04/15/the-tuesday-test.html) for this: if a manifest format is expressive enough that a package can declare different dependencies depending on what day of the week it is, you've lost any hope of resolving it without running it.
 
 Even where metadata is properly static, stages one and two are almost always interleaved rather than sequential. npm's resolver, like most that talk to large registries, fetches per-package metadata on demand as constraint solving proceeds, because pulling the full version list for every transitively-reachable package up front would be enormously wasteful, so the network stays live for the whole resolution.
 
@@ -68,7 +68,7 @@ The npm ecosystem leans on this heavily: a great many packages with native compo
 
 ### Consequences for tooling
 
-The questions tooling authors most want to answer about an install, which hosts it will touch on the network, what code it will run before anyone has had a chance to look at it, whether it can be [reproduced](/ideas/reproducible-builds-in-language-package-managers) from a mirror without the public internet, don't have good answers for most ecosystems.
+The questions tooling authors most want to answer about an install, which hosts it will touch on the network, what code it will run before anyone has had a chance to look at it, whether it can be [reproduced](https://nesbitt.io/2026/02/24/reproducible-builds-in-language-package-managers.html) from a mirror without the public internet, don't have good answers for most ecosystems.
 
 You can't point at a moment in the process and promise nothing after it dials out, because a `postinstall` three levels deep might pull a binary from an S3 bucket, and you can't promise nothing before it executes package code, because the resolver might already have evaluated a manifest. [SBOM generators](/ideas/could-lockfiles-just-be-sboms), supply-chain scanners, and sandboxing wrappers all end up reconstructing from the outside the stage boundaries that the package manager declined to provide from the inside.
 

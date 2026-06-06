@@ -10,7 +10,7 @@ canonicalUrl: "https://nesbitt.io/2026/01/23/package-management-is-a-wicked-prob
 
 In 1973, Horst Rittel and Melvin Webber published ["Dilemmas in a General Theory of Planning"](https://urbanpolicy.net/wp-content/uploads/2015/06/Rittel-Webber_1973_DilemmasInAGeneralTheoryOfPlanning.pdf), introducing the concept of "wicked problems" in urban planning. Wicked problems are problems where the act of trying to solve them changes what the problem is. Problems where you can't test solutions in advance. Problems where every stakeholder has a different definition of success.
 
-Package management fits the definition. I've spent years working on [package manager data and tooling](/ideas/why-im-fascinated-by-package-management), and the more I learn, the more the wicked problem framework explains why progress feels so difficult. Tens of millions of packages, hundreds of millions of versions, trillions of downloads. Small improvements at this layer affect every project built on top.
+Package management fits the definition. I've spent years working on [package manager data and tooling](https://nesbitt.io/2025/12/09/why-im-fascinated-by-package-management.html), and the more I learn, the more the wicked problem framework explains why progress feels so difficult. Tens of millions of packages, hundreds of millions of versions, trillions of downloads. Small improvements at this layer affect every project built on top.
 
 Rittel and Webber [identified ten characteristics](https://www.leanessays.com/2002/01/wicked-problems.html) that distinguish wicked problems from tame ones.
 

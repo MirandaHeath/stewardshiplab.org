@@ -354,7 +354,7 @@ Build systems that include package management features.
 
 ## Research
 
-A longer list of academic work is in [Package Management Papers](/reports/package-management-papers).
+A longer list of academic work is in [Package Management Papers](https://nesbitt.io/2025/11/13/package-management-papers.html).
 
 **Dependency analysis:** [FASTEN](https://github.com/fasten-project), [Software Heritage](https://www.softwareheritage.org), [Mancoosi](https://www.mancoosi.org)
 
