@@ -6,6 +6,7 @@ import LogoChaoss from '~/assets/images/logos/chaoss.svg'
 import LogoCncf from '~/assets/images/logos/cncf.svg'
 import LogoCycloneDx from '~/assets/images/logos/cyclonedx.svg'
 import LogoEcosystems from '~/assets/images/logos/ecosystems.svg'
+import LogoEpfl from '~/assets/images/logos/epfl.svg'
 import LogoGatesFoundation from '~/assets/images/logos/gatesfoundation.svg'
 import LogoGitHub from '~/assets/images/logos/github.svg'
 import LogoIntel from '~/assets/images/logos/intel.svg'
@@ -362,6 +363,16 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <a
             class="logo plain-link"
             target="_blank"
+            href="https://www.epfl.ch/en/"
+          ><LogoEpfl
+            aria-label="The EPFL logo"
+            style="padding-block: 5px;"
+            width="104"
+            height="40"
+          /></a>
+          <a
+            class="logo plain-link"
+            target="_blank"
             href="https://alpha-omega.dev/"
           ><LogoAlphaOmega
             aria-label="The Alpha Omega logo"
@@ -381,15 +392,6 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <a
             class="logo plain-link"
             target="_blank"
-            href="https://www.cncf.io/"
-          ><LogoCncf
-            aria-label="The CNCF logo"
-            width="104"
-            height="40"
-          /></a>
-          <a
-            class="logo plain-link"
-            target="_blank"
             href="https://www.linuxfoundation.org/"
           ><LogoLinuxFoundation
             aria-label="The Linux Foundation logo"
@@ -400,12 +402,21 @@ const { data: posts } = await useAsyncData(route.path, () =>
           <a
             class="logo plain-link"
             target="_blank"
-            href="https://cyclonedx.org/"
-          ><LogoCycloneDx
-            aria-label="The CycloneDX logo"
+            href="https://www.cncf.io/"
+          ><LogoCncf
+            aria-label="The CNCF logo"
             width="104"
             height="40"
           /></a>
+          <!-- <a -->
+          <!--   class="logo plain-link" -->
+          <!--   target="_blank" -->
+          <!--   href="https://cyclonedx.org/" -->
+          <!-- ><LogoCycloneDx -->
+          <!--   aria-label="The CycloneDX logo" -->
+          <!--   width="104" -->
+          <!--   height="40" -->
+          <!-- /></a> -->
         </div>
       </div>
     </div>
