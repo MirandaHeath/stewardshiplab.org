@@ -34,7 +34,7 @@ const toggleNav = debounceLeading(() => {
             <div class="visually-hidden">
               Software Stewardship Lab
             </div>
-            <NuxtLink to="/" class="plain-link">
+            <NuxtLink @click="closeNav" to="/" class="plain-link">
               <Logo width="240" height="51" />
             </NuxtLink>
           </div>
