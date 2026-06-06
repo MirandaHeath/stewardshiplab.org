@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
+
+const title = `Sponsor ✸ Software Stewardship Lab`;
+const description = 'Support impactful applied Open Source research by sponsoring the Stewardship Lab.';
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+});
 </script>
 
 <template>
