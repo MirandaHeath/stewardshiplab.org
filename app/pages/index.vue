@@ -183,7 +183,7 @@ const { data: posts } = await useAsyncData(route.path, () =>
         >
           <p>
             Board member of <a href="https://chaoss.community/">CHAOSS</a> and <a href="https://openuk.uk/">OpenUK</a>.
-            Previous open source leadership positions at <a href="https://www.intel.com/">Intel</a>, <a href="https://www.vmware.com/">VMware</a>, and <a href="https://www.puppet.com/">Puppet</a>.
+            Previous Open Source leadership positions at <a href="https://www.intel.com/">Intel</a>, <a href="https://www.vmware.com/">VMware</a>, and <a href="https://www.puppet.com/">Puppet</a>.
             <a href="https://fastwonderblog.com/academic/">PhD</a> using metrics to study the Linux kernel.
           </p>
         </Member>
