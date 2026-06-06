@@ -6,6 +6,7 @@ date: 2026-05-09 10:00 +0000
 description: "The streetlight effect in project-health scoring"
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/05/09/the-mismeasure-of-open-source"
+featured: true
 ---
 
 Every attempt to score open source projects for criticality, risk, or funding need ends up built on roughly the same dozen signals, because those are the dozen signals you can get from a registry API and the GitHub REST endpoints in an afternoon. I [wrote earlier this week](/ideas/revisiting-the-2015-open-source-census) about the 2015 CII census, whose formula scored xz-utils a 6 out of 13 and let it sink to row 254, and which nonetheless got more right than it's usually given credit for.

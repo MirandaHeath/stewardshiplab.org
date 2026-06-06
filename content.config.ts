@@ -12,6 +12,7 @@ const postSchema = z.object({
   imageAlt: z.string().optional(),
   fullWidthLayout: z.boolean().optional(),
   featured: z.boolean().optional(),
+  featuredOnHomepage: z.boolean().optional(),
   canonicalWebsiteName: z.string().optional(),
   canonicalUrl: z.string().optional(),
   venue: z.string().optional(),

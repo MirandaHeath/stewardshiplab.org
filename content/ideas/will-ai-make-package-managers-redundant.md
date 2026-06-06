@@ -6,6 +6,7 @@ date: 2026-01-30 10:00 +0000
 description: "Following the prompt registry idea to its logical conclusion."
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/01/30/will-ai-make-package-managers-redundant"
+featured: true
 ---
 
 A [recent post by Marcelo Emmerich](https://medium.com/@marcelo.emmerich/the-package-manager-of-the-future-95408980478f) proposes replacing package managers with a "prompt registry." Instead of publishing code, library authors would publish AI prompts. Developers paste the prompt into their AI tool, which generates a self-contained implementation on the spot. No transitive dependencies, no supply chain attacks, no version conflicts. The code is generated fresh each time, tailored to your language and project.

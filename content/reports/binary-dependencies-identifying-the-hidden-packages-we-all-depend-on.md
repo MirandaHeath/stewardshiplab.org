@@ -11,6 +11,7 @@ metaImage: 'https://vlad.website/images/opengraph/binary-dependencies.png'
 canonicalWebsiteName: "vlad.website"
 canonicalUrl: "https://vlad.website/binary-dependencies-identifying-the-hidden-packages-we-all-depend-on/"
 featured: true
+featuredOnHomepage: true
 ---
 
 <figure>

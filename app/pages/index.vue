@@ -29,19 +29,19 @@ const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   Promise.all([
     queryCollection('tools')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage')
       .order('date', 'DESC')
-      .where('featured', '=', true)
+      .where('featuredOnHomepage', '=', true)
       .all(),
     queryCollection('reports')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage')
       .order('date', 'DESC')
-      .where('featured', '=', true)
+      .where('featuredOnHomepage', '=', true)
       .all(),
     queryCollection('ideas')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
+      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage')
       .order('date', 'DESC')
-      .where('featured', '=', true)
+      .where('featuredOnHomepage', '=', true)
       .all(),
   ]).then((results) =>
     results.flat().sort((a, b) => b.date.localeCompare(a.date))

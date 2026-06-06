@@ -6,6 +6,7 @@ date: 2026-05-06 10:00 +0000
 description: "The riskiest projects in open source, scored a decade early"
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/05/06/revisiting-the-2015-open-source-census"
+featured: true
 ---
 
 In July 2015, a year after Heartbleed, the Linux Foundation's Core Infrastructure Initiative published a [census of open source projects](https://github.com/ossf/census). The idea was to find the next OpenSSL before it found us: take every package in Debian's popularity contest, score it for risk, and produce a ranked list of where to send help. David Wheeler designed the scoring, a small team did manual review, and the output was [a CSV of 428 projects](https://github.com/ossf/census/blob/main/results.csv) sorted by a `risk_index` from 1 to 13.

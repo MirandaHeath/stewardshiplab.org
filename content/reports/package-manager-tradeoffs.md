@@ -6,6 +6,7 @@ date: 2025-12-05 10:00 +0000
 description: "Design tradeoffs in package managers"
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2025/12/05/package-manager-tradeoffs"
+featured: true
 ---
 
 Package managers make dozens of design decisions with no right answer. Each choice has real costs and benefits, and choosing one side often forecloses other options. This is a survey of those tradeoffs.

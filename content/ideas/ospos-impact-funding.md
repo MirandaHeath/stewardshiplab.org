@@ -6,6 +6,7 @@ date: 2026-06-02
 description: "Measuring the impact of open source funding can help justify future rounds of funding"
 canonicalWebsiteName: "fastwonderblog.com"
 canonicalUrl: "https://fastwonderblog.com/2026/06/02/how-ospos-can-measure-the-impact-of-oss-funding/"
+featured: true
 ---
 
 So much of the critical infrastructure that we all rely on contains open source projects that are under-resourced and struggling. One (of many) ways to help these projects is by funding development and maintenance so that contributors can focus on this work, but times are tough. Organizations and OSPOs are feeling the pinch, and it can be hard to justify continuing to fund open source projects. Measuring the impact of open source funding is something that I'm passionate about because the best way to continue to get leadership to give you money to fund open source is by showing them the impact of that funding. 

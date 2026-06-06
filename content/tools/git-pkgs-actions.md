@@ -6,6 +6,7 @@ description: "How to add git-pkgs to your GitHub Actions workflows."
 date: 2026-03-11 10:00:00 +0000
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/03/11/git-pkgs-actions"
+featured: true
 ---
 
 Until now [git-pkgs](https://github.com/git-pkgs/git-pkgs) has been a local tool, you run it in your terminal to query dependency history, scan for vulnerabilities, check licenses. Getting it into CI meant downloading the binary yourself, initializing the database, and wiring up whatever checks you wanted by hand.

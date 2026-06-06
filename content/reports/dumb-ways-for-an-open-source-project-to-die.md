@@ -6,6 +6,7 @@ date: 2026-05-19 10:00 +0000
 description: "How your dependencies became Bernies"
 canonicalWebsiteName: "nesbitt.io"
 canonicalUrl: "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die"
+featured: true
 ---
 
 [Weekend at Bernie's](/ideas/weekend-at-bernies) showed that a good chunk of the most-depended-on open source packages are dead, and there are a lot of different ways for a project to end up that way.

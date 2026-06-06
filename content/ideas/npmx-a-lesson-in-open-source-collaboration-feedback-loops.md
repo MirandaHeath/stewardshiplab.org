@@ -7,6 +7,7 @@ date: 2026-03-03T10:00:00+01:00
 location: Edinburgh, Scotland
 canonicalUrl: http://opensourcepledge.com/blog/npmx-a-lesson-in-open-source-collaboration-feedback-loops
 canonicalWebsiteName: "the Open Source Pledge blog"
+featured: true
 ---
 
 [_npmx_ launched today][npmx-release-post], and witnessing its incredible development journey has taught me a lot about

@@ -9,6 +9,7 @@ venue: 'AltCtrlOrg'
 venueUrl: 'https://altctrl.org/'
 canonicalWebsiteName: 'vlad.website'
 canonicalUrl: 'https://vlad.website/open-source-deceptive-power-or-collective-governance/'
+featured: true
 ---
 
 In October 2024, it emerged that WordPress co-founder Matt Mullenweg has extensive power over the entire WordPress

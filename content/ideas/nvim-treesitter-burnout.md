@@ -8,6 +8,7 @@ location: Edinburgh, Scotland
 metaImage: 'https://vlad.website/images/opengraph/nvim-treesitter-burnout.png'
 canonicalWebsiteName: 'vlad.website'
 canonicalUrl: 'https://vlad.website/nvim-treesitter-burnout/'
+featured: true
 ---
 
 On 2 Apr, in the
