@@ -22,7 +22,7 @@ const toggleNav = debounceLeading(() => {
 </script>
 
 <template>
-  <div class="page-container">
+  <div class="page-container" id="top">
     <div class="squiggles">
       <Star class="squiggle squiggle--a" />
       <Star class="squiggle squiggle--b" />
@@ -94,6 +94,9 @@ const toggleNav = debounceLeading(() => {
     <footer>
       <div class="container">
         <div class="footer-items">
+          <div class="footer-access">
+            <a href="#top" class="plain-link text-xs">Back to top ↑</a>
+          </div>
           <div class="footer-links">
             <h2>Resources</h2>
             <a href="/privacy-policy">Privacy Policy</a>
@@ -287,6 +290,16 @@ footer {
     font-feature-settings: "smcp";
     text-transform: lowercase;
     color: var(--color-text);
+  }
+  .footer-access {
+    display: none;
+    @media (max-width: 900px) {
+      display: block;
+    }
+    a {
+      margin-top: -10px;
+      padding: 10px 0;
+    }
   }
   .footer-items {
     display: flex;

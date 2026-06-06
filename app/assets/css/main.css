@@ -551,6 +551,21 @@ button.button, a.button {
       margin-left: 10px;
     }
   }
+  &.button--text {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-weight: normal;
+    color: var(--color-text);
+    font-variant-caps: unset;
+    font-feature-settings: unset;
+    text-transform: unset;
+    font-size: var(--font-size-xs);
+    &:hover {
+      background: none;
+      color: var(--color-blue);
+    }
+  }
 }
 
 button.plain-button {
