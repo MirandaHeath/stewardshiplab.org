@@ -193,7 +193,7 @@ h1.page-title {
 }
 .usps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-block: 40px;
   .usp {
