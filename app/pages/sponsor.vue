@@ -31,8 +31,8 @@ useSeoMeta({
         <h3>Signal thought leadership to customers</h3>
         <hr>
         <p>
-          Give customers another reason to choose you over their competitors by positioning yourself as a thought
-          leader that sees issues in the ecosystem before they happen, and does something to help.
+          Give customers another reason to choose you over your competitors by positioning yourself as a thought leader
+          that sees issues in the ecosystem before they happen, and does something to help.
         </p>
       </div>
       <div class="usp">
@@ -149,8 +149,8 @@ useSeoMeta({
       <hr class="hr--short">
       <div>
         <p>
-          Yes! We are very grateful for donations received from individuals, and for one-time donations. Every little
-          bit helps us do our research. We'll be happy to feature your name in our “other sponsors” section.
+          Yes! We are very grateful for donations from individuals, and for one-time donations. Every little bit helps
+          us do our research. We'll be happy to feature your name in our “other sponsors” section.
         </p>
       </div>
     </div>
@@ -160,7 +160,7 @@ useSeoMeta({
       <div>
         <p>
           No. To be able to use our funds most efficiently, we made the choice to incorporate as a UK non-profit company
-          limited by guarantee, which does not have tax-exempt status.
+          limited by guarantee, which does not offer tax-exempt status.
         </p>
       </div>
     </div>
