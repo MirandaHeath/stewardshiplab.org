@@ -33,3 +33,26 @@ elements.
 
 [govuk-type-scale]: https://design-system.service.gov.uk/styles/type-scale/
 [rem]: https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/#strategic-unit-deployment-6
+
+## Adding New Reports, Tools, and Ideas Posts
+
+Add the appropriate metadata at the top of the .md file. Here's an example:
+```
+---
+authors: ['vlad']
+category: 'funding-tech-infrastructure'
+title: "Not Paying Open Source Maintainers Is Expensive"
+description: "Not paying for the Open Source software you use can seem like a great deal — but it can end up costing you money."
+date: 2025-06-18
+canonicalWebsiteName: 'the Open Source Pledge blog'
+canonicalUrl: 'https://opensourcepledge.com/blog/not-paying-open-source-maintainers-is-expensive/'
+---
+```
+
+To view existing categories or to create a new category, use app/data/content.ts.
+
+To properly credit multiple authors:
+
+* Add the authors to app/data/content.ts
+* Add an avatar to public/images/people/personName.webp using `magick personName.jpg -resize '>400x' personName.webp`
+* Add the author IDs to the authors field in the metadata
