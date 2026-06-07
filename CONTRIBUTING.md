@@ -36,7 +36,9 @@ elements.
 
 ## Adding New Reports, Tools, and Ideas Posts
 
-Add the appropriate metadata at the top of the .md file. Here's an example:
+Create a new `.md` file in [`content/`](./content/) or its subdirectories, and add the appropriate metadata to the front
+matter at the top of the file. Here's an example:
+
 ```
 ---
 authors: ['vlad']
@@ -49,10 +51,12 @@ canonicalUrl: 'https://opensourcepledge.com/blog/not-paying-open-source-maintain
 ---
 ```
 
-To view existing categories or to create a new category, use app/data/content.ts.
+To view the front matter schema, check [`content.config.ts`](/content.config.ts).
+
+To view existing categories or to create a new category, use [`app/data/content.ts`](./app/data/content.ts).
 
 To properly credit multiple authors:
 
-* Add the authors to app/data/content.ts
-* Add an avatar to public/images/people/personName.webp using `magick personName.jpg -resize '>400x' personName.webp`
-* Add the author IDs to the authors field in the metadata
+* Add the authors to `app/data/content.ts`
+* Add an avatar to `public/images/people/personName.webp` using, for example, `magick personName.jpg -resize '>400x' personName.webp`
+* Add the author IDs to the `authors` field in the `.md` file's front matter
