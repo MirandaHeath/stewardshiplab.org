@@ -187,6 +187,12 @@ img, svg, figure, iframe, video {
   max-width: 100%;
 }
 
+iframe[src^="https://www.youtube.com/embed/"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 svg {
   * {
     transition: fill 200ms, stroke 200ms;
