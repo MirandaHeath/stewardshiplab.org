@@ -2,28 +2,29 @@ import * as cheerio from 'cheerio';
 import { parseUsdAmount } from './format.ts';
 
 type Employee = {
-  name: string;
-  title: string;
-  salaryPay: number;
-  otherPay: number;
-  totalPay: number;
+  name: string
+  title: string
+  salaryPay: number
+  otherPay: number
+  totalPay: number
 };
 
 type Filing = {
-  year: number;
-  revenue: number;
-  netAssets: number;
-  highestPaidEmployee: Employee;
-  employees: Employee[];
+  year: number
+  revenue: number
+  netAssets: number
+  highestPaidEmployee: Employee
+  employees: Employee[]
 };
 
 type Org = {
-  id: string;
-  name: string;
-  filings: Filing[];
+  id: string
+  name: string
+  legalForm: string
+  filings: Filing[]
 };
 
-export async function getPropublicaInfo(id, pageBody, targetYears) {
+export async function getPropublicaInfo(id, pageBody, targetYears): Org {
   const $ = await cheerio.load(pageBody);
 
   const name = $('h1.text-hed-900').text();
@@ -47,11 +48,11 @@ export async function getPropublicaInfo(id, pageBody, targetYears) {
       .find('.row-summary .row-summary__item:last-child .row-summary__number')
       .text());
     const $employeeRows = $(this).find('.employee-row:not(.more-employees-link)');
-    const employees = $employeeRows.map(function(idx) {
+    const _employees = $employeeRows.map(function(idx) {
       const nameAndTitle = $(this).find('td:first-child').text().trim();
       const name = nameAndTitle.replace(/ \n.*/, '');
       let title = '';
-      const titleMatches = nameAndTitle.match(/\((.*)\)/)
+      const titleMatches = nameAndTitle.match(/\((.*)\)/);
       if (titleMatches && titleMatches.length >= 2) {
         title = titleMatches[1];
       }

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
   features: {
-    inlineStyles: false
+    inlineStyles: false,
   },
   svgo: {
     defaultImport: 'component',
@@ -20,8 +20,8 @@ export default defineNuxtConfig({
       script: [
         {
           'data-goatcounter': 'https://stewardshiplab.goatcounter.com/count',
-          src: '//gc.zgo.at/count.js',
-          async: '',
+          'src': '//gc.zgo.at/count.js',
+          'async': '',
         },
       ],
     },
@@ -70,4 +70,4 @@ export default defineNuxtConfig({
   htmlValidator: {
     failOnError: true,
   },
-})
+});

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import Logo from '~/assets/images/logo.svg'
-import Star from '~/assets/images/star.svg'
-import IconBluesky from '../components/IconBluesky.vue'
-import IconMastodon from '~/assets/images/icons/mastodon.svg'
-import IconDiscord from '~/assets/images/icons/discord.svg'
-import IconList from '~/assets/images/icons/phosphor/list.svg'
-import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
-import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
-import LogoStatichost from '~/assets/images/logos/statichost.svg'
-import { debounceLeading } from '../utils/misc.ts'
+import Logo from '~/assets/images/logo.svg';
+import Star from '~/assets/images/star.svg';
+import IconBluesky from '../components/IconBluesky.vue';
+import IconMastodon from '~/assets/images/icons/mastodon.svg';
+import IconDiscord from '~/assets/images/icons/discord.svg';
+import IconList from '~/assets/images/icons/phosphor/list.svg';
+import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg';
+import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg';
+import LogoStatichost from '~/assets/images/logos/statichost.svg';
+import { debounceLeading } from '../utils/misc.ts';
 
-let isNavOpen = ref(false);
+const isNavOpen = ref(false);
 
 const closeNav = debounceLeading(() => {
   isNavOpen.value = false;

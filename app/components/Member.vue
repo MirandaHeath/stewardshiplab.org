@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
+import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg';
 
-const props = defineProps(['name', 'title', 'imageUrl', 'url']);
+defineProps({
+  name: String,
+  title: String,
+  imageUrl: String,
+  url: String,
+});
 </script>
 
 <template>

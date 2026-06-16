@@ -2,7 +2,12 @@
 import { formatDate } from '../utils/format.ts';
 import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
 
-const props = defineProps(['post', 'type', 'breadcrumbUrl', 'breadcrumbText']);
+const props = defineProps({
+  post: Object,
+  type: String,
+  breadcrumbUrl: String,
+  breadcrumbText: String,
+});
 
 const title = `${props.post.title} ✸ Software Stewardship Lab`;
 
@@ -19,7 +24,7 @@ useSeoMeta({
   <div class="container post__before">
     <div>
       <NuxtLink
-       v-if="breadcrumbUrl && breadcrumbText"
+        v-if="breadcrumbUrl && breadcrumbText"
         class="plain-link"
         :to="breadcrumbUrl"
       >{{ breadcrumbText }}</NuxtLink>
@@ -36,7 +41,7 @@ useSeoMeta({
       v-if="post.authors || post.editor || post.date || post.location || (post.canonicalWebsiteName && post.canonicalUrl) || post.venue"
     >
       <template v-if="post.authors">
-        <div class="post__meta-item" v-for="author in post.authors">
+        <div class="post__meta-item" v-for="author in post.authors" :key="author">
           <b v-if="post.authors.length == 1">Author</b>
           <b v-if="post.authors.length > 1">Co-author</b>
           <div class="post__person">
@@ -74,7 +79,7 @@ useSeoMeta({
       <img :src="post.image" :alt="post.imageAlt">
     </figure>
   </div>
-  <div :class="{ 'container': !post.fullWidthLayout }">
+  <div :class="{ container: !post.fullWidthLayout }">
     <ContentRenderer :value="post" class="prose" />
   </div>
   <div class="container post__after">

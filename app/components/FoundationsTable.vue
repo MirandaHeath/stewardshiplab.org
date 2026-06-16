@@ -4,7 +4,8 @@
       <div class="control-bar">
         <div class="control-set">
           <button
-            v-for='year in displayYearOptions'
+            v-for="year in displayYearOptions"
+            :key="year"
             @click="setDisplayYear(year)"
             class="button button--s"
             :class="{ 'button--active': displayYear == year }"
@@ -156,6 +157,120 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
+import { getPropublicaInfo } from '../utils/propublica.ts';
+import { formatUsdAmount } from '../utils/format.ts';
+
+function guard(org, getter) {
+  try {
+    return getter(org);
+  } catch {
+    return undefined;
+  }
+}
+const SG_NAME          = d => guard(d, d => d.name);
+const SG_COUNTRY       = d => guard(d, d => d.country);
+const SG_LEGALFORM     = d => guard(d, d => d.legalForm);
+const SG_REVENUE       = d => guard(d, d => d.filings[displayYear.value].revenue);
+const SG_NETASSETS     = d => guard(d, d => d.filings[displayYear.value].netAssets);
+const SG_HPE_NAME      = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.name);
+const SG_HPE_TITLE     = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.title);
+const SG_HPE_SALARYPAY = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
+const SG_HPE_OTHERPAY  = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.otherPay);
+
+function setDisplayYear(year) {
+  displayYear.value = year;
+}
+
+function setSortGetter(newGetter) {
+  if (sortGetter.value.name == newGetter.name) {
+    sortAsc.value = !sortAsc.value;
+  } else {
+    sortGetter.value = newGetter;
+    sortAsc.value = true;
+  }
+}
+
+function getSortingDataAttr(candidateSortGetter) {
+  if (candidateSortGetter == sortGetter.value) {
+    if (sortAsc.value) {
+      return 'asc';
+    } else {
+      return 'desc';
+    }
+  }
+}
+
+function mean(getter) {
+  const vals = sortedOrgs.value.map(getter).filter(item => item);
+  const sum = vals.reduce((acc, item) => acc + item, 0);
+  return sum / vals.length;
+}
+
+function median(getter) {
+  const vals = sortedOrgs.value.map(getter).filter(item => item);
+  return vals[Math.round(vals.length / 2)];
+}
+
+function nonzeroMean(getter) {
+  const vals = sortedOrgs.value
+    .map(getter)
+    .filter(item => item)
+    .filter(item => item != 0);
+  const sum = vals.reduce((acc, item) => acc + item, 0);
+  return sum / vals.length;
+}
+
+function nonzeroMedian(getter) {
+  const vals = sortedOrgs.value
+    .map(getter)
+    .filter(item => item)
+    .filter(item => item != 0);
+  return vals[Math.round(vals.length / 2)];
+}
+
+const sortGetter = ref(SG_REVENUE);
+const sortAsc = ref(false);
+const displayYear = ref('2024');
+const displayYearOptions = ['2024', '2023', '2022'];
+
+// eslint-disable-next-line @stylistic/space-before-function-paren
+const { data: allOrgs, _status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
+  const promises = ORG_IDS.map((orgId) => {
+    return $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
+      .then(pageBody => getPropublicaInfo(orgId, pageBody, displayYearOptions));
+  });
+  return await Promise.all(promises);
+});
+
+const sortedOrgs = computed(() => {
+  return allOrgs.value.toSorted((a, b) => {
+    let va, vb;
+    try {
+      va = sortGetter.value(a);
+      vb = sortGetter.value(b);
+    } catch {
+      return 0;
+    }
+    if (typeof va == 'number' && typeof vb == 'number') {
+      if (sortAsc.value) {
+        return va - vb;
+      } else {
+        return vb - va;
+      }
+    }
+    if (typeof va == 'string' && typeof vb == 'string') {
+      if (sortAsc.value) {
+        return va.localeCompare(vb);
+      } else {
+        return vb.localeCompare(va);
+      }
+    }
+  });
+});
+</script>
+
 <style scoped>
 .foundations-table {
   margin-block: 30px;
@@ -188,117 +303,3 @@ table {
   }
 }
 </style>
-
-<script setup lang="ts">
-import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
-import { getPropublicaInfo } from '../utils/propublica.ts';
-import { formatUsdAmount } from '../utils/format.ts';
-
-function guard(org, getter) {
-  try {
-    return getter(org);
-  } catch (e) {
-    return undefined;
-  }
-}
-const SG_NAME          = (d) => guard(d, (d) => d.name);
-const SG_COUNTRY       = (d) => guard(d, (d) => d.country);
-const SG_LEGALFORM     = (d) => guard(d, (d) => d.legalForm);
-const SG_REVENUE       = (d) => guard(d, (d) => d.filings[displayYear.value].revenue);
-const SG_NETASSETS     = (d) => guard(d, (d) => d.filings[displayYear.value].netAssets);
-const SG_HPE_NAME      = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.name);
-const SG_HPE_TITLE     = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.title);
-const SG_HPE_SALARYPAY = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
-const SG_HPE_OTHERPAY  = (d) => guard(d, (d) => d.filings[displayYear.value].highestPaidEmployee.otherPay);
-
-function setDisplayYear(year) {
-  displayYear.value = year;
-}
-
-function setSortGetter(newGetter) {
-  if (sortGetter.value.name == newGetter.name) {
-    sortAsc.value = !sortAsc.value;
-  } else {
-    sortGetter.value = newGetter;
-    sortAsc.value = true;
-  }
-}
-
-function getSortingDataAttr(candidateSortGetter) {
-  if (candidateSortGetter == sortGetter.value) {
-    if (sortAsc.value) {
-      return 'asc';
-    } else {
-      return 'desc';
-    }
-  }
-}
-
-function mean(getter) {
-  const vals = sortedOrgs.value.map(getter).filter((item) => item);
-  const sum = vals.reduce((acc, item) => acc + item, 0);
-  return sum / vals.length;
-}
-
-function median(getter) {
-  const vals = sortedOrgs.value.map(getter).filter((item) => item);
-  return vals[Math.round(vals.length / 2)];
-}
-
-function nonzeroMean(getter) {
-  const vals = sortedOrgs.value
-    .map(getter)
-    .filter((item) => item)
-    .filter((item) => item != 0);
-  const sum = vals.reduce((acc, item) => acc + item, 0);
-  return sum / vals.length;
-}
-
-function nonzeroMedian(getter) {
-  const vals = sortedOrgs.value
-    .map(getter)
-    .filter((item) => item)
-    .filter((item) => item != 0);
-  return vals[Math.round(vals.length / 2)];
-}
-
-let sortGetter = ref(SG_REVENUE);
-let sortAsc = ref(false);
-let displayYear = ref('2024');
-const displayYearOptions = ['2024', '2023', '2022'];
-
-const { data: allOrgs, status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
-  return await Promise.all(
-    ORG_IDS.map((orgId) =>
-      $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
-        .then((pageBody) => getPropublicaInfo(orgId, pageBody, displayYearOptions))
-    )
-  );
-});
-
-const sortedOrgs = computed(() => {
-  return allOrgs.value.toSorted((a, b) => {
-    let va, vb;
-    try {
-      va = sortGetter.value(a);
-      vb = sortGetter.value(b);
-    } catch (e) {
-      return 0;
-    }
-    if (typeof va == 'number' && typeof vb == 'number') {
-      if (sortAsc.value) {
-        return va - vb;
-      } else {
-        return vb - va;
-      }
-    }
-    if (typeof va == 'string' && typeof vb == 'string') {
-      if (sortAsc.value) {
-        return va.localeCompare(vb);
-      } else {
-        return vb.localeCompare(va);
-      }
-    }
-  });
-});
-</script>

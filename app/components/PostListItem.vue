@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import Star from '~/assets/images/star.svg'
+import Star from '~/assets/images/star.svg';
 import { PEOPLE } from '../data/content.ts';
 
-const props = defineProps(['post']);
+defineProps({
+  post: Object,
+});
 </script>
 
 <template>
@@ -12,7 +14,7 @@ const props = defineProps(['post']);
     <div class="post-list-item__meta">
       <div class="post-list-item__authors">
         <template v-if="post.authors">
-          <div class="post-list-item__person" v-for="author in post.authors">
+          <div class="post-list-item__person" v-for="author in post.authors" :key="author">
             <img :src="PEOPLE[author].image" :alt="'A portrait of ' + PEOPLE[author].name">
             <span>{{ PEOPLE[author].name }}</span>
           </div>

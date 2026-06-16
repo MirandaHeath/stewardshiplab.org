@@ -10,4 +10,3 @@ export function debounceLeading(func: Function, timeout = 300) {
     }, timeout);
   };
 }
-

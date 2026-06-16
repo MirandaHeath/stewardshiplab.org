@@ -1,5 +1,5 @@
 export const URL_PREFIX_PROPUBLICA_ORG = 'https://projects.propublica.org/nonprofits/organizations/';
-export const ORG_IDS = [
+export const ORG_IDS: string[] = [
   '472119192', // .NET Foundation
   '862791864', // AlmaLinux OS Foundation
   '470825376', // Apache Foundation

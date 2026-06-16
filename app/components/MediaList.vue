@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { formatDate } from '../utils/format.ts';
-import { PEOPLE, MEDIA_CATEGORIES } from '../data/content.ts';
+import { PEOPLE } from '../data/content.ts';
 
-const props = defineProps(['media']);
+defineProps({
+  media: Array,
+});
 
 function makeBackground(imageUrl) {
   return `url(${imageUrl})`;
@@ -19,13 +21,13 @@ function makeBackground(imageUrl) {
         <p>{{ item.description }}</p>
         <div class="media-list-item__people">
           <template v-if="item.guests">
-            <div class="media-list-item__person" v-for="guest in item.guests">
+            <div class="media-list-item__person" v-for="guest in item.guests" :key="guest">
               <img :src="PEOPLE[guest].image" :alt="'A portrait of ' + PEOPLE[guest].name">
               <span>{{ PEOPLE[guest].name }}</span>
             </div>
           </template>
           <template v-if="item.hosts">
-            <div class="media-list-item__person" v-for="host in item.hosts">
+            <div class="media-list-item__person" v-for="host in item.hosts" :key="host">
               <img :src="PEOPLE[host].image" :alt="'A portrait of ' + PEOPLE[host].name">
               <span>{{ PEOPLE[host].name }}</span>
             </div>

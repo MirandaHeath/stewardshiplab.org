@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const props = defineProps(['posts']);
+const props = defineProps({
+  posts: Array,
+});
 
-let categorised = ref(true);
+const categorised = ref(true);
 
-const featuredPosts = props.posts.filter((post) => post.featured);
+const featuredPosts = props.posts.filter(post => post.featured);
 </script>
 
 <template>

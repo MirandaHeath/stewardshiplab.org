@@ -1,11 +1,11 @@
 <script setup>
 const route = useRoute();
-const { data: posts } = await useAsyncData(route.path, () =>
-  queryCollection('ideas')
+const { data: posts } = await useAsyncData(route.path, () => {
+  return queryCollection('ideas')
     .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured')
     .order('date', 'DESC')
-    .all()
-);
+    .all();
+});
 
 const title = `Ideas ✸ Software Stewardship Lab`;
 const description = 'We regularly write about Open Source governance and burnout, software supply chains, package management, funding and metrics, and other topics in Open Source sustainability.';

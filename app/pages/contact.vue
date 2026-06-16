@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import IconEnvelopeOpenBold from '~/assets/images/icons/phosphor/envelope-open-bold.svg'
-import IconBluesky from '../components/IconBluesky.vue'
-import IconMastodon from '~/assets/images/icons/mastodon.svg'
-import IconDiscord from '~/assets/images/icons/discord.svg'
+import IconEnvelopeOpenBold from '~/assets/images/icons/phosphor/envelope-open-bold.svg';
+import IconBluesky from '../components/IconBluesky.vue';
+import IconMastodon from '~/assets/images/icons/mastodon.svg';
+import IconDiscord from '~/assets/images/icons/discord.svg';
 
 const title = `Contact ✸ Software Stewardship Lab`;
 const description = 'Want to chat about Open Source sustainability? Contact us!';

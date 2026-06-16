@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { formatDate } from '../utils/format.ts';
 import { POST_CATEGORIES } from '../data/content.ts';
 
-const props = defineProps(['posts', 'categorised', 'featuredOnly']);
+const props = defineProps({
+  posts: Array,
+  categorised: Boolean,
+  featuredOnly: Boolean,
+});
 
 const postsByCategory = props.posts.reduce((cats, post) => {
   if (!(post.category in cats)) {
@@ -12,7 +15,7 @@ const postsByCategory = props.posts.reduce((cats, post) => {
   return cats;
 }, {});
 
-const featuredPosts = props.posts.filter((post) => post.featured);
+const featuredPosts = props.posts.filter(post => post.featured);
 </script>
 
 <template>
@@ -25,8 +28,8 @@ const featuredPosts = props.posts.filter((post) => post.featured);
     <template v-if="!featuredOnly">
       <template v-if="categorised">
         <div class="post-list-category-set">
-          <template v-for='category in Object.keys(POST_CATEGORIES)'>
-            <div class="post-list-category" v-if='category in postsByCategory'>
+          <template v-for="category in Object.keys(POST_CATEGORIES)" :key="category">
+            <div class="post-list-category" v-if="category in postsByCategory">
               <div class="post-list-category__details">
                 <h2>{{ POST_CATEGORIES[category].name }}</h2>
                 <p>{{ POST_CATEGORIES[category].description }}</p>

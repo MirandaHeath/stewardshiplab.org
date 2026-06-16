@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { formatUsdAmount } from '../utils/format.ts';
 
-const tier = defineProps(['name', 'price']);
+const tier = defineProps({
+  name: String,
+  price: Number,
+});
 </script>
 
 <template>

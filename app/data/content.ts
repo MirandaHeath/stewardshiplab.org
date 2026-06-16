@@ -1,21 +1,21 @@
 export const PEOPLE = {
-  vlad: {
+  'vlad': {
     name: 'Vlad-Stefan Harbuz',
     image: '/images/people/vlad@120px.webp',
   },
-  miranda: {
+  'miranda': {
     name: 'Miranda Heath',
     image: '/images/people/miranda@120px.webp',
   },
-  andrew: {
+  'andrew': {
     name: 'Andrew Nesbitt',
     image: '/images/people/andrew@120px.webp',
   },
-  dawn: {
+  'dawn': {
     name: 'Dawn Foster',
     image: '/images/people/dawn@120px.webp',
   },
-  ben: {
+  'ben': {
     name: 'Ben Nickolls',
     image: '/images/people/ben@120px.webp',
   },

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
+import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg';
 
 const title = `Sponsor ✸ Software Stewardship Lab`;
 const description = 'Support impactful applied Open Source research by sponsoring the Stewardship Lab.';
@@ -194,6 +194,7 @@ h1.page-title {
   }
 }
 </style>
+
 <style>
 .sponsor-hero {
   img {

@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg'
-import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable vue/html-indent */
+import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg';
+import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg';
 </script>
 
 <template>
