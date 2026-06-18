@@ -66,6 +66,7 @@ path = [
     "public/images/favicon.png",
     "public/images/logo.svg",
     "public/images/og/**",
+    "public/images/star-for-bg.svg",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "LicenseRef-Restricted"

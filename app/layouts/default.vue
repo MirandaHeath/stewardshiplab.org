@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Logo from '~/assets/images/logo.svg';
 import Star from '~/assets/images/star.svg';
+import LesserArms from '~/assets/images/lesser-arms.svg';
 import IconBluesky from '../components/IconBluesky.vue';
 import IconMastodon from '~/assets/images/icons/mastodon.svg';
 import IconDiscord from '~/assets/images/icons/discord.svg';
@@ -31,11 +32,8 @@ const toggleNav = debounceLeading(() => {
       <div class="container container--narrow">
         <div class="header-container">
           <div class="header-logo">
-            <div class="visually-hidden">
-              Software Stewardship Lab
-            </div>
             <NuxtLink @click="closeNav" to="/" class="plain-link">
-              <Logo width="240" height="51" />
+              <Logo aria-label="Software Stewardship Lab" width="240" height="51" />
             </NuxtLink>
           </div>
           <nav class="desktop-nav">
@@ -97,6 +95,42 @@ const toggleNav = debounceLeading(() => {
           <div class="footer-access">
             <a href="#top" class="plain-link text-xs">Back to top ↑</a>
           </div>
+          <div class="footer-colophon">
+            <Logo width="200" aria-label="Software Stewardship Lab" />
+            <div class="footer-colophon__details">
+              <LesserArms width="50" height="50" />
+              <div>
+                A non-profit incorporated in Scotland<br>
+                Company number <a
+                  href="https://find-and-update.company-information.service.gov.uk/company/SC893294"
+                  target="_blank"
+                >SC893294</a>
+              </div>
+            </div>
+            <div class="footer-socials">
+              <a
+                href="https://bsky.app/profile/stewardshiplab.org"
+                class="plain-link"
+                target="_blank"
+              >
+                <IconBluesky />
+              </a>
+              <a
+                href="https://fosstodon.org/@stewardshiplab"
+                target="_blank"
+                class="plain-link"
+              >
+                <IconMastodon width="28" height="28" />
+              </a>
+              <a
+                href="https://discord.gg/2GNQHcKmcH"
+                target="_blank"
+                class="plain-link"
+              >
+                <IconDiscord width="28" height="28" />
+              </a>
+            </div>
+          </div>
           <div class="footer-links">
             <h2>Resources</h2>
             <a href="/privacy-policy">Privacy Policy</a>
@@ -106,30 +140,7 @@ const toggleNav = debounceLeading(() => {
           <div class="footer-sponsors">
             <h2>Hosting Sponsor</h2>
             <a class="plain-link" href="https://www.statichost.eu/" target="_blank">
-              <LogoStatichost />
-            </a>
-          </div>
-          <div class="footer-socials">
-            <a
-              href="https://bsky.app/profile/stewardshiplab.org"
-              class="plain-link"
-              target="_blank"
-            >
-              <IconBluesky />
-            </a>
-            <a
-              href="https://fosstodon.org/@stewardshiplab"
-              target="_blank"
-              class="plain-link"
-            >
-              <IconMastodon width="28" height="28" />
-            </a>
-            <a
-              href="https://discord.gg/2GNQHcKmcH"
-              target="_blank"
-              class="plain-link"
-            >
-              <IconDiscord width="28" height="28" />
+              <LogoStatichost aria-label="statichost.eu" />
             </a>
           </div>
         </div>
@@ -303,20 +314,46 @@ footer {
   }
   .footer-items {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media (max-width: 900px) {
+      gap: 20px;
+    }
+  }
+  .footer-colophon {
+    display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
     @media (max-width: 900px) {
       flex-direction: column;
+      gap: 15px;
+      margin: 0;
+    }
+    .footer-colophon__details {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    a {
+      &:after {
+        display: none;
+      }
     }
   }
   .footer-links {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
     font-size: var(--font-size-xs);
-    line-height: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: unset;
+      gap: 10px;
+    }
     a {
       &:after {
         display: none;
@@ -325,9 +362,13 @@ footer {
   }
   .footer-sponsors {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: unset;
+      gap: 10px;
+    }
     svg {
       height: 16px;
       path[fill] {
@@ -340,6 +381,7 @@ footer {
   }
   .footer-socials {
     display: flex;
+    align-items: center;
     gap: 20px;
     a svg {
       width: var(--icon-size-m);
