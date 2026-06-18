@@ -7,7 +7,6 @@ date: 2026-01-31T00:00:00+00:00
 location: 'Brussels, Belgium'
 venue: 'FOSDEM 2026'
 venueUrl: 'https://fosdem.org/2026/'
-metaImage: 'https://vlad.website/images/opengraph/binary-dependencies.png'
 canonicalWebsiteName: "vlad.website"
 canonicalUrl: "https://vlad.website/binary-dependencies-identifying-the-hidden-packages-we-all-depend-on/"
 featured: true

@@ -5,7 +5,6 @@ title: "Keystone Maintainers Keep the Internet Going"
 description: "“Keystone maintainers” is a good name for the most impactful Open Source maintainers."
 date: 2025-11-13T12:00:00+01:00
 location: Edinburgh, Scotland
-metaImage: 'https://vlad.website/images/opengraph/keystone-maintainers-keep-the-internet-going.png'
 image: 'https://vlad.website/static/irasutoya/kagu_tobiishi@500px.webp'
 imageAlt: 'An illustration of yarn'
 canonicalWebsiteName: 'vlad.website'

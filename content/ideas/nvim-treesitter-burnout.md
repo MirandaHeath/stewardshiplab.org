@@ -5,7 +5,6 @@ title: "Open Source Burnout Claims Another Project"
 description: "Yet another OSS maintainer quits because of burnout. To fix this, we need better mental health resources for maintainers."
 date: 2026-05-20T10:00:00+01:00
 location: Edinburgh, Scotland
-metaImage: 'https://vlad.website/images/opengraph/nvim-treesitter-burnout.png'
 canonicalWebsiteName: 'vlad.website'
 canonicalUrl: 'https://vlad.website/nvim-treesitter-burnout/'
 featured: true
