@@ -11,13 +11,18 @@ const props = defineProps({
 
 const title = `${props.post.title} ✸ Software Stewardship Lab`;
 
-useSeoMeta({
+let seoMeta = {
   title: title,
   description: props.post.description,
   ogTitle: title,
   ogDescription: props.post.description,
-  ogImage: props.post.metaImage,
-});
+};
+
+if (props.post.metaImage) {
+  seoMeta.ogImage = props.post.metaImage;
+}
+
+useSeoMeta(seoMeta);
 </script>
 
 <template>
