@@ -15,6 +15,10 @@ export const PEOPLE = {
     name: 'Dawn Foster',
     image: '/images/people/dawn@120px.webp',
   },
+  'mike': {
+    name: 'Mike McQuaid',
+    image: '/images/people/mike@120px.webp',
+  },
   'ben': {
     name: 'Ben Nickolls',
     image: '/images/people/ben@120px.webp',
