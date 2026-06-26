@@ -98,7 +98,7 @@ useSeoMeta({
           </li>
         </ul>
       </SponsorshipTier>
-      <SponsorshipTier name="Sustaining Patron" :price="25000">
+      <SponsorshipTier name="Sustaining Patron" :price="20000">
         <ul>
           <li>
             A press release about your company's Open Source involvement
@@ -116,7 +116,7 @@ useSeoMeta({
           </li>
         </ul>
       </SponsorshipTier>
-      <SponsorshipTier name="Associate Patron" :price="5000">
+      <SponsorshipTier name="Associate Patron" :price="10000">
         <ul>
           <li>
             Your logo on our website
