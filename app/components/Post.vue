@@ -11,7 +11,7 @@ const props = defineProps({
 
 const title = `${props.post.title} ✸ Software Stewardship Lab`;
 
-let seoMeta = {
+const seoMeta = {
   title: title,
   description: props.post.description,
   ogTitle: title,
