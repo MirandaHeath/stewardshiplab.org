@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="container container--wide table-container">
+    <div class="container container--fullwidth table-container">
       <table>
         <thead>
           <tr>

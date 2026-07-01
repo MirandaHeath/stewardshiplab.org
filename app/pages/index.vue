@@ -56,7 +56,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
         <h1 class="visually-hidden">Software Stewardship Lab</h1>
         <div class="hero">
           <Star class="squiggle squiggle--mobile squiggle--hero" />
-          <h2>
+          <h2 class="sechead">
             <small>A new non-profit applied research lab</small>
             <hr class="hr--short">
             We ensure the stability of the Open Source ecosystem we all rely on.
@@ -109,7 +109,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
         </div>
       </section>
     </div>
-    <section class="section--contrasting">
+    <section class="section--contrasting section--no-bottom-margin">
       <Star class="squiggle squiggle--c" />
       <Star class="squiggle squiggle--d" />
       <Star class="squiggle squiggle--mobile squiggle--section-a" />
@@ -412,6 +412,87 @@ const { data: posts } = await useAsyncData(route.path, () => {
         </div>
       </div>
     </section>
+    <section class="project">
+      <div class="project-canvas-container">
+        <ClientOnly>
+          <ProjectCanvas />
+        </ClientOnly>
+      </div>
+      <div class="container">
+        <div class="project__wrapper">
+          <h2 class="sechead">
+            <small>Current research focus</small>
+            <hr class="hr--short">
+            The Open Infrastructure Observatory
+          </h2>
+          <div class="project__copy">
+            <div>
+              <p>
+                Maecenas sollicitudin egestas lacus in interdum. Suspendisse pharetra sapien id scelerisque convallis.
+                Nunc varius, sapien gravida tincidunt blandit, magna turpis fringilla ligula, at aliquet eros neque eu
+                augue. Suspendisse id volutpat lectus. In pharetra, justo finibus mollis suscipit, dui ex tempor erat,
+                lobortis eleifend nisl nisl eget felis.
+              </p>
+            </div>
+            <div>
+              <p>
+                Nam nec libero mattis, molestie mi ut, pellentesque turpis. Mauris lacus nisl, elementum vitae justo in,
+                convallis interdum massa. In gravida sem sed est consequat, sed tincidunt risus luctus. Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+          </div>
+          <div class="project__features">
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+            <div class="project__feature">
+              <h3>Feature goes here</h3>
+              <p>
+                Phasellus feugiat
+                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
+              </p>
+            </div>
+          </div>
+          <div class="cta">
+            <h3>Can you help fund this work?</h3>
+            <NuxtLink to="/contact" class="button">Contact us </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container">
       <section>
         <h2 class="big-heading">
@@ -515,24 +596,8 @@ const { data: posts } = await useAsyncData(route.path, () => {
     width: 30px;
     height: 30px;
   }
-  h2 {
+  h2.sechead {
     padding-right: 30px;
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
-    text-wrap: balance;
-    small {
-      display: block;
-      font-family: var(--font-family-sans);
-      font-size: var(--font-size-m);
-      line-height: var(--line-height-m);
-      font-variant-caps: small-caps;
-      font-feature-settings: "smcp";
-      text-transform: lowercase;
-    }
-    hr {
-      margin: 10px 0;
-      border-color: var(--color-blue);
-    }
   }
 }
 .subhero {
@@ -641,6 +706,83 @@ const { data: posts } = await useAsyncData(route.path, () => {
   row-gap: 20px;
   column-gap: 30px;
   margin-block: 30px;
+}
+.project {
+  position: relative;
+  margin-top: 0;
+  padding-block: 60px;
+  background: var(--color-blue);
+  overflow: hidden;
+  @media (max-width: 800px) {
+    padding-block: 160px;
+  }
+  .project-canvas-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .project__wrapper {
+    position: relative;
+    z-index: 50;
+    padding: 60px;
+    background: var(--color-beige-bright);
+    border-radius: var(--border-radius-s);
+    box-shadow:
+      0px 0px 10px 8px #3a4de6ff,
+      0px 0px 50px 8px #ffffff44;
+  }
+  .project__copy {
+    display: flex;
+    gap: 50px;
+    margin-block: 30px;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    & > * {
+      flex: 1;
+    }
+  }
+  .project__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    column-gap: 50px;
+    row-gap: 20px;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .project__feature {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h3 {
+        margin: 0;
+        font-family: var(--font-family-sans);
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-m);
+        font-weight: 500;
+        font-variant-caps: small-caps;
+        font-feature-settings: "smcp";
+        text-transform: lowercase;
+      }
+      p {
+        margin: 0;
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-s);
+      }
+    }
+  }
+  .cta {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
 }
 .values {
   display: grid;
