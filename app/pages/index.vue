@@ -426,69 +426,69 @@ const { data: posts } = await useAsyncData(route.path, () => {
             The Open Infrastructure Observatory
           </h2>
           <div class="project__copy">
-            <div>
+            <div class="project__column">
               <p>
-                Maecenas sollicitudin egestas lacus in interdum. Suspendisse pharetra sapien id scelerisque convallis.
-                Nunc varius, sapien gravida tincidunt blandit, magna turpis fringilla ligula, at aliquet eros neque eu
-                augue. Suspendisse id volutpat lectus. In pharetra, justo finibus mollis suscipit, dui ex tempor erat,
-                lobortis eleifend nisl nisl eget felis.
+                We are currently building the components of an observatory that allows users to identify and monitor the
+                world's critical Open Source packages in real time.
+              </p>
+              <p>
+                A public observatory would inform users and companies when dependencies become insecure or unmaintained.
+              </p>
+              <p>
+                It would allow funders to intelligently allocate money to the most critical projects.
+              </p>
+              <p>
+                And it would empower researchers, governments and foundations to understand how Open Source software
+                underpins our global tech infrastructure.
+              </p>
+              <p>
+                We are doing this work in a piecemeal fashion, starting with the features listed here. We are looking
+                for funding to develop the broader project as a public-benefit resource.
               </p>
             </div>
-            <div>
-              <p>
-                Nam nec libero mattis, molestie mi ut, pellentesque turpis. Mauris lacus nisl, elementum vitae justo in,
-                convallis interdum massa. In gravida sem sed est consequat, sed tincidunt risus luctus. Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-          </div>
-          <div class="project__features">
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
-            </div>
-            <div class="project__feature">
-              <h3>Feature goes here</h3>
-              <p>
-                Phasellus feugiat
-                posuere est, sed ullamcorper tortor pellentesque eget. Praesent fermentum porta velit vitae luctus.
-              </p>
+            <div class="project__column">
+              <div class="project__feature">
+                <h3>Identifying Bernies</h3>
+                <p>
+                  Critical packages can covertly become <a href="/ideas/weekend-at-bernies">Bernies</a> —
+                  packages that appear maintained but are really abandoned.
+                </p>
+              </div>
+              <div class="project__feature">
+                <h3>Unveiling Binary Dependencies</h3>
+                <p>
+                  Many packages
+                  <a href="/reports/binary-dependencies-identifying-the-hidden-packages-we-all-depend-on"
+                    >depend on binaries</a
+                  >,
+                  but this dependency relationship is hidden and
+                  cannot be recorded by package managers.
+                </p>
+              </div>
+              <div class="project__feature">
+                <h3>Connecting Repackaged Packages</h3>
+                <p>
+                  CVEs are filed against a canonical package like <em>pypi/pip</em>,
+                  but
+                  <a
+                    href="https://nesbitt.io/2026/05/28/package-managers-that-package-package-managers.html"
+                    target="_blank"
+                  >repackaged</a>
+                  versions (eg in Homebrew or Nix) lose this security information.
+                </p>
+              </div>
+              <div class="project__feature">
+                <h3>Tracking Patches</h3>
+                <p>
+                  Many packages are augmented by system package managers' patches. However, the security implications of
+                  these patches are not currently tracked.
+                </p>
+              </div>
             </div>
           </div>
           <div class="cta">
             <h3>Can you help fund this work?</h3>
-            <NuxtLink to="/contact" class="button">Contact us </NuxtLink>
+            <NuxtLink to="/contact" class="button button--arrow">Sponsor the Lab</NuxtLink>
           </div>
         </div>
       </div>
@@ -713,8 +713,10 @@ const { data: posts } = await useAsyncData(route.path, () => {
   padding-block: 60px;
   background: var(--color-blue);
   overflow: hidden;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
   @media (max-width: 800px) {
-    padding-block: 160px;
+    padding-block: 100px;
   }
   .project-canvas-container {
     display: flex;
@@ -736,6 +738,9 @@ const { data: posts } = await useAsyncData(route.path, () => {
     box-shadow:
       0px 0px 10px 8px #3a4de6ff,
       0px 0px 50px 8px #ffffff44;
+    @media (max-width: 800px) {
+      padding: 30px;
+    }
   }
   .project__copy {
     display: flex;
@@ -749,39 +754,37 @@ const { data: posts } = await useAsyncData(route.path, () => {
       flex: 1;
     }
   }
-  .project__features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    column-gap: 50px;
-    row-gap: 20px;
-    @media (max-width: 800px) {
-      display: flex;
-      flex-direction: column;
+  .project__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    p {
+      margin: 0;
     }
-    .project__feature {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      h3 {
-        margin: 0;
-        font-family: var(--font-family-sans);
-        font-size: var(--font-size-m);
-        line-height: var(--line-height-m);
-        font-weight: 500;
-        font-variant-caps: small-caps;
-        font-feature-settings: "smcp";
-        text-transform: lowercase;
-      }
-      p {
-        margin: 0;
-        font-size: var(--font-size-s);
-        line-height: var(--line-height-s);
-      }
+  }
+  .project__feature {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    h3 {
+      margin: 0;
+      font-family: var(--font-family-sans);
+      font-weight: 500;
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+    }
+    p {
+      margin: 0;
     }
   }
   .cta {
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 0;
+    @media (max-width: 800px) {
+      margin-top: 30px;
+    }
   }
 }
 .values {
