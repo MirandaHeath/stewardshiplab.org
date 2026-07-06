@@ -38,9 +38,6 @@ a.post-list-item {
   border: 1px solid var(--color-beige-pale);
   text-decoration: none;
   transition: background-color 200ms, color 200ms;
-  &:after {
-    display: none;
-  }
   &:hover {
     background: var(--color-beige-pale);
     color: var(--color-text);

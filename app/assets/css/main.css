@@ -1,6 +1,7 @@
 :root {
   --color-text: #0a1030;
   --color-text-pale: #505673;
+  --color-text-xpale: #938e8c;
   --color-text-mark: rgba(255, 255, 255, 0.3);
 
   --color-beige: #fdf1f0;
@@ -151,12 +152,8 @@ a {
   transition: background-color 200ms, color 200ms;
   &:not(.plain-link):not(.button):not(.data-footnote-backref) {
     text-decoration: underline;
-    text-decoration-color: var(--color-beige-pale);
-    &:after {
-      content: "°";
-      padding-left: 1px;
-      color: var(--color-main);
-    }
+    text-decoration-color: var(--color-text-xpale);
+    text-decoration-thickness: 1px;
     &:hover, &:active {
       background-color: var(--color-blue);
       color: white;
@@ -166,9 +163,6 @@ a {
 h1, h2, h3, h4, h5, h6 {
   & > a[href^="#"] {
     text-decoration: none !important; /* HACK */
-    &:after {
-      display: none !important; /* HACK */
-    }
   }
 }
 .sechead {

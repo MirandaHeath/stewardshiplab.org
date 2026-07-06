@@ -337,11 +337,6 @@ footer {
       align-items: center;
       gap: 15px;
     }
-    a {
-      &:after {
-        display: none;
-      }
-    }
   }
   .footer-links {
     display: flex;
@@ -353,11 +348,6 @@ footer {
       flex-direction: column;
       align-items: unset;
       gap: 10px;
-    }
-    a {
-      &:after {
-        display: none;
-      }
     }
   }
   .footer-sponsors {
