@@ -114,7 +114,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
       <Star class="squiggle squiggle--d" />
       <Star class="squiggle squiggle--mobile squiggle--section-a" />
       <div class="container">
-        <h2 class="big-heading">Our Team</h2>
+        <h2 class="big-heading" id="team">Our Team</h2>
         <div class="members">
           <Member
             name="Vlad-Stefan Harbuz"
