@@ -165,7 +165,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
           </Member>
           <Member
             name="Daniel Roe"
-            title="Non-Executive Director"
+            title="Independent Non-Executive Director"
             image-url="/images/people/daniel@300px.webp"
             url="https://roe.dev"
           >
@@ -177,7 +177,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
           </Member>
           <Member
             name="Dawn Foster"
-            title="Non-Executive Director"
+            title="Independent Non-Executive Director"
             image-url="/images/people/dawn@300px.webp"
             url="https://fastwonder.com/"
           >
@@ -189,7 +189,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
           </Member>
           <Member
             name="Matias Capeletto"
-            title="Non-Executive Director"
+            title="Independent Non-Executive Director"
             image-url="/images/people/patak@300px.webp"
             url="https://patak.cat"
           >
