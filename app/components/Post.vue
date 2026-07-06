@@ -91,6 +91,12 @@ useSeoMeta(seoMeta);
   <div :class="{ container: !post.fullWidthLayout }">
     <ContentRenderer :value="post" class="prose" />
   </div>
+  <div v-if="post.ctaText && post.ctaAction && post.ctaLink">
+    <div class="cta">
+      <h2>{{ post.ctaText }}</h2>
+      <NuxtLink :to="post.ctaLink" class="button button--arrow">{{ post.ctaAction }}</NuxtLink>
+    </div>
+  </div>
   <div class="container post__after">
     <div v-if="breadcrumbUrl && breadcrumbText">
       <NuxtLink class="plain-link" :to="breadcrumbUrl">{{ breadcrumbText }}</NuxtLink>
@@ -100,10 +106,11 @@ useSeoMeta(seoMeta);
 
 <style>
 .embargo {
-  padding-inline: 5px;
+  padding-inline: 6px;
   border: 1px solid #ff0000;
   background: #ffdddd;
   font-weight: 500;
+  border-radius: var(--border-radius-s);
 }
 .post__before, .post__after {
   font-size: var(--font-size-xs);

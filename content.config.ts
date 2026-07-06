@@ -19,6 +19,9 @@ const postSchema = z.object({
   venueUrl: z.string().optional(),
   hidden: z.boolean().optional(),
   embargoReleaseTime: z.string().optional(), // Waiting for zod ⇌ Temporal integration
+  ctaText: z.string().optional(),
+  ctaAction: z.string().optional(),
+  ctaLink: z.string().optional(),
 });
 
 const mediaSchema = z.object({
