@@ -18,8 +18,8 @@ type Node = {
   cy: number // y position of center
   r: number // circle radius
   vx: number // x velocity
+  vx_max: number // maximum x velocity
   vy: number // y velocity
-  vy_max: number // maximum y velocity
   ax: number // x acceleration
   ay: number // y acceleration
   radar_interval: number // time between radar pulses
@@ -39,7 +39,7 @@ type State = {
 
 const state: State = {
   dt: 0,
-  tPrev: new Date(),
+  tPrev: 0,
   nodes: [],
 };
 
@@ -59,8 +59,8 @@ function getRandomNodeCx() {
 }
 
 function generateNodes() {
-  const ENT_VY = [-0.1, -0.3, -0.6];
-  const ENT_VY_MAX = [0.02, 0.1, 0.2];
+  const ENT_VY = [-0.01, -0.02, -0.03];
+  const ENT_VX_MAX = [0.002, 0.01, 0.02];
   const ENT_COUNT = 50;
   for (let idx = 0; idx < ENT_COUNT; idx += 1) {
     const node: Node = {
@@ -68,18 +68,18 @@ function generateNodes() {
       cy: rand(0, $canvas.height),
       r: rand(10, 50),
       vx: 0.0,
+      vx_max: ENT_VX_MAX[rand(0, ENT_VX_MAX.length - 1)],
       vy: ENT_VY[rand(0, ENT_VY.length - 1)],
-      vy_max: ENT_VY_MAX[rand(0, ENT_VY_MAX.length - 1)],
-      ax: 0.005,
+      ax: 0.0005,
       ay: 0.0,
-      radar_interval: rand(40.0, 60.0),
-      radar_t_to_pulse: rand(0.0, 60.0),
-      radar_pulse_duration: 6.0,
+      radar_interval: rand(20000.0, 40000.0),
+      radar_t_to_pulse: rand(0.0, 40000.0),
+      radar_pulse_duration: 6000.0,
       radar_t_left: 0,
       radar_r: 0,
-      radar_init_vr: 0.8,
+      radar_init_vr: 0.030,
       radar_vr: 0.0,
-      radar_ar: -0.006,
+      radar_ar: -0.000007,
     };
     state.nodes.push(node);
   }
@@ -118,6 +118,7 @@ function update() {
     }
 
     if (node.radar_t_to_pulse < 0) {
+      console.log('pulse');
       node.radar_t_to_pulse = 0;
       node.radar_t_left = node.radar_pulse_duration;
       node.radar_r = node.r;
@@ -127,9 +128,9 @@ function update() {
     if (node.radar_t_left > 0) {
       node.radar_t_left -= state.dt;
       if (node.radar_vr > 0) {
-        node.radar_r += node.radar_vr;
+        node.radar_r += node.radar_vr * state.dt;
       }
-      node.radar_vr += node.radar_ar;
+      node.radar_vr += node.radar_ar * state.dt;
     }
 
     if (node.radar_t_left < 0) {
@@ -138,12 +139,12 @@ function update() {
     }
 
     node.vx += node.ax;
-    if (Math.abs(node.vx) > node.vy_max) {
+    if (Math.abs(node.vx) > node.vx_max) {
       node.ax *= -1;
     }
 
-    node.cx += node.vx;
-    node.cy += node.vy;
+    node.cx += node.vx * state.dt;
+    node.cy += node.vy * state.dt;
     if ((node.cy + node.r) < 0) {
       node.cy = $canvas.height + node.r;
       node.cx = getRandomNodeCx();
@@ -151,10 +152,10 @@ function update() {
   });
 }
 
-function render() {
-  const tNow = new Date();
-  state.dt = (tNow - state.tPrev) / 1000;
-  state.tPrev = new Date();
+function render(t) {
+  // Just to get slightly bigger numbers for velocities etc, which are easier to right
+  state.dt = t - state.tPrev;
+  state.tPrev = t;
   draw();
   update();
   window.requestAnimationFrame(render);
