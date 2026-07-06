@@ -501,7 +501,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
         <PostList :posts="posts" />
       </section>
       <section>
-        <h2 class="big-heading">
+        <h2 class="big-heading" id="values">
           Values
         </h2>
         <div class="values">
