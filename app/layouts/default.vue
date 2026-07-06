@@ -133,6 +133,10 @@ const toggleNav = debounceLeading(() => {
           </div>
           <div class="footer-links">
             <h2>Resources</h2>
+            <a
+              href="https://find-and-update.company-information.service.gov.uk/company/SC893294/filing-history/MzUyNjQ3NTMwNWFkaXF6a2N4/document?format=pdf&download=0"
+              target="_blank"
+            >Articles of Incorporation</a>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/cookie-policy">Cookie Policy</a>
             <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
