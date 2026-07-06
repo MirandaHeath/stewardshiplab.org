@@ -22,6 +22,10 @@ if (props.post.metaImage) {
   seoMeta.ogImage = props.post.metaImage;
 }
 
+if (props.post.embargoReleaseTime) {
+  seoMeta.robots = 'noindex, nofollow';
+}
+
 useSeoMeta(seoMeta);
 </script>
 
