@@ -50,6 +50,9 @@ export default defineNuxtConfig({
     '/reports/foundations': {
       prerender: true,
     },
+    '/ideas/a-research-lab-for-open-source': {
+      prerender: true,
+    },
     '/foundations': {
       redirect: {
         to: '/reports/foundations',
