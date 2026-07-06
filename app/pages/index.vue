@@ -412,7 +412,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
         </div>
       </div>
     </section>
-    <section class="project">
+    <section class="project" id="observatory">
       <div class="project-canvas-container">
         <ClientOnly>
           <ProjectCanvas />

@@ -71,8 +71,11 @@ Our [independent non-executive directors][team] hold us accountable.
 
 ---
 
-Our current research focus is the _Open Infrastructure Observatory_.
-(TODO)
+Our current research focus is building the components of an observatory that allows users to identify and monitor the
+world's critical Open Source packages in real time. You can find more details [here][observatory].
+
+Another ongoing project is compiling yearly follow-ups to the [Burnout Report][burnout], and creating a companion report
+on how AI is affecting maintainer burnout.
 
 We are also working with our solicitors on becoming the UK's first Open Source charity, hopefully helping pave the way
 for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
@@ -158,6 +161,7 @@ Matias Capeletto
 [miranda]: https://mirandaheath.website/
 [npmx]: https://npmx.dev/
 [nuxt]: https://nuxt.com/
+[observatory]: /#observatory
 [ose]: https://endowment.dev/
 [osp-members]: https://opensourcepledge.com/members/
 [osp]: https://opensourcepledge.com/
