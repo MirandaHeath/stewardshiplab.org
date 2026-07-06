@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatDate } from '../utils/format.ts';
+import { formatDate, formatDateTime } from '../utils/format.ts';
 import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
 
 const props = defineProps({
@@ -79,6 +79,10 @@ useSeoMeta(seoMeta);
         <b>Original post</b>
         <a target="_blank" :href="post.canonicalUrl">on {{ post.canonicalWebsiteName }}</a>
       </div>
+      <div class="post__meta-item" v-if="post.embargoReleaseTime">
+        <b>Embargo</b>
+        <span class="embargo">Embargoed — do not release until {{ formatDateTime(post.embargoReleaseTime) }} UK time</span>
+      </div>
     </div>
     <figure class="post__image" v-if="post.image">
       <img :src="post.image" :alt="post.imageAlt">
@@ -95,6 +99,12 @@ useSeoMeta(seoMeta);
 </template>
 
 <style>
+.embargo {
+  padding-inline: 5px;
+  border: 1px solid #ff0000;
+  background: #ffdddd;
+  font-weight: 500;
+}
 .post__before, .post__after {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);

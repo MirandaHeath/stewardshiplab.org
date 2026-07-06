@@ -22,7 +22,9 @@ const featuredPosts = props.posts.filter(post => post.featured);
   <div class="post-list">
     <template v-if="featuredOnly">
       <div class="post-list-item-container" v-for="post in featuredPosts" :key="post.path">
-        <PostListItem :post="post" />
+        <template v-if="!post.hidden">
+          <PostListItem :post="post" />
+        </template>
       </div>
     </template>
     <template v-if="!featuredOnly">
@@ -36,7 +38,9 @@ const featuredPosts = props.posts.filter(post => post.featured);
               </div>
               <div class="post-list-item-set">
                 <div class="post-list-item-container" v-for="post in postsByCategory[category]" :key="post.path">
-                  <PostListItem :post="post" />
+                  <template v-if="!post.hidden">
+                    <PostListItem :post="post" />
+                  </template>
                 </div>
               </div>
             </div>
@@ -45,7 +49,9 @@ const featuredPosts = props.posts.filter(post => post.featured);
       </template>
       <template v-if="!categorised">
         <div class="post-list-item-container" v-for="post in posts" :key="post.path">
-          <PostListItem :post="post" />
+          <template v-if="!post.hidden">
+            <PostListItem :post="post" />
+          </template>
         </div>
       </template>
     </template>

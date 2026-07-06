@@ -25,3 +25,14 @@ export function formatDate(date) {
       year: 'numeric',
     });
 }
+
+export function formatDateTime(date) {
+  return Temporal.ZonedDateTime.from(date)
+    .toLocaleString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+}
