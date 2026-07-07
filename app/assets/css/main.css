@@ -346,8 +346,8 @@ blockquote {
     font-size: var(--font-size-m);
     line-height: var(--line-height-m);
     header, footer {
-      justify-content: center;
-      text-align: center;
+      justify-content: flex-start;
+      text-align: flex-start;
     }
   }
   header, footer {
