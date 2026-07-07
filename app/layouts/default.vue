@@ -28,7 +28,7 @@ const toggleNav = debounceLeading(() => {
       <Star class="squiggle squiggle--a" />
       <Star class="squiggle squiggle--b" />
     </div>
-    <header>
+    <header class="site-header">
       <div class="container container--narrow">
         <div class="header-container">
           <div class="header-logo">
@@ -89,7 +89,7 @@ const toggleNav = debounceLeading(() => {
     <main>
       <slot />
     </main>
-    <footer>
+    <footer class="site-footer">
       <div class="container">
         <div class="footer-items">
           <div class="footer-access">
@@ -154,7 +154,7 @@ const toggleNav = debounceLeading(() => {
 </template>
 
 <style>
-header {
+header.site-header {
   --header-height: 72px;
   position: relative;
   border-bottom: 1px solid var(--color-beige-pale);
@@ -291,7 +291,7 @@ main {
   }
 }
 
-footer {
+footer.site-footer {
   margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px;

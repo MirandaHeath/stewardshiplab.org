@@ -44,7 +44,7 @@ monitor our critical infrastructure _are themselves critical infrastructure_, so
 funded independently of for-profit interests. This way, current and future developers and researchers can build tools on
 top of them, and the public can benefit.
 
----
+<hr class="hr--short hr--blue">
 
 All in all, a non-profit public-benefit home for this critical research does not exist.
 
@@ -70,7 +70,28 @@ We are [registered][companies-house] as a Scottish non-profit — though our sco
 and [articles][articles] legally bind us to serving the public good and making all our work publicly accessible.
 Our [independent non-executive directors][team] hold us accountable.
 
----
+<blockquote class="blockquote--center">
+  <p>
+    “This effort is critical to the future sustainability of Open Source. The unique challenges the Open Source
+    ecosystem is facing needs the sort of Open Source thinking the Software Stewardship Lab is building. Open Source
+    has never been more important, it's imperative we give it a strong future.”
+  </p>
+  <footer>
+    <img
+      src="/images/people/josh-bressers@120px.webp"
+      alt="A portrait of Josh Bressers"
+      width="22"
+      height="22"
+    >
+    <span>
+      Josh Bressers
+      (VP of Security at
+      <a href="https://anchore.com/" target="_blank">Anchore</a>,
+      host of the
+      <a href="https://opensourcesecurity.io/" target="_blank">Open Source Security Podcast</a>)
+    </span>
+  </footer>
+</blockquote>
 
 Our current research focus is building the components of an observatory that allows users to identify and monitor the
 world's critical Open Source packages in real time. You can find more details [here][observatory].
@@ -84,7 +105,7 @@ critical work. We are already building a research network and working together w
 And we are also working with our solicitors on becoming the UK's first Open Source charity, hopefully helping pave the
 way for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
 
----
+<hr class="hr--short hr--blue">
 
 But we need your help.
 
@@ -111,7 +132,7 @@ All our income and expenses will be detailed on Open Collective with full transp
 Know that, if you are able to help fund our work, you are making a positive difference to the Open Source ecosystem that
 the entire world relies on.
 
----
+<hr class="hr--short hr--blue">
 
 If our mission resonates with you, follow us on [Bluesky][bluesky] and [Mastodon][mastodon], join our community of
 researchers on [Discord][discord], and share this post with interested colleagues.
@@ -123,21 +144,18 @@ preserve our critical infrastructure.
 We can solve this problem together with your support. If you're able to, [sponsor us][sponsor].
 
 <div class="post-signature">
-<img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
-
-<i>
-Vlad-Stefan Harbuz, Executive Director
-</i>
-
-Together with our board:
-
-<i>
-Andrew Nesbitt<br>
-Miranda Heath<br>
-Daniel Roe<br>
-Dawn Foster<br>
-Matias Capeletto
-</i>
+  <img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
+  <i>
+    Vlad-Stefan Harbuz, Executive Director
+  </i>
+  <p>Together with our board:</p>
+  <i>
+    Andrew Nesbitt<br>
+    Miranda Heath<br>
+    Daniel Roe<br>
+    Dawn Foster<br>
+    Matias Capeletto
+  </i>
 </div>
 
 [andrew]: https://nesbitt.io/

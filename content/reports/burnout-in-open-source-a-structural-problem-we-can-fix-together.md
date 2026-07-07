@@ -69,9 +69,9 @@ Psychological research shows that high demand, low reward and feelings of unfair
   <p>
     There was a long time where I was doing Open Source almost more time than my full time job, and getting paid nothing. I just burnt out. I stopped writing and contributing to Open Source.
   </p>
-  <cite>
+  <footer>
     <a href="https://blog.opencollective.com/frontend-masters/" target="_blank">Marc Grabanski, Open Collective Case Studies</a>
-  </cite>
+  </footer>
 </blockquote>
 
 If it were easier for OSS developers to get regular, reliable and sufficient compensation for their OSS work, they wouldn’t need to rely on additional full-time employment to pay their way while contributing to OSS. They would be less likely to feel like they are being treated unfairly by the people that benefit from their labour. They would have more time to do the things that replenish our energy: full nights of sleep, full days with the people we love. This would greatly reduce the risk of burnout.
@@ -102,9 +102,9 @@ Combine this with the fact that, once a project is popular, responding to reques
   <p>
     [T]he angry response has been overwhelming. Every single day I'm reading someone else rant about how awful of a job we're doing. It's been hard to stay motivated
   </p>
-  <cite>
+  <footer>
     <a href="https://jamie.build/dear-javascript.html" target="_blank">James Kyle, Dear JavaScript</a>
-  </cite>
+  </footer>
 </blockquote>
 
 Normally, when we receive something for free that is beneficial to us, we react with gratitude. However, it seems as if a portion of the Open Source userbase are acting as if OSS were a service provided by a company. This is the typical model of consumption in a market economy. But [Open Source has always been different](https://www.softwaremaxims.com/blog/not-a-supplier). Open Source is a common resource pool — people contribute for free, and the more people contribute, the more it benefits all of us.

@@ -16,8 +16,8 @@ issue tracker, a user was upset that the changes he wanted to see were not being
 
 He angrily took this out on the maintainer, telling him to
 
-<blockquote>
-	<cite class="cite--byline">
+<blockquote class="blockquote--chunk">
+	<header>
 		<img
 			src="https://avatars.githubusercontent.com/u/58133782?v=4"
 			alt="sushtain's avatar"
@@ -28,7 +28,7 @@ He angrily took this out on the maintainer, telling him to
 			href="https://github.com/nvim-treesitter/nvim-treesitter/discussions/8627#discussioncomment-16440673"
 			target="_blank"
 		>shushtain on 2 Apr</a>
-	</cite>
+	</header>
 	<p>
 		go switch to something that doesn't require interacting with people
 	</p>
@@ -36,8 +36,8 @@ He angrily took this out on the maintainer, telling him to
 
 The maintainer, having already been overwhelmed with issues and complaints from entitled users, replied
 
-<blockquote>
-	<cite class="cite--byline">
+<blockquote class="blockquote--chunk">
+	<header>
 		<img
 			src="https://avatars.githubusercontent.com/u/2361214?v=4"
 			alt="clason's avatar"
@@ -48,7 +48,7 @@ The maintainer, having already been overwhelmed with issues and complaints from 
 			href="https://github.com/nvim-treesitter/nvim-treesitter/discussions/8627#discussioncomment-16442595"
 			target="_blank"
 		>clason on 2 Apr</a>
-	</cite>
+	</header>
 	<p>
 		OK
 	</p>
@@ -58,7 +58,7 @@ Now, the banner at the top of nvim-treesitter's
 <a href="https://github.com/nvim-treesitter/nvim-treesitter" target="_blank" class="suplink">GitHub page</a>
 reads:
 
-<blockquote>
+<blockquote class="blockquote--chunk">
 	<em>This repository was archived by the owner on Apr 3, 2026. It is now read-only.</em>
 </blockquote>
 
@@ -76,15 +76,17 @@ Ashley Williams:
 		issue follow-ups, like, “is this maintained?”, “are you gonna fix my issue?”, I had to say that I had to give it
 		up.
 	</p>
-	<cite>
-		Ashley Williams, p 8 of the
-		<a href="https://mirandaheath.website/static/oss_burnout_report_mh_25.pdf" target="_blank">
-			burnout report
-		</a>, and
-		<a href="https://www.youtube.com/watch?v=gR2hjbh0RUk" target="_blank">
-			on YouTube
-		</a>
-	</cite>
+	<footer>
+		<span>
+			Ashley Williams, p 8 of the
+			<a href="https://mirandaheath.website/static/oss_burnout_report_mh_25.pdf" target="_blank">
+				burnout report
+			</a>, and
+			<a href="https://www.youtube.com/watch?v=gR2hjbh0RUk" target="_blank">
+				on YouTube
+			</a>
+		</span>
+	</footer>
 </blockquote>
 
 Explaining these situations by referring to the faults of any individual person would be a mistake, because the problem
