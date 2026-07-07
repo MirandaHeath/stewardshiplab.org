@@ -95,9 +95,9 @@ useSeoMeta(seoMeta);
   <div :class="{ container: !post.fullWidthLayout }">
     <ContentRenderer :value="post" class="prose" />
   </div>
-  <div class="container" v-if="post.ctaText && post.ctaAction && post.ctaLink">
+  <div class="container" v-if="post.ctaAction && post.ctaLink">
     <div class="cta">
-      <h2>{{ post.ctaText }}</h2>
+      <h2 v-if="post.ctaText">{{ post.ctaText }}</h2>
       <NuxtLink :to="post.ctaLink" class="button button--arrow">{{ post.ctaAction }}</NuxtLink>
     </div>
   </div>

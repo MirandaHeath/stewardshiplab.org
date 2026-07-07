@@ -6,9 +6,6 @@ date: 2026-07-30
 description: "We're launching the world's first research lab dedicated to Open Source sustainability."
 hidden: true
 embargoReleaseTime: 2026-07-30T09:00:00[Europe/London]
-ctaText: Want to strengthen Open Source together?
-ctaAction: Sponsor us
-ctaLink: /sponsor
 ---
 
 Today, we're launching the world's first research lab dedicated to Open Source sustainability.
@@ -121,6 +118,10 @@ projects are underfunded and insecure, and when maintainers are overworked. Exis
 preserve our critical infrastructure.
 
 Let's solve this together.
+
+<div class="cta" style="margin-bottom: 0; margin-top: 40px;">
+<a href="/sponsor" class="button button--arrow">Sponsor us</a>
+</div>
 
 <div class="post-signature">
 <img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
