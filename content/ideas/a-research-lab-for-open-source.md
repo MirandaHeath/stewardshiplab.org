@@ -19,9 +19,10 @@ When the Open Source packages we use break, this infrastructure is at risk.
 This isn't hypothetical — it's happening already, with catastrophic global supply chain attacks such as the [XZ Utils
 backdoor][xz], [Log4Shell][log4shell], [Shai-Hulud][shaihulud] and others.
 
-There are good efforts underway to make Open Source development more sustainable:
-the [Open Source Pledge][osp] ($7,262,189 raised for Open Source maintainers),
-the [Open Source Endowment][ose],
+There are efforts underway to make Open Source development more sustainable.
+The [Open Source Pledge][osp] has raised $7,262,189 for maintainers,
+the [Open Source Endowment][ose] is nearing a principal of $1m,
+and excellent security work is being done by
 Python's [Security Developer-in-Residence][seth],
 [Alpha-Omega][ao]
 and others.
@@ -77,8 +78,11 @@ world's critical Open Source packages in real time. You can find more details [h
 Another ongoing project is compiling yearly follow-ups to the [Burnout Report][burnout], and creating a companion report
 on how AI is affecting maintainer burnout.
 
-We are also working with our solicitors on becoming the UK's first Open Source charity, hopefully helping pave the way
-for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
+Moving forward, the Lab's experts will supervise and direct funding to Open Source sustainability researchers doing
+critical work. We are already building a research network and working together with universities on this.
+
+And we are also working with our solicitors on becoming the UK's first Open Source charity, hopefully helping pave the
+way for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
 
 ---
 
