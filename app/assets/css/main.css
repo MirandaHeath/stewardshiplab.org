@@ -347,13 +347,13 @@ blockquote {
     line-height: var(--line-height-m);
     header, footer {
       justify-content: flex-start;
-      text-align: flex-start;
+      text-align: left;
     }
   }
   header, footer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
     img {

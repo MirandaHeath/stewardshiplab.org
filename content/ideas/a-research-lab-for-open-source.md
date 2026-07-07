@@ -83,13 +83,17 @@ Our [independent non-executive directors][team] hold us accountable.
       width="22"
       height="22"
     >
-    <span>
-      Josh Bressers
-      (VP of Security at
-      <a href="https://anchore.com/" target="_blank">Anchore</a>,
-      host of the
-      <a href="https://opensourcesecurity.io/" target="_blank">Open Source Security Podcast</a>)
-    </span>
+    <div>
+      <div>
+        Josh Bressers
+      </div>
+      <em>
+        VP of Security at
+        <a href="https://anchore.com/" target="_blank">Anchore</a>,
+        host of the
+        <a href="https://opensourcesecurity.io/" target="_blank">Open&nbsp;Source&nbsp;Security&nbsp;Podcast</a>
+      </em>
+    </div>
   </footer>
 </blockquote>
 
