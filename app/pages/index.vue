@@ -735,9 +735,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
     padding: 60px;
     background: var(--color-beige-bright);
     border-radius: var(--border-radius-s);
-    box-shadow:
-      0px 0px 10px 8px #3a4de6ff,
-      0px 0px 50px 8px #ffffff44;
     @media (max-width: 800px) {
       padding: 30px;
     }
