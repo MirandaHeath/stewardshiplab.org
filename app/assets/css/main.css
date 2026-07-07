@@ -399,6 +399,7 @@ details {
   margin-bottom: 30px;
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
+  text-wrap: balance;
 }
 
 .visually-hidden {
