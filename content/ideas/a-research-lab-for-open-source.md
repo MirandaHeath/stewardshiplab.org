@@ -120,7 +120,7 @@ Open Source lies at the foundation of our modern technology. That technology can
 projects are underfunded and insecure, and when maintainers are overworked. Existing solutions aren't doing enough to
 preserve our critical infrastructure.
 
-Let's solve this together.
+We can solve this problem together with your support. [Sponsor us.][sponsor]
 
 <div class="post-signature">
 <img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
