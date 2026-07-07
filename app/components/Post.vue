@@ -85,7 +85,7 @@ useSeoMeta(seoMeta);
       </div>
       <div class="post__meta-item" v-if="post.embargoReleaseTime">
         <b>Embargo</b>
-        <span class="embargo">Embargoed — do not release until {{ formatDateTime(post.embargoReleaseTime) }} UK time</span>
+        <span class="embargo">Do not share — Embargoed — Do not release until {{ formatDateTime(post.embargoReleaseTime) }} UK time</span>
       </div>
     </div>
     <figure class="post__image" v-if="post.image">
