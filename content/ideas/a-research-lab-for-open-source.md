@@ -73,8 +73,8 @@ Our [independent non-executive directors][team] hold us accountable.
 <blockquote class="blockquote--center">
   <p>
     “This effort is critical to the future sustainability of Open Source. The unique challenges the Open Source
-    ecosystem is facing needs the sort of Open Source thinking the Software Stewardship Lab is building. Open Source
-    has never been more important, it's imperative we give it a strong future.”
+    ecosystem is facing need the sort of Open Source thinking the Software Stewardship Lab is building. Open Source
+    has never been more important. It's imperative we give it a strong future.”
   </p>
   <footer>
     <img
