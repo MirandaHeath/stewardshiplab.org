@@ -28,7 +28,7 @@ Python's [Security Developer-in-Residence][seth],
 and others.
 
 But there is no organisation dedicated to answering the more general questions that this work depends on. What are the
-most critical [keystone][keystone] packages? Which keystone packages appear to be mainainted, but are actually long-dead
+most critical [keystone][keystone] packages? Which keystone packages appear to be maintained, but are actually long-dead
 [Bernies][bernies]? Which dependencies are [invisible][bindep] to us? How can we prevent the ever-growing issue of
 [maintainer burnout][burnout]?
 
