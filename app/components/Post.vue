@@ -101,6 +101,12 @@ useSeoMeta(seoMeta);
       <NuxtLink :to="post.ctaLink" class="button button--arrow">{{ post.ctaAction }}</NuxtLink>
     </div>
   </div>
+  <dl class="container disclaimers" v-if="post.disclaimers.length > 0">
+    <template v-for="disclaimer in post.disclaimers">
+      <dt>{{ disclaimer.title }}</dt>
+      <dd>{{ disclaimer.text }}</dd>
+    </template>
+  </dl>
   <div class="container post__after">
     <div v-if="breadcrumbUrl && breadcrumbText">
       <NuxtLink class="plain-link" :to="breadcrumbUrl">{{ breadcrumbText }}</NuxtLink>
@@ -200,6 +206,20 @@ useSeoMeta(seoMeta);
   margin-top: 45px;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
+}
+.disclaimers {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  color: var(--color-text-pale);
+  dt {
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+  }
+  dd {
+    margin: 0;
+  }
 }
 .ender {
   display: none;
