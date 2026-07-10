@@ -101,7 +101,7 @@ useSeoMeta(seoMeta);
       <NuxtLink :to="post.ctaLink" class="button button--arrow">{{ post.ctaAction }}</NuxtLink>
     </div>
   </div>
-  <dl class="container disclaimers" v-if="post.disclaimers.length > 0">
+  <dl class="container disclaimers" v-if="post.disclaimers && post.disclaimers.length > 0">
     <template v-for="disclaimer in post.disclaimers">
       <dt>{{ disclaimer.title }}</dt>
       <dd>{{ disclaimer.text }}</dd>
