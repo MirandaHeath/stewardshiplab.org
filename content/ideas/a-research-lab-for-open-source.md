@@ -9,9 +9,7 @@ embargoReleaseTime: 2026-07-30T09:00:00[Europe/London]
 ctaText: Want to strengthen Open Source together?
 ctaAction: Sponsor us
 ctaLink: /sponsor
-disclaimers:
-  - title: Authorship note
-    text: This post is written by humans. LLMs have never been used in my writing.
+llmDisclaimer: true
 ---
 
 Today, we're launching the world's first research lab dedicated to Open Source sustainability.

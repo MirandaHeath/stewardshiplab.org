@@ -94,6 +94,9 @@ useSeoMeta(seoMeta);
   </div>
   <div :class="{ container: !post.fullWidthLayout }">
     <ContentRenderer :value="post" class="prose" />
+    <p v-if="post.llmDisclaimer" class="llm-disclaimer">
+      Written by humans, not LLMs.
+    </p>
   </div>
   <div class="container" v-if="post.ctaText && post.ctaAction && post.ctaLink">
     <div class="cta">
@@ -220,6 +223,11 @@ useSeoMeta(seoMeta);
   dd {
     margin: 0;
   }
+}
+.llm-disclaimer {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  color: var(--color-text-pale);
 }
 .ender {
   display: none;

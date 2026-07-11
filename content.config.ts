@@ -22,6 +22,7 @@ const postSchema = z.object({
   ctaText: z.string().optional(),
   ctaAction: z.string().optional(),
   ctaLink: z.string().optional(),
+  llmDisclaimer: z.boolean().optional(),
   disclaimers: z.array(z.strictObject({ title: z.string(), text: z.string() })).optional(),
 });
 
