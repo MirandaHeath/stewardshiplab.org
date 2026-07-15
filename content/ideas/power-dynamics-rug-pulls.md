@@ -31,7 +31,7 @@ Having your employees working within a project helps you understand the power dy
 
 * [Power Dynamics, Rug Pulls, and Other Corporate Impacts on OSS Sustainability at OSSEU](https://www.youtube.com/watch?v=1-2L9DLFc8A) (video)
 * [New Power Dynamics in Open Source: Rug Pulls, Relicensing, and Forks](https://fastwonderblog.com/2025/05/23/new-power-dynamics-in-open-source-rug-pulls-relicensing-and-forks/)
-* OpenUK Blog Post: [The Shifting Power Dynamics in Open Source: Rug Pulls, Relicensing and Forks – OpenUK](https://openuk.uk/blog-shiftingpowerdynamicsopensource/)
+* OpenUK Blog Post: [The Shifting Power Dynamics in Open Source: Rug Pulls, Relicensing and Forks - OpenUK](https://openuk.uk/blog-shiftingpowerdynamicsopensource/)
 * LWN Coverage of my recent talk: [Rug pulls, forks, and open-source feudalism](https://lwn.net/Articles/1036465/)
 * [Companies Can Mitigate Sustainability Risks](https://fastwonderblog.com/2025/06/18/companies-can-mitigate-sustainability-risks/)
 * [CHAOSS Practitioner Guides](https://chaoss.community/about-chaoss-practitioner-guides/)
