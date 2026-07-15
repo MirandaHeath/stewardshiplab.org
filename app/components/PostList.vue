@@ -73,6 +73,7 @@ const featuredPosts = props.posts.filter(post => post.featured);
       gap: 20px;
     }
     .post-list-category__details {
+      flex-shrink: 0;
       flex-basis: 200px;
       @media (max-width: 900px) {
         flex-basis: unset;
