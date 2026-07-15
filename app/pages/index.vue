@@ -59,7 +59,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
           <h2 class="sechead">
             <small>A new non-profit applied research lab</small>
             <hr class="hr--short">
-            We ensure the stability of the Open Source ecosystem we all rely on.
+            We ensure the stability of the Open&nbsp;Source ecosystem we all rely on.
           </h2>
         </div>
         <div class="subhero">
