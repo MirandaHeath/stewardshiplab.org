@@ -12,26 +12,29 @@ ctaLink: /sponsor
 llmDisclaimer: true
 ---
 
-Today, we're launching the world's first research lab dedicated to Open Source sustainability.
+<p class="post-prelude">
+Today, we're launching a world-class research lab dedicated to Open Source sustainability with a team of some of the
+most experienced people in the world.
+</p>
 
 Why? The infrastructure we all use depends on Open Source: transportation, healthcare, the internet and more.
-When the Open Source packages we use break, this infrastructure is at risk.
+When the Open Source packages we use break, our infrastructure is at risk.
 
-This isn't hypothetical — it's happening already, with catastrophic global supply chain attacks such as the [XZ Utils
+This isn't just hypothetical. It's happening already, with catastrophic global supply chain attacks such as the [XZ Utils
 backdoor][xz], [Log4Shell][log4shell], [Shai-Hulud][shaihulud] and others.
 
 There are efforts underway to make Open Source development more sustainable.
 The [Open Source Pledge][osp] has raised $7,262,189 for maintainers,
 the [Open Source Endowment][ose] is nearing a principal of $1m,
-and excellent security work is being done by
-Python's [Security Developer-in-Residence][seth],
+and excellent research is being done by
+the [Sovereign Tech Agency][sta],
 [Alpha-Omega][ao]
 and others.
 
-But there is no organisation dedicated to answering the more general questions that this work depends on. What are the
-most critical [keystone][keystone] packages? Which keystone packages appear to be maintained, but are actually long-dead
-[Bernies][bernies]? Which dependencies are [invisible][bindep] to us? How can we prevent the ever-growing issue of
-[maintainer burnout][burnout]?
+But we need an organisation dedicated to answering the more general questions that Open Source sustainability depends
+on. What are the most critical [keystone][keystone] packages? Which keystone packages appear to be maintained, but are
+actually long-dead [Bernies][bernies]? Which dependencies are [invisible][bindep] to us? How can we prevent the
+ever-growing issue of [maintainer burnout][burnout]?
 
 One would think that one of the many [well-funded Open Source foundations][foundations] could tackle this research, with
 a median yearly revenue of $1.6m and a mean of $11.6m. But for the most part, foundations, as a policy, do not pay
@@ -40,21 +43,17 @@ of the Open Source Endowment, the IRS had not recognised Open Source software as
 not given _501(c)(3)_ status to any organisation that funds Open Source development.
 
 What about for-profit companies? Some, like [Chainguard][chainguard] and [Socket][socket] are building software supply
-chain analysis tools. But this work is proprietary. This doesn't sit right with our vision. The tools that allow us to
+chain analysis tools. But this work is proprietary, which doesn't sit right with our vision. The tools that allow us to
 monitor our critical infrastructure _are themselves critical infrastructure_, so they should be publicly accessible, and
-funded independently of for-profit interests. This way, current and future developers and researchers can build tools on
-top of them, and the public can benefit.
+funded independently of for-profit interests.
 
 <hr class="hr--short hr--blue">
 
-All in all, a non-profit public-benefit home for this critical research does not exist.
+That's why we founded the Software Stewardship Lab: a new non-profit research lab dedicated to ensuring the stability of
+the Open Source ecosystem we all depend on.
 
-So we decided to create one.
-
-The Software Stewardship Lab is a new non-profit research lab dedicated to ensuring the stability of the Open Source
-ecosystem we all depend on. We map and strengthen the Open Source ecosystem by building software, creating APIs, and
-writing research reports. But we also focus on the human side of Open Source, by investigating and caring for maintainer
-health.
+We map and strengthen the Open Source ecosystem by building software, creating APIs, and writing research reports. And
+our research takes into account the human side of Open Source, by investigating and caring for maintainer health.
 
 Our [team][team] includes some of the most experienced people in the field:
 
@@ -98,16 +97,19 @@ Our [independent non-executive directors][team] hold us accountable.
   </footer>
 </blockquote>
 
-Our current research focus is building the components of an observatory that allows users to identify and monitor the
-world's critical Open Source packages in real time. You can find more details [here][observatory].
+Our current research focuses are:
 
-Another ongoing project is compiling yearly follow-ups to the [Burnout Report][burnout], and creating a companion report
-on how AI is affecting maintainer burnout.
+- **Software supply chain security** — We're working on an observatory that allows users to identify and monitor the
+  world's critical Open Source packages in real time, including previously [hidden][bindep] parts of the dependency
+  graph. More details [here][observatory].
+- **Maintainer burnout** — Our [report on burnout in Open Source][burnout] has been well received. We're working on
+  yearly follow-ups, plus a companion report on how AI is affecting maintainer burnout.
 
-Moving forward, the Lab's experts will supervise and direct funding to Open Source sustainability researchers doing
-critical work. We are already building a research network and working together with universities on this.
+Moving forward, the Lab's experts will direct funding to and supervise Open Source sustainability researchers doing
+critical work. We are already working with universities to teach the next generations of software supply chain experts.
 
-And we are also working with our solicitors on becoming the UK's first Open Source charity, hopefully helping pave the
+And we are also working with our solicitors on achieving charity status. Charity regulators have not historically
+recognised Open Source software as a charitable purpose. We hope that by seeking charity status, we will help pave the
 way for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
 
 <hr class="hr--short hr--blue">
@@ -118,21 +120,21 @@ We can't do this research without funding. In fact, without funding, we would be
 couldn't sustainably develop _the very technology_ required for the Open Source ecosystem to be more sustainable. That's
 a _Catch-22_ with serious ramifications.
 
-We have seen that companies are [willing to fund][osp-members] keystone Open Source projects, which is important. But
-we're asking organisations to also fund Open Source sustainability research, simply because it acts as a force
+We have seen that companies are [willing to fund][osp-members] keystone Open Source projects, which is important.
+
+But we're asking organisations to _also_ fund Open Source sustainability research, simply because it acts as a force
 multiplier — it creates tools that strengthen the entire ecosystem, not just individual projects. Each dollar funds
 structural improvements to the foundations of our technological infrastructure.
 
-If you're a decision maker at a company, we have [multiple sponsorship tiers][sponsor] available, and are happy to
-[discuss][contact] how we can make sponsoring the Lab work for you.
+We have various sponsorship arrangements available:
 
-If you represent a grant-making organisation, we have a grant proposal available on [_Securing Python's Binary
-Dependencies_][proposal-bindep], and others in the works. If this, or related work, aligns with your funding goals,
-[contact us][contact].
+- For companies, [multiple sponsorship tiers][sponsor] with various benefits.
+- For grant-making organisations, a grant proposal on [_Securing Python's Binary
+Dependencies_][proposal-bindep], and others in the works.
+- For individual donors, more information on our [Sponsor page][sponsor].
 
-We are very grateful for donations from individuals as well. You'll find more info on our [Sponsor page][sponsor].
-
-All our income and expenses will be detailed on Open Collective with full transparency.
+All our income and expenses will be detailed on Open Collective with full transparency. [Contact us][contact] for more
+information.
 
 Know that, if you are able to help fund our work, you are making a positive difference to the Open Source ecosystem that
 the entire world relies on.
@@ -198,6 +200,7 @@ We can solve this problem together with your support. If you're able to, [sponso
 [shaihulud]: https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/
 [socket]: https://socket.dev/
 [sponsor]: /sponsor
+[sta]: https://www.sovereign.tech/
 [team]: /#team
 [values]: /#values
 [vlad]: https://vlad.website/

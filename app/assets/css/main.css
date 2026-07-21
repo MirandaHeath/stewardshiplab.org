@@ -762,3 +762,10 @@ section {
     font-style: normal;
   }
 }
+
+.post-prelude {
+  max-width: 700px;
+  margin-bottom: 25px;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+}
