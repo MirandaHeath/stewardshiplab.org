@@ -72,6 +72,49 @@ Our [independent non-executive directors][team] hold us accountable.
 
 <blockquote class="blockquote--center">
   <p>
+    “If we don't secure the software supply chain, the vast majority of software will suffer.  The Software Stewardship
+    Lab has a collection of world-class experts in addressing problems like this and represents perhaps the most
+    ambitious effort today to solve the key problems in a fundamental manner.”
+  </p>
+  <footer>
+    <img
+      src="/images/people/justin@300px.webp"
+      alt="A portrait of Justin Cappos"
+      width="22"
+      height="22"
+    >
+    <div>
+      <div>
+        Justin Cappos
+      </div>
+      <em>
+        Professor at the
+        <a href="https://engineering.nyu.edu/faculty/justin-cappos" target="_blank">
+        NYU Tandon School of Engineering
+        </a>,
+        software supply chain security expert
+      </em>
+    </div>
+  </footer>
+</blockquote>
+
+Our current research focuses are:
+
+- **Software supply chain security** — We're working on an observatory that allows users to identify and monitor the
+  world's critical Open Source packages in real time, including previously [hidden][bindep] parts of the dependency
+  graph. More details [here][observatory].
+- **Maintainer burnout** — Our [report on burnout in Open Source][burnout] has been well received. We're working on
+  yearly follow-ups, plus a companion report on how AI is affecting maintainer burnout.
+
+Moving forward, the Lab's experts will direct funding to and supervise Open Source sustainability researchers doing
+critical work. We are already working with universities to teach the next generations of software supply chain experts.
+
+And we are also working with our solicitors on achieving charity status. Charity regulators have not historically
+recognised Open Source software as a charitable purpose. We hope that by seeking charity status, we will help pave the
+way for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
+
+<blockquote class="blockquote--center">
+  <p>
     “This effort is critical to the future sustainability of Open Source. The unique challenges the Open Source
     ecosystem is facing need the sort of Open Source thinking the Software Stewardship Lab is building. Open Source
     has never been more important. It's imperative we give it a strong future.”
@@ -96,23 +139,6 @@ Our [independent non-executive directors][team] hold us accountable.
     </div>
   </footer>
 </blockquote>
-
-Our current research focuses are:
-
-- **Software supply chain security** — We're working on an observatory that allows users to identify and monitor the
-  world's critical Open Source packages in real time, including previously [hidden][bindep] parts of the dependency
-  graph. More details [here][observatory].
-- **Maintainer burnout** — Our [report on burnout in Open Source][burnout] has been well received. We're working on
-  yearly follow-ups, plus a companion report on how AI is affecting maintainer burnout.
-
-Moving forward, the Lab's experts will direct funding to and supervise Open Source sustainability researchers doing
-critical work. We are already working with universities to teach the next generations of software supply chain experts.
-
-And we are also working with our solicitors on achieving charity status. Charity regulators have not historically
-recognised Open Source software as a charitable purpose. We hope that by seeking charity status, we will help pave the
-way for charity regulators worldwide to recognise the criticality of Open Source infrastructure.
-
-<hr class="hr--short hr--blue">
 
 But we need your help.
 

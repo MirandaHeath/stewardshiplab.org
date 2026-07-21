@@ -23,6 +23,10 @@ export const PEOPLE = {
     name: 'Ben Nickolls',
     image: '/images/people/ben@120px.webp',
   },
+  'justin': {
+    name: 'Justin Cappos',
+    image: '/images/people/justin@300px.webp',
+  },
   'damian-vicino': {
     name: 'Damián Vicino',
     image: '/images/people/damian-vicino@120px.webp',
