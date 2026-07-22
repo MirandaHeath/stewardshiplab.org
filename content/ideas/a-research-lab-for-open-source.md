@@ -103,7 +103,7 @@ Our current research focuses are:
 - **Software supply chain security** — We're working on an observatory that allows users to identify and monitor the
   world's critical Open Source packages in real time, including previously [hidden][bindep] parts of the dependency
   graph. More details [here][observatory].
-- **Maintainer burnout** — Our [report on burnout in Open Source][burnout] has been well received. We're working on
+- **Maintainer burnout** — Our [report on burnout in Open Source][burnout] has been well-received. We're working on
   yearly follow-ups, plus a companion report on how AI is affecting maintainer burnout.
 
 Moving forward, the Lab's experts will direct funding to and supervise Open Source sustainability researchers doing
@@ -159,16 +159,12 @@ We have various sponsorship arrangements available:
 Dependencies_][proposal-bindep], and others in the works.
 - For individual donors, more information on our [Sponsor page][sponsor].
 
-All our income and expenses will be detailed on Open Collective with full transparency. [Contact us][contact] for more
-information.
+All our income and expenses will be detailed on Open Collective with full transparency.
 
 Know that, if you are able to help fund our work, you are making a positive difference to the Open Source ecosystem that
 the entire world relies on.
 
 <hr class="hr--short hr--blue">
-
-If our mission resonates with you, follow us on [Bluesky][bluesky] and [Mastodon][mastodon], join our community of
-researchers on [Discord][discord], and share this post with interested colleagues.
 
 Open Source lies at the foundation of our modern technology. That technology can, and does, fall apart when keystone
 projects are underfunded and insecure, and when maintainers are overworked. Existing solutions aren't doing enough to
