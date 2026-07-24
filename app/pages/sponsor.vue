@@ -49,7 +49,7 @@ useSeoMeta({
       <a class="button button--cta" href="/contact">
         Get in touch<IconCaretRightBold class="icon icon--l" />
       </a>
-      <small>Open Collective donations coming in July</small>
+      <small>Open Collective donations coming in August</small>
     </div>
     <hr>
     <h2>Sponsorship Tiers</h2>
