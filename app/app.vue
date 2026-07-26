@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = 'Software Stewardship Lab';
-const description = 'A non-profit applied research lab dedicated to ensuring the stability of the Open Source ecosystem we all rely on.';
+const description = 'A non-profit applied research lab ensuring the stability of the Open Source software ecosystem we all rely on.';
 
 useHead({
   link: [
