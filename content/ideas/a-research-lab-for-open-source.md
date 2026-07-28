@@ -2,7 +2,7 @@
 authors: ['vlad']
 category: 'philosophy'
 title: "A Research Lab for Open Source"
-date: 2026-07-30
+date: 2026-08-06
 description: "Today, we're launching a world-class research lab dedicated to Open Source sustainability with a team of some of the most experienced people in the world."
 hidden: true
 embargoReleaseTime: 2026-08-06T09:00:00[Europe/London]
