@@ -65,29 +65,56 @@ const { data: posts } = await useAsyncData(route.path, () => {
         <div class="subhero">
           <div class="feature-set">
             <div class="feature">
-              <h2>Mission</h2>
               <p>
-                We safeguard global tech infrastructure by caring for the Open Source technology it relies upon. We
-                develop ways to make the Open Source ecosystem more secure, sustainably funded, and responsibly governed.
+                Without
+                <a
+                  href="https://opensource.com/resources/what-open-source"
+                  target="_blank"
+                >Open Source</a>
+                software, our critical infrastructure would break. This includes transportation, healthcare and the
+                internet.
               </p>
               <p>
-                We do this to benefit the public and protect critical services that depend on Open Source, like
-                transportation, healthcare and the internet.
+                But the Open Source software we rely on is in crisis. It's developed by
+                <a
+                  href="/reports/burnout-in-open-source-a-structural-problem-we-can-fix-together"
+                >burnout-prone unpaid volunteers</a>
+                with
+                <a
+                  href="https://openpath.quest/2024/the-open-source-sustainability-crisis/"
+                  target="_blank"
+                >insufficient funding</a>
+                or institutional support. And it faces systematic
+                <a
+                  href="https://arstechnica.com/security/2024/04/what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world/"
+                  target="_blank"
+                >supply chain security threats</a>.
+              </p>
+              <p>
+                Unsustainably developed Open Source software can break or
+                <a
+                  href="https://en.wikipedia.org/wiki/Npm_left-pad_incident"
+                  target="_blank"
+                >disappear</a>,
+                threatening the critical infrastructure the public depends on.
               </p>
             </div>
+            <hr class="hr--short hr--blue">
             <div class="feature">
-              <h2>Strategy</h2>
               <p>
-                We identify threats to the Open Source ecosystem and mitigate them by producing software, APIs, research
-                reports, and peer-reviewed papers.
+                <strong>
+                  We care for the Open Source technology we all rely on, thereby protecting our global
+                  infrastructure.
+                </strong>
               </p>
               <p>
-                Our work on <mark>supply chain security</mark> enables developers to identify and support vulnerable
-                projects.
+                We develop ways to make the Open Source ecosystem more secure, sustainably funded, and responsibly
+                governed, by producing software, APIs, research reports, and peer-reviewed papers.
               </p>
               <p>
-                And our work on <mark>sustainable funding and governance</mark> has helped maintainers avoid burnout, so
-                they can continue their critical work.
+                Our work on <mark>supply chain security</mark> enables developers to protect vulnerable projects. And
+                our work on <mark>sustainable funding and governance</mark> has helped maintainers avoid burnout and
+                continue their critical work.
               </p>
             </div>
           </div>
@@ -114,7 +141,12 @@ const { data: posts } = await useAsyncData(route.path, () => {
       <Star class="squiggle squiggle--d" />
       <Star class="squiggle squiggle--mobile squiggle--section-a" />
       <div class="container">
-        <h2 class="big-heading" id="team">Our Team</h2>
+        <div class="subtitled-heading" id="team">
+          <h2>Our Team</h2>
+          <p>
+            Our team includes some of the world's foremost Open Source sustainability experts.
+          </p>
+        </div>
         <div class="members">
           <Member
             name="Vlad-Stefan Harbuz"
@@ -586,9 +618,12 @@ const { data: posts } = await useAsyncData(route.path, () => {
 <style scoped>
 .hero {
   position: relative;
-  margin-block: 50px;
+  margin-block: 30px;
   @media (max-width: 900px) {
     margin-top: 0;
+    h2.sechead {
+      margin-top: 15px;
+    }
   }
   .squiggle--hero {
     bottom: -10px;
@@ -607,7 +642,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     .postcard {
-      margin-top: 0;
+      margin-top: 15px;
       margin-bottom: 40px;
       figcaption {
         display: none;
@@ -640,8 +675,14 @@ const { data: posts } = await useAsyncData(route.path, () => {
   display: flex;
   gap: 50px;
   @media (max-width: 900px) {
-    flex-direction: column;
-    gap: 30px;
+    display: block;
+  }
+  hr {
+    display: none;
+    margin-block: 25px;
+    @media (max-width: 900px) {
+      display: block;
+    }
   }
 }
 .feature {
@@ -653,6 +694,8 @@ const { data: posts } = await useAsyncData(route.path, () => {
     font-variant-caps: small-caps;
     font-feature-settings: "smcp";
     text-transform: lowercase;
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
   }
 }
 .logowall-group {
