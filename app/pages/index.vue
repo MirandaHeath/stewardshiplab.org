@@ -520,7 +520,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
           </div>
           <div class="cta">
             <h3>Can you help fund this work?</h3>
-            <NuxtLink to="/contact" class="button button--arrow">Sponsor the Lab</NuxtLink>
+            <NuxtLink to="/sponsor" class="button button--arrow">Sponsor the Lab</NuxtLink>
           </div>
         </div>
       </div>
@@ -607,8 +607,8 @@ const { data: posts } = await useAsyncData(route.path, () => {
       </section>
       <section>
         <div class="cta">
-          <h2>Want to work together?</h2>
-          <NuxtLink to="/contact" class="button">Say hi<IconHandWaving class="icon" /></NuxtLink>
+          <h2>Ready to protect the Open Source ecosystem?</h2>
+          <NuxtLink to="/sponsor" class="button">Sponsor the Lab</NuxtLink>
         </div>
       </section>
     </div>
