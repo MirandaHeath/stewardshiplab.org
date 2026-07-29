@@ -156,8 +156,8 @@ a {
     text-decoration-color: var(--color-text-xpale);
     text-decoration-thickness: 1px;
     &:hover, &:active {
-      background-color: var(--color-blue);
-      color: white;
+      color: var(--color-blue);
+      text-decoration-color: var(--color-blue);
     }
   }
 }

@@ -96,48 +96,39 @@ const toggleNav = debounceLeading(() => {
           <div class="footer-access">
             <a href="#top" class="plain-link text-xs">Back to top ↑</a>
           </div>
-          <div class="footer-colophon">
-            <Logo width="200" aria-label="Software Stewardship Lab" />
-            <div class="footer-colophon__details">
-              <LesserArms width="50" height="50" />
-              <div>
-                A non-profit incorporated in Scotland<br>
-                Company number <a
-                  href="https://find-and-update.company-information.service.gov.uk/company/SC893294"
-                  target="_blank"
-                >SC893294</a>
-              </div>
-            </div>
-            <div class="footer-socials">
-              <a
-                href="https://opencollective.com/stewardshiplab"
-                class="plain-link"
-                target="_blank"
-              >
-                <IconOpenCollective width="28" height="28" />
-              </a>
-              <a
-                href="https://bsky.app/profile/stewardshiplab.org"
-                class="plain-link"
-                target="_blank"
-              >
-                <IconBluesky />
-              </a>
-              <a
-                href="https://fosstodon.org/@stewardshiplab"
-                target="_blank"
-                class="plain-link"
-              >
-                <IconMastodon width="28" height="28" />
-              </a>
-              <a
-                href="https://discord.gg/2GNQHcKmcH"
-                target="_blank"
-                class="plain-link"
-              >
-                <IconDiscord width="28" height="28" />
-              </a>
-            </div>
+          <div class="footer-logo">
+            <Logo width="250" aria-label="Software Stewardship Lab" />
+          </div>
+          <div class="footer-links">
+            <h2>Find us on</h2>
+            <a
+              href="https://opencollective.com/stewardshiplab"
+              class="social-link"
+              target="_blank"
+            >
+              <IconOpenCollective width="28" height="28" /> Open Collective
+            </a>
+            <a
+              href="https://bsky.app/profile/stewardshiplab.org"
+              class="social-link bluesky-flutter"
+              target="_blank"
+            >
+              <IconBluesky /> Bluesky
+            </a>
+            <a
+              href="https://fosstodon.org/@stewardshiplab"
+              class="social-link"
+              target="_blank"
+            >
+              <IconMastodon width="28" height="28" /> Mastodon
+            </a>
+            <a
+              href="https://discord.gg/2GNQHcKmcH"
+              class="social-link"
+              target="_blank"
+            >
+              <IconDiscord width="28" height="28" /> Discord
+            </a>
           </div>
           <div class="footer-links">
             <h2>Resources</h2>
@@ -149,11 +140,21 @@ const toggleNav = debounceLeading(() => {
             <a href="/cookie-policy">Cookie Policy</a>
             <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
           </div>
-          <div class="footer-sponsors">
+          <div class="footer-links">
             <h2>Hosting Sponsor</h2>
-            <a class="plain-link" href="https://www.statichost.eu/" target="_blank">
+            <a href="https://www.statichost.eu/" target="_blank">
               <LogoStatichost aria-label="statichost.eu" />
             </a>
+          </div>
+        </div>
+        <div class="footer-imprint">
+          <LesserArms width="40" height="40" />
+          <div>
+            Scottish non-profit <a
+              href="https://find-and-update.company-information.service.gov.uk/company/SC893294"
+              target="_blank"
+            >SC893294</a><br>
+            58 Morrison St, Edinburgh, EH3 8BP, UK
           </div>
         </div>
       </div>
@@ -304,6 +305,8 @@ footer.site-footer {
   padding-top: 40px;
   padding-bottom: 40px;
   border-top: 1px solid var(--color-beige-pale);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
   h2 {
     margin: 0;
     font-size: var(--font-size-s);
@@ -326,46 +329,24 @@ footer.site-footer {
   }
   .footer-items {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    @media (max-width: 900px) {
-      gap: 20px;
-    }
-  }
-  .footer-colophon {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
+    gap: 40px;
     @media (max-width: 900px) {
       flex-direction: column;
-      gap: 15px;
-      margin: 0;
+      gap: 30px;
     }
-    .footer-colophon__details {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+  }
+  .footer-logo {
+    flex: 1;
+  }
+  .footer-imprint {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
   }
   .footer-links {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-    @media (max-width: 900px) {
-      flex-direction: column;
-      align-items: unset;
-      gap: 10px;
-    }
-  }
-  .footer-sponsors {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     @media (max-width: 900px) {
       flex-direction: column;
       align-items: unset;
@@ -380,17 +361,28 @@ footer.site-footer {
         stroke: var(--color-text);
       }
     }
-  }
-  .footer-socials {
-    display: flex;
-    align-items: center;
-    gap: 20px;
     a {
-      display: block;
-      line-height: 0;
-      svg {
-        width: var(--icon-size-m);
-        height: var(--icon-size-m);
+      &:hover {
+        .bluesky-flutter {
+          --color-bluesky-icon: var(--color-blue);
+        }
+        svg {
+          path[fill] {
+            fill: var(--color-blue);
+          }
+          path[stroke] {
+            stroke: var(--color-blue);
+          }
+        }
+      }
+      &.social-link {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        svg {
+          width: var(--icon-size-s);
+          height: var(--icon-size-s);
+        }
       }
     }
   }
