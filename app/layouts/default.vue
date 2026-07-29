@@ -377,9 +377,13 @@ footer.site-footer {
     display: flex;
     align-items: center;
     gap: 20px;
-    a svg {
-      width: var(--icon-size-m);
-      height: var(--icon-size-m);
+    a {
+      display: block;
+      line-height: 0;
+      svg {
+        width: var(--icon-size-m);
+        height: var(--icon-size-m);
+      }
     }
   }
 }
