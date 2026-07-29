@@ -166,14 +166,24 @@ useSeoMeta({
           No. To be able to use our funds most efficiently, we made the choice to incorporate as a UK non-profit company
           limited by guarantee, which does not offer tax-exempt status.
         </p>
+        <p>
+          We plan to seek tax-exempt charity status moving forward, but we need your financial support to be able to
+          bear the associated costs.
+        </p>
+        <p>
+          So far, charity regulators have given limited or no recognition to Open Source causes. Our becoming a charity
+          will help pave the way for future organisations to become Open Source charities.
+        </p>
       </div>
     </div>
     <div class="faq-item">
-      <h3>Can I pay by bank transfer?</h3>
+      <h3>What payment methods are available?</h3>
       <hr class="hr--short">
       <div>
         <p>
-          Of course. <a href="/contact">Contact us</a> and we'll send you our bank details.
+          Our Open Collective page allows card payments and payments by bank transfer.
+          If you need more information, or a different payment method,
+          <a href="/contact">contact us</a>.
         </p>
       </div>
     </div>
@@ -183,7 +193,16 @@ useSeoMeta({
       <div>
         <p>
           All benefits last while you have an active yearly sponsorship. There's one exception: one-time donations are
-          permanently featured in our “other donors” section.
+          permanently featured in our “other sponsors” section.
+        </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <h3>Where are sponsors listed?</h3>
+      <hr class="hr--short">
+      <div>
+        <p>
+          Sponsors will be listed on our website shortly, on a page we're still setting up.
         </p>
       </div>
     </div>
