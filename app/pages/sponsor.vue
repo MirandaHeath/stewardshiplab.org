@@ -46,10 +46,14 @@ useSeoMeta({
     </div>
     <div class="sponsor-cta">
       <h3>Want to sponsor our work?</h3>
-      <a class="button button--cta" href="/contact">
-        Get in touch<IconCaretRightBold class="icon icon--l" />
+      <a
+        class="button button--cta"
+        href="https://opencollective.com/stewardshiplab"
+        target="_blank"
+      >
+        Sponsor on Open Collective<IconCaretRightBold class="icon icon--l" />
       </a>
-      <small>Open Collective donations coming in August</small>
+      <small>Full financials reported transparently on Open Collective.</small>
     </div>
     <hr>
     <h2>Sponsorship Tiers</h2>

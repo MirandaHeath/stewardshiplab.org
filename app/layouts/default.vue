@@ -2,6 +2,7 @@
 import Logo from '~/assets/images/logo.svg';
 import Star from '~/assets/images/star.svg';
 import LesserArms from '~/assets/images/lesser-arms.svg';
+import IconOpenCollective from '~/assets/images/icons/opencollective.svg';
 import IconBluesky from '../components/IconBluesky.vue';
 import IconMastodon from '~/assets/images/icons/mastodon.svg';
 import IconDiscord from '~/assets/images/icons/discord.svg';
@@ -108,6 +109,13 @@ const toggleNav = debounceLeading(() => {
               </div>
             </div>
             <div class="footer-socials">
+              <a
+                href="https://opencollective.com/stewardshiplab"
+                class="plain-link"
+                target="_blank"
+              >
+                <IconOpenCollective width="28" height="28" />
+              </a>
               <a
                 href="https://bsky.app/profile/stewardshiplab.org"
                 class="plain-link"
