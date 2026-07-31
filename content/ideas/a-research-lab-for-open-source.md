@@ -2,10 +2,10 @@
 authors: ['vlad']
 category: 'philosophy'
 title: "A Research Lab for Open Source"
-date: 2026-08-06
+date: 2026-08-07
 description: "Today, we're launching a world-class research lab dedicated to Open Source sustainability with a team of some of the most experienced people in the world."
 hidden: true
-embargoReleaseTime: 2026-08-06T09:00:00[Europe/London]
+embargoReleaseTime: 2026-08-07T10:00:00[Europe/London]
 ctaText: Want to strengthen Open Source together?
 ctaAction: Sponsor us
 ctaLink: /sponsor
