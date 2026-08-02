@@ -206,6 +206,26 @@ useSeoMeta({
         </p>
       </div>
     </div>
+    <div class="faq-item">
+      <h3>Does the Lab unreservedly endorse the organisations that sponsor it?</h3>
+      <hr class="hr--short">
+      <div>
+        <p>
+          We accept contributions from a wide variety of organisations, and we aim to celebrate the good that they do.
+          However, accepting a contribution from an organisation does not constitute endorsement of it, and certainly
+          not endorsement of all its practices.
+        </p>
+        <p>
+          We acknowledge that organisations may simultaneously carry out both socially harmful practices, which we may
+          push back on in order to help the organisation do better; and socially beneficial practices, which we will
+          celebrate.
+        </p>
+        <p>
+          Even so, we reserve our right to refuse contributions from organisations that carry out egregiously socially
+          harmful practices, such as widespread environmental destruction.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
