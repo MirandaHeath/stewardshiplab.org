@@ -33,14 +33,14 @@ useSeoMeta({
       </p>
       <footer>
         <img
-          src="/images/people/miranda@300px.webp"
-          alt="A portrait of Miranda Heath"
+          src="/images/people/vlad@300px.webp"
+          alt="A portrait of Vlad-Stefan Harbuz"
           width="40"
           height="40"
         >
         <div>
-          <div>Miranda Heath</div>
-          <em>Non-Executive Director, Researcher</em>
+          <div>Vlad-Stefan Harbuz</div>
+          <em>Executive Director</em>
         </div>
       </footer>
     </blockquote>
