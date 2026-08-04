@@ -88,9 +88,9 @@ Our [independent non-executive directors][team] hold us accountable.
         Justin Cappos
       </div>
       <em>
-        Professor at the
+        Professor at
         <a href="https://engineering.nyu.edu/faculty/justin-cappos" target="_blank"
-          >NYU Tandon School of Engineering</a
+          >NYU Tandon</a
         >,
         software supply chain security expert
       </em>

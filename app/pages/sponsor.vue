@@ -18,25 +18,61 @@ useSeoMeta({
       <img alt="Daniel Roe speaking in front of a very large screen" src="/images/daniel-talk@1400px.webp">
     </div>
     <h2>Why sponsor the Stewardship Lab?</h2>
+    <p>
+      We do applied research to make the global Open Source ecosystem more sustainable. It's in your company's interest
+      for this work to get done, since your revenue depends on the stability of the OSS you use.
+    </p>
+    <p>
+      Our team makes sure critical Open Source software keeps working, by creating tools that prevent supply chain
+      security issues, and by creating resources that improve project governance and maintainer mental health.
+    </p>
+    <blockquote class="blockquote--center">
+      <p>
+        “We need your support to get the sustainable long-term funding our researchers need to do their work without the
+        precarity of short-term grants, and to pay for the computing that our work requires.”
+      </p>
+      <footer>
+        <img
+          src="/images/people/miranda@300px.webp"
+          alt="A portrait of Miranda Heath"
+          width="40"
+          height="40"
+        >
+        <div>
+          <div>Miranda Heath</div>
+          <em>Non-Executive Director, Researcher</em>
+        </div>
+      </footer>
+    </blockquote>
+    <p>
+      By contributing to this work, you're also helping protect the critical services that our society depends on, like
+      healthcare, transportation and the internet.
+    </p>
+    <p>
+      Our team of non-executive directors ensures that all funds
+      are used for making progress towards our mission, and all our finances are transparently reported on Open
+      Collective.
+    </p>
+    <h2>Why sponsor the Stewardship Lab?</h2>
     <div class="usps">
       <div class="usp">
-        <h3>Improve the ecosystem you rely on</h3>
+        <h3>Tell us your research needs</h3>
         <hr>
         <p>
-          Without sustainable stewardship, the Open Source tech you rely on can go away, or worse, introduce
-          vulnerabilities to your code. That's bad news for your organisation. We can help.
+          Higher-tier sponsors have the ability to get regular updates on our research projects and suggest future
+          research ideas.
         </p>
       </div>
       <div class="usp">
-        <h3>Signal thought leadership to customers</h3>
+        <h3>Signal thought leadership</h3>
         <hr>
         <p>
-          Give customers another reason to choose you over your competitors by positioning yourself as a thought leader
-          that sees issues in the ecosystem before they happen, and does something to help.
+          Give customers another reason to choose you over competitors. Prove you're a thought leader that sees issues
+          in the ecosystem before they happen, and does something to help.
         </p>
       </div>
       <div class="usp">
-        <h3>Show prospective employees you care about Open Source</h3>
+        <h3>Attract prospective employees</h3>
         <hr>
         <p>
           We've seen it time and time again: developers care about joining companies that grok Open Source. Supporting
@@ -68,7 +104,7 @@ useSeoMeta({
           </li>
         </ul>
       </SponsorshipTier>
-      <SponsorshipTier name="Consulting Patron" :price="60000">
+      <SponsorshipTier name="Consulting Patron" :price="50000">
         <ul>
           <li>
             Participate in a quarterly call with our directors
@@ -77,24 +113,7 @@ useSeoMeta({
             </small>
           </li>
           <li>
-            10 total hours of consultation sessions
-            <small>
-              Our researchers will help your team with any questions regarding engagement with Open Source, supply chain
-              issues, and other areas we have expertise in
-            </small>
-          </li>
-        </ul>
-      </SponsorshipTier>
-      <SponsorshipTier name="Participating Patron" :price="40000">
-        <ul>
-          <li>
-            Participate in a yearly call with our directors
-            <small>
-              This gives you an opportunity to make suggestions for our future research
-            </small>
-          </li>
-          <li>
-            5 hours of consultation sessions
+            10 hours of consultation sessions
             <small>
               Our researchers will help your team with any questions regarding engagement with Open Source, supply chain
               issues, and other areas we have expertise in
@@ -146,15 +165,28 @@ useSeoMeta({
         </ul>
       </SponsorshipTier>
     </div>
+    <div class="sponsor-cta">
+      <h3>Want more details?</h3>
+      <a
+        class="button button--cta"
+        href="/contact"
+      >
+        Contact & book a call<IconCaretRightBold class="icon icon--l" />
+      </a>
+    </div>
     <hr>
     <h2>Frequently asked questions</h2>
     <div class="faq-item">
-      <h3>Are donations from individuals welcome? Are one-time donations welcome?</h3>
+      <h3>Is the Software Stewardship Lab registered as a non-profit?</h3>
       <hr class="hr--short">
       <div>
         <p>
-          Yes! We are very grateful for donations from individuals, and for one-time donations. Every little bit helps
-          us do our research. We'll be happy to feature your name in our “other sponsors” section.
+          Yes. We are registered as a Scottish non-profit with company number
+          <a
+            href="https://find-and-update.company-information.service.gov.uk/company/SC893294"
+            target="_blank"
+          >SC893294</a>.
+          This means that we are legally required to use all funds received to further our mission.
         </p>
       </div>
     </div>
@@ -184,6 +216,16 @@ useSeoMeta({
           Our Open Collective page allows card payments and payments by bank transfer.
           If you need more information, or a different payment method,
           <a href="/contact">contact us</a>.
+        </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <h3>Are donations from individuals welcome? Are one-time donations welcome?</h3>
+      <hr class="hr--short">
+      <div>
+        <p>
+          Yes! We are very grateful for donations from individuals, and for one-time donations. Every little bit helps
+          us do our research. We'll be happy to feature your name in our “other sponsors” section.
         </p>
       </div>
     </div>
@@ -287,8 +329,7 @@ h1.page-title {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-block: 50px;
   h3 {
     margin: 0;
     font-size: var(--font-size-l);

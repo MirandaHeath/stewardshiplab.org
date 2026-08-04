@@ -328,7 +328,6 @@ blockquote {
   border-left: 1px solid var(--color-text);
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
-  font-family: var(--font-family-serif);
   &.blockquote--chunk {
     margin: 0;
     margin-block: 30px;
@@ -348,6 +347,9 @@ blockquote {
     header, footer {
       justify-content: flex-start;
       text-align: left;
+    }
+    p {
+      font-style: italic;
     }
   }
   header, footer {

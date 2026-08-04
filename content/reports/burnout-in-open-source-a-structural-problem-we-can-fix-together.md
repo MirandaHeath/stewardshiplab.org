@@ -65,7 +65,7 @@ To add insult to injury, OSS developers often feel exploited by the beneficiarie
 
 Psychological research shows that high demand, low reward and feelings of unfairness in work are all associated with an [increased risk of burnout](https://doi.org/10.1016/j.im.2013.08.003), and many OSS developer testimonials highlighted the amount of time and effort they were putting into their OSS, only to receive little-to-nothing in recognition of their efforts, as instrumental in causing their burnout.
 
-<blockquote>
+<blockquote class="blockquote--center">
   <p>
     There was a long time where I was doing Open Source almost more time than my full time job, and getting paid nothing. I just burnt out. I stopped writing and contributing to Open Source.
   </p>
@@ -98,9 +98,9 @@ It is not straightforward for developers to say no to unreasonable requests eith
 
 Combine this with the fact that, once a project is popular, responding to requests and reviewing code can take hours and hours every single day, and it is easy to see why many developers feel that maintenance work can be truly thankless.
 
-<blockquote>
+<blockquote class="blockquote--center">
   <p>
-    [T]he angry response has been overwhelming. Every single day I'm reading someone else rant about how awful of a job we're doing. It's been hard to stay motivated
+    [T]he angry response has been overwhelming. Every single day I'm reading someone else rant about how awful of a job we're doing. It's been hard to stay motivated.
   </p>
   <footer>
     <a href="https://jamie.build/dear-javascript.html" target="_blank">James Kyle, Dear JavaScript</a>
