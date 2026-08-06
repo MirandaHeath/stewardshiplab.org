@@ -21,6 +21,8 @@ const closeNav = debounceLeading(() => {
 const toggleNav = debounceLeading(() => {
   isNavOpen.value = !isNavOpen.value;
 }, 100);
+
+const route = useRoute();
 </script>
 
 <template>
@@ -87,6 +89,21 @@ const toggleNav = debounceLeading(() => {
       </div>
       <NoscriptNav />
     </header>
+    <a
+      href="/ideas/a-research-lab-for-open-source"
+      class="notice plain-link"
+      v-if="route.path != '/ideas/a-research-lab-for-open-source'"
+    >
+      <div class="container">
+        <div class="notice-parts">
+          <div>
+            <strong>We've launched<em>!</em></strong>&thinsp;
+            Read our announcement.
+          </div>
+          <IconCaretRightBold class="icon icon--s icon--white" />
+        </div>
+      </div>
+    </a>
     <main>
       <slot />
     </main>
@@ -290,6 +307,24 @@ header.site-header {
         }
       }
     }
+  }
+}
+
+a.notice {
+  display: block;
+  padding-block: 10px;
+  background: var(--color-blue);
+  color: white;
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  &:hover {
+    background: var(--color-blue-dark);
+  }
+  .notice-parts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 }
 
