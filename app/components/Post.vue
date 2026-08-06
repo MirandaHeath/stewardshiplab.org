@@ -170,7 +170,7 @@ useSeoMeta(seoMeta);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-beige-pale);
   font-size: var(--font-size-xs);
