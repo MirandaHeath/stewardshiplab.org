@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Star from '~/assets/images/star.svg';
 import IconHandWaving from '~/assets/images/icons/phosphor/hand-waving.svg';
+import IconCaretRightBold from '~/assets/images/icons/phosphor/caret-right-bold.svg';
 import LogoAlphaOmega from '~/assets/images/logos/alphaomega.svg';
 import LogoChaoss from '~/assets/images/logos/chaoss.svg';
 import LogoCncf from '~/assets/images/logos/cncf.svg';
@@ -134,9 +135,29 @@ const { data: posts } = await useAsyncData(route.path, () => {
             </figcaption>
           </figure>
         </div>
+        <a
+          class="news-item plain-link"
+          href="https://podcast.sustainoss.org/292"
+          target="_blank"
+        >
+          <div class="news-item__body">
+            <img
+              class="news-item__graphic"
+              width="65"
+              height="65"
+              src="https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/2/27729c65-f4a6-4496-8c86-820e7f13b285/episodes/8/8c2b381b-e2ca-4668-9b38-30b87b4825b1/cover_medium.jpg?v=1"
+              alt="Sustain Episode 292"
+            >
+            <div class="news-item__text">
+              <h2>Listen to our Sustain podcast episode</h2>
+              <em class="news-item__extra">“Vlad-Stefan Harbuz: Launching the Software Stewardship Lab”</em>
+            </div>
+            <IconCaretRightBold class="icon icon--s" />
+          </div>
+        </a>
       </section>
     </div>
-    <section class="section--contrasting section--no-bottom-margin">
+    <section class="section--contrasting section--no-bottom-margin section--no-top-margin">
       <Star class="squiggle squiggle--c" />
       <Star class="squiggle squiggle--d" />
       <Star class="squiggle squiggle--mobile squiggle--section-a" />
@@ -666,9 +687,49 @@ const { data: posts } = await useAsyncData(route.path, () => {
   figcaption {
     position: relative;
     z-index: 10;
-    top: -20px;
+    top: -30px;
     left: -30px;
     border-radius: var(--border-radius-s);
+  }
+}
+.news-item {
+  display: block;
+  margin-bottom: 30px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  text-wrap: balance;
+  color: var(--color-blue);
+  .news-item__body {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px;
+    border-radius: var(--border-radius-s);
+    background: var(--color-beige-xpale);
+    &:hover {
+      background: var(--color-beige-pale);
+    }
+    @media (max-width: 900px) {
+      margin-top: 30px;
+      .news-item__extra {
+        display: none;
+      }
+    }
+    .news-item__text {
+      flex: 1;
+    }
+    h2 {
+      margin-bottom: 5px;
+      color: var(--color-blue);
+      font-size: var(--font-size-m);
+      line-height: var(--line-height-xs);
+    }
+  }
+  .news-item__graphic {
+    width: 65px;
+    height: 65px;
+    border-radius: var(--border-radius-s);
+    transform: rotate(2deg);
   }
 }
 .feature-set {

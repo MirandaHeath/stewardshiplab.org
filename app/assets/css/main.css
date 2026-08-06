@@ -726,6 +726,9 @@ section {
       background: var(--color-beige);
     }
   }
+  &.section--no-top-margin {
+    margin-top: 0;
+  }
   &.section--no-bottom-margin {
     margin-bottom: 0;
   }
