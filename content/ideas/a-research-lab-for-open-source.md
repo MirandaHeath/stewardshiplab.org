@@ -39,7 +39,7 @@ One would think that one of the many [well-funded Open Source foundations][found
 a median yearly revenue of $1.6m and a mean of $11.6m. But for the most part, foundations, as a policy, do not pay
 developers at all, so they cannot fund this work. This is partly a quirk of the US tax code — until the Feb 2026 launch
 of the Open Source Endowment, the IRS had not recognised Open Source software as serving the public benefit, so they had
-not given _501(c)(3)_ status to any organisation that primarily funds Open Source development.
+not given _501(c)(3)_ status to any organisation that [primarily][irs-caveats] funds Open Source development.
 
 What about for-profit companies? Some, like [Chainguard][chainguard] and [Socket][socket] are building software supply
 chain analysis tools. But this work is proprietary, which doesn't sit right with our vision. The tools that allow us to
@@ -204,6 +204,7 @@ We can solve this problem together with your support. If you're able to, [sponso
 [ecosystems]: https://ecosyste.ms/
 [foundations]: /reports/foundations
 [homebrew]: https://brew.sh/
+[irs-caveats]: https://mastodon.social/@ancoghlan/117054686598927263
 [keystone]: https://vlad.website/keystone-maintainers-keep-the-internet-going/
 [log4shell]: https://en.wikipedia.org/wiki/Log4Shell#Usage
 [mastodon]: https://fosstodon.org/@stewardshiplab
