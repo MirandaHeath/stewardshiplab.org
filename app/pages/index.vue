@@ -710,7 +710,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
       background: var(--color-beige-pale);
     }
     @media (max-width: 900px) {
-      margin-top: 30px;
       .news-item__extra {
         display: none;
       }
@@ -736,6 +735,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
   gap: 50px;
   @media (max-width: 900px) {
     display: block;
+    margin-bottom: 30px;
   }
   hr {
     display: none;
