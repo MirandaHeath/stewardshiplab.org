@@ -663,7 +663,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     .postcard {
-      margin-top: 15px;
+      margin-top: 10px;
       margin-bottom: 40px;
       figcaption {
         display: none;
@@ -672,23 +672,23 @@ const { data: posts } = await useAsyncData(route.path, () => {
   }
 }
 .postcard {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 15px;
-  margin-top: 60px;
-  margin-bottom: 0;
+  margin-top: 40px;
+  margin-bottom: 50px;
   .postcard__main {
     width: auto;
     height: auto;
     border-radius: var(--border-radius-l);
-    transform: rotate(2deg);
   }
   figcaption {
-    position: relative;
+    position: absolute;
     z-index: 10;
-    top: -30px;
-    left: -30px;
+    bottom: -20px;
+    right: 20px;
     border-radius: var(--border-radius-s);
   }
 }
@@ -729,7 +729,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
     width: 65px;
     height: 65px;
     border-radius: var(--border-radius-s);
-    transform: rotate(2deg);
   }
 }
 .feature-set {
