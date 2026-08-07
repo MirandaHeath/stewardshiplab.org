@@ -92,7 +92,7 @@ const route = useRoute();
     <a
       href="/ideas/a-research-lab-for-open-source"
       class="notice plain-link"
-      v-if="route.path != '/ideas/a-research-lab-for-open-source/'"
+      v-if="route.path != '/ideas/a-research-lab-for-open-source/' && route.path != '/ideas/a-research-lab-for-open-source'"
     >
       <div class="container">
         <div class="notice-parts">
