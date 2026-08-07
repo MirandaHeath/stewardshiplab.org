@@ -135,26 +135,26 @@ const { data: posts } = await useAsyncData(route.path, () => {
             </figcaption>
           </figure>
         </div>
-        <a
-          class="news-item plain-link"
-          href="https://podcast.sustainoss.org/292"
-          target="_blank"
-        >
-          <div class="news-item__body">
-            <img
-              class="news-item__graphic"
-              width="65"
-              height="65"
-              src="https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/2/27729c65-f4a6-4496-8c86-820e7f13b285/episodes/8/8c2b381b-e2ca-4668-9b38-30b87b4825b1/cover_medium.jpg?v=1"
-              alt="Sustain Episode 292"
-            >
-            <div class="news-item__text">
-              <h2>Listen to our Sustain podcast episode</h2>
-              <em class="news-item__extra">“Vlad-Stefan Harbuz: Launching the Software Stewardship Lab”</em>
-            </div>
-            <IconCaretRightBold class="icon icon--s" />
-          </div>
-        </a>
+        <!-- <a -->
+        <!--   class="news-item plain-link" -->
+        <!--   href="https://podcast.sustainoss.org/292" -->
+        <!--   target="_blank" -->
+        <!-- > -->
+        <!--   <div class="news-item__body"> -->
+        <!--     <img -->
+        <!--       class="news-item__graphic" -->
+        <!--       width="65" -->
+        <!--       height="65" -->
+        <!--       src="https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/2/27729c65-f4a6-4496-8c86-820e7f13b285/episodes/8/8c2b381b-e2ca-4668-9b38-30b87b4825b1/cover_medium.jpg?v=1" -->
+        <!--       alt="Sustain Episode 292" -->
+        <!--     > -->
+        <!--     <div class="news-item__text"> -->
+        <!--       <h2>Listen to our Sustain podcast episode</h2> -->
+        <!--       <em class="news-item__extra">“Vlad-Stefan Harbuz: Launching the Software Stewardship Lab”</em> -->
+        <!--     </div> -->
+        <!--     <IconCaretRightBold class="icon icon--s" /> -->
+        <!--   </div> -->
+        <!-- </a> -->
       </section>
     </div>
     <section class="section--contrasting section--no-bottom-margin section--no-top-margin">
