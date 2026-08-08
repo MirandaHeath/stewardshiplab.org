@@ -155,6 +155,7 @@ const route = useRoute();
             >Articles of Incorporation</a>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/cookie-policy">Cookie Policy</a>
+            <a href="/brand">Brand</a>
             <a href="https://codeberg.org/stewardshiplab/stewardshiplab.org" target="_blank">Website Source</a>
           </div>
           <div class="footer-links">
