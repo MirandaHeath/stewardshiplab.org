@@ -154,8 +154,7 @@ structural improvements to the foundations of our technological infrastructure.
 We have various sponsorship arrangements available:
 
 - For companies, [multiple sponsorship tiers][sponsor] with various benefits.
-- For grant-making organisations, a grant proposal on [_Securing Python's Binary
-Dependencies_][proposal-bindep], and others in the works.
+- For grant-making organisations, a grant proposal on <a href="/proposal.bindep.pdf" target="_blank"><em>Securing Python's Binary Dependencies</em></a>
 - For individual donors, more information on our [Sponsor page][sponsor].
 
 All our income and expenses will be detailed on Open Collective with full transparency.
@@ -217,7 +216,6 @@ We can solve this problem together with your support. If you're able to, [sponso
 [osp-members]: https://opensourcepledge.com/members/
 [osp]: https://opensourcepledge.com/
 [patak]: https://patak.cat/
-[proposal-bindep]: /proposal.bindep.pdf
 [seth]: https://sethmlarson.dev/
 [shaihulud]: https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/
 [socket]: https://socket.dev/
