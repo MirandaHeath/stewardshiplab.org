@@ -97,9 +97,9 @@ useSeoMeta({
       <SponsorshipTier name="Advising Patron" :price="90000">
         <ul>
           <li>
-            A seat on our advisory board
+            A seat on our Funder Advisory Board
             <small>
-              This substantial advisory role will allow your company regular access to our directors' meetings
+              This substantial advisory role will allow your company to regularly meet with our directors
             </small>
           </li>
         </ul>
