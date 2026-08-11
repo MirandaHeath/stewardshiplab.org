@@ -94,7 +94,7 @@ useSeoMeta({
     <hr>
     <h2>Sponsorship Tiers</h2>
     <div class="tiers">
-      <SponsorshipTier name="Advising Patron" :price="90000">
+      <SponsorshipTier name="Advising Patron" :price="72000">
         <ul>
           <li>
             A seat on our Funder Advisory Board
@@ -104,7 +104,7 @@ useSeoMeta({
           </li>
         </ul>
       </SponsorshipTier>
-      <SponsorshipTier name="Consulting Patron" :price="50000">
+      <SponsorshipTier name="Consulting Patron" :price="42000">
         <ul>
           <li>
             Participate in a quarterly call with our directors
