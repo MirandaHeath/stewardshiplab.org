@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatUsdAmount } from '../utils/format.ts';
+import { formatGbpAmount } from '../utils/format.ts';
 
 const tier = defineProps({
   name: String,
@@ -12,7 +12,7 @@ const tier = defineProps({
     <div class="tier__meta">
       <h3>{{ tier.name }}</h3>
       <div class="tier__price">
-        <template v-if="tier.price">{{ formatUsdAmount(tier.price) }}+/year</template>
+        <template v-if="tier.price">{{ formatGbpAmount(tier.price) }}+/year</template>
         <template v-if="!tier.price">All lower amounts</template>
       </div>
     </div>
