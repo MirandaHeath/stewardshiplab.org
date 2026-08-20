@@ -53,7 +53,6 @@ useSeoMeta({
       are used for making progress towards our mission, and all our finances are transparently reported on Open
       Collective.
     </p>
-    <h2>Why sponsor the Stewardship Lab?</h2>
     <div class="usps">
       <div class="usp">
         <h3>Tell us your research needs</h3>
