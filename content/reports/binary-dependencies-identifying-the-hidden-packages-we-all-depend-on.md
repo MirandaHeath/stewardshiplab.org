@@ -1,4 +1,5 @@
 ---
+[buildwarden]: https://github.com/buildwarden/buildwarden
 authors: ['vlad']
 category: 'software-supply-chains'
 title: "Binary Dependencies: Identifying the Hidden Packages We All Depend On"
@@ -102,7 +103,6 @@ interested, here are some resources to help you learn more and/or get involved!&
 
 ## Other Resources
 
-- The [bindep repository][bindep-repo] is where I keep my work-in-progress code and notes.
 - The [Open Source Pledge][osp] is an initiative aiming to get companies to pay the Open Source maintainers whose work
   they depend on. Pledge members have paid $6,879,498 to Open Source developers at the time of writing.
 - [_The C-Shaped Hole in Package Management_][c-shaped] by Andrew Nesbitt, a great post about the problem of binary
@@ -146,11 +146,13 @@ interested, here are some resources to help you learn more and/or get involved!&
   assigning reliable identities to binary dependencies.
 - [_How to publish binaries on npm_][npm-bin-pub] by Luca Forstner tells us that it's possible, but tricky, to publish
   binary packages on _npm_.
+- [_BuildWarden_][buildwarden] “produces a cryptographically-signed, tamper-evident ledger of every network input to a
+  software build”.
 
 [auditwheel-577]: https://github.com/pypa/auditwheel/pull/577
 [auditwheel-676]: https://github.com/pypa/auditwheel/issues/676
 [auditwheel]: https://github.com/pypa/auditwheel
-[bindep-repo]: https://tangled.org/vlad.website/bindep
+[buildwarden]: https://github.com/buildwarden/buildwarden
 [burnout]: https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/
 [c-shaped]: https://nesbitt.io/2026/01/27/the-c-shaped-hole-in-package-management.html
 [cffi]: https://cffi.readthedocs.io/en/stable/
