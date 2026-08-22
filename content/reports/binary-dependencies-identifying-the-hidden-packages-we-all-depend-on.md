@@ -1,5 +1,4 @@
 ---
-[buildwarden]: https://github.com/buildwarden/buildwarden
 authors: ['vlad']
 category: 'software-supply-chains'
 title: "Binary Dependencies: Identifying the Hidden Packages We All Depend On"
@@ -15,21 +14,21 @@ featuredOnHomepage: true
 ---
 
 <figure>
-    <video
-        controls
-        width="980"
-        poster="https://vlad.website/static/vlad-fosdem-2026.webp"
-    >
-        <source type="video/mp4" src="https://vlad.website/static/vlad-fosdem-2026.mp4">
-        Download the <a href="https://vlad.website/static/vlad-fosdem-2026.mp4">mp4 video</a>.
-    </video>
-    <figcaption>
-        Or watch on <a href="https://www.youtube.com/watch?v=fP8OFI5PdBI">YouTube</a>
-    </figcaption>
+  <video
+    controls
+    width="980"
+    poster="https://vlad.website/static/ep2026-from-paulox-2-16x9@1500px.webp"
+  >
+    <source type="video/mp4" src="https://vlad.website/static/vlad-europython-2026.mp4">
+    Download the <a href="https://vlad.website/static/vlad-europython-2026.mp4">mp4 video</a>.
+  </video>
+  <figcaption>
+    Also available on <a href="https://www.youtube.com/watch?v=qooQD1tLVTg" target="_blank">YouTube</a>
+  </figcaption>
 </figure>
 
-On 31 Jan 2026, I gave a talk at [FOSDEM 2026][fosdem] on _phantom binary dependencies_ — packages that we depend on in
-binary form, even though these dependency relationships are invisible to us. If we cannot reliably identify these
+On 16 Jul 2026, I gave a talk at [EuroPython 2026][ep2026] on _phantom binary dependencies_ — packages that we depend on
+in binary form, even though these dependency relationships are invisible to us. If we cannot reliably identify these
 phantom dependencies, the sustainability and security of our tech infrastructure will be at risk, which threatens
 critical services such as hospitals, transportation and the internet.
 
@@ -37,12 +36,12 @@ You can watch my talk on this page, and I've included more details below, as wel
 want to learn more about this topic.
 
 <div class="page-items">
-    <a class="button button--arrow" href="https://fosdem.org/2026/schedule/event/7NQJNU-binary_dependencies_identifying_the_hidden_packages_we_all_depend_on/">
-        See talk info
-    </a>
-    <a class="button button--arrow" href="https://vlad.website/static/vlad-fosdem-2026.pdf">
-        See slides
-    </a>
+  <a class="button button--arrow" href="https://ep2026.europython.eu/session/binary-dependencies-identifying-the-hidden-packages-we-all-depend-on" target="_blank">
+    See talk info
+  </a>
+  <a class="button button--arrow" href="https://vlad.website/static/vlad-europython-2026.pdf" target="_blank">
+    See slides
+  </a>
 </div>
 
 ## Abstract
@@ -63,19 +62,17 @@ You can find detailed technical information about how binary dependencies work i
 Why are phantom binary dependencies important? For at least two reasons:
 
 - **Sustainability**.
-  <a href="/ideas/keystone-maintainers-keep-the-internet-going/" class="suplink">Keystone</a> maintainers struggle to get paid
+  [Keystone][keystone] maintainers struggle to get paid
   because of the
-  <a href="https://openpath.quest/2024/the-open-source-sustainability-crisis/" class="suplink"
-      >Open Source sustainability crisis</a>,
+  [Open Source sustainability crisis][suscri],
   which makes them more vulnerable to
-  <a href="https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/" class="suplink">
-    burnout</a>.
+  [burnout][burnout].
   Projects like the
-  <a href="https://opensourcepledge.com" class="suplink">Open Source Pledge</a>,
+  [Open Source Pledge][osp],
   the
-  <a href="https://endowment.dev" class="suplink">Open Source Endowment</a>,
+  [Open Source Endowment][endowment],
   and
-  <a href="https://thanks.dev" class="suplink">thanks.dev</a>
+  [thanks.dev][thanksdev]
   help maintainers get paid. But we have to know which maintainers we depend on to be able to pay them. If we cannot
   identify our binary dependencies, we cannot identify which maintainers we should support, which puts the
   sustainability of the Open Source ecosystem at risk, threating our global tech infrastructure.
@@ -121,7 +118,7 @@ interested, here are some resources to help you learn more and/or get involved!&
 - [PEP 725][pep-725], which specifies a way to record binary dependencies in `pyproject.toml`. This interoperable record
   of binary dependencies could allow many tools to, for example, flag security issues that were previously invisible.
 - [PEP 804][pep-804], which specifies a system for mapping binary dependency names to packages in non-Python registries.
-- [Issue #1261][ecosystems-packages-1261] on the <a href="https://ecosyste.ms" class="suplink">ecosyste.ms</a> _packages_
+- [Issue #1261][ecosystems-packages-1261] on the [ecosyste.ms][ecosystems] _packages_
   repo collects more information on strategies for tracking binary dependencies across multiple package managers.
 - [_ESSTRA_][esstra] is a tool developed at Sony that aims to improve supply chain transparency by embedding metadata
   into binaries.
@@ -148,24 +145,60 @@ interested, here are some resources to help you learn more and/or get involved!&
   binary packages on _npm_.
 - [_BuildWarden_][buildwarden] “produces a cryptographically-signed, tamper-evident ledger of every network input to a
   software build”.
+- [_dep-scan_][depscan] is a “next-generation security and risk audit tool based on known vulnerabilities, advisories,
+  and license limitations for project dependencies”.
+- [_blint_][blint] is a “Binary Linter that checks the security properties and capabilities of your executables”,
+  including “symbols, functions, dependencies, and build toolchains”.
+- [_blint-db_][blint-db] is a family of SQLite databases containing data about binaries generated by _blint_.
+
+## Other Talks
+
+I've also spoken on this topic at previous events.
+
+### FOSDEM 2026
+
+<figure>
+  <video
+    controls
+    width="980"
+    poster="https://vlad.website/static/vlad-fosdem-2026.webp"
+  >
+    <source type="video/mp4" src="https://vlad.website/static/vlad-fosdem-2026.mp4">
+    Download the <a href="https://vlad.website/static/vlad-fosdem-2026.mp4">mp4 video</a>.
+  </video>
+  <figcaption>
+    Also available on <a href="https://www.youtube.com/watch?v=fP8OFI5PdBI" target="_blank">YouTube</a>
+  </figcaption>
+</figure>
+
+<div class="page-items">
+  <a class="button button--arrow" href="https://fosdem.org/2026/schedule/event/7NQJNU-binary_dependencies_identifying_the_hidden_packages_we_all_depend_on/" target="_blank">
+    See talk info
+  </a>
+  <a class="button button--arrow" href="https://vlad.website/static/vlad-fosdem-2026.pdf" target="_blank">
+    See slides
+  </a>
+</div>
 
 [auditwheel-577]: https://github.com/pypa/auditwheel/pull/577
 [auditwheel-676]: https://github.com/pypa/auditwheel/issues/676
 [auditwheel]: https://github.com/pypa/auditwheel
+[blint-db]: https://github.com/AppThreat/blint-db
+[blint]: https://github.com/owasp-dep-scan/blint
 [buildwarden]: https://github.com/buildwarden/buildwarden
-[burnout]: https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/
 [c-shaped]: https://nesbitt.io/2026/01/27/the-c-shaped-hole-in-package-management.html
 [cffi]: https://cffi.readthedocs.io/en/stable/
+[depscan]: https://github.com/owasp-dep-scan/dep-scan
 [ecosystems-packages-1261]: https://github.com/ecosyste-ms/packages/issues/1261
+[ecosystems]: https://ecosyste.ms
 [elfdeps]: https://github.com/python-wheel-build/elfdeps/
 [endowment]: https://endowment.dev
+[ep2026]: https://ep2026.europython.eu/
 [esstra]: https://github.com/sony/esstra
 [fedora-package-info]: https://fedoraproject.org/wiki/Changes/Package_information_on_ELF_objects
 [fosdem]: https://fosdem.org/2026/
 [fromager]: https://github.com/python-wheel-build/fromager
-[how-bindeps-work]: /reports/how-binary-dependencies-work/
 [insight]: https://dl.acm.org/doi/pdf/10.1145/3551349.3556921
-[keystone]: /keystone-maintainers-keep-the-internet-going/
 [libffi]: https://github.com/libffi/libffi
 [npm-bin-pub]: https://sentry.engineering/blog/publishing-binaries-on-npm
 [osp]: https://opensourcepledge.com
@@ -176,5 +209,10 @@ interested, here are some resources to help you learn more and/or get involved!&
 [purl]: https://github.com/package-url/purl-spec
 [seth-pep-770]: https://sethmlarson.dev/pep-770-sbom-data-from-pypi-fedora-and-redhat
 [suscri]: https://openpath.quest/2024/the-open-source-sustainability-crisis/
+[thanksdev]: https://thanks.dev
 [uapi-12]: https://uapi-group.org/specifications/specs/elf_dlopen_metadata/
 [uapi-8]: https://uapi-group.org/specifications/specs/package_metadata_for_executable_files/
+
+[burnout]: /reports/burnout-in-open-source-a-structural-problem-we-can-fix-together/
+[how-bindeps-work]: /reports/how-binary-dependencies-work/
+[keystone]: /ideas/keystone-maintainers-keep-the-internet-going/
