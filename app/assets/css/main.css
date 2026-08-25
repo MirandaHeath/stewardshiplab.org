@@ -468,6 +468,9 @@ small, .text-xs {
 .text-pale {
   color: var(--color-text-pale);
 }
+.text-balance {
+  text-wrap: balance;
+}
 
 p {
   margin: 0;

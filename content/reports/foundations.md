@@ -10,7 +10,7 @@ date: 2026-05-24
 
 <div class="container">
   <section>
-    <p>
+    <p class="text-balance">
       An automated summary of the financials of Open Source software foundations, based on up-to-date IRS filing data.
     </p>
     <p class="text-xs">
