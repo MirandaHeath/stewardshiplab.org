@@ -233,7 +233,7 @@ function nonzeroMedian(getter) {
 const sortGetter = ref(SG_REVENUE);
 const sortAsc = ref(false);
 const displayYear = ref('2024');
-const displayYearOptions = ['2024', '2023', '2022'];
+const displayYearOptions = ['2025', '2024', '2023', '2022'];
 
 // eslint-disable-next-line @stylistic/space-before-function-paren
 const { data: allOrgs, _status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
