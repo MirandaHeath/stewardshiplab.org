@@ -257,6 +257,13 @@ const sortedOrgs = computed(() => {
         return vb.localeCompare(va);
       }
     }
+    if (typeof va != 'string' && typeof va != 'number') {
+      return 1;
+    }
+    if (typeof vb != 'string' && typeof vb != 'number') {
+      return -1;
+    }
+    return 0;
   });
 });
 </script>
