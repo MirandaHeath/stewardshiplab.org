@@ -70,7 +70,7 @@
               @click="setSortGetter(SG_HPE_TOTALPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_TOTALPAY)"
               class="cell--right-align cell--mobile-expand"
-            ><span>Total compensation</span></th>
+            ><span>Total pay</span></th>
           </tr>
         </thead>
         <tbody>
@@ -136,7 +136,7 @@
             <th scope="col" class="cell--right-align">Net assets</th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align">Total compensation</th>
+            <th scope="col" class="cell--right-align">Total pay</th>
           </tr>
         </tfoot>
       </table>
