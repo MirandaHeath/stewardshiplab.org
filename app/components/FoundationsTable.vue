@@ -193,20 +193,20 @@ function getSortingDataAttr(candidateSortGetter) {
 }
 
 function mean(getter) {
-  const vals = sortedOrgs.value.map(getter).filter(item => item);
+  const vals = sortedOrgs.value.map(getter).filter(item => item != undefined);
   const sum = vals.reduce((acc, item) => acc + item, 0);
   return sum / vals.length;
 }
 
 function median(getter) {
-  const vals = sortedOrgs.value.map(getter).filter(item => item);
+  const vals = sortedOrgs.value.map(getter).filter(item => item != undefined);
   return vals[Math.round(vals.length / 2)];
 }
 
 function nonzeroMean(getter) {
   const vals = sortedOrgs.value
     .map(getter)
-    .filter(item => item)
+    .filter(item => item != undefined)
     .filter(item => item != 0);
   const sum = vals.reduce((acc, item) => acc + item, 0);
   return sum / vals.length;
@@ -215,7 +215,7 @@ function nonzeroMean(getter) {
 function nonzeroMedian(getter) {
   const vals = sortedOrgs.value
     .map(getter)
-    .filter(item => item)
+    .filter(item => item != undefined)
     .filter(item => item != 0);
   return vals[Math.round(vals.length / 2)];
 }
