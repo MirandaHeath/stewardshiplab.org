@@ -67,17 +67,10 @@
             <th
               style="width: 9%"
               scope="col"
-              @click="setSortGetter(SG_HPE_SALARYPAY)"
-              :data-sorting="getSortingDataAttr(SG_HPE_SALARYPAY)"
+              @click="setSortGetter(SG_HPE_TOTALPAY)"
+              :data-sorting="getSortingDataAttr(SG_HPE_TOTALPAY)"
               class="cell--right-align cell--mobile-expand"
-            ><span>Salary</span></th>
-            <th
-              style="width: 9%"
-              scope="col"
-              @click="setSortGetter(SG_HPE_OTHERPAY)"
-              :data-sorting="getSortingDataAttr(SG_HPE_OTHERPAY)"
-              class="cell--right-align cell--mobile-expand"
-            ><span>Other pay</span></th>
+            ><span>Total compensation</span></th>
           </tr>
         </thead>
         <tbody>
@@ -90,8 +83,7 @@
               <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_NETASSETS(org)) }}</td>
               <td class="cell--ellipsis">{{ formatUsdAmount(SG_HPE_NAME(org)) }}</td>
               <td class="cell--ellipsis">{{ formatUsdAmount(SG_HPE_TITLE(org)) }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_HPE_SALARYPAY(org)) }}</td>
-              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_HPE_OTHERPAY(org)) }}</td>
+              <td class="cell--right-align cell--mono">{{ formatUsdAmount(SG_HPE_TOTALPAY(org)) }}</td>
             </tr>
           </template>
         </tbody>
@@ -104,8 +96,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_NETASSETS)) }}</th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_SALARYPAY)) }}</th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(mean(SG_HPE_TOTALPAY)) }}</th>
           </tr>
           <tr>
             <th scope="row">Median</th>
@@ -115,8 +106,7 @@
             <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_NETASSETS)) }}</th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_SALARYPAY)) }}</th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(median(SG_HPE_TOTALPAY)) }}</th>
           </tr>
           <tr>
             <th scope="row">Mean of non-zero</th>
@@ -126,8 +116,7 @@
             <th scope="col" class="cell--right-align"></th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_SALARYPAY)) }}</th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMean(SG_HPE_TOTALPAY)) }}</th>
           </tr>
           <tr>
             <th scope="row">Median of non-zero</th>
@@ -137,8 +126,7 @@
             <th scope="col" class="cell--right-align"></th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_SALARYPAY)) }}</th>
-            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_OTHERPAY)) }}</th>
+            <th scope="col" class="cell--right-align cell--mono">{{ formatUsdAmount(nonzeroMedian(SG_HPE_TOTALPAY)) }}</th>
           </tr>
           <tr>
             <th scope="row"></th>
@@ -148,8 +136,7 @@
             <th scope="col" class="cell--right-align">Net assets</th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align">Salary</th>
-            <th scope="col" class="cell--right-align">Other pay</th>
+            <th scope="col" class="cell--right-align">Total compensation</th>
           </tr>
         </tfoot>
       </table>
@@ -178,6 +165,9 @@ const SG_HPE_NAME      = d => guard(d, d => d.filings[displayYear.value].highest
 const SG_HPE_TITLE     = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.title);
 const SG_HPE_SALARYPAY = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
 const SG_HPE_OTHERPAY  = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.otherPay);
+const SG_HPE_TOTALPAY  = d => guard(d, d =>
+  d.filings[displayYear.value].highestPaidEmployee.salaryPay + d.filings[displayYear.value].highestPaidEmployee.otherPay
+);
 
 function setDisplayYear(year) {
   displayYear.value = year;
