@@ -30,7 +30,7 @@ useSeoMeta(seoMeta);
 </script>
 
 <template>
-  <div class="container post__before">
+  <div class="container post__before" v-if="breadcrumbUrl && breadcrumbText">
     <div>
       <NuxtLink
         v-if="breadcrumbUrl && breadcrumbText"
@@ -38,7 +38,7 @@ useSeoMeta(seoMeta);
         :to="breadcrumbUrl"
       >{{ breadcrumbText }}</NuxtLink>
     </div>
-    <div class="post__labels">
+    <div class="post__labels" v-if="post.category in POST_CATEGORIES">
       <div class="post-label post-label--category">{{ POST_CATEGORIES[post.category].name }}</div>
       <div class="post-label post-label--type">{{ type }}</div>
     </div>
