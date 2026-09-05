@@ -37,6 +37,8 @@ const mediaSchema = z.object({
   venue: z.string().optional(),
 });
 
+const pageSchema = z.object({});
+
 export default defineContentConfig({
   collections: {
     tools: defineCollection({
@@ -58,6 +60,11 @@ export default defineContentConfig({
       type: 'page',
       source: 'media/*.md',
       schema: mediaSchema,
+    }),
+    pages: defineCollection({
+      type: 'page',
+      source: '*.md',
+      schema: pageSchema,
     }),
   },
 });

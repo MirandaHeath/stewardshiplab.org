@@ -153,6 +153,7 @@ const route = useRoute();
               href="https://find-and-update.company-information.service.gov.uk/company/SC893294/filing-history/MzUyNjQ3NTMwNWFkaXF6a2N4/document?format=pdf&download=0"
               target="_blank"
             >Articles of Incorporation</a>
+            <a href="/labour-policy">Labour Policy</a>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/cookie-policy">Cookie Policy</a>
             <a href="/brand">Brand</a>
