@@ -3,6 +3,12 @@ const route = useRoute();
 const { data: post } = await useAsyncData(route.path, () => {
   return queryCollection('ideas').path(route.path).first();
 });
+if (!post.value) {
+  throw createError({
+    status: 404,
+    statusText: 'Page Not Found',
+  });
+}
 </script>
 
 <template>
