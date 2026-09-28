@@ -27,7 +27,7 @@ useSeoMeta({
 });
 
 const route = useRoute();
-const { data: posts } = await useAsyncData(route.path.replace(/\/$/, ''), () => {
+const { data: posts } = await useAsyncData('/', () => {
   return Promise.all([
     queryCollection('tools')
       .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage', 'hidden', 'ctaText', 'ctaAction', 'ctaLink')
