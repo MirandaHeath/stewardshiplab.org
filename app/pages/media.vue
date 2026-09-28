@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { data: media } = await useAsyncData(route.path, () => {
+const { data: media } = await useAsyncData(route.path.replace(/\/$/, ''), () => {
   return queryCollection('media')
     .order('date', 'DESC')
     .all();

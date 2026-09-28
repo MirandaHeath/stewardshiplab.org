@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { data: post } = await useAsyncData(route.path, () => {
+const { data: post } = await useAsyncData(route.path.replace(/\/$/, ''), () => {
   return queryCollection('pages').path(route.path).first();
 });
 if (!post.value) {
