@@ -227,15 +227,26 @@ const displayYearOptions = ['2025', '2024', '2023', '2022'];
 
 // eslint-disable-next-line @stylistic/space-before-function-paren
 const { data: allOrgs } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
-  const promises = ORG_IDS.map((orgId) => {
-    return $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
-      .then(pageBody => getPropublicaInfo(orgId, pageBody, displayYearOptions))
-      .catch((err) => {
-        console.warn(`Could not fetch data for org ${orgId}; removing this org`, err);
-        return undefined;
-      });
+  const results = [];
+  const queue = ORG_IDS.map((orgId, index) => ({ orgId, index }));
+  // ProPublica resets connections under high concurrency.
+  const workers = Array.from({ length: 4 }, async () => {
+    for (let item = queue.shift(); item; item = queue.shift()) {
+      try {
+        const pageBody = await $fetch(URL_PREFIX_PROPUBLICA_ORG + item.orgId, {
+          signal,
+          headers: { accept: 'text/html' },
+          retry: 3,
+          retryDelay: 1000,
+        });
+        results[item.index] = await getPropublicaInfo(item.orgId, pageBody, displayYearOptions);
+      }
+      catch (err) {
+        console.warn(`Could not fetch data for org ${item.orgId}; removing this org`, err);
+      }
+    }
   });
-  const results = await Promise.all(promises);
+  await Promise.all(workers);
   return results.filter(d => d);
 });
 
