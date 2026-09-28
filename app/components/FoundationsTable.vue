@@ -226,12 +226,17 @@ const displayYear = ref('2024');
 const displayYearOptions = ['2025', '2024', '2023', '2022'];
 
 // eslint-disable-next-line @stylistic/space-before-function-paren
-const { data: allOrgs, _status } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
+const { data: allOrgs } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
   const promises = ORG_IDS.map((orgId) => {
     return $fetch(URL_PREFIX_PROPUBLICA_ORG + orgId, { signal })
-      .then(pageBody => getPropublicaInfo(orgId, pageBody, displayYearOptions));
+      .then(pageBody => getPropublicaInfo(orgId, pageBody, displayYearOptions))
+      .catch((err) => {
+        console.warn(`Could not fetch data for org ${orgId}; removing this org`, err);
+        return undefined;
+      });
   });
-  return await Promise.all(promises);
+  const results = await Promise.all(promises);
+  return results.filter(d => d);
 });
 
 const sortedOrgs = computed(() => {
