@@ -67,3 +67,5 @@ export const ORG_IDS: string[] = [
   '205498932', // Wordpress Foundation
   '845105214', // Zig Software Foundation
 ];
+
+export const DISPLAY_YEARS = ['2025', '2024', '2023', '2022'];

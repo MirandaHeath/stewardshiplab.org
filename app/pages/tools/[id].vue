@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const { data: post } = await useAsyncData(route.path.replace(/\/$/, ''), () => {
-  return queryCollection('tools').path(route.path).first();
+  return $fetch(`/api/pages${route.path.replace(/\/$/, '')}`).catch(() => null);
 });
 if (!post.value) {
   throw createError({

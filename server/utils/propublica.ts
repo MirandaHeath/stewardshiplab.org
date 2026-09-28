@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import { parseUsdAmount } from './format.ts';
+import { parseUsdAmount } from '../../app/utils/format.ts';
 
 type Employee = {
   name: string

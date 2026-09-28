@@ -145,8 +145,7 @@
 </template>
 
 <script setup lang="ts">
-import { URL_PREFIX_PROPUBLICA_ORG, ORG_IDS } from '../data/propublica.ts';
-import { getPropublicaInfo } from '../utils/propublica.ts';
+import { DISPLAY_YEARS } from '../data/propublica.ts';
 import { formatUsdAmount } from '../utils/format.ts';
 
 function guard(org, getter) {
@@ -223,32 +222,9 @@ function nonzeroMedian(getter) {
 const sortGetter = ref(SG_REVENUE);
 const sortAsc = ref(false);
 const displayYear = ref('2024');
-const displayYearOptions = ['2025', '2024', '2023', '2022'];
+const displayYearOptions = DISPLAY_YEARS;
 
-// eslint-disable-next-line @stylistic/space-before-function-paren
-const { data: allOrgs } = await useAsyncData('orgs', async (_nuxtApp, { signal }) => {
-  const results = [];
-  const queue = ORG_IDS.map((orgId, index) => ({ orgId, index }));
-  // ProPublica resets connections under high concurrency.
-  const workers = Array.from({ length: 4 }, async () => {
-    for (let item = queue.shift(); item; item = queue.shift()) {
-      try {
-        const pageBody = await $fetch(URL_PREFIX_PROPUBLICA_ORG + item.orgId, {
-          signal,
-          headers: { accept: 'text/html' },
-          retry: 3,
-          retryDelay: 1000,
-        });
-        results[item.index] = await getPropublicaInfo(item.orgId, pageBody, displayYearOptions);
-      }
-      catch (err) {
-        console.warn(`Could not fetch data for org ${item.orgId}; removing this org`, err);
-      }
-    }
-  });
-  await Promise.all(workers);
-  return results.filter(d => d);
-});
+const { data: allOrgs } = await useFetch('/api/foundations', { key: 'orgs' });
 
 const sortedOrgs = computed(() => {
   return allOrgs.value.toSorted((a, b) => {

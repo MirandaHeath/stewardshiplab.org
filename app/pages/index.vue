@@ -26,27 +26,8 @@ useSeoMeta({
   ogDeterminer: 'the',
 });
 
-const route = useRoute();
 const { data: posts } = await useAsyncData('/', () => {
-  return Promise.all([
-    queryCollection('tools')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage', 'hidden', 'ctaText', 'ctaAction', 'ctaLink')
-      .order('date', 'DESC')
-      .where('featuredOnHomepage', '=', true)
-      .all(),
-    queryCollection('reports')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage', 'hidden', 'ctaText', 'ctaAction','ctaLink')
-      .order('date', 'DESC')
-      .where('featuredOnHomepage', '=', true)
-      .all(),
-    queryCollection('ideas')
-      .select('path', 'title', 'description', 'authors', 'date', 'category', 'featuredOnHomepage', 'hidden', 'ctaText', 'ctaAction', 'ctaLink')
-      .order('date', 'DESC')
-      .where('featuredOnHomepage', '=', true)
-      .all(),
-  ]).then((results) => {
-    return results.flat().sort((a, b) => b.date.localeCompare(a.date));
-  });
+  return $fetch('/api/featured');
 });
 </script>
 

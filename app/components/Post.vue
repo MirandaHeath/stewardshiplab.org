@@ -93,7 +93,12 @@ useSeoMeta(seoMeta);
     </figure>
   </div>
   <div :class="{ container: !post.fullWidthLayout }">
-    <ContentRenderer :value="post" class="prose" />
+    <div class="prose">
+      <template v-for="(block, index) in post.blocks" :key="index">
+        <LazyFoundationsTable v-if="block === 'foundations-table'" />
+        <PostBody v-else :path="post.path" :block="index" />
+      </template>
+    </div>
     <p v-if="post.llmDisclaimer" class="llm-disclaimer">
       Written by humans, not LLMs.
     </p>

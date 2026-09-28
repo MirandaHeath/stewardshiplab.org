@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     'nuxt-svgo',
-    '@nuxt/content',
   ],
   features: {
     inlineStyles: false,
@@ -27,13 +26,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-  content: {
-    database: {
-      type: 'sqlite',
-      filename: ':memory:',
-    },
-    experimental: { sqliteConnector: 'native' },
-  },
   vite: {
     build: {
       cssCodeSplit: false,

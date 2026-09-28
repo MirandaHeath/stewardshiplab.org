@@ -1,10 +1,7 @@
 <script setup>
 const route = useRoute();
 const { data: posts } = await useAsyncData(route.path.replace(/\/$/, ''), () => {
-  return queryCollection('reports')
-    .select('path', 'title', 'description', 'authors', 'date', 'category', 'featured', 'hidden', 'ctaText', 'ctaAction', 'ctaLink')
-    .order('date', 'DESC')
-    .all();
+  return $fetch('/api/posts/reports');
 });
 
 const title = `Reports ✸ Software Stewardship Lab`;
