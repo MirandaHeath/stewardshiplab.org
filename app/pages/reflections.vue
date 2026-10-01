@@ -25,7 +25,7 @@ definePageMeta({
       >Join Calendar</a>
       <a href="https://discord.gg/bw4PzpbuAf" target="_blank" class="link-area link-area--chat">Join Chat</a>
       <a href="https://vlad.website" target="_blank" class="link-area link-area--vlad">Vlad-Stefan Harbuz</a>
-      <!-- <a href="https://mirandaheath.website" target="_blank" class="link-area link-area--miranda">Miranda Heath</a> -->
+      <a href="https://mirandaheath.website" target="_blank" class="link-area link-area--miranda">Miranda Heath</a>
       <a href="https://stewardshiplab.org" target="_blank" class="link-area link-area--lab">Software Stewardship Lab</a>
       <a href="https://stewardshiplab.org" target="_blank" class="link-area link-area--star">Software Stewardship Lab</a>
       <img src="/images/reflections-p2.webp" alt="The second page of the letter">
