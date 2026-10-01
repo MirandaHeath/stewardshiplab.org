@@ -118,7 +118,6 @@ definePageMeta({
     position: relative;
     img {
       min-width: 0;
-      max-width: 1000px;
     }
     .link-area {
       display: block;
