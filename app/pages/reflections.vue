@@ -127,7 +127,7 @@ definePageMeta({
       text-indent: -99999px;
       background: rgba(255, 255, 255, 0.5);
       box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.5);
-      opacity: 0;
+      opacity: 0.01;
       &:hover {
         opacity: 1;
       }
