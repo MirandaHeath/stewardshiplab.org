@@ -148,7 +148,7 @@ strong {
   font-weight: 500;
 }
 
-a {
+a, .fakelink {
   color: inherit;
   text-decoration: none;
   transition: background-color 200ms, color 200ms;
