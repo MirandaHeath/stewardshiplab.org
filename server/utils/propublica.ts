@@ -5,6 +5,7 @@ type Employee = {
   name: string
   title: string
   salaryPay: number
+  relatedPay: number
   otherPay: number
   totalPay: number
 };
@@ -56,19 +57,24 @@ export async function getPropublicaInfo(id, pageBody, targetYears): Org {
       if (titleMatches && titleMatches.length >= 2) {
         title = titleMatches[1];
       }
+      const nColumns = $(this).find('td').length;
       const salaryPay = parseUsdAmount($(this).find('td:nth-child(2)').text());
+      let relatedPay = 0;
+      if (nColumns == 4) {
+        relatedPay = parseUsdAmount($(this).find('td:nth-child(3)').text());
+      }
       const otherPay = parseUsdAmount($(this).find('td:last-child').text());
       const employee = {
         name: name,
         title: title,
         salaryPay: salaryPay,
+        relatedPay: relatedPay,
         otherPay: otherPay,
-        totalPay: salaryPay + otherPay,
+        totalPay: salaryPay + relatedPay + otherPay,
       };
       if (
         idx == 0 ||
-        !highestPaidEmployee.salaryPay ||
-        (employee.salaryPay && employee.salaryPay > highestPaidEmployee.salaryPay)
+        (employee.totalPay > highestPaidEmployee.totalPay)
       ) {
         highestPaidEmployee = employee;
       }

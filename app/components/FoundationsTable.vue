@@ -70,7 +70,7 @@
               @click="setSortGetter(SG_HPE_TOTALPAY)"
               :data-sorting="getSortingDataAttr(SG_HPE_TOTALPAY)"
               class="cell--right-align cell--mobile-expand"
-            ><span>Total pay</span></th>
+            ><span>Total compensation</span></th>
           </tr>
         </thead>
         <tbody>
@@ -136,7 +136,7 @@
             <th scope="col" class="cell--right-align">Net assets</th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" class="cell--right-align">Total pay</th>
+            <th scope="col" class="cell--right-align">Total compensation</th>
           </tr>
         </tfoot>
       </table>
@@ -164,9 +164,7 @@ const SG_HPE_NAME      = d => guard(d, d => d.filings[displayYear.value].highest
 const SG_HPE_TITLE     = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.title);
 const SG_HPE_SALARYPAY = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.salaryPay);
 const SG_HPE_OTHERPAY  = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.otherPay);
-const SG_HPE_TOTALPAY  = d => guard(d, d =>
-  d.filings[displayYear.value].highestPaidEmployee.salaryPay + d.filings[displayYear.value].highestPaidEmployee.otherPay
-);
+const SG_HPE_TOTALPAY  = d => guard(d, d => d.filings[displayYear.value].highestPaidEmployee.totalPay);
 
 function setDisplayYear(year) {
   displayYear.value = year;
