@@ -18,7 +18,7 @@ definePageMeta({
       <img src="/images/reflections-p1.webp" alt="The first page of the letter">
     </div>
     <div class="page">
-      <a href="TODO" target="_blank" class="link-area link-area--calendar">Join Calendar</a>
+      <a href="#" target="_blank" class="link-area link-area--calendar">Join Calendar</a>
       <a href="https://discord.gg/bw4PzpbuAf" target="_blank" class="link-area link-area--chat">Join Chat</a>
       <a href="https://vlad.website" target="_blank" class="link-area link-area--vlad">Vlad-Stefan Harbuz</a>
       <a href="https://mirandaheath.website" target="_blank" class="link-area link-area--miranda">Miranda Heath</a>
@@ -69,7 +69,7 @@ definePageMeta({
           If you'd like to join us, we'd love to hear how things are going for you.
         </p>
         <div class="page-items">
-          <a href="javascript:alert('todo')" class="button">Join Calendar</a>
+          <a href="#" class="button">Join Calendar</a>
           <a href="https://discord.gg/bw4PzpbuAf" class="button">Join Chat</a>
         </div>
         <p>
