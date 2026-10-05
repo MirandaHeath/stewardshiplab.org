@@ -1,6 +1,6 @@
 export const PEOPLE = {
   'vlad': {
-    name: 'Vlad-Stefan Harbuz',
+    name: 'Vlad Miricioiu',
     image: '/images/people/vlad@120px.webp',
   },
   'miranda': {

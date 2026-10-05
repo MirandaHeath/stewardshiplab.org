@@ -109,7 +109,7 @@ section](https://stewardshiplab.org/#team) of _stewardshiplab.org_.
 <div class="post-signature">
   <img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
   <i>
-    Vlad-Stefan Harbuz, Executive Director<br>
+    Vlad Miricioiu, Executive Director<br>
   </i>
 </div>
 

@@ -42,7 +42,7 @@ useSeoMeta({
               >
               <div class="contact-person__body">
                 <div class="contact-person__head">
-                  <strong>Vlad-Stefan Harbuz</strong>
+                  <strong>Vlad Miricioiu</strong>
                   <span>Executive Director</span>
                   <span>(UK timezone)</span>
                 </div>

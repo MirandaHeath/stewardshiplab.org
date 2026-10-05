@@ -140,5 +140,5 @@ But there is another way to rebalance the energy equation. What if instead of le
 You can read my finished report in full using the button above. I am really keen to get feedback from the Open Source community to ensure I am fairly representing their views. If you work in open source and can spare some of your precious time to read the report, I would love to hear from you! You can talk to me on Bluesky [@mirandaheath.website](https://bsky.app/profile/mirandaheath.website), Mastodon [@mirandah@mastodon.social](https://mastodon.social/@mirandah/) or drop me an email at miranda@mirandaheath.website.
 
 <p class="credit">
-  Illustrations by Harriet Boeing. Additional work by Vlad-Stefan Harbuz, Greg Kumparak and Michael Selvidge.
+  Illustrations by Harriet Boeing. Additional work by Vlad Miricioiu, Greg Kumparak and Michael Selvidge.
 </p>

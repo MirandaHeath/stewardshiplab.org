@@ -131,7 +131,7 @@ const { data: posts } = await useAsyncData('/', () => {
             >
             <div class="news-item__text">
               <h2>Listen to our Sustain podcast episode</h2>
-              <em class="news-item__extra">“Vlad-Stefan Harbuz: Launching the Software Stewardship Lab”</em>
+              <em class="news-item__extra">“Launching the Software Stewardship Lab”</em>
             </div>
             <IconCaretRightBold class="icon icon--s" />
           </div>
@@ -151,7 +151,7 @@ const { data: posts } = await useAsyncData('/', () => {
         </div>
         <div class="members">
           <Member
-            name="Vlad-Stefan Harbuz"
+            name="Vlad Miricioiu"
             title="Executive Director, Researcher"
             image-url="/images/people/vlad@300px.webp"
             url="https://vlad.website"

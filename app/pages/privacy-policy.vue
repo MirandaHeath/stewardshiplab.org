@@ -16,7 +16,7 @@
 
     <p>
       If you need to contact us about your data, reach out to our Data Protection Officer.
-      Our Data Protection Officer is Vlad-Stefan Harbuz who can be contacted at
+      Our Data Protection Officer is Vlad Miricioiu who can be contacted at
       <a href="mailto:vlad@vlad.website">vlad@vlad.website</a>.
     </p>
 

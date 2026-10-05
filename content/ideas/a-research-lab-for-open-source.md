@@ -56,7 +56,7 @@ our research takes into account the human side of Open Source, by investigating 
 
 Our [team][team] includes some of the most experienced people in the field:
 
-- [Vlad-Stefan Harbuz][vlad], director of the [Open Source Pledge][osp] and adviser to the [Open Source Endowment][ose].
+- [Vlad Miricioiu][vlad], director of the [Open Source Pledge][osp] and adviser to the [Open Source Endowment][ose].
 - [Andrew Nesbitt][andrew], creator of [ecosyste.ms][ecosystems] and probably the world's foremost expert on package
 management.
 - [Miranda Heath][miranda], author of the to-date most comprehensive [report on burnout in Open Source][burnout].
@@ -173,7 +173,7 @@ We can solve this problem together with your support. If you're able to, [sponso
 <div class="post-signature">
   <img src="/images/vlad-squiggle-sig.svg" width="130" alt="Vlad's signature">
   <i>
-    Vlad-Stefan Harbuz, Executive Director
+    Vlad Miricioiu, Executive Director
   </i>
   <p>Together with our board:</p>
   <i>
