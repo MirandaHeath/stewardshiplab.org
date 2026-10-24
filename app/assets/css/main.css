@@ -244,6 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul, ol {
+  padding-left: 50px;
   li {
     margin: 5px 0;
     &:first-child {
@@ -292,6 +293,17 @@ mark {
   border-radius: var(--border-radius-s);
   box-shadow: 0px 0px 5px 5px var(--color-text-mark);
   box-decoration-break: clone;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 6fr;
+  margin-left: 30px;
+  dt {
+    font-variant-caps: small-caps;
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+  }
 }
 
 figure {
