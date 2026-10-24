@@ -1,5 +1,5 @@
 ---
-authors: ['vlad', 'andrew', 'wolf-vollprecht', 'travis-hathaway']
+authors: ['andrew', 'vlad', 'wolf-vollprecht', 'travis-hathaway']
 category: 'package-management'
 title: "CfP: Package Management devroom at FOSDEM 27"
 date: 2026-10-24
