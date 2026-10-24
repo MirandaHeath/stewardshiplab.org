@@ -4,6 +4,7 @@ category: 'package-management'
 title: "CfP: Package Management devroom at FOSDEM 27"
 date: 2026-10-24
 description: "We are excited to announce the Call for Participation for the Package Management devroom at FOSDEM 2027."
+metaImage: "https://stewardshiplab.org/images/og/cfp-package-management-devroom-at-fosdem-27.png"
 hidden: true
 llmDisclaimer: true
 ---
