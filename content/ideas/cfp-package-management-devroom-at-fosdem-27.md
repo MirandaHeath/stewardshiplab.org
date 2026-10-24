@@ -6,9 +6,6 @@ date: 2026-10-24
 description: "We are excited to announce the Call for Participation for the Package Management devroom at FOSDEM 2027."
 hidden: true
 llmDisclaimer: true
-disclaimers:
-  - title: hlelo world
-    text: dsada sdas dsa 
 ---
 
 We are excited to announce the Call for Participation for the Package Management devroom at FOSDEM 2027, taking place on
