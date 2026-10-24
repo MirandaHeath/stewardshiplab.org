@@ -45,6 +45,9 @@ export default defineNuxtConfig({
     '/reflections': {
       prerender: true,
     },
+    '/ideas/cfp-package-management-devroom-at-fosdem-27': {
+      prerender: true,
+    },
     '/ideas/a-research-lab-for-open-source': {
       prerender: true,
     },
