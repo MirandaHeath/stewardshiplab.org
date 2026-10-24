@@ -27,6 +27,14 @@ export const PEOPLE = {
     name: 'Justin Cappos',
     image: '/images/people/justin@300px.webp',
   },
+  'travis-hathaway': {
+    name: 'Travis Hathaway',
+    image: '/images/people/travis-hathaway@120px.webp',
+  },
+  'wolf-vollprecht': {
+    name: 'Wolf Vollprecht',
+    image: '/images/people/wolf-vollprecht@120px.webp',
+  },
   'damian-vicino': {
     name: 'Damián Vicino',
     image: '/images/people/damian-vicino@120px.webp',
