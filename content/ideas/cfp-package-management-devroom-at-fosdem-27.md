@@ -56,7 +56,7 @@ Important dates:
   <dd>Schedule published</dd>
 </dl>
 
-Some things to remember:
+Some things to remember during talk submission:
 
 - Please select “Package Management” as the track in the dropdown menu.
 - We suggest including a list of related previous work, and a brief bio, for each speaker.
