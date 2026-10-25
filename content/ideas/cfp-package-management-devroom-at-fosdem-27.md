@@ -46,7 +46,7 @@ products.
 Important dates:
 
 <dl>
-  <dt>24 Oct 2026</dt>
+  <dt>25 Oct 2026</dt>
   <dd>Call for proposals opens</dd>
   <dt>01 Dec 2026</dt>
   <dd>Submissions close at 23:59 UTC</dd>
