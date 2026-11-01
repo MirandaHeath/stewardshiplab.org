@@ -167,13 +167,14 @@ const route = useRoute();
           </div>
         </div>
         <div class="footer-imprint">
-          <LesserArms width="40" height="40" />
+          <LesserArms width="60" height="60" />
           <div>
             Scottish non-profit <a
               href="https://find-and-update.company-information.service.gov.uk/company/SC893294"
               target="_blank"
             >SC893294</a><br>
-            58 Morrison St, Edinburgh, EH3 8BP, UK
+            58 Morrison St, Edinburgh, EH3 8BP, UK<br>
+            &copy; 2026 · Software Stewardship Lab is a registered trademark
           </div>
         </div>
       </div>
