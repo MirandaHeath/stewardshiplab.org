@@ -2,33 +2,25 @@
   "name": "stewardshiplab.org",
   "private": true,
   "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "lint": "eslint .",
-    "typecheck": "nuxt typecheck",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@comark/vue": "^0.8.1",
-    "@nuxt/eslint": "^1.17.0",
-    "@nuxt/fonts": "^1.1.0",
-    "@nuxtjs/html-validator": "^2.1.0",
-    "comark": "^0.8.1",
-    "comark-content": "^0.4.1",
-    "nuxt": "^4.6.2",
-    "rangi": "^2.2.0",
+    "@astrojs/mdx": "^8.1.2",
+    "@astrojs/vue": "^7.1.2",
+    "astro": "^7.4.5",
     "temporal-polyfill": "^1.0.6",
-    "vue": "^3.5.44"
+    "vue": "^3.5.45"
   },
   "devDependencies": {
-    "cheerio": "^1.2.0",
-    "eslint": "10.13.0",
-    "nuxt-svgo": "^5.3.0",
-    "typescript": "7.0.2",
-    "vue-tsc": "3.3.13"
+    "cheerio": "^1.2.0"
   },
-  "packageManager": "pnpm@12.15.0"
+  "packageManager": "pnpm@12.16.1"
 }

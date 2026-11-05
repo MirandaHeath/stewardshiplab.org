@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate } from '../utils/format.ts';
+import { PEOPLE } from '../data/content.ts';
+import PostList from './PostList.astro';
+
+interface Props {
+  posts: []object;
+}
+
+let { posts } = Astro.props;
+const featuredPosts = posts.filter(post => post.featured);
+---
+
+<div>
+  {featuredPosts.length > 0 && (
+    <div class="fake-category">
+      <h2>Featured Posts</h2>
+      <PostList posts={posts} featuredOnly={true} />
+    </div>
+    <hr>
+  )}
+  <div class="control-bar">
+    <h2>All Posts</h2>
+    <div class="control-set">
+      <button
+        class="date-trigger button button--s"
+        type="button"
+        data-poppy-trigger
+        data-poppy-group="post-browser"
+        data-poppy-id="date"
+      >By date</button>
+      <button
+        class="category-trigger button button--s"
+        type="button"
+        data-poppy-trigger
+        data-poppy-group="post-browser"
+        data-poppy-id="category"
+        data-poppy-active
+      >By category</button>
+    </div>
+  </div>
+  <div data-poppy-group="post-browser" data-poppy-id="category">
+    <PostList posts={posts} categorised={true} />
+  </div>
+  <div data-poppy-group="post-browser" data-poppy-id="date" hidden>
+    <PostList posts={posts} categorised={false} />
+  </div>
+</div>
+
+<style>
+.control-bar {
+  margin-bottom: 60px;
+  @media (max-width: 900px) {
+    margin-bottom: 40px;
+  }
+}
+.fake-category {
+  display: flex;
+  gap: 45px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  h2 {
+    flex-basis: 200px;
+    @media (max-width: 900px) {
+      flex-basis: unset;
+      text-align: center;
+    }
+  }
+  .post-list {
+    flex: 1;
+  }
+}
+</style>

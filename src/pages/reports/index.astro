@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import PostBrowser from '../../components/PostBrowser.astro';
+
+const reports = (await getCollection('reports'))
+  .map((d) => {
+    return {
+      id: d.id,
+      url: '/reports/' + d.id,
+      ...d.data
+    };
+  })
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<MainLayout
+  title="Reports"
+  description="Detailed investigations. Living documents. Taxonomies. Reference materials. Our reports help Open Source folks do better work and design better policies and institutions."
+>
+  <div class="container">
+    <h1 class="page-title">Reports</h1>
+    <p>Detailed investigations. Living documents. Taxonomies. Reference materials. Our reports help Open Source folks do better work and design better policies and institutions.</p>
+    <hr>
+    <PostBrowser posts={reports} />
+  </div>
+</MainLayout>

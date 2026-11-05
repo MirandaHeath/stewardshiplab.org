@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import PostBrowser from '../../components/PostBrowser.astro';
+
+const ideas = (await getCollection('ideas'))
+  .map((d) => {
+    return {
+      id: d.id,
+      url: '/ideas/' + d.id,
+      ...d.data
+    };
+  })
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<MainLayout
+  title="Ideas"
+  description="We regularly write about Open Source governance and burnout, software supply chains, package management, funding and metrics, and other topics in Open Source sustainability."
+>
+  <div class="container">
+    <h1 class="page-title">Ideas</h1>
+    <p>We regularly write about Open Source governance and burnout, software supply chains, package management, funding and metrics, and other topics in Open Source sustainability.</p>
+    <hr>
+    <PostBrowser posts={ideas} />
+  </div>
+</MainLayout>

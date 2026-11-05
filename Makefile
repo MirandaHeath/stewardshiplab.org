@@ -6,7 +6,7 @@
 .PHONY: site publish-staging
 
 site:
-	pnpm generate
+	pnpm build
 
 publish-staging: site
 	rsync -Pvrthl --delete --exclude .git --info=progress2 .output/public/ yavin:/srv/www/lab-staging/

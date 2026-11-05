@@ -1,0 +1,232 @@
+---
+import FoundationsTableWrapper from './FoundationsTableWrapper.astro';
+import { formatDate, formatDateTime } from '../utils/format.ts';
+import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
+
+interface Props {
+  post: object;
+  type: string;
+  breadcrumbUrl: string;
+  breadcrumbText: boolean;
+}
+
+let { post, type, breadcrumbUrl, breadcrumbText } = Astro.props;
+
+const haveMetadata = post.authors || post.editor || post.date || post.location ||
+  (post.canonicalWebsiteName && post.canonicalUrl) || post.venue;
+---
+
+<div>
+  <div class="container post__before">
+    <div>
+      {breadcrumbUrl && breadcrumbText && (
+        <a class="plain-link" href={breadcrumbUrl}>{breadcrumbText}</a>
+      )}
+    </div>
+    {(post.category in POST_CATEGORIES) && (
+      <div class="post__labels">
+        <div class="post-label post-label--category">{POST_CATEGORIES[post.category].name}</div>
+        <div class="post-label post-label--type">{type}</div>
+      </div>
+    )}
+  </div>
+  <div class="container">
+    <h1 class="page-title">{post.title}</h1>
+    {haveMetadata && (
+      <div class="post__meta">
+        {post.authors && post.authors.map((author) => (
+          <div class="post__meta-item">
+            {post.authors.length == 1 && (<b>Author</b>)}
+            {post.authors.length > 1 && (<b>Co-author</b>)}
+            <div class="post__person">
+              <img src={PEOPLE[author].image} alt={`A portrait of ${PEOPLE[author].name}`}>
+              <span>{PEOPLE[author].name}</span>
+            </div>
+          </div>
+        ))}
+        {post.editor && (
+          <div class="post__meta-item">
+            <b>Editor</b>
+            <div class="post__person">
+              {post.editorImage && (
+                <img src={post.editorImage} alt={`A portrait of ${post.editor}`}>
+              )}
+              <span>{post.editor}</span>
+            </div>
+          </div>
+        )}
+        {post.date && (
+          <div class="post__meta-item">
+            <b>Date</b>
+            <span>{formatDate(post.date)}</span>
+          </div>
+        )}
+        {post.location && (
+          <div class="post__meta-item">
+            <b>Location</b>
+            <span>{post.location}</span>
+          </div>
+        )}
+        {post.venue && (
+          <div class="post__meta-item">
+            <b>Talk given at</b>
+            {post.venueUrl && (
+              <a target="_blank" href={post.venueUrl}>{post.venue}</a>
+            )}
+            {!post.venueUrl && (
+              <span>{post.venue}</span>
+            )}
+          </div>
+        )}
+        {post.canonicalWebsiteName && post.canonicalUrl && (
+          <div class="post__meta-item">
+            <b>Original post</b>
+            <a target="_blank" href={post.canonicalUrl}>on {post.canonicalWebsiteName}</a>
+          </div>
+        )}
+        {post.embargoReleaseTime && (
+          <div class="post__meta-item">
+            <b>Embargo</b>
+            <span class="embargo">Do not share — Embargoed — Do not release until {formatDateTime(post.embargoReleaseTime)} UK time</span>
+          </div>
+        )}
+      </div>
+    )}
+    {post.image && (
+      <figure class="post__image">
+        <img src={post.image} alt={post.imageAlt}>
+      </figure>
+    )}
+  </div>
+  <div class={!post.fullWidthLayout && "container"}>
+    <div class="prose">
+      <slot />
+      {post.id == "foundations" && (
+        <FoundationsTableWrapper />
+      )}
+    </div>
+    {post.llmDisclaimer && (
+      <p class="llm-disclaimer">
+        Written by humans, not LLMs.
+      </p>
+    )}
+  </div>
+  {post.ctaText && post.ctaAction && post.ctaLink && (
+    <div class="container">
+      <div class="cta">
+        <h2>{post.ctaText}</h2>
+        <a href={post.ctaLink} class="button button--arrow">{post.ctaAction}</a>
+      </div>
+    </div>
+  )}
+  {breadcrumbUrl && breadcrumbText && (
+    <div class="container post__after">
+      <div>
+        <a class="plain-link" href={breadcrumbUrl}>{breadcrumbText}</a>
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+.embargo {
+  padding-inline: 6px;
+  border: 1px solid #ff0000;
+  background: #ffdddd;
+  font-weight: 500;
+  border-radius: var(--border-radius-s);
+}
+.post__before, .post__after {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.post__before {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.post__after {
+  margin-top: 80px;
+}
+.post__labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.post-label {
+  display: inline-block;
+  padding: 0 8px;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  border-radius: var(--border-radius-s);
+  background: var(--color-blue);
+  color: white;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+  text-transform: lowercase;
+}
+.post-label--type {
+  background: var(--color-blue);
+}
+.post-label--category {
+  background: var(--color-purple);
+}
+.post__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-beige-pale);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  --person-image-size: 20px;
+  .post__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    b {
+      min-width: 120px;
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+      font-weight: normal;
+    }
+  }
+  .post__person {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    img {
+      width: var(--person-image-size);
+      height: var(--person-image-size);
+      border-radius: 100%;
+    }
+  }
+}
+:global(.post__image) {
+  img {
+    max-height: 300px;
+  }
+}
+:global(.credit) {
+  display: block;
+  margin-top: 45px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+:global(.llm-disclaimer) {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  color: var(--color-text-pale);
+}
+:global(.ender) {
+  display: none;
+}
+</style>

@@ -1,6 +1,6 @@
 # stewardshiplab.org
 
-This is the website of the Software Stewardship Lab. It uses Nuxt.
+This is the website of the Software Stewardship Lab. It uses Astro.
 
 ## Usage
 

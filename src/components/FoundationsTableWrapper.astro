@@ -1,0 +1,10 @@
+---
+import FoundationsTable from './FoundationsTable.vue';
+import { getPropublicaInfo } from '../utils/propublica.ts';
+
+const allOrgs = await getPropublicaInfo();
+---
+
+<div>
+  <FoundationsTable client:idle allOrgs={allOrgs} />
+</div>

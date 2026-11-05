@@ -4,12 +4,14 @@ version = 1
 path = [
     ".gitignore",
     "REUSE.toml",
-    "app/data/**",
-    "content.config.ts",
+    "astro.config.mjs",
     "eslint.config.mjs",
     "package.json",
     "pnpm-lock.yaml",
     "pnpm-workspace.yaml",
+    "public/funding.json",
+    "public/robots.txt",
+    "src/data/**",
     "statichost.yml",
     "tsconfig.json",
 ]
@@ -18,19 +20,20 @@ SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
 path = [
-    "app/**/*.vue",
-    "app/assets/css/**",
-    "app/layouts/**",
-    "app/pages/**",
-    "app/utils/**",
-    "nuxt.config.ts",
+    "src/components/**",
+    "src/content.config.ts",
+    "src/layouts/**",
+    "src/pages/**",
+    "src/scripts/**",
+    "src/styles/**",
+    "src/utils/**",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
 path = [
-    "app/assets/images/icons/phosphor/**",
+    "src/assets/images/icons/phosphor/**",
 ]
 SPDX-FileCopyrightText = "© Phosphor Icons"
 SPDX-License-Identifier = "MIT"
@@ -39,14 +42,15 @@ SPDX-License-Identifier = "MIT"
 path = [
     "CONTRIBUTING.md",
     "README.md",
-    "public/pitch.pdf",
+    "public/*.pdf",
+    "public/images/reflections*",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 [[annotations]]
 path = [
-    "content/**/*",
+    "src/content/**/*",
 ]
 SPDX-FileCopyrightText = "© The post's author"
 SPDX-License-Identifier = "LicenseRef-Restricted"
@@ -60,13 +64,15 @@ SPDX-License-Identifier = "LicenseRef-Restricted"
 
 [[annotations]]
 path = [
-    "app/assets/images/logo.svg",
-    "app/assets/images/markset.svg",
-    "app/assets/images/star.svg",
+    "public/brand/**",
     "public/images/favicon.png",
     "public/images/logo.svg",
     "public/images/og/**",
     "public/images/star-for-bg.svg",
+    "public/images/vlad-squiggle-sig.svg",
+    "src/assets/images/logo.svg",
+    "src/assets/images/markset.svg",
+    "src/assets/images/star.svg",
 ]
 SPDX-FileCopyrightText = "© Software Stewardship Lab"
 SPDX-License-Identifier = "LicenseRef-Restricted"

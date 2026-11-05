@@ -39,7 +39,7 @@
         "status": "active",
         "name": "Associate Patron",
         "amount": 10000,
-        "currency": "USD",
+        "currency": "GBP",
         "frequency": "yearly",
         "channels": ["opencollective"]
       },
@@ -48,16 +48,7 @@
         "status": "active",
         "name": "Sustaining Patron",
         "amount": 20000,
-        "currency": "USD",
-        "frequency": "yearly",
-        "channels": ["opencollective"]
-      },
-      {
-        "guid": "participating-patron",
-        "status": "active",
-        "name": "Participating Patron",
-        "amount": 40000,
-        "currency": "USD",
+        "currency": "GBP",
         "frequency": "yearly",
         "channels": ["opencollective"]
       },
@@ -65,8 +56,8 @@
         "guid": "consulting-patron",
         "status": "active",
         "name": "Consulting Patron",
-        "amount": 60000,
-        "currency": "USD",
+        "amount": 42000,
+        "currency": "GBP",
         "frequency": "yearly",
         "channels": ["opencollective"]
       },
@@ -74,8 +65,8 @@
         "guid": "advising-patron",
         "status": "active",
         "name": "Advising Patron",
-        "amount": 90000,
-        "currency": "USD",
+        "amount": 72000,
+        "currency": "GBP",
         "frequency": "yearly",
         "channels": ["opencollective"]
       }

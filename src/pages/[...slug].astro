@@ -1,0 +1,30 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+import Post from '../components/Post.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('pages');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<'pages'>;
+
+const entry = Astro.props;
+const { Content } = await render(entry);
+const post = entry.data;
+post.id = entry.id;
+---
+
+<MainLayout
+  title={post.title}
+  description={post.description}
+  ogImageUrl={post.ogImageUrl}
+  canonicalUrl={post.canonicalUrl}
+>
+  <Post post={post} type="page">
+    <Content />
+  </Post>
+</MainLayout>

@@ -34,10 +34,10 @@ elements.
 [govuk-type-scale]: https://design-system.service.gov.uk/styles/type-scale/
 [rem]: https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/#strategic-unit-deployment-6
 
-## Adding New Reports, Tools, and Ideas Posts
+## Adding New Posts
 
-Create a new `.md` file in [`content/`](./content/) or its subdirectories, and add the appropriate metadata to the front
-matter at the top of the file. Here's an example:
+Create a new `.md` file in [`src/content/`](./src/content/) or its subdirectories, and add the appropriate metadata to
+the front matter at the top of the file. Here's an example:
 
 ```
 ---
@@ -45,18 +45,18 @@ authors: ['vlad']
 category: 'funding-tech-infrastructure'
 title: "Not Paying Open Source Maintainers Is Expensive"
 description: "Not paying for the Open Source software you use can seem like a great deal — but it can end up costing you money."
-date: 2025-06-18
+date: "2025-06-18"
 canonicalWebsiteName: 'the Open Source Pledge blog'
 canonicalUrl: 'https://opensourcepledge.com/blog/not-paying-open-source-maintainers-is-expensive/'
 ---
 ```
 
-To view the front matter schema, check [`content.config.ts`](/content.config.ts).
+To view the front matter schema, check [`src/content.config.ts`](/src/content.config.ts).
 
-To view existing categories or to create a new category, use [`app/data/content.ts`](./app/data/content.ts).
+To view existing categories or to create a new category, use [`src/data/content.ts`](./src/data/content.ts).
 
 To properly credit multiple authors:
 
-* Add the authors to `app/data/content.ts`
+* Add the authors to `src/data/content.ts`
 * Add an avatar to `public/images/people/personName.webp` using, for example, `magick personName.jpg -resize '>400x' personName.webp`
 * Add the author IDs to the `authors` field in the `.md` file's front matter

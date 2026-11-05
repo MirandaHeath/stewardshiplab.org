@@ -1,0 +1,168 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import IconCaretRightBold from '../assets/images/icons/phosphor/caret-right-bold.svg';
+---
+
+<MainLayout
+  title="Brand"
+  description="Get our branding materials here."
+>
+  <div class="container">
+    <h1 class="page-title">Branding materials</h1>
+    <p>
+      You can find our branding materials on this page.
+      If you have any questions about using them,
+      <a href="/contact">contact us</a>.
+    </p>
+    <div class="brand-item">
+      <div class="brand-item__details">
+        <h2>Logo</h2>
+      </div>
+      <div class="brand-item__main">
+        <div class="brand-item__graphic">
+          <img
+            alt="The Software Stewardship Lab logo"
+            src="/brand/logo.png"
+          >
+        </div>
+        <div class="brand-item__controls">
+          <a
+            class="button button--arrow"
+            href="/brand/logo.svg"
+            target="_blank"
+          >SVG</a>
+          <a
+            class="button button--arrow"
+            href="/brand/logo.png"
+            target="_blank"
+          >PNG</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-item brand-item--dark">
+      <div class="brand-item__details">
+        <h2>Logo, white</h2>
+      </div>
+      <div class="brand-item__main">
+        <div class="brand-item__graphic">
+          <img
+            alt="The Software Stewardship Lab logo"
+            src="/brand/logo-white.png"
+          >
+        </div>
+        <div class="brand-item__controls">
+          <a
+            class="button button--arrow"
+            href="/brand/logo-white.svg"
+            target="_blank"
+          >SVG</a>
+          <a
+            class="button button--arrow"
+            href="/brand/logo-white.png"
+            target="_blank"
+          >PNG</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-item__details">
+        <h2>Avatar</h2>
+      </div>
+      <div class="brand-item__main">
+        <div class="brand-item__graphic">
+          <img
+            alt="The Software Stewardship Lab avatar"
+            src="/brand/avatar-star-blue-on-satbeige.png"
+          >
+        </div>
+        <div class="brand-item__controls">
+          <a
+            class="button button--arrow"
+            href="/brand/avatar-star-blue-on-satbeige.svg"
+            target="_blank"
+          >SVG</a>
+          <a
+            class="button button--arrow"
+            href="/brand/avatar-star-blue-on-satbeige.png"
+            target="_blank"
+          >PNG</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-item__details">
+        <h2>Icon</h2>
+      </div>
+      <div class="brand-item__main">
+        <div class="brand-item__graphic">
+          <img
+            alt="The Software Stewardship Lab icon"
+            src="/brand/mark-beige-on-blue.png"
+          >
+        </div>
+        <div class="brand-item__controls">
+          <a
+            class="button button--arrow"
+            href="/brand/mark-beige-on-blue.svg"
+            target="_blank"
+          >SVG</a>
+          <a
+            class="button button--arrow"
+            href="/brand/mark-beige-on-blue.png"
+            target="_blank"
+          >PNG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+.brand-item {
+  display: flex;
+  gap: 45px;
+  margin-block: 60px;
+  &.brand-item--dark {
+    .brand-item__graphic {
+      background: #28282f;
+    }
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .brand-item__details {
+    flex-shrink: 0;
+    flex-basis: 200px;
+    @media (max-width: 900px) {
+      flex-basis: unset;
+    }
+    h2 {
+      font-size: var(--font-size-m);
+      line-height: 20px;
+      font-family: var(--font-family-sans);
+      font-variant-caps: small-caps;
+      font-feature-settings: "smcp";
+      text-transform: lowercase;
+    }
+  }
+  .brand-item__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .brand-item__graphic {
+    padding: 20px;
+    background: var(--color-beige-xpale);
+    border-radius: var(--border-radius-l);
+    img {
+      max-height: 100px;
+    }
+  }
+  .brand-item__controls {
+    display: flex;
+    gap: 10px;
+  }
+}
+</style>
