@@ -8,6 +8,7 @@ canonicalWebsiteName: "the Open Source Pledge blog"
 canonicalUrl: "https://opensourcepledge.com/blog/burnout-in-open-source-a-structural-problem-we-can-fix-together/"
 featured: true
 featuredOnHomepage: true
+metaImage: "https://stewardshiplab.org/images/og/burnout-in-open-source.png"
 ---
 
 <figure class="post__image">
