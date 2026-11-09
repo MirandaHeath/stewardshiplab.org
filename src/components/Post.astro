@@ -1,5 +1,4 @@
 ---
-import FoundationsTableWrapper from './FoundationsTableWrapper.astro';
 import { formatDate, formatDateTime } from '../utils/format.ts';
 import { PEOPLE, POST_CATEGORIES } from '../data/content.ts';
 
@@ -101,9 +100,6 @@ const haveMetadata = post.authors || post.editor || post.date || post.location |
   <div class={!post.fullWidthLayout && "container"}>
     <div class="prose">
       <slot />
-      {post.id == "foundations" && (
-        <FoundationsTableWrapper />
-      )}
     </div>
     {post.llmDisclaimer && (
       <p class="llm-disclaimer">
