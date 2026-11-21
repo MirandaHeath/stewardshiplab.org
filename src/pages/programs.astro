@@ -1,0 +1,63 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+import BactaCanvas from '../components/BactaCanvas.astro';
+import Program from '../components/Program.astro';
+
+const programs = await Promise.all(
+  (await getCollection('programs'))
+    .sort((a, b) => a.data.order - b.data.order)
+    .map(async (d) => {
+      return {
+        id: d.id,
+        content: await render(d),
+        ...d.data
+      };
+    })
+);
+---
+
+<MainLayout
+  title="Our programs"
+  description="Our programs"
+>
+  <div class="bacta">
+    <div class="bacta-canvas-container">
+      <BactaCanvas />
+    </div>
+    <div class="bacta-head container">
+      <h1 class="page-title">Our programs</h1>
+      <p>
+        Making the Open Source ecosystems we rely on more sustainable means doing research on topics from software
+        supply chain security to maintainer burnout. We need your support to do our work.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="programs pagepad">
+      {programs.map((program) => (
+        <Program
+          id={program.id}
+          title={program.title}
+          fundedAmount={program.fundedAmount}
+          targetAmount={program.targetAmount}
+          ocUrl={program.ocUrl}
+          currency={program.currency}
+          aim={program.aim}
+          color={program.color}
+          resources={program.resources}
+        >
+          <program.content.Content />
+        </Program>
+      ))}
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+</style>

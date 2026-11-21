@@ -9,12 +9,11 @@ export function formatUsdAmount(value) {
     return value;
   }
   const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+    style: 'decimal',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
-  return formatter.format(value);
+  return formatter.format(value) + ' USD';
 }
 
 export function formatGbpAmount(value) {
@@ -22,12 +21,11 @@ export function formatGbpAmount(value) {
     return value;
   }
   const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'GBP',
+    style: 'decimal',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
-  return formatter.format(value);
+  return formatter.format(value) + ' GBP';
 }
 
 export function formatDate(date) {

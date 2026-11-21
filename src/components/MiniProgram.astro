@@ -1,0 +1,70 @@
+---
+import { formatUsdAmount, formatGbpAmount } from '../utils/format.ts';
+
+interface Resource {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  fundedAmount: number;
+  targetAmount: number;
+  currency: string;
+  aim: string;
+  color: string;
+}
+
+let {
+  id, title, fundedAmount, targetAmount, currency, aim, color
+} = Astro.props;
+
+const oneUsdAsGbp = 0.76;
+const percentFunded = fundedAmount / targetAmount * 100;
+---
+
+<a class="program plain-link" href={`/programs#${id}`}>
+  <div class="program__head">
+    <div class="program__headtext">
+      <h2>{title}</h2>
+      <div class="program__aim">{aim}</div>
+    </div>
+  </div>
+  <div class="program__funding">
+    <div class="program__totals">
+      <div>
+        <i>Funded</i>
+        {currency == "gbp" && (
+        <span>{formatGbpAmount(fundedAmount)}</span>
+        )}
+        {currency == "usd" && (
+        <span>{formatUsdAmount(fundedAmount)}</span>
+        <span class="conversion">
+          ({formatGbpAmount(fundedAmount * oneUsdAsGbp)})
+        </span>
+        )}
+      </div>
+      <div class="program__goal">
+        <i>Goal</i>
+        {currency == "gbp" && (
+        <span>{formatGbpAmount(targetAmount)}</span>
+        )}
+        {currency == "usd" && (
+        <span class="conversion">
+          ({formatGbpAmount(targetAmount * oneUsdAsGbp)})
+        </span>
+        <span>{formatUsdAmount(targetAmount)}</span>
+        )}
+      </div>
+    </div>
+    <div class="program__bar" style={`--percent-funded: ${percentFunded}%`}>
+    </div>
+  </div>
+</a>
+
+<style define:vars={{ programColor: color }}>
+.program {
+  --programColor: var(--color-blue);
+}
+</style>

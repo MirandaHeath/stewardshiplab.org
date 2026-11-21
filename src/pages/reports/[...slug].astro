@@ -24,12 +24,14 @@ post.id = entry.id;
   ogImageUrl={post.ogImageUrl}
   canonicalUrl={post.canonicalUrl}
 >
-  <Post
-    post={post}
-    type="report"
-    breadcrumbUrl="/reports"
-    breadcrumbText="← All reports"
-  >
-    <Content />
-  </Post>
+  <div class="pagepad">
+    <Post
+      post={post}
+      type="report"
+      breadcrumbUrl="/reports"
+      breadcrumbText="← All reports"
+    >
+      <Content />
+    </Post>
+  </div>
 </MainLayout>

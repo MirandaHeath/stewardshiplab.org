@@ -1,4 +1,4 @@
-<div class="project-canvas">
+<div class="bacta-canvas">
   <canvas></canvas>
 </div>
 
@@ -158,7 +158,7 @@ function resizeCanvas($canvas, $canvasWrapper, ctx) {
 }
 
 function setupCanvas() {
-  const $canvasWrappers = document.querySelectorAll('.project-canvas');
+  const $canvasWrappers = document.querySelectorAll('.bacta-canvas');
   $canvasWrappers.forEach(($canvasWrapper) => {
     const $canvas = $canvasWrapper.querySelector('canvas');
     const ctx = $canvas.getContext('2d');
