@@ -13,6 +13,11 @@ let { post, type, breadcrumbUrl, breadcrumbText } = Astro.props;
 
 const haveMetadata = post.authors || post.editor || post.date || post.location ||
   (post.canonicalWebsiteName && post.canonicalUrl) || post.venue;
+
+let postCategoryName = undefined;
+if (post.category in POST_CATEGORIES) {
+  postCategoryName = POST_CATEGORIES[post.category].name;
+}
 ---
 
 <div>
@@ -22,12 +27,12 @@ const haveMetadata = post.authors || post.editor || post.date || post.location |
         <a class="plain-link" href={breadcrumbUrl}>{breadcrumbText}</a>
       )}
     </div>
-    {(post.category in POST_CATEGORIES) && (
-      <div class="post__labels">
-        <div class="post-label post-label--category">{POST_CATEGORIES[post.category].name}</div>
-        <div class="post-label post-label--type">{type}</div>
-      </div>
-    )}
+    <div class="post__labels">
+      {postCategoryName && postCategoryName != "News" && (
+        <div class="post-label post-label--category">{postCategoryName}</div>
+      )}
+      <div class="post-label post-label--type">{type}</div>
+    </div>
   </div>
   <div class="container">
     <h1 class="page-title">{post.title}</h1>
