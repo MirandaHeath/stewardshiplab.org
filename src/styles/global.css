@@ -814,6 +814,13 @@ section {
   }
 }
 
+.pagepad {
+  margin-block: 40px;
+  @media (max-width: 900px) {
+    margin-block: 30px;
+  }
+}
+
 .big-heading {
   margin-bottom: 30px;
   font-size: var(--font-size-xl);
