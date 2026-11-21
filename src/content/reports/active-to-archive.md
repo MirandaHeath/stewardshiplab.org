@@ -16,10 +16,7 @@ I've [blogged before](https://fastwonderblog.com/2025/11/18/responsibly-sunsetti
 The[ Open Source Program Office](https://www.cms.gov/digital-service/open-source-program-office) at the Digital Service at the Centers for Medicare and Medicaid Services in the US Government built on the CHAOSS sunsetting practitioner guide, contributed their improvements back into the guide, and built tooling to automate some of the tasks! They've done some excellent work, so I was thrilled when they asked me to join them to talk more about all of this at the recent [Open Source Summit North America](https://sched.co/2JQyK)! The [slides](https://fastwonderblog.com/wp-content/uploads/2026/05/ossna2026.pdf) and [video](https://www.youtube.com/watch?v=T9DXykNLl3I&list=PLbzoR-pLrL6p2URzlq8xlNtBhPspd2xpi) are available if you want to have a look at what we discussed.
 
 <figure>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/T9DXykNLl3I?si=9mI9XYMHw_lbZuug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption>
-        Or watch on <a href="https://www.youtube.com/watch?v=T9DXykNLl3I">YouTube</a>
-    </figcaption>
+   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T9DXykNLl3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
 ## Additional Reading:

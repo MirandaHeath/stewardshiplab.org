@@ -122,4 +122,8 @@ export const POST_CATEGORIES = {
     name: 'Tooling',
     description: 'How to find good tools for developers to use.',
   },
+  'news': {
+    name: 'News',
+    description: 'Updates from the Lab.',
+  },
 };

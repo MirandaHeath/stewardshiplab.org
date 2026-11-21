@@ -54,6 +54,10 @@ export const collections = {
     loader: glob({ base: './src/content/ideas', pattern: '**/*.{md,mdx}' }),
     schema: postSchema,
   }),
+  news: defineCollection({
+    loader: glob({ base: './src/content/news', pattern: '**/*.{md,mdx}' }),
+    schema: postSchema,
+  }),
   media: defineCollection({
     loader: glob({ base: './src/content/media', pattern: '**/*.{md,mdx}' }),
     schema: mediaSchema,

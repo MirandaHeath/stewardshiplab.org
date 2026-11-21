@@ -15,10 +15,7 @@ Having good open source project governance allows us all to collaborate and work
 
 
 <figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bSBmq2AUM18?si=6l4awn1HnXaoojnu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption>
-        Or watch on <a href="https://www.youtube.com/watch?v=bSBmq2AUM18">YouTube</a>
-    </figcaption>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bSBmq2AUM18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
 While I spend more time talking about open source project governance, I've also started thinking more about public governance and how open source can be a key part of a digital sovereignty strategy. But the open source impact on public governance goes beyond just digital sovereignty, which is why I was so excited to be invited by OpenGov Africa to talk more about the intersection between open source and public governance last week. The [slides](https://fastwonderblog.com/wp-content/uploads/2026/06/OpenGovAfrica-Dawn-2026.pdf) and [video](https://www.youtube.com/live/sVLL8q5p8kM) for that talk are also online.
