@@ -19,8 +19,8 @@
       "url": "https://stewardshiplab.org/#observatory"
     },
     "repositoryUrl": {
-      "url": "https://codeberg.org/stewardshiplab/bindep",
-      "wellKnown": "https://codeberg.org/stewardshiplab/bindep/src/branch/main/.well-known/funding-manifest-urls"
+      "url": "https://github.com/stewardshiplab/bindep",
+      "wellKnown": "https://github.com/stewardshiplab/bindep/src/branch/main/.well-known/funding-manifest-urls"
     },
     "licenses": ["spdx:Apache-2.0"],
     "tags": ["package-management", "infrastructure", "security", "software-supply-chain-security"]

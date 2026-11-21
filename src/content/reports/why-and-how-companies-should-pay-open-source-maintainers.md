@@ -45,16 +45,6 @@ as ways to submit your own feedback and views on these topics.
 	<figcaption>Thanks to <a href="https://merveilles.town/@leo">leo</a> for this photo.</figcaption>
 </figure>
 
-## Join the Conversation
-
-Have feedback or ideas? I set up an issue tracker where everyone can share their thoughts.
-
-<div class="page-items">
-	<a class="button button--arrow" href="https://codeberg.org/vladh/open-source-sustainability/issues">
-		Go to issue tracker
-	</a>
-</div>
-
 ## Abstract
 
 In this talk, I present some economical arguments for why companies should pay the Open Source maintainers they depend
