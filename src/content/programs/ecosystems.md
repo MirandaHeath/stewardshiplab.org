@@ -1,9 +1,9 @@
 ---
 title: "ecosyste.ms Growth Fund"
-fundedAmount: 20000
-targetAmount: 182000
+fundedAmount: 27000
+targetAmount: 240000
 ocUrl: "https://opencollective.com/ecosystems/projects/ecosystem-growth"
-currency: "gbp"
+currency: "usd"
 aim: "Providing world-class Open Source intelligence tooling to governments, researchers and companies worldwide."
 color: "var(--color-ecosystems-purple)"
 order: 4

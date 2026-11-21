@@ -946,6 +946,7 @@ section {
     @media (max-width: 800px) {
       flex-direction: column;
       gap: 15px;
+      margin-bottom: 10px;
     }
     .program__headtext {
       flex: 1 1;
