@@ -1,10 +1,9 @@
 ---
 authors: ['vlad']
-category: 'philosophy'
+category: 'news'
 title: "A Research Lab for Open Source"
 date: "2026-08-07"
 description: "Today, we're launching a world-class research lab dedicated to Open Source sustainability with a team of some of the most experienced people in the world."
-hidden: true
 ctaText: Want to strengthen Open Source together?
 ctaAction: Sponsor us
 ctaLink: /sponsor
@@ -154,7 +153,7 @@ structural improvements to the foundations of our technological infrastructure.
 We have various sponsorship arrangements available:
 
 - For companies, [multiple sponsorship tiers][sponsor] with various benefits.
-- For grant-making organisations, a grant proposal on <a href="/proposal.bindep.pdf" target="_blank"><em>Securing Python's Binary Dependencies</em></a>
+- For grant-making organisations, a grant proposal on [_Securing Python's Binary Dependencies_](https://static.stewardshiplab.org/proposal.bindep.pdf)
 - For individual donors, more information on our [Sponsor page][sponsor].
 
 All our income and expenses will be detailed on Open Collective with full transparency.

@@ -21,10 +21,7 @@ I expanded on this topic in another blog post, [OSPO Contribution Strategies to 
 I've also presented on this topic [several times recently](https://fastwonderblog.com/speaking/), but I wanted to highlight the two most recent talks, since they are the most comprehensive examples of these presentations. I [blogged about my talk for the folks from CURIOSS](https://fastwonderblog.com/2026/04/07/curioss-demonstrating-open-source-value/) (Community for University and Research Institution OSPOs) where I expanded on the content in the guide to also include more about how to demonstrate value in a university context. I further expanded it beyond corporate and university contexts to include how government / public sector organizations can demonstrate the value of their work in my talk at the Open Source Summit in Minneapolis a few weeks ago. Here's the [video](https://www.youtube.com/watch?v=uhnTkYTiv6o&list=PLbzoR-pLrL6p2URzlq8xlNtBhPspd2xpi) and [slides](https://fastwonderblog.com/wp-content/uploads/2026/05/Demonstrating-Value-OSSNA-2026.pdf) for this most recent version of the talk.
 
 <figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/uhnTkYTiv6o?si=59TaSs-oC7_fMTLK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption>
-        Or watch on <a href="https://www.youtube.com/watch?v=fP8OFI5PdBI">YouTube</a>
-    </figcaption>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uhnTkYTiv6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
 ## Related blog posts:

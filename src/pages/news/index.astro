@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import PostList from '../../components/PostList.astro';
+
+const news = (await getCollection('news'))
+  .map((d) => {
+    return {
+      id: d.id,
+      url: '/news/' + d.id,
+      ...d.data
+    };
+  })
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<MainLayout
+  title="News"
+  description="Updates from the Lab."
+>
+  <div class="container">
+    <h1 class="page-title">News</h1>
+    <p>Updates from the Lab.</p>
+    <hr>
+    <PostList posts={news} categorised={false} />
+  </div>
+</MainLayout>
