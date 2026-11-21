@@ -45,6 +45,21 @@ const pageSchema = z.object({
   title: z.string(),
 });
 
+const programSchema = z.object({
+  title: z.string(),
+  fundedAmount: z.number(),
+  targetAmount: z.number(),
+  currency: z.string(),
+  ocUrl: z.string(),
+  aim: z.string(),
+  color: z.string(),
+  order: z.number(),
+  resources: z.array(z.object({
+    name: z.string(),
+    url: z.string(),
+  })).optional(),
+});
+
 export const collections = {
   reports: defineCollection({
     loader: glob({ base: './src/content/reports', pattern: '**/*.{md,mdx}' }),
@@ -65,5 +80,9 @@ export const collections = {
   pages: defineCollection({
     loader: glob({ base: './src/content/pages', pattern: '**/*.{md,mdx}' }),
     schema: pageSchema,
+  }),
+  programs: defineCollection({
+    loader: glob({ base: './src/content/programs', pattern: '**/*.{md,mdx}' }),
+    schema: programSchema,
   }),
 };

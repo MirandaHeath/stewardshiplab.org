@@ -20,7 +20,7 @@ let { name, title, imageUrl, url } = Astro.props;
   ></div>
   <div class="member__info">
     <div class="member__name">
-      <strong>{ name }</strong>
+      <strong>{name}</strong>
       <a class="plain-link" href={url}>
         <IconHandWaving
           aria-label={`Go to the website for ${name}`}
@@ -28,7 +28,7 @@ let { name, title, imageUrl, url } = Astro.props;
         />
       </a>
     </div>
-    <span>{ title }</span>
+    <span>{title}</span>
     <slot></slot>
   </div>
 </div>
