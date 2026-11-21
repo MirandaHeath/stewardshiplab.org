@@ -15,7 +15,6 @@ const media = (await getCollection('media'))
         <div class="media-list-item__image" style={`background-image: url(${item.image})`}></div>
         <h3>{item.title}</h3>
         <hr class="hr--short">
-        <p>{item.description}</p>
         <div class="media-list-item__people">
           {item.guests && item.guests.map((guest) => (
             <div class="media-list-item__person">
