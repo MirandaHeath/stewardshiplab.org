@@ -14,7 +14,6 @@ const media = (await getCollection('media'))
       <a class="media-list-item plain-link" href={item.url}>
         <div class="media-list-item__image" style={`background-image: url(${item.image})`}></div>
         <h3>{item.title}</h3>
-        <hr class="hr--short">
         <div class="media-list-item__people">
           {item.guests && item.guests.map((guest) => (
             <div class="media-list-item__person">
@@ -62,9 +61,6 @@ const media = (await getCollection('media'))
     &:hover {
       background: var(--color-beige-pale);
       color: var(--color-text);
-      hr {
-        border-color: var(--color-text-pale);
-      }
     }
     .media-list-item__image {
       display: flex;
@@ -80,7 +76,6 @@ const media = (await getCollection('media'))
     }
     .media-list-item__details {
       color: var(--color-text-pale);
-      line-height: 1;
     }
     h3 {
       margin: 0;
@@ -92,17 +87,10 @@ const media = (await getCollection('media'))
         line-height: var(--line-height-l);
       }
     }
-    hr {
-      margin: 0;
-      border-color: var(--color-beige-pale);
-    }
-    p {
-      flex: 1;
-      margin: 0;
-      margin-bottom: 10px;
-    }
     .media-list-item__people {
+      flex: 1;
       display: flex;
+      justify-content: flex-end;
       flex-direction: column;
       gap: 5px;
       line-height: 15px;
