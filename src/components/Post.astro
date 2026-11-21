@@ -21,19 +21,21 @@ if (post.category in POST_CATEGORIES) {
 ---
 
 <div>
-  <div class="container post__before">
-    <div>
-      {breadcrumbUrl && breadcrumbText && (
-        <a class="plain-link" href={breadcrumbUrl}>{breadcrumbText}</a>
-      )}
+  {type != "page" && (
+    <div class="container post__before">
+      <div>
+        {breadcrumbUrl && breadcrumbText && (
+          <a class="plain-link" href={breadcrumbUrl}>{breadcrumbText}</a>
+        )}
+      </div>
+      <div class="post__labels">
+        {postCategoryName && postCategoryName != "News" && (
+          <div class="post-label post-label--category">{postCategoryName}</div>
+        )}
+        <div class="post-label post-label--type">{type}</div>
+      </div>
     </div>
-    <div class="post__labels">
-      {postCategoryName && postCategoryName != "News" && (
-        <div class="post-label post-label--category">{postCategoryName}</div>
-      )}
-      <div class="post-label post-label--type">{type}</div>
-    </div>
-  </div>
+  )}
   <div class="container">
     <h1 class="page-title">{post.title}</h1>
     {haveMetadata && (
