@@ -114,7 +114,7 @@ function update($canvas, $canvasWrapper) {
     if (node.radar_t_to_pulse < 0) {
       node.radar_t_to_pulse = 0;
       node.radar_t_left = node.radar_pulse_duration;
-      node, $canvasWrapper.radar_r = node.r;
+      node.radar_r = node.r;
       node.radar_vr = node.radar_init_vr;
     }
 
