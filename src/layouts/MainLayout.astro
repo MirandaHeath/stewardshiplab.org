@@ -1,15 +1,16 @@
 ---
-import Logo from '../assets/images/logo.svg';
-import Star from '../assets/images/star.svg';
-import LesserArms from '../assets/images/lesser-arms.svg';
-import IconOpenCollective from '../assets/images/icons/opencollective.svg';
 import IconBluesky from '../components/IconBluesky.astro';
-import IconMastodon from '../assets/images/icons/mastodon.svg';
-import IconDiscord from '../assets/images/icons/discord.svg';
-import IconList from '../assets/images/icons/phosphor/list.svg';
 import IconCaretRightBold from '../assets/images/icons/phosphor/caret-right-bold.svg';
+import IconDiscord from '../assets/images/icons/discord.svg';
+import IconGithub from '../assets/images/icons/github.svg';
 import IconHandWaving from '../assets/images/icons/phosphor/hand-waving.svg';
+import IconList from '../assets/images/icons/phosphor/list.svg';
+import IconMastodon from '../assets/images/icons/mastodon.svg';
+import IconOpenCollective from '../assets/images/icons/opencollective.svg';
+import LesserArms from '../assets/images/lesser-arms.svg';
+import Logo from '../assets/images/logo.svg';
 import LogoStatichost from '../assets/images/logos/statichost.svg';
+import Star from '../assets/images/star.svg';
 
 interface Props {
   title?: string;
@@ -223,6 +224,13 @@ if (!ogImageUrl) {
                   target="_blank"
                 >
                   <IconDiscord width={28} height={28} /> Discord
+                </a>
+                <a
+                  href="https://github.com/stewardshiplab"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <IconGithub width={28} height={28} /> GitHub
                 </a>
               </div>
               <div class="footer-links">
