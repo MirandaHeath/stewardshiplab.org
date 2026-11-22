@@ -168,6 +168,11 @@ function setupCanvas() {
     window.addEventListener('resize',
       resizeCanvas.bind(null, $canvas, $canvasWrapper, ctx));
     resizeCanvas($canvas, $canvasWrapper, ctx);
+    // Hopefully queue this after the page has made some progress rendering,
+    // otherwise the canvas will be too vertically small on iOS
+    setTimeout(() => {
+      resizeCanvas($canvas, $canvasWrapper, ctx);
+    }, 0);
     generateNodes($canvas);
     window.requestAnimationFrame(
       render.bind(null, $canvas, $canvasWrapper, ctx));
