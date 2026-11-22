@@ -917,6 +917,9 @@ section {
         -5px 5px 5px var(--color-blue),
         5px -5px 5px var(--color-blue);
     }
+    p {
+      text-wrap: balance;
+    }
   }
   .bacta-canvas-container {
     display: flex;
