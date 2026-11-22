@@ -73,6 +73,7 @@ function generateNodes($canvas) {
       radar_r: 0,
       radar_init_vr: 0.030,
       radar_vr: 0.0,
+      radar_vr_min: 0.001,
       radar_ar: -0.000007,
     };
     state.nodes.push(node);
@@ -83,7 +84,6 @@ function draw($canvas, ctx) {
   ctx.clearRect(0, 0, $canvas.width, $canvas.height);
 
   state.nodes.forEach((node) => {
-
     ctx.beginPath();
     ctx.arc(node.cx, node.cy, node.r, 0, Math.PI * 2, false);
     ctx.strokeStyle = '#3a4de6';
@@ -120,15 +120,17 @@ function update($canvas, $canvasWrapper) {
 
     if (node.radar_t_left > 0) {
       node.radar_t_left -= state.dt;
-      if (node.radar_vr > 0) {
+      if (node.radar_t_left <= 0) {
+        node.radar_t_left = 0;
+        node.radar_t_to_pulse = node.radar_interval;
+      }
+      if (node.radar_vr > node.radar_vr_min) {
         node.radar_r += node.radar_vr * state.dt;
       }
       node.radar_vr += node.radar_ar * state.dt;
-    }
-
-    if (node.radar_t_left < 0) {
-      node.radar_t_left = 0;
-      node.radar_t_to_pulse = node.radar_interval;
+      if (node.radar_vr < node.radar_vr_min * state.dt) {
+        node.radar_vr = node.radar_vr_min * state.dt;
+      }
     }
 
     node.vx += node.ax;
