@@ -54,7 +54,8 @@ function getRandomNodeCx($canvas) {
 function generateNodes($canvas) {
   const ENT_VY = [-0.01, -0.02, -0.03];
   const ENT_VX_MAX = [0.002, 0.01, 0.02];
-  const ENT_COUNT = 50;
+  const ENT_COUNT = $canvas.height * $canvas.width / 15000;
+  state.nodes = [];
   for (let idx = 0; idx < ENT_COUNT; idx += 1) {
     const node: Node = {
       cx: getRandomNodeCx($canvas),
@@ -157,6 +158,7 @@ function render($canvas, $canvasWrapper, ctx, t) {
 function resizeCanvas($canvas, $canvasWrapper, ctx) {
   $canvas.width = window.innerWidth;
   $canvas.height = $canvasWrapper.offsetHeight;
+  generateNodes($canvas);
   draw($canvas, ctx);
 }
 
@@ -168,7 +170,6 @@ function setupCanvas() {
     window.addEventListener('resize',
       resizeCanvas.bind(null, $canvas, $canvasWrapper, ctx));
     resizeCanvas($canvas, $canvasWrapper, ctx);
-    generateNodes($canvas);
     window.requestAnimationFrame(
       render.bind(null, $canvas, $canvasWrapper, ctx));
   });
