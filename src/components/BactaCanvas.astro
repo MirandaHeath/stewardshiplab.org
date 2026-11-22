@@ -39,6 +39,7 @@ function rand(min, max) {
 
 function getRandomNodeCx($canvas) {
   const n = Math.random();
+  /*
   if (n < 0.4) {
     return rand(0, $canvas.width / 4);
   } else if (n < 0.8) {
@@ -46,6 +47,8 @@ function getRandomNodeCx($canvas) {
   } else {
     return rand(0, $canvas.width);
   }
+  */
+  return rand(0, $canvas.width);
 }
 
 function generateNodes($canvas) {
